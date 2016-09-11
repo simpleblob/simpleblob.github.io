@@ -10,7 +10,7 @@ categories:
 
 ## Synopsis
 
-Personally, the best way to learn is to build myself a small prototype based on what I have learn fromthe books/theory. The *tinkering* and *debugging* parts really gave me an intuition that is missing had I just do a proof of concept in paper. 
+Personally, I think the best way to learn is to build myself a small prototype based on what I have learn fromthe books/theory. The *tinkering* and *debugging* parts really gave me an intuition that is missing had I just do a proof of concept in paper. 
 
 
 [Here is the list of jupyter notebooks I created](https://github.com/simpleblob/ml_algorithms_stepbystep), with theory explanation and actual code side-by-side. Hope these will be useful for someone with similar itention.
