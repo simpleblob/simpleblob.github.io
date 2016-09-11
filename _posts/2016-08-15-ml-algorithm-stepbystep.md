@@ -14,7 +14,7 @@ Personally, I think the best way to learn is to build myself a small prototype b
 
 
 [Here is the list of jupyter notebooks I created](https://github.com/simpleblob/ml_algorithms_stepbystep), with theory explanation and actual code side-by-side. Hope these will be useful for someone with similar itention.
-
+ 
 ## Table of Content
 
 1. *[Linear Regression](https://github.com/simpleblob/ml_algorithms_stepbystep/blob/master/algo_example_linear_regression.ipynb)* - the basics of the basics. This notebook illustrates the solution in closed form using matrix in python.
