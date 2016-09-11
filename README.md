@@ -1,3 +1,2 @@
 
-Personal website, forked from
-# [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/)
+Personal website, based on [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/).
