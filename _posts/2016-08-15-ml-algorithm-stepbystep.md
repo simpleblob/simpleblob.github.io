@@ -21,7 +21,8 @@ Personally, I think the best way to learn is to build myself a small prototype b
 2. *[Logistic Regression](https://github.com/simpleblob/ml_algorithms_stepbystep/blob/master/algo_example_logistic_regression_and_optimization_methods.ipynb)* - another bread and butter algorithm. Mostly useful for probability-type predictions (Churn rate, yes/no, certain classifications). Here I used gradient descent as an optimization method.
 3. *[Neural Network: Perceptron](https://github.com/simpleblob/ml_algorithms_stepbystep/blob/master/algo_example_NN_perceptron.ipynb)* - the most simple type of NN. 
 4. *[Neural Network: Multi-layer](https://github.com/simpleblob/ml_algorithms_stepbystep/blob/master/algo_example_NN_multilayer_FNN.ipynb)* - a more elaborate type with a hidden layer in the middle. Illustrates backpropagation method with MNIST digit image dataset.
+5. *[Neural Network: Convolutional Net](https://github.com/simpleblob/ml_algorithms_stepbystep/blob/master/algo_example_NN_multilayer_CNN.ipynb)* - even more complex type, working well with image & video classification problems. 
+6. *[Neural Network: Neural Nets (Deep Learning) Open-source Libraries](https://github.com/simpleblob/ml_algorithms_stepbystep/blob/master/algo_example_NN_multilayer_CNN_libraries.ipynb)* - testing out open-source libraries for production-grade ML implementations
 
-## TODO
 
-More will be updated once finished and cleaned up the code..
+More will be updated once I finished cleaning up the code..
