@@ -1,4 +1,5 @@
 # Hakyll
+.stack-work
 _cache
 dist
 site
