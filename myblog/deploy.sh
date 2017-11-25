@@ -19,12 +19,12 @@ cp -a _site/. ../
 # Commit
 cd ../
 git add -A
-# git commit -m "Publish."
+git commit -m "Publish."
 
 # Push
-# git push origin master
+git push origin master
 
 # Restoration
-# git checkout develop
-# git stash pop
+git checkout develop
+git stash pop
 # cd myblog
