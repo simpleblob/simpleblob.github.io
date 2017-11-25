@@ -1,0 +1,20 @@
+# Hakyll
+_cache
+dist
+site
+site.hi
+site.o
+_site
+generated
+
+# publish
+publish
+publish.hi
+publish.o
+
+# cabal
+cabal.sandbox.config
+.cabal-sandbox/
+
+# Elm
+elm-stuff
