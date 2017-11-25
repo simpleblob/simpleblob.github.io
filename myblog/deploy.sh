@@ -5,6 +5,7 @@ git stash
 git checkout develop
 
 # Build new files
+stack build
 stack exec myblog clean
 stack exec myblog build
 
