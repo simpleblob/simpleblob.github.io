@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>My Hakyll Blog - Org Mode in Hakyll</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                <a href="../">My Hakyll Blog</a>
+            </div>
+            <div id="navigation">
+                <a href="../">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../archive.html">Archive</a>
+            </div>
+        </div>
+
+        <div id="content">
+            <h1>Org Mode in Hakyll</h1>
+
+            <div class="info">
+    Posted on December 21, 2016
+    
+</div>
+
+<p>Testing Pandoc’s emacs-org file conversion to html. Based on this page: <a href="https://github.com/turboMaCk/turboMaCk.github.io/blob/develop/posts/2016-12-21-org-mode-in-hakyll.org" class="uri">https://github.com/turboMaCk/turboMaCk.github.io/blob/develop/posts/2016-12-21-org-mode-in-hakyll.org</a></p>
+<p>This is the end of post itself. Everything below is just to test how Pandoc handles org files.</p>
+<h1 id="this-is-h1">This is H1</h1>
+<p>There is paragraph under h1</p>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h1 id="some-basic-test">Some basic test</h1>
+<p>This is <strong>bold</strong>, <em>italic</em>, <code>code</code>, <code>verbatim</code> and <del>strike</del> text.</p>
+<ul>
+<li>However <strong><em>bold and italic</em></strong> doesn’t play well when used together like in markdown.</li>
+<li>However <em><strong>bold and italic</strong></em> doesn’t play well when used together like in markdown.</li>
+</ul>
+<h1 id="list">List</h1>
+<ul>
+<li>Bullet</li>
+<li>Another bullet
+<ul>
+<li>child
+<ul>
+<li>deep</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="other-style">Other style</h2>
+<ul>
+<li>Bullet</li>
+<li>Another bullet * child * deep</li>
+</ul>
+<h2 id="other-style-1">Other style</h2>
+<ol>
+<li>Bullet</li>
+<li>Another bullet
+<ol>
+<li>child
+<ol>
+<li>deep</li>
+</ol></li>
+</ol></li>
+</ol>
+<p>Style <code>*</code> isn’t supported.</p>
+<h1 id="links">Links</h1>
+<p><em><a href="http://orgmode.org/" class="uri">http://orgmode.org/</a></em></p>
+<h1 id="check-list-13-33">Check List [1/3] [33%]</h1>
+<ul>
+<li>[ ] Item</li>
+<li>[ ] Item</li>
+<li>[X] Checked item</li>
+</ul>
+<p>Heading and has special class however <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> are plain.</p>
+<h1 id="task-list">Task List</h1>
+<h2 id="some-to-do"><span class="todo TODO">TODO</span> some to-do</h2>
+<h2 id="done-to-do"><span class="done DONE">DONE</span> done to-do</h2>
+<p>Items are added with special class.</p>
+<h1 id="tables">Tables</h1>
+<table>
+<thead>
+<tr class="header">
+<th>number</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>looooong long name</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>name</td>
+</tr>
+</tbody>
+</table>
+<p><code>&lt;tr&gt;</code> has <code>even</code> and <code>odd</code> classes.</p>
+<h1 id="source-code">Source Code</h1>
+<p><strong>Emacs Lisp:</strong></p>
+<div class="sourceCode"><pre class="sourceCode commonlisp"><code class="sourceCode commonlisp">(<span class="kw">defun</span><span class="fu"> negate </span>(x)
+    <span class="st">&quot;Negate the value of x.&quot;</span>
+    (<span class="op">-</span> x))</code></pre></div>
+<div class="sourceCode" rundoc-language="emacs-lisp" rundoc-results="output"><pre class="sourceCode commonlisp rundoc-block"><code class="sourceCode commonlisp">(<span class="kw">print</span>
+    (negate <span class="dv">10</span>))</code></pre></div>
+<pre class="example"><code>-10
+</code></pre>
+<p>There are interesting classes like <code>sourceCode</code> and <code>example</code>. Also there html5 attributes prefixed with <code>rundoc-</code>.</p>
+<p><strong>Haskell:</strong></p>
+<div class="sourceCode" rundoc-language="haskell" rundoc-results="output"><pre class="sourceCode haskell rundoc-block"><code class="sourceCode haskell"><span class="ot">factorial ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span>
+factorial <span class="dv">0</span> <span class="fu">=</span> <span class="dv">1</span>
+factorial n <span class="fu">=</span> n <span class="fu">*</span> factorial (n <span class="fu">-</span> <span class="dv">1</span>)</code></pre></div>
+<h1 id="latex">LaTeX</h1>
+<ul>
+<li><strong>Characters:</strong> <em>α</em> <em>β</em> → ↑ ∨ ∧ ⟹ <em>π</em> ∞</li>
+<li><strong>Inline Math:</strong> <span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em><sup>2</sup></span></li>
+<li><strong>More complex:</strong> <span class="math inline">$\frac{x^2}{2}$</span></li>
+</ul>
+<p>LaTeX characters are wrapped in <code>&lt;em&gt;</code> and Math inside <code>&lt;span class=&quot;math inline&quot;&gt;</code>.</p>
+<h2 id="ℋℯ𝓁𝓁ℴ">ℋℯ𝓁𝓁ℴ!</h2>
+
+<p><strong>NOTE:</strong> <em>There is standard LaTeX embeded above which is skipped during compilation to HTML.</em></p>
+<p><strong>This is using</strong> <em><a href="https://www.mathjax.org/" class="uri">https://www.mathjax.org/</a></em></p>
+<p><br /><span class="math display">$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</span><br /></p>
+<h1 id="deadline">Deadline</h1>
+<p>DEADLINE: &lt;2016-12-20 Tue&gt;</p>
+<h1 id="tagged">Tagged<span class="tag" data-tag-name="tag"></span></h1>
+<p>Tags are not visible in render</p>
+<h1 id="block-quote">Block Quote</h1>
+<blockquote>
+<p>Org mode is amazing. So is Hakyll &amp; Pandoc.</p>
+</blockquote>
+<h1 id="image">Image</h1>
+<p><a href="http://media.riffsy.com/images/f8534774b678ad1932b379a03460680b/raw" class="uri">http://media.riffsy.com/images/f8534774b678ad1932b379a03460680b/raw</a></p>
+<p>Images has to have extension like:</p>
+<p><img src="../assets/reddit.png" /></p>
+<p>then it can be loaded even from other origin..</p>
+<p><img src="http://45.media.tumblr.com/270992d792c9899f79888a8ea6955ca5/tumblr_o0jt792qLd1r83d7lo6_540.gif" /></p>
+<h1 id="description-list">Description List</h1>
+<dl>
+<dt>Frodo</dt>
+<dd>The hobbit ringbearer
+</dd>
+<dt>Aragorn</dt>
+<dd>The human ranger, true kind of Gondor
+</dd>
+<dt>Gandalf</dt>
+<dd>The Grey Wizard
+</dd>
+</dl>
+<p>creddits to <em><a href="https://www.reddit.com/user/nihilmancer" class="uri">https://www.reddit.com/user/nihilmancer</a></em></p>
+<h1 id="footnotes">Footnotes</h1>
+<p>This has some<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> foot note.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The link is: <a href="http://orgmode.org" class="uri">http://orgmode.org</a><a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+
+        </div>
+        <div id="footer">
+            Site proudly generated by
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+        </div>
+
+    <!-- MathJax is library for displaying math nicely -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    </body>
+</html>
