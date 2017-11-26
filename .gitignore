@@ -1,4 +1,5 @@
 # Hakyll
+myblog
 .stack-work
 _cache
 dist
@@ -21,3 +22,6 @@ cabal.sandbox.config
 
 # Elm
 elm-stuff
+
+# other
+.DS_Store
