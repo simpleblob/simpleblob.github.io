@@ -36,6 +36,7 @@ div#header #navigation a {
     color: black;
     font-size: 18px;
     font-weight: bold;
+    padding: 0px 0px 0px 12px;
     /* margin-left: 12px; */
     text-decoration: none;
     text-transform: uppercase;
@@ -58,7 +59,17 @@ nav#site_navigation {
     overflow: hidden;
 }
 
-footer { font-size: 80%; }
+footer {
+    font-size: 80%;
+}
+
+div#footer {
+    text-align: right;
+    font-size: 80%;
+    border-top: 2px solid black;
+    margin-top: 30px;
+    padding: 12px 0px 12px 0px;
+}
 
 h1 {
     font-size: 120%;

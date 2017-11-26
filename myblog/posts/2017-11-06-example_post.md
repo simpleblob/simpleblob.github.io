@@ -1,8 +1,16 @@
 ---
 title: example post
+subtitle: None
+description: None
+tags: first_post
+created: 2017-11-06
+modified: 2017-11-07
+status: finished
+confidence: log
+importance: 1
 ---
 
-Try changing the post.
+This is an example post using markdown file format.
 
 Mauris in lorem nisl. Maecenas tempus facilisis ante, eget viverra nisl
 tincidunt et. Donec turpis lectus, mattis ac malesuada a, accumsan eu libero.

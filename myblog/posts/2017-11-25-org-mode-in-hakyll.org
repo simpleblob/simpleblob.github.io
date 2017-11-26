@@ -2,8 +2,12 @@
 title: Org Mode in Hakyll
 subtitle: The Ultimate Toolkit for Publishing?
 description: Testing Pandoc's org to HTML compilation.
-reddit: r/emacs/comments/5jjnri/org_mode_in_hakyll
 tags: emacs, haskell
+created: 2017-11-25
+modified: 2017-11-26
+status: finished
+confidence: log
+importance: 1
 ---
 
 Testing Pandoc's emacs-org file conversion to html, based on this [[https://github.com/turboMaCk/turboMaCk.github.io/blob/develop/posts/2016-12-21-org-mode-in-hakyll.org][page]].
