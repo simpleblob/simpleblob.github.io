@@ -6,9 +6,7 @@ reddit: r/emacs/comments/5jjnri/org_mode_in_hakyll
 tags: emacs, haskell
 ---
 
-Testing Pandoc's emacs-org file conversion to html.
-Based on this page:
-https://github.com/turboMaCk/turboMaCk.github.io/blob/develop/posts/2016-12-21-org-mode-in-hakyll.org
+Testing Pandoc's emacs-org file conversion to html, based on this [[https://github.com/turboMaCk/turboMaCk.github.io/blob/develop/posts/2016-12-21-org-mode-in-hakyll.org][page]].
 
 This is the end of post itself. Everything below is just to test how Pandoc handles org files.
 
@@ -148,11 +146,11 @@ Org mode is amazing. So is Hakyll & Pandoc.
 
 Images has to have extension like:
 
-[[../assets/reddit.png]]
+[[../assets/lena-image.jpg]]
 
 then it can be loaded even from other origin..
 
-[[http://45.media.tumblr.com/270992d792c9899f79888a8ea6955ca5/tumblr_o0jt792qLd1r83d7lo6_540.gif]]
+[[https://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png]]
 
 * Description List
 

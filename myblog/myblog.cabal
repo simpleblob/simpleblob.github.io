@@ -2,12 +2,12 @@ name:                myblog
 version:             0.1.0.0
 -- synopsis:
 -- description:
-homepage:            https://github.com/githubuser/myblog#readme
+homepage:            https://github.com/simpleblob/
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
+author:              simpleblob
 maintainer:          example@example.com
-copyright:           2017 Author name here
+copyright:           2017 simpleblob
 category:            Web
 build-type:          Simple
 extra-source-files:  README.md
