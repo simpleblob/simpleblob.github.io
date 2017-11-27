@@ -1,0 +1,19 @@
+---
+title: Book Summary - Early Retirement Extreme by Jacob Fisker
+subtitle: Financial Independence
+description: None
+tags: FI, antifragile
+created: 2016-12-03
+modified: 2017-11-26
+status: draft
+confidence: log
+importance: 1
+---
+
+** Plan vs Strategy
+  -  A plan is a string of actions. One action fail, all fail. Fragile.
+  -  A strategy is a web of actions. can't go this way then go another
+    way. it means having logical constraints in your head (similar to
+    numerical programming) which exposes you to a set of path you can
+    choose to execute (and diverge later as long as the new path satisfies
+    the constraints)

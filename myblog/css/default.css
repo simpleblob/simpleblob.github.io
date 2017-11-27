@@ -8,10 +8,16 @@ html { font-size: 20px; }
 }
 
 body {
-    background-color: #fff;
-    color: #222;
+    /* background-color: #fff; */
+    /* color: #222; */
+    background-color: #fdf6e3;
+    color: #333;
     font-family: Charter, "Bitstream Charter", Palatino, "Noto Serif", Georgia, serif;
 }
+
+body code { background-color: #eee8d5;}
+body a:link { color: #268bd2; }
+body a:visited { color: #2aa198; }
 
 main, footer {
     line-height: 1.4;

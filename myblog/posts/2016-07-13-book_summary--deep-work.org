@@ -1,5 +1,5 @@
 ---
-title: Summary - Deep Work by Cal Newport
+title: Book Summary - Deep Work by Cal Newport
 subtitle: The Ultimate Toolkit for Publishing?
 description: Testing Pandoc's org to HTML compilation.
 tags: emacs, haskell
