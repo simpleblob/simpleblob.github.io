@@ -4,7 +4,7 @@ subtitle: None
 description: None
 tags: first_post
 created: 2017-11-06
-modified: 2017-11-07
+published: 2017-11-07
 status: finished
 confidence: log
 importance: 1

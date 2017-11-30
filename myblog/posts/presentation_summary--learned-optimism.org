@@ -4,7 +4,7 @@ subtitle: None
 description: None
 tags: economics
 created: 2016-08-17
-modified: 2016-08-17
+published: 2016-08-17
 status: finished
 confidence: log
 importance: 1

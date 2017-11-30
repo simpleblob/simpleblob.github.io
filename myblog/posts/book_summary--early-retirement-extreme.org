@@ -4,7 +4,7 @@ subtitle: Financial Independence
 description: None
 tags: FI, antifragile
 created: 2016-12-03
-modified: 2017-11-26
+published: 2017-11-26
 status: draft
 confidence: log
 importance: 1
