@@ -1,0 +1,22 @@
+---
+title: Personal Knowledge Management - Memex, remembrance agent
+subtitle: an extension of your brain
+description: None
+tags: memory, IA, brain
+created: 2017-12-02
+published: 2017-12-02
+status: draft
+confidence: log
+importance: 1
+---
+
+
+** Information of interest
+- Reddit emacs tools ->[[https://www.reddit.com/r/emacs/comments/5h6weh/serious_knowledge_management_concept_networks/][emacs PKM tool discussions]]
+- ConnectedText [[http://www.connectedtext.com/manfred.php][Manfred]] philopher about notetaking
+- and [[https://takingnotenow.blogspot.jp/][this is Manfred's blog]]
+
+** Summary of Ideas
+- A connected system for "note cards"
+- "One thought, One card" -- how about one-letter one-card as a linked list?
+- a hypertext card allows one with write up a [[http://www.openculture.com/2014/02/the-notecards-on-which-vladimir-nabokov-wrote-lolita.html][whole book]] from any point, bit-by-bits -- not from beginning to end. Think about painting a picture only on certain area, modifying as we go along.
