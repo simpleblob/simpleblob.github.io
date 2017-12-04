@@ -1,0 +1,33 @@
+---
+title: Project Summary - Nand2Tetris
+subtitle: projected-base building a computing system from scratch
+description: None
+tags: computing, hardware
+created: 2017-12-04
+published: 2017-12-04
+status: draft
+confidence: log
+importance: 1
+---
+
+** Link of interest
+- [[http://www.nand2tetris.org][nand2tetris.org]]
+
+** Introduction
+- we are learning 3 things:
+  1. how computers work, 
+  2. how to break complex problems into manageable modules, 
+  3. how to develop large-scale hardware and software systems.
+- how codes work:
+  1. write C sourcecode in file
+  2. file is compiled into machine-level codes
+  3. machine-level codes (binary code-map) are executed by a chipset -- register, memory, ALU.
+  4. all the hardware stuff in 3. >> they are all logic-gates.
+- abstractions - we use it to "split off" complex projects into simple parts, as we did here.
+
+** Lesson 01: Boolean and Logic Gates
+- Basic boolean building blocks are NOT, OR, AND
+- With these we can build up complex functions
+- Actually, we start with truth table work backwards to construct the logic gates that can implement addition and multiplication etc.
+
+** Lesson 02
