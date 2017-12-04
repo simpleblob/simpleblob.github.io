@@ -26,8 +26,14 @@ importance: 1
 - abstractions - we use it to "split off" complex projects into simple parts, as we did here.
 
 ** Lesson 01: Boolean and Logic Gates
-- Basic boolean building blocks are NOT, OR, AND
-- With these we can build up complex functions
-- Actually, we start with truth table work backwards to construct the logic gates that can implement addition and multiplication etc.
+- Basic boolean building blocks are NOT & AND
+  - OR(X,Y) can be construct with NOT(AND(X,Y))
+- we can further discard NOT & AND by just using [[https://docs.google.com/spreadsheets/d/1vtnEP28OuOuxE_SNyYei37tIicGpcogD1NU_nhP-hw4/edit#gid=0][NAND Logic]]: 
+  - NOT X   = NAND(X,X)
+  - X OR Y  = NAND(NAND(X,X),NAND(Y,Y))
+  - X AND Y = NAND(NAND(X,Y),NAND(X,Y))
+  - Trivia: NOR can do these too. we call them "universal gates"
+- With these we can build up complex functions 
+- For logic gates, we start with truth table work backwards to construct functions that can implement addition and multiplication etc.
 
 ** Lesson 02
