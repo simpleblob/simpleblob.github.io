@@ -26,7 +26,7 @@
             <div class="info">
     <em>
     creation date: 2017-12-04, 
-    latest update: 2017-12-04
+    latest update: 2017-12-10
     </em>
     
 </div>
@@ -67,8 +67,20 @@
 </ul></li>
 <li>With these we can build up complex functions</li>
 <li>For logic gates, we start with truth table work backwards to construct functions that can implement addition and multiplication etc.</li>
+<li>We start with having an input of 1-bit. However, later on we will have more bit (16-bits etc.) to manipulate. It is better to thing of them as one group – “bus” (latin for “many”)</li>
+<li>Building up from NANDs, the basic blocks are NOT,AND,OR,XOR,MUX,DMUX. (can be many-bits version).</li>
+<li>Mux and Demux is useful when shared communication over a single line. (selecting by feeding certain frequencies to the “select” channel of Mux/Demux)</li>
+<li>We can do 3-way or more combining inputs by cumulatively applying the basic blocks. for DMUX, it’s similar to branching out and vice versa for MUX.</li>
 </ul>
-<h2 id="lesson-02">Lesson 02</h2>
+<h2 id="lesson-02-boolean-arithmetic-and-alu">Lesson 02: Boolean Arithmetic and ALU</h2>
+<ul>
+<li>How to convert from decimal to binary
+<ul>
+<li>find the biggest “buckets” that decimal number can fit then down to the next biggest one.</li>
+<li>Example, 99 is 64 + 32 + 0 + 0 + 0 + 2 + 1</li>
+<li>Therefore, in binary form, it is 1100011</li>
+</ul></li>
+</ul>
 
         </div>
         <div id="footer">
