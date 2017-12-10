@@ -4,7 +4,7 @@ subtitle: projected-base building a computing system from scratch
 description: None
 tags: computing, hardware
 created: 2017-12-04
-published: 2017-12-04
+published: 2017-12-10
 status: draft
 confidence: log
 importance: 1
@@ -35,5 +35,13 @@ importance: 1
   - Trivia: NOR can do these too. we call them "universal gates"
 - With these we can build up complex functions 
 - For logic gates, we start with truth table work backwards to construct functions that can implement addition and multiplication etc.
+- We start with having an input of 1-bit. However, later on we will have more bit (16-bits etc.) to manipulate. It is better to thing of them as one group -- "bus" (latin for "many")
+- Building up from NANDs, the basic blocks are NOT,AND,OR,XOR,MUX,DMUX. (can be many-bits version).
+- Mux and Demux is useful when shared communication over a single line. (selecting by feeding certain frequencies to the "select" channel of Mux/Demux)
+- We can do 3-way or more combining inputs by cumulatively applying the basic blocks. for DMUX, it's similar to branching out and vice versa for MUX.
 
-** Lesson 02
+** Lesson 02: Boolean Arithmetic and ALU
+- How to convert from decimal to binary
+  - find the biggest "buckets" that decimal number can fit then down to the next biggest one.
+  - Example, 99 is 64 + 32 + 0 + 0 + 0 + 2 + 1
+  - Therefore, in binary form, it is 1100011
