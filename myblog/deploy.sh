@@ -1,5 +1,7 @@
+# Note - MUST BE IN myblog DIRECTORY!!
+
 # Temporarily store uncommited changes
-# git stash
+git stash
 
 # Verify correct branch
 git checkout develop
@@ -10,7 +12,7 @@ stack exec myblog clean
 stack exec myblog build
 
 # Get previous files
-git fetch --all
+# git fetch --all
 git checkout master
 
 # Overwrite existing files with new files
@@ -18,7 +20,7 @@ cp -a _site/. ../
 
 # Commit
 cd ../
-git add -A
+git add .
 git commit -m "Publish."
 
 # Push
@@ -27,4 +29,4 @@ git push origin master
 # Restoration
 git checkout develop
 git stash pop
-# cd myblog
+cd myblog
