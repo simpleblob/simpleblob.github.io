@@ -26,7 +26,7 @@
             <div class="info">
     <em>
     creation date: 2017-12-04, 
-    latest update: 2017-12-10
+    latest update: 2017-12-25
     </em>
     
 </div>
@@ -79,6 +79,91 @@
 <li>find the biggest “buckets” that decimal number can fit then down to the next biggest one.</li>
 <li>Example, 99 is 64 + 32 + 0 + 0 + 0 + 2 + 1</li>
 <li>Therefore, in binary form, it is 1100011</li>
+</ul></li>
+<li>The following are the basic arithmetics we want to have: Add, Subtract, which is greater, Multiply, Divide</li>
+<li>First we will get “Add”, then we get “Subtract” and “which is greater” for free
+<ul>
+<li>“Subtract” is adding another negative number together (this depends on how to represent negative numbers in a clever way)</li>
+<li>“Greater” means we can subtract the two numbers and see whether result is positive.</li>
+</ul></li>
+<li>How to build Multi-bits Adder
+<ol>
+<li>Build Half-Adder –&gt; input a,b and output a sum and carry (I call this a H-carry)</li>
+<li>Build Full-Adder –&gt; input a,b,H-carry then output “true sum” and “true carry”</li>
+<li>Build multi-bits Adder by stacking the Full-Adder cumulatively – digits by digits</li>
+</ol></li>
+<li>About “ALU” inside a cpu
+<ul>
+<li>generally used to compute integer and logic stuff. other computation can be implemented later in software.</li>
+<li>in “Hack ALU” design, there are 2 16-bit inputs, 1 function select, and 1 16-bit output</li>
+</ul></li>
+</ul>
+<h2 id="lesson-03-memory">Lesson 03: Memory</h2>
+<ul>
+<li>Why do we need memory?
+<ul>
+<li>for loop, memory “states”, counters</li>
+<li>deal with physical speed - the gap in one discrete “clock” cycle to make sure all electrical/transistor input/output changes are done before one ticks.</li>
+</ul></li>
+<li>Types of logic
+<ul>
+<li>combinatorial: out[t] = func(in[t])</li>
+<li>sequential: out[t+1] = func(in[t])</li>
+</ul></li>
+<li>How to implement states?
+<ul>
+<li>in[t+1] = func(in[t]) .. AKA Flip-Flop unit (func = identity).</li>
+</ul></li>
+<li>Register is a multi-bit register chained together
+<ul>
+<li>WORD = width of the register</li>
+</ul></li>
+<li>RAM (our actual memory unit)
+<ul>
+<li>stores both data and code to run. remember von neumann…</li>
+<li>this is just a bunch of registers stacked together</li>
+<li>select register to manipulate by setting “address” and turn on “load” flag</li>
+</ul></li>
+<li>Counter
+<ul>
+<li>need this so that we could fetch the code and execute them one by one</li>
+<li>counter interface: RESET, NEXT, GOTO</li>
+</ul></li>
+</ul>
+<h2 id="lesson-04-machine-language">Lesson 04: Machine Language</h2>
+<ul>
+<li>Universal Turing Machine: a base representation of any computing machine.
+<ul>
+<li>Tool 1: An infinitely long tape with encoded binary code/data on it.</li>
+<li>Tool 2: a magic box that looks at one digit at the time (on the time), then change its internal state, (maybe) modify that digit, then move on to another digits.</li>
+<li>Given Tool 1 and Tool 2, all computation problems can be converted to this format</li>
+<li>Turing Complete = can do all the things the turing machine can do</li>
+</ul></li>
+<li>Von Neumann architecture: one possible (practical) realization of a computing machine</li>
+<li>Machine Language: used to control the machine at the lowest level to do simple things
+<ul>
+<li>read the instruction code of a certain part of memory</li>
+<li>grab the data (from specific memory address)</li>
+<li>do some computation (and maybe write down result)</li>
+<li>move to next instruction</li>
+</ul></li>
+<li>Assembly Language: This is just a convenient “shorthand” for human, since the machine language is all binary code. There will be some compiler to compile the asm to binary form.</li>
+<li>CPU has a small register inside to do small computation (like adding registers together)</li>
+<li>I/O devices can have drivers that do (virtual) memory-mapping to known local addresses. then we can send input/output data that way.</li>
+<li>HACK computer system
+<ul>
+<li>instruction &gt;&gt; CPU (computation / jump ) &gt;&gt; memory I/O</li>
+<li>register A=Address, M=Mapped/selected, D=Data to be computed</li>
+<li>instructions
+<ul>
+<li>A-instruction: select memory addresses</li>
+<li>C-instruction: dest = comp ; jump</li>
+</ul></li>
+<li>Every IO devices are mapped into certain RAM addresses. we can see it as just data manipulation
+<ul>
+<li>For example, Screen can have 600 x 400 x 16 bit mapped.</li>
+<li>Keyboard has 16-bit area mapped.</li>
+</ul></li>
 </ul></li>
 </ul>
 
