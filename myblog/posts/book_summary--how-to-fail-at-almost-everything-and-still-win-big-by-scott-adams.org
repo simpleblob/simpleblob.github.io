@@ -1,0 +1,107 @@
+---
+title: Book Summary - How to Fail at Almost Everything and Still Win Big by Scott Adams
+subtitle: None
+description: None
+tags: economics
+created: 2014-03-17
+published: 2017-11-26
+status: draft
+confidence: log
+importance: 1
+---
+
+** Gist Summary
+  1. Optimize Personal Energy by
+    -  Diet
+    -  Exercise
+    -  Sleep
+  2. Optimize Personal luck (success) by
+    -  Move from strategies with bad odds to ones with good odds
+    -  Stay in a game long enough for luck to find you
+  3. Optimize your happiness chance by
+    -  Being Healthy
+    -  Have resources
+    -  Have flexible schedule
+** Fail-toward-success tactics
+  1. Goals are for losers. Use Systems.
+  2. Your mind isn't magic. It's an organic computer you can (sort of) program.
+  3. The most important metric to track is your personal energy.
+  4. Every skill you acquire doubles your odds of success.
+  5. Happiness is health plus freedom.
+  6. Luck can be managed, sort of.
+  7. Conquer shyness by being a huge phony (in a good way).
+  8. Fitness is the lever that moves the world.
+  9. Simplicity transform ordinary into amazing.
+** The 6 Filters for Truth
+  (Commonly what we do given constraint)
+  1. Personal experience (biased)
+  2. Experience of people you know (more bias)
+  3. Experts (They work for money, not for truth)
+  4. Scientific studies (correlation not causation)
+  5. Common sense (works until it's wrong)
+  6. Pattern recognition (Patterns, coincidence,  and personal bias look alike)
+
+  That's why you should try to use different sources and hope that it
+  rules out random noise once combined.
+
+  Look for consistency in answers. /Multiple models by Charlie Munger./
+
+** Failure as tool to get information
+  Failure always brings something valuable with it. Don't let it leave until you extract that value. Mug the shit out of it.
+
+** Goal vs System
+A goal is a specific objective that you either achieve or don't sometime in the future.
+
+A system is something you do on a regular basis that increases your odds of happiness in the long run.
+
+This is partly semantics, but it's helpful to think this way. Same as career capital.
+
+It's roughly more like a single point of success vs daily practices to get there.
+
+However, a daily practice can help you reach multiple goals. That's a good side effect. Be flexible, do pivot if reasonable.
+
+** Deciding vs Wanting Success
+Wishing starts in the mind, and usually stays there. If want to achieve success, figure out the price, then pay it.
+
+** You have permission to put your self-interest first, charity second
+  The most important form of self-interest involves
+  -  spending time on your fitness,
+  -  eating right,
+  -  pursuing your career, and still
+  -  spending quality time with your family and friends.
+
+** CH11: Maximized your Energy
+
+We humans want many things: good health, financial freedom, accomplishment, a great social life, love, sex, recreation, travel, family, career, and more.
+
+The way I approach the problem of multiple priorities is by focusing on just one main metric: my energy.
+
+I make choices that maximize my personal energy because that makes it easier to manage all of the other priorities.
+
+Maximizing my personal energy means eating right, exercising, avoiding unnecessary stress, getting enough sleep, and all of the obvious steps.
+
+But it also means having something in my life that makes me excited to wake up.
+
+One example: During my corporate days, I always had one or two side projects going on that had the potential to set me free.
+
+For years, the prospect of starting “my own thing” and leaving my cubicle behind gave me an enormous amount of energy.
+
+
+*** Tricks for getting most energy
+1. Match creative work to time of day
+2. Be simplifying instead of optimising -- allow some time buffer for less stress
+3. Place matching -- Bed only for sleeping, Desk for work, couch for games
+4. Keep things Tidy - mentally clear
+5. Don't be scared of lack of knowledge of "how to do something" - 90% Can be solved by Google and the 10% by asking other people
+6. Don't be an asshole
+7. Set the right priorities
+  1. Your health
+  2. Your economics (money, career)
+  3. Family and friends
+  4. Local community, country, the world
+
+*CH12: The Right Attitudes*
+
+\\
+
+
