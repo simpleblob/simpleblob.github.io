@@ -29,6 +29,18 @@ list: https://competitions.codalab.org/
  :TOPIC: Image classification, detection, segmentation
  :URL: http://image-net.org/about-stats
  :END:
+
+** Anomaly Detection
+- Overview
+ - currently there are 3 main approaches
+   1. clustering or nearest neighbor
+   2. learn from 1-class (normal) data and draw a boundary using SVM etc.
+   3. feature reconstruction of what is considered "normal" and compared against the sample.
+ - recently DL methods focus on the 3rd approach using autoencoders and GANs
+- [[https://github.com/hoya012/awesome-anomaly-detection][Awesome list of anomaly detection]]
+- [2017] [[https://arxiv.org/abs/1703.05921][Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery (AnoGAN), Schlegl.]] / [[https://github.com/tkwoo/anogan-keras][code]]
+- [2018] [[https://arxiv.org/abs/1802.06222][Efficient GAN-Based Anomaly Detection, Zenati]] / [[https://openreview.net/forum?id=BkXADmJDM][open-review]] / [[https://github.com/houssamzenati/Efficient-GAN-Anomaly-Detection][code]]
+
 ** Understanding / Generalization / Transfer
 
 - [2014] [[http://papers.nips.cc/paper/5347-how-transferable-are-features-in-deep-neural-networks.pdf][How transferable are features in deep neural networks?]]
