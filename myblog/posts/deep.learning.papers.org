@@ -1,50 +1,30 @@
-#+TITLE: PatrickSu deep learning paper reading notes
+#+TITLE: My deep learning paper reading notes
 #+DESCRIPTION: based on awesome list papers
 #+LINK: https://github.com/terryum/awesome-deep-learning-papers
 #+KEYWORDS: CNN
 
-* Background
-Before this list, there exist other awesome deep We believe that there exist 
-/classic/ deep learning papers which are worth reading regardless of their application domain. 
-Rather than providing overwhelming amount of papers, We would like to provide a
-/curated list/ of the awesome deep learning papers which are considered
-as /must-reads/ in certain research domains.
-learning lists/, for example, [[https://github.com/kjw0612/awesome-deep-vision][Deep Vision]] and [[https://github.com/kjw0612/awesome-rnn][Awesome Recurrent Neural Networks]]. 
-Also, after this list comes out, another awesome list for
-deep learning beginners, called [[https://github.com/songrotek/Deep-Learning-Papers-Reading-Roadmap][Deep Learning Papers Reading Roadmap]], 
-has been created and loved by many deep learning researchers.
+** Background
+Based on [[https://github.com/terryum/awesome-deep-learning-papers][Awesome Deep Learning Papers]] plus my own addition of literature summary 
 
-* Famous Machine Learning Conferences
-** NIPS
- :TOPIC: general machine learning
- :URL: https://nips.cc/
-** CVPR
- :TOPIC: computer vision (US)
- :URL: http://cvpr2019.thecvf.com/
-** ECCV
- :TOPIC: computer vision (european)
- :URL: https://eccv2018.org/
-** ICML
- :TOPIC: general machine learning (international)
- :URL: https://icml.cc/
-** ICCV
- :TOPIC: computer vision (international)
- :URL: http://iccv2019.thecvf.com/submission/timeline
-** SIGGRAPH
- :TOPIC: animation, computer graphic
- :URL: https://www.siggraph.org/
-* Famous Challenges / Dataset
-** list: https://competitions.codalab.org/
-** [2010-2017] ImageNet
+** Famous Machine Learning Conferences
+- [[https://nips.cc/][NIPS]] - general machine learning (US)
+- [[https://icml.cc/][ICML]] - general machine learning (international)
+- [[http://cvpr2019.thecvf.com/][CVPR]] - computer vision (US)
+- [[https://eccv2018.org/][ECCV]] - computer vision (european)
+- [[http://iccv2019.thecvf.com/submission/timeline][ICCV]] - computer vision (international)
+- [[https://www.siggraph.org/][SIGGRAPH]] - animation, computer graphic
+** Famous Challenges / Dataset
+list: https://competitions.codalab.org/
+- [2010-2017] ImageNet
  :SIZE: 14 mil with 20k synset for classification / 1 mil with bboxs and 200 class
  :TOPIC: Image classification and object detection
  :URL: http://image-net.org/about-stats
-** [2005-2012] Pascal VOC
+- [2005-2012] Pascal VOC
  :SIZE: (2007) 10k imgs with 20 class / (2012) 12k images with 20 class & 7k imgs for segmentation
  :TOPIC: Image classification, detection, segmentation
  :URL: http://image-net.org/about-stats
-* Understanding / Generalization / Transfer
-** [2015] Distilling the knowledge in a neural network
+** Understanding / Generalization / Transfer
+- [2015] Distilling the knowledge in a neural network
    :PROPERTIES:
    :AUTHOR:   G. Hinton et al.
    :YEAR:     2015
