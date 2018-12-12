@@ -40,6 +40,7 @@ list: https://competitions.codalab.org/
 - [[https://github.com/hoya012/awesome-anomaly-detection][Awesome list of anomaly detection]]
 - [2017] [[https://arxiv.org/abs/1703.05921][Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery (AnoGAN), Schlegl.]] / [[https://github.com/tkwoo/anogan-keras][code]]
 - [2018] [[https://arxiv.org/abs/1802.06222][Efficient GAN-Based Anomaly Detection, Zenati]] / [[https://openreview.net/forum?id=BkXADmJDM][open-review]] / [[https://github.com/houssamzenati/Efficient-GAN-Anomaly-Detection][code]]
+- [2017] [[https://arxiv.org/abs/1706.02690][Enhancing The Reliability of Out-of-distribution Image Detection in Neural Networks, Liang]] / [[https://openreview.net/forum?id=H1VGkIxRZ][open-review]]
 
 ** Understanding / Generalization / Transfer
 
