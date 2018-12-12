@@ -43,6 +43,7 @@ list: https://competitions.codalab.org/
 - [2017] [[https://arxiv.org/abs/1706.02690][Enhancing The Reliability of Out-of-distribution Image Detection in Neural Networks, Liang]] / [[https://openreview.net/forum?id=H1VGkIxRZ][open-review]]
 - [2018] [[https://arxiv.org/abs/1810.01392][Generative Ensembles for Robust Anomaly Detection]]
 - [2018] [[https://sdm.lbl.gov/snta/2018/SNTA18_KWON.pdf][An Empirical Study on Network Anomaly Detection using Convolutional Neural Networks (slides)]]
+  - Convolve 1D features of non-image data. not really a good use of CNN.
 - [2018] [[https://arxiv.org/abs/1801.03149][An overview of deep learning based methods for unsupervised and semi-supervised anomaly detection in videos, Kiran]]
 
 ** Understanding / Generalization / Transfer
