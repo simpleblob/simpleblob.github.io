@@ -45,6 +45,8 @@ list: https://competitions.codalab.org/
 - [2018] [[https://sdm.lbl.gov/snta/2018/SNTA18_KWON.pdf][An Empirical Study on Network Anomaly Detection using Convolutional Neural Networks (slides)]]
   - Convolve 1D features of non-image data. not really a good use of CNN.
 - [2018] [[https://arxiv.org/abs/1801.03149][An overview of deep learning based methods for unsupervised and semi-supervised anomaly detection in videos, Kiran]]
+- [2018] [NIPS'18] [[https://nips.cc/Conferences/2018/Schedule?showEvent=11927][Deep Anomaly Detection Using Geometric Transformations]]
+- [2018] [NIPS'18] [[https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection][A loss framework for calibrated anomaly detection]]
 
 ** Understanding / Generalization / Transfer
 
