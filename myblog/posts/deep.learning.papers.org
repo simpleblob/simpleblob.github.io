@@ -70,13 +70,10 @@ list: https://competitions.codalab.org/
    :END:
  - keypoints
   - comparison of state-of-the-art "manual" feature engineering (SIFT etc.) vs "OVERFEAT" CNN
-  - Summary from the paper: 
+  - Summary from the paper:
+  It’s all about the features! SIFT and HOG descriptors produced big performance gains a decade ago and now deep convolutional features are providing a similar breakthroughfor recognition. 
   
-It’s all about the features! SIFT and HOG descriptors produced big performance gains a decade ago and
-now deep convolutional features are providing a similar breakthroughfor recognition. 
-Thus, applying the well-established com-puter vision procedures on CNN representations should 
-potentially push the reported results even further. In any case,if you develop any new algorithm for 
-a recognition task thenitmustbe compared against the strong baseline ofgenericdeep features+simple classifier.
+  Thus, applying the well-established com-puter vision procedures on CNN representations should potentially push the reported results even further. In any case,if you develop any new algorithm for a recognition task thenitmustbe compared against the strong baseline ofgenericdeep features+simple classifier.
 
 - [2014] [[http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Oquab_Learning_and_Transferring_2014_CVPR_paper.pdf][Learning and transferring mid-Level image representations using convolutional neural networks]]
    :PROPERTIES:
@@ -89,7 +86,7 @@ a recognition task thenitmustbe compared against the strong baseline ofgenericde
   - use the pre-trained weights from task A (ImageNet) to apply to task B (Pascal)
   - they transferred all the weights (all CNN and FCs layers), froze them , and added 2 FC layers at the end to adapt to new output
   - for task B (Pascal), the pictures are cropped to specific object, so they use a sliding window to generate new pics + "background" class
-  - [2014] [[http://arxiv.org/pdf/1311.2901][Visualizing and understanding convolutional networks]]
+- [2014] [[http://arxiv.org/pdf/1311.2901][Visualizing and understanding convolutional networks]]
    :PROPERTIES:
    :AUTHOR:   M. Zeiler and R. Fergus
    :YEAR:     2014
@@ -100,16 +97,12 @@ a recognition task thenitmustbe compared against the strong baseline ofgenericde
 - Decaf: [[http://arxiv.org/pdf/1310.1531][A deep convolutional activation feature for generic visual recognition* (2014), J. Donahue et al.]]
 
 ** Optimization / Training Techniques
-- [[http://arxiv.org/pdf/1502.03167][*Batch normalization: Accelerating deep network training by reducing internal covariate shift* (2015), S. Loffe and C. Szegedy]]
-** *Delving deep into rectifiers: Surpassing human-level performance on imagenet classification* (2015), K. He et al.
-  [[http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/He_Delving_Deep_into_ICCV_2015_paper.pdf][[pdf]]]
-** *Dropout: A simple way to prevent neural networks from overfitting* (2014), N. Srivastava et al.
+- [2015] [[http://arxiv.org/pdf/1502.03167][*Batch normalization: Accelerating deep network training by reducing internal covariate shift, S. Loffe and C. Szegedy]]
+- [2015] [[http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/He_Delving_Deep_into_ICCV_2015_paper.pdf][Delving deep into rectifiers: Surpassing human-level performance on imagenet classification, K. He et al.]]
+- *Dropout: A simple way to prevent neural networks from overfitting* (2014), N. Srivastava et al.
   [[http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf][[pdf]]]
-** *Adam: A method for stochastic optimization* (2014), D. Kingma and J.
-  Ba [[http://arxiv.org/pdf/1412.6980][[pdf]]]
-** *Improving neural networks by preventing co-adaptation of feature
-  detectors* (2012), G. Hinton et al.
-  [[http://arxiv.org/pdf/1207.0580.pdf][[pdf]]]
+- [[http://arxiv.org/pdf/1412.6980][*Adam: A method for stochastic optimization* (2014), D. Kingma and J.Ba]]
+- [[http://arxiv.org/pdf/1207.0580.pdf][*Improving neural networks by preventing co-adaptation of feature detectors* (2012), G. Hinton et al.]]
 ** [2012] Random search for hyper-parameter optimization
    :PROPERTIES:
    :AUTHOR:   M. Zeiler and R. Fergus
