@@ -48,60 +48,59 @@ list: https://competitions.codalab.org/
   - some images are similar to the "real" thing, some looks just like static TV noise
   - using the "static" images to retrain, still difficult to patch up the weakness
   - is this similar to adversarial network?
-** [2014] How transferable are features in deep neural networks?
+- [2014] [[http://papers.nips.cc/paper/5347-how-transferable-are-features-in-deep-neural-networks.pdf][How transferable are features in deep neural networks?]]
    :PROPERTIES:
    :AUTHOR:   J. Yosinski et al.
    :YEAR:     2014
    :URL:      http://papers.nips.cc/paper/5347-how-transferable-are-features-in-deep-neural-networks.pdf
    :END:
-*** keypoints
-**** through empirical evidence, researchers notice that for all CNN models, the first 1-3 layers are similar
-**** the higher layers (after three) are more specific to the classification task
-**** we want to test how "general" or "specific" for each layer
-**** train a real-image classification CNN (7 layers) model-A and model-B, using completely seperate classes
-**** freeze 3 lowest layers from model A, then put the 4 higher layer with random weight, then train with model B dataset
-**** the resulting accuracy does not change 
-**** and actually if we don't freeze (let it fine-tune), the accuracy is higher (it generalizes better)
-** [2014] CNN features off-the-Shelf: An astounding baseline for recognition
+ - keypoints
+  - through empirical evidence, researchers notice that for all CNN models, the first 1-3 layers are similar
+  - the higher layers (after three) are more specific to the classification task
+  - we want to test how "general" or "specific" for each layer
+  - train a real-image classification CNN (7 layers) model-A and model-B, using completely seperate classes
+  - freeze 3 lowest layers from model A, then put the 4 higher layer with random weight, then train with model B dataset
+  - the resulting accuracy does not change 
+  - and actually if we don't freeze (let it fine-tune), the accuracy is higher (it generalizes better)
+- [2014] [[http://www.cv-foundation.org//openaccess/content_cvpr_workshops_2014/W15/papers/Razavian_CNN_Features_Off-the-Shelf_2014_CVPR_paper.pdf][CNN features off-the-Shelf: An astounding baseline for recognition]]
    :PROPERTIES:
    :AUTHOR:   Razavian et al.
    :YEAR:     2014
    :URL:      http://www.cv-foundation.org//openaccess/content_cvpr_workshops_2014/W15/papers/Razavian_CNN_Features_Off-the-Shelf_2014_CVPR_paper.pdf
    :END:
-*** keypoints
-**** comparison of state-of-the-art "manual" feature engineering (SIFT etc.) vs "OVERFEAT" CNN
-**** Summmary from the paper: 
+ - keypoints
+  - comparison of state-of-the-art "manual" feature engineering (SIFT etc.) vs "OVERFEAT" CNN
+  - Summary from the paper: 
+  
 It’s all about the features! SIFT and HOG descriptors produced big performance gains a decade ago and
 now deep convolutional features are providing a similar breakthroughfor recognition. 
 Thus, applying the well-established com-puter vision procedures on CNN representations should 
 potentially push the reported results even further. In any case,if you develop any new algorithm for 
 a recognition task thenitmustbe compared against the strong baseline ofgenericdeep features+simple classifier.
-** [2014] Learning and transferring mid-Level image representations using convolutional neural networks 
+
+- [2014] [[http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Oquab_Learning_and_Transferring_2014_CVPR_paper.pdf][Learning and transferring mid-Level image representations using convolutional neural networks]]
    :PROPERTIES:
    :AUTHOR:   M. Oquab et al.
    :YEAR:     2014
-   :URL:      http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Oquab_Learning_and_Transferring_2014_CVPR_paper.pdf
+   :URL:      http://www.cv-foundation.org/openaccess/content_cvpr_2014/paper/Oquab_Learning_and_Transferring_2014_CVPR_paper.pdf
    :END:
-*** keypoints
-**** same idea as the "transferable features in DNN" paper
-**** use the pre-trained weights from task A (ImageNet) to apply to task B (Pascal)
-**** they transferred all the weights (all CNN and FCs layers), froze them , and added 2 FC layers at the end to adapt to new output
-**** for task B (Pascal), the pictures are cropped to specific object, so they use a sliding window to generate new pics + "background" class
-** [2014] Visualizing and understanding convolutional networks
+ - keypoints
+  - same idea as the "transferable features in DNN" paper
+  - use the pre-trained weights from task A (ImageNet) to apply to task B (Pascal)
+  - they transferred all the weights (all CNN and FCs layers), froze them , and added 2 FC layers at the end to adapt to new output
+  - for task B (Pascal), the pictures are cropped to specific object, so they use a sliding window to generate new pics + "background" class
+  - [2014] [[http://arxiv.org/pdf/1311.2901][Visualizing and understanding convolutional networks]]
    :PROPERTIES:
    :AUTHOR:   M. Zeiler and R. Fergus
    :YEAR:     2014
    :URL:      http://arxiv.org/pdf/1311.2901
    :END:
-*** keypoints
-**** Building from 2011 papers, they use deconvnet to analyze the CNN layers.
-** Decaf: A deep convolutional activation feature for generic visual recognition* (2014), J. Donahue et al.
-  [[http://arxiv.org/pdf/1310.1531][[pdf]]]
+ - keypoints
+  - Building from 2011 papers, they use deconvnet to analyze the CNN layers.
+- Decaf: [[http://arxiv.org/pdf/1310.1531][A deep convolutional activation feature for generic visual recognition* (2014), J. Donahue et al.]]
 
-* Optimization / Training Techniques
-** *Batch normalization: Accelerating deep network training by reducing internal covariate shift* 
-*** (2015), S. Loffe and C. Szegedy
-*** [[http://arxiv.org/pdf/1502.03167][[pdf]]]
+** Optimization / Training Techniques
+- [[http://arxiv.org/pdf/1502.03167][*Batch normalization: Accelerating deep network training by reducing internal covariate shift* (2015), S. Loffe and C. Szegedy]]
 ** *Delving deep into rectifiers: Surpassing human-level performance on imagenet classification* (2015), K. He et al.
   [[http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/He_Delving_Deep_into_ICCV_2015_paper.pdf][[pdf]]]
 ** *Dropout: A simple way to prevent neural networks from overfitting* (2014), N. Srivastava et al.
