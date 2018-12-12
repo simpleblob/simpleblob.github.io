@@ -6,6 +6,8 @@
 ** Background
 Based on [[https://github.com/terryum/awesome-deep-learning-papers][Awesome Deep Learning Papers]] plus my own addition of literature summary 
 
+
+
 ** Famous Machine Learning Conferences
 - [[https://nips.cc/][NIPS]] - general machine learning (US)
 - [[https://icml.cc/][ICML]] - general machine learning (international)
@@ -24,27 +26,28 @@ list: https://competitions.codalab.org/
  :TOPIC: Image classification, detection, segmentation
  :URL: http://image-net.org/about-stats
 ** Understanding / Generalization / Transfer
-- [2015] Distilling the knowledge in a neural network
+- [2015] [[http://arxiv.org/pdf/1503.02531][Distilling the knowledge in a neural network]]
    :PROPERTIES:
    :AUTHOR:   G. Hinton et al.
    :YEAR:     2015
    :URL:      http://arxiv.org/pdf/1503.02531
    :END:
-*** keypoints
-**** train the complex model first (model-A) 
-**** then train a simpler one using loss function that combines (same dataset) and (model-A prediction)
-** [2015] Deep neural networks are easily fooled: High confidence predictions for unrecognizable images 
+ - keypoints
+  - train the complex model first (model-A) 
+  - then train a simpler one using loss function that combines (same dataset) and (model-A prediction)
+  - divide by certain constant (lambda) to change how sensitive the difference for each classes is
+- [2015] [[http://arxiv.org/pdf/1412.1897][Deep neural networks are easily fooled: High confidence predictions for unrecognizable images]] 
    :PROPERTIES:
    :AUTHOR:   A. Nguyen et al.
    :YEAR:     2015
    :URL:      http://arxiv.org/pdf/1412.1897
    :END:
-*** keypoints
-**** use the CNN model's prediction probabilities as input
-**** use an evolution algorithm to evolve a random image to fool the model
-**** some images are similar to the "real" thing, some looks just like static TV noise
-**** using the "static" images to retrain, still difficult to patch up the weakness
-**** is this similar to adversarial network?
+ - keypoints
+  - use the CNN model's prediction probabilities as input
+  - use an evolution algorithm to evolve a random image to fool the model
+  - some images are similar to the "real" thing, some looks just like static TV noise
+  - using the "static" images to retrain, still difficult to patch up the weakness
+  - is this similar to adversarial network?
 ** [2014] How transferable are features in deep neural networks?
    :PROPERTIES:
    :AUTHOR:   J. Yosinski et al.
