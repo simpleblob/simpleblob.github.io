@@ -153,11 +153,17 @@ list: https://competitions.codalab.org/
   - Nadam - Nesterov + Adam 
 ** Unsupervised / Generative Models
 - [2013] [[http://arxiv.org/pdf/1312.6114][Auto-encoding variational Bayes, D. Kingma and M. Welling]]
-- *Building high-level features using large scale unsupervised
-   learning* (2013), Q. Le et al.
-   [[http://arxiv.org/pdf/1112.6209][[pdf]]]
-- *Generative adversarial nets* (2014), I. Goodfellow et al.
-  [[http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf][[pdf]]]
+- [2013] [[http://arxiv.org/pdf/1112.6209][Building high-level features using large scale unsupervised learning, Q. Le et al.]]
+- [2014] [[http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf][Generative adversarial nets, I. Goodfellow et al.]]
+ - Objective is to get distribution of generated sample (P_g) to be as close to distribution of real data (P_y) as much as possible
+ - using a minimax game of fight between discriminator (D) and generator (G)
+ - the learning process is like this: uniform z --> G(z) --> D(G(z))
+ - we switch between D(x) and D(G(z)) to learn D
+ - the loss is like this: C(D,G) = minimize log(D(x)) + log(1 - D(G(z)))
+  - this is equivalent to C(D,G) = -log(4) + 2*JS(P_x || P_g)
+   - JS is Jensen-Shannon Divergence
+  - a little trick for G to get sizable gradients, the loss used is instead: maximize D(G(z))
+ - note that the theory calls for optimizing P_g but in practive we approximate with function G. the better or more powerful G, the closer to P_g
 - *Unsupervised representation learning with deep convolutional
   generative adversarial networks* (2015), A. Radford et al.
   [[https://arxiv.org/pdf/1511.06434v2][[pdf]]]
