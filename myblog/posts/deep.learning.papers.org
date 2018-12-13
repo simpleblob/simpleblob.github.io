@@ -194,31 +194,28 @@ list: https://competitions.codalab.org/
 - [2016] [[http://arxiv.org/pdf/1512.03385][Deep residual learning for image recognition, K. He et al.]]
 
 ** Image: Object Detection
-** Overview paper: [2018-09] recent advances in object detection in the age of deep CNNs
-*** https://arxiv.org/pdf/1809.03193.pdf
-** YOLO family
-*** YOLOv1
-**** simple network design, one-shot detector
-**** result (voc 07-12) - mAP(0.5) 63.4 with 45 FPS at 554x554 on Titan X
-*** YOLOv2
-**** add batch normalization, able to train deeper network
-**** double input resolution 224x224 --> 448x448 (also in Imagenet pretraining)
-**** add anchor box priors, will custom clustering to find best priors
-**** result (voc 07-12) - mAP(0.5) 78.6 with 40 FPS at 554x554 on Titan X
-*** YOLOv3
-**** predict boxes at 3 different scales (similar to SSD)
-**** use skip connection (upsampled then concat layers)
-**** much deeper feature extractors (Darknet-53)
-**** result (COCO) - mAP(0.5) 57.9 with 20 FPS at 608x608 on Titan X
-** R-CNN family
-*** source: http://cs231n.stanford.edu/slides/2018/cs231n_2018_ds06.pdf
-*** History
-**** R-CNN: Selective search → Cropped Image → CNN  
-**** Fast R-CNN: Selective search → Crop feature map of CNN
-**** Faster R-CNN: CNN → Region-Proposal Network → Crop feature map of CN** 
-*** Best accuracy but slow
-* Image: Segmentation
-** [2015] Fully convolutional networks for semantic segmentation 
+- Overview paper: [2018-09] [[https://arxiv.org/pdf/1809.03193.pdf][recent advances in object detection in the age of deep CNNs]]
+ - YOLO family
+  - YOLOv1
+   - simple network design, one-shot detector
+   - result (voc 07-12) - mAP(0.5) 63.4 with 45 FPS at 554x554 on Titan X
+  - YOLOv2
+   - add batch normalization, able to train deeper network
+   - double input resolution 224x224 --> 448x448 (also in Imagenet pretraining)
+   - add anchor box priors, will custom clustering to find best priors
+   - result (voc 07-12) - mAP(0.5) 78.6 with 40 FPS at 554x554 on Titan X
+  - YOLOv3
+   - predict boxes at 3 different scales (similar to SSD)
+   - use skip connection (upsampled then concat layers)
+   - much deeper feature extractors (Darknet-53)
+   - result (COCO) - mAP(0.5) 57.9 with 20 FPS at 608x608 on Titan X
+ - [[http://cs231n.stanford.edu/slides/2018/cs231n_2018_ds06.pdf][R-CNN family]]
+  - R-CNN: Selective search → Cropped Image → CNN  
+  - Fast R-CNN: Selective search → Crop feature map of CNN
+  - Faster R-CNN: CNN → Region-Proposal Network → Crop feature map of CN** 
+  - Best accuracy but slow
+** Image: Segmentation
+- [2015] Fully convolutional networks for semantic segmentation 
    :PROPERTIES:
    :AUTHOR:   J. Long et al.
    :YEAR:     2015
