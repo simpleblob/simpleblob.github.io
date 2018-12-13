@@ -39,6 +39,14 @@ list: https://competitions.codalab.org/
  - recently DL methods focus on the 3rd approach using autoencoders and GANs
 - [[https://github.com/hoya012/awesome-anomaly-detection][Awesome list of anomaly detection]]
 - [2017] [[https://arxiv.org/abs/1703.05921][Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery (AnoGAN), Schlegl.]] / [[https://github.com/tkwoo/anogan-keras][code]]
+ - train normal GAN setup to get D and G (in this case they use DCGAN)
+ - now get new (potential anomaly) image called `x`
+ - back-optimize the input `z` of G, using `x`
+ - we then use 2 kind of losses to measure anomaly score
+  - residual loss RL(x) = sum(abs(x - G(z)))
+  - feature discrimination loss DL(X) = sum(abs(D_f(x) - D_f(G(z)))
+    - where D_f is a function to get mid-level features from D
+  - total_loss A(x) = lambda * DL(x) + (1 - lambda) * RL(x) where they found lamda = 0.1 works best
 - [2018] [[https://arxiv.org/abs/1802.06222][Efficient GAN-Based Anomaly Detection, Zenati]] / [[https://openreview.net/forum?id=BkXADmJDM][open-review]] / [[https://github.com/houssamzenati/Efficient-GAN-Anomaly-Detection][code]]
 - [2017] [[https://arxiv.org/abs/1706.02690][Enhancing The Reliability of Out-of-distribution Image Detection in Neural Networks, Liang]] / [[https://openreview.net/forum?id=H1VGkIxRZ][open-review]]
 - [2018] [[https://arxiv.org/abs/1810.01392][Generative Ensembles for Robust Anomaly Detection]]
