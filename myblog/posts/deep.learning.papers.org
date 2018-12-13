@@ -164,60 +164,27 @@ list: https://competitions.codalab.org/
    - JS is Jensen-Shannon Divergence
   - a little trick for G to get sizable gradients, the loss used is instead: maximize D(G(z))
  - note that the theory calls for optimizing P_g but in practive we approximate with function G. the better or more powerful G, the closer to P_g
-- *Unsupervised representation learning with deep convolutional
-  generative adversarial networks* (2015), A. Radford et al.
-  [[https://arxiv.org/pdf/1511.06434v2][[pdf]]]
-- *DRAW: A recurrent neural network for image generation* (2015), K.
-  Gregor et al. [[http://arxiv.org/pdf/1502.04623][[pdf]]]
+- [2015] [[https://arxiv.org/pdf/1511.06434v2][Unsupervised representation learning with deep convolutional generative adversarial networks, A. Radford et al.]]
+- [2015] [[http://arxiv.org/pdf/1502.04623][DRAW: A recurrent neural network for image generation, K.Gregor et al.]]
 - [2016] [[http://arxiv.org/pdf/1601.06759v2.pdf][Pixel recurrent neural networks (PixelRNN), A. Oord et al.]]
 - [2016] [[http://papers.nips.cc/paper/6125-improved-techniques-for-training-gans.pdf][Improved techniques for training GANs, T. Salimans et al.]]
 
-#+BEGIN_HTML
-  <!---[Key researchers] [Yoshua Bengio](https://scholar.google.ca/citations?user=kukA0LcAAAAJ), [Ian Goodfellow](https://scholar.google.ca/citations?user=iYN86KEAAAAJ), [Alex Graves](https://scholar.google.ca/citations?user=DaFHynwAAAAJ)-->
-#+END_HTML
+** CNN Feature Extractors
+- [2016] [[http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf][Rethinking the inception architecture for computer vision,C. Szegedy et al.]]
+- [2016] [[http://arxiv.org/pdf/1602.07261][Inception-v4, inception-resnet and the impact of residual connections on learning, C. Szegedy et al.]]
+- [2016] [[https://arxiv.org/pdf/1603.05027v2.pdf][Identity Mappings in Deep Residual Networks, K. He et al.]]
+- [2016] [[http://arxiv.org/pdf/1512.03385][Deep residual learning for image recognition, K. He et al.]]
+- [2015] [[http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf][Spatial transformer network, M. Jaderberg et al.]]
+- [2015] [[http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Szegedy_Going_Deeper_With_2015_CVPR_paper.pdf][Going deeper with convolutions, C. Szegedy et al.]]
+- [2014] [[http://arxiv.org/pdf/1409.1556][Very deep convolutional networks for large-scale image recognition, K. Simonyan and A. Zisserman]]
+- [2014] [[http://arxiv.org/pdf/1406.4729][Spatial pyramid pooling in deep convolutional networks for visual recognition, K. He et al.]]
+- [2014] [[http://arxiv.org/pdf/1405.3531][Return of the devil in the details: delving deep into convolutional nets, K. Chatfield et al.]]
+- [2013] [[http://arxiv.org/pdf/1312.6229][OverFeat: Integrated recognition, localization and detection using convolutional networks, P. Sermanet et al.]]
+- [2013] [[http://arxiv.org/pdf/1302.4389v4][Maxout networks, I. Goodfellow et al.]]
+- [2013] [[http://arxiv.org/pdf/1312.4400][Network in network, M. Lin et al.]]
+- [2012] [[http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf][(AlexNet) ImageNet classification with deep convolutional neural networks, A. Krizhevsky et al.]]
 
-* CNN Feature Extractors
-** *Rethinking the inception architecture for computer vision* (2016),
-  C. Szegedy et al.
-  [[http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf][[pdf]]]
-** *Inception-v4, inception-resnet and the impact of residual
-  connections on learning* (2016), C. Szegedy et al.
-  [[http://arxiv.org/pdf/1602.07261][[pdf]]]
-** *Identity Mappings in Deep Residual Networks* (2016), K. He et al.
-  [[https://arxiv.org/pdf/1603.05027v2.pdf][[pdf]]]
-** *Deep residual learning for image recognition* (2016), K. He et al.
-  [[http://arxiv.org/pdf/1512.03385][[pdf]]]
-** *Spatial transformer network* (2015), M. Jaderberg et al.,
-  [[http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf][[pdf]]]
-** *Going deeper with convolutions* (2015), C. Szegedy et al.
-  [[http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Szegedy_Going_Deeper_With_2015_CVPR_paper.pdf][[pdf]]]
-** *Very deep convolutional networks for large-scale image recognition*
-  (2014), K. Simonyan and A. Zisserman
-  [[http://arxiv.org/pdf/1409.1556][[pdf]]]
-** *Spatial pyramid pooling in deep convolutional networks for visual
-  recognition* (2014), K. He et al.
-  [[http://arxiv.org/pdf/1406.4729][[pdf]]]
-** *Return of the devil in the details: delving deep into convolutional
-  nets* (2014), K. Chatfield et al.
-  [[http://arxiv.org/pdf/1405.3531][[pdf]]]
-** *OverFeat: Integrated recognition, localization and detection using
-  convolutional networks* (2013), P. Sermanet et al.
-  [[http://arxiv.org/pdf/1312.6229][[pdf]]]
-** *Maxout networks* (2013), I. Goodfellow et al.
-  [[http://arxiv.org/pdf/1302.4389v4][[pdf]]]
-** *Network in network* (2013), M. Lin et al.
-  [[http://arxiv.org/pdf/1312.4400][[pdf]]]
-** *ImageNet classification with deep convolutional neural networks*
-   (2012), A. Krizhevsky et al.
-   [[http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf][[pdf]]]
-
-#+BEGIN_HTML
-  <!---[Key researchers]  [Christian Szegedy](https://scholar.google.ca/citations?hl=en&user=3QeF7mAAAAAJ), 
-[Kaming He](https://scholar.google.ca/citations?hl=en&user=DhtAFkwAAAAJ), 
-[Shaoqing Ren](https://scholar.google.ca/citations?hl=en&user=AUhj438AAAAJ), [Jian Sun](https://scholar.google.ca/citations?hl=en&user=ALVSZAYAAAAJ), 
-[Geoffrey Hinton](https://scholar.google.ca/citations?user=JicYPdAAAAAJ), [Yoshua Bengio](https://scholar.google.ca/citations?user=kukA0LcAAAAJ), [Yann LeCun](https://scholar.google.ca/citations?hl=en&user=WLN3QrAAAAAJ)-->
-#+END_HTML
-* Image: Object Detection
+** Image: Object Detection
 ** Overview paper: [2018-09] recent advances in object detection in the age of deep CNNs
 *** https://arxiv.org/pdf/1809.03193.pdf
 ** YOLO family
