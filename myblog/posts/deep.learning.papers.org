@@ -387,63 +387,65 @@ list: https://competitions.codalab.org/
     - Gamma = discount factor
     - This assumes a learning rate of 1. If we want a different learning rate, we can do:
      - Q_new = Q_old + learning_rate * (Q_update - Q_old)
-** [2013] Playing atari with deep reinforcement learning  
+- [2013] Playing atari with deep reinforcement learning  
    :PROPERTIES:
    :AUTHOR:   V. Mnih et al.
    :YEAR:     2013
    :URL:      http://arxiv.org/pdf/1312.5602.pdf
    :END:
-*** keypoints
-**** aasdf
-** [2017] A Brief Survey of Deep Reinforcement Learning
+ - keypoints
+  - aasdf
+- [2017] A Brief Survey of Deep Reinforcement Learning
    :PROPERTIES:
    :AUTHOR:   Kai Arulkumaran
    :YEAR:     2016
    :URL:      https://arxiv.org/pdf/1708.05866
    :END:
-*** keypoints
-**** In this survey, we begin withan introduction to the general field of reinforcement learning, then progress to the main streams of value-based and policy-based methods. Our survey will cover central algorithms indeep  reinforcement  learning,  including  the  deep Q-network,trust region policy optimisation, and asynchronous advantage actor-critic.
-**** General RL concepts
-***** Reward-Driver Behavior
-****** the essense of RL is interaction. the interaction loop is simple.
-******* 1. given current state --> choose action
-******* 2. execute action
-******* 3. arrives at new state (received new state data and its rewards)
-******* 4. go to 1. until terminal state
-****** Per sequence above, we want to derive "optimal policy" so that the agents can asymtotically get "optimal" rewards --> which means a highest expected value of aggregated future rewards with a certain discount factor.
-****** Formally, RL can be described as a Markov decision process (MDP). For (only) partially-observable states like in the real world, there is a generalization of MDP called POMDP.
-****** Challenges in RL: long sequences until reward (credit assignment problem) and temporal sequence correlation
-***** Reinforcement Learning Algorithms
-****** Concept I: estimating Value function (total expected Rewards)
-******* Dynamic Programming: 
-******** define: V = total expected Rewards (R) , Q|s,a is conditional V given state s and action a
-******** define: Y = R(t) + disc * Q|s(t+1),a(t+1)
-******** define: Temporal difference (TD) error = Y - Q|s,a 
-******** to get Q|s,a , we use Q-learning method and try to minimize the TD error
-****** Concept II: sampling -- random walk till the end to get all Rs
-******* so instead of going breadth-search like [I], we do depth-first
-******* we can use Monte Carlo (MC) to get multiple returns and average them.
-******* it is easier to learn that one actions lead to much better consequences than the other (a fork in the road)
-******* define: relative advantage A = V - Q
-*******  we use an idea of "advantage update" in many recent algorithms
-****** Concept III: policy search
-******* instead of estimating value function, we try to contruct policy directly. (so we can sample actions from it)
-******* try several policies to get the optimal one, using either gradient-based or gradient-free optimization.
-******* Policy Gradients
-******** get the approximate V diff from different policies
-******** interate policy parameters to know the diff on each one
-******** change the params to optimize policy
-******** there are several ways to estimate the diff -- Finite Diference, Likelihood Ratio etc.
-******* Actor-Critic Methods
-******** Use Actor (policy driven) to choose actions and learn feedback from Critic (value function).
-******** Alphago uses this
-****** Summary
-******* Shallow sequence, no branching --> one-step TD learning
-******* Shallow sequence, many branching --> dynamic programming
-******* Deep sequences, no branching --> many-steps (MC) TD learning
-******* Deep sequence, many branching --> exhaustive search
-* GANs
-* Style Transfers
+ - keypoints
+  - In this survey, we begin withan introduction to the general field of reinforcement learning, then progress to the main streams of value-based and policy-based methods. Our survey will cover central algorithms indeep  reinforcement  learning,  including  the  deep Q-network,trust region policy optimisation, and asynchronous advantage actor-critic.
+  - General RL concepts
+   - Reward-Driver Behavior
+    - the essense of RL is interaction. the interaction loop is simple.
+     1. given current state --> choose action
+     2. execute action
+     3. arrives at new state (received new state data and its rewards)
+     4. go to 1. until terminal state
+    - Per sequence above, we want to derive "optimal policy" so that the agents can asymtotically get "optimal" rewards --> which means a highest expected value of aggregated future rewards with a certain discount factor.
+    - Formally, RL can be described as a Markov decision process (MDP). For (only) partially-observable states like in the real world, there is a generalization of MDP called POMDP.
+    - Challenges in RL: long sequences until reward (credit assignment problem) and temporal sequence correlation
+   - Reinforcement Learning Algorithms
+    - Concept I: estimating Value function (total expected Rewards)
+     - Dynamic Programming: 
+      - define: V = total expected Rewards (R) , Q|s,a is conditional V given state s and action a
+      - define: Y = R(t) + disc * Q|s(t+1),a(t+1)
+      - define: Temporal difference (TD) error = Y - Q|s,a 
+      - to get Q|s,a , we use Q-learning method and try to minimize the TD error
+     - Concept II: sampling -- random walk till the end to get all Rs
+      - so instead of going breadth-search like [I], we do depth-first
+      - we can use Monte Carlo (MC) to get multiple returns and average them.
+      - it is easier to learn that one actions lead to much better consequences than the other (a fork in the road)
+      - define: relative advantage A = V - Q
+      -  we use an idea of "advantage update" in many recent algorithms
+     - Concept III: policy search
+      - instead of estimating value function, we try to contruct policy directly. (so we can sample actions from it)
+      - try several policies to get the optimal one, using either gradient-based or gradient-free optimization.
+      - Policy Gradients
+       - get the approximate V diff from different policies
+       - interate policy parameters to know the diff on each one
+       - change the params to optimize policy
+       - there are several ways to estimate the diff -- Finite Diference, Likelihood Ratio etc.
+      - Actor-Critic Methods
+       - Use Actor (policy driven) to choose actions and learn feedback from Critic (value function).
+       - Alphago uses this
+     - Summary
+      - Shallow sequence, no branching --> one-step TD learning
+      - Shallow sequence, many branching --> dynamic programming
+      - Deep sequences, no branching --> many-steps (MC) TD learning
+      - Deep sequence, many branching --> exhaustive search
+** GANs
+to be moved here?
+
+** Style Transfers
 Newly published papers (< 6 months) which are worth reading
 ** Deep Photo Style Transfer (2017), F. Luan et al.
 [[http://arxiv.org/pdf/1703.07511v1.pdf][[pdf]]]
@@ -790,112 +792,104 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
 ** Snippets
 - asdf
 
-* Classic Papers
-/Classic papers published before 2012/ 
-** An analysis of single-layer networks in unsupervised feature learning (2011), A. Coates et al.
+** Classic Paperspublished before 2012
+- An analysis of single-layer networks in unsupervised feature learning (2011), A. Coates et al.
 [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_CoatesNL11.pdf][[pdf]]]
-** Deep sparse rectifier neural networks (2011), X. Glorot et al.
+- Deep sparse rectifier neural networks (2011), X. Glorot et al.
 [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_GlorotBB11.pdf][[pdf]]]
-** Natural language processing (almost) from scratch (2011), R. Collobert
+- Natural language processing (almost) from scratch (2011), R. Collobert
 et al. [[http://arxiv.org/pdf/1103.0398][[pdf]]]
-** Recurrent neural network based language model (2010), T. Mikolov et al.
+- Recurrent neural network based language model (2010), T. Mikolov et al.
 [[http://www.fit.vutbr.cz/research/groups/speech/servite/2010/rnnlm_mikolov.pdf][[pdf]]]
-** Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion (2010), P. Vincent et al.
+- Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion (2010), P. Vincent et al.
 [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.297.3484&rep=rep1&type=pdf][[pdf]]]
-** Learning mid-level features for recognition (2010), Y. Boureau
+- Learning mid-level features for recognition (2010), Y. Boureau
 [[http://ece.duke.edu/~lcarin/boureau-cvpr-10.pdf][[pdf]]]
-** A practical guide to training restricted boltzmann machines (2010), G. Hinton
+- A practical guide to training restricted boltzmann machines (2010), G. Hinton
 [[http://www.csri.utoronto.ca/~hinton/absps/guideTR.pdf][[pdf]]]
-** Understanding the difficulty of training deep feedforward neural networks (2010), X. Glorot and Y. Bengio
+- Understanding the difficulty of training deep feedforward neural networks (2010), X. Glorot and Y. Bengio
 [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_GlorotB10.pdf][[pdf]]]
-** Why does unsupervised pre-training help deep learning (2010), D. Erhan et al.
+- Why does unsupervised pre-training help deep learning (2010), D. Erhan et al.
 [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_ErhanCBV10.pdf][[pdf]]]
-** Learning deep architectures for AI (2009), Y. Bengio.
+- Learning deep architectures for AI (2009), Y. Bengio.
 [[http://sanghv.com/download/soft/machine%20learning,%20artificial%20intelligence,%20mathematics%20ebooks/ML/learning%20deep%20architectures%20for%20AI%20(2009).pdf][[pdf]]]
-** Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations (2009), H. Lee et al.
+- Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations (2009), H. Lee et al.
 [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.149.802&rep=rep1&type=pdf][[pdf]]]
-** Greedy layer-wise training of deep networks (2007), Y. Bengio et al.
+- Greedy layer-wise training of deep networks (2007), Y. Bengio et al.
 [[http://machinelearning.wustl.edu/mlpapers/paper_files/NIPS2006_739.pdf][[pdf]]]
-** Reducing the dimensionality of data with neural networks, G. Hinton and R. Salakhutdinov.
+- Reducing the dimensionality of data with neural networks, G. Hinton and R. Salakhutdinov.
 [[http://homes.mpimf-heidelberg.mpg.de/~mhelmsta/pdf/2006%20Hinton%20Salakhudtkinov%20Science.pdf][[pdf]]]
-** A fast learning algorithm for deep belief nets (2006), G. Hinton et al.
+- A fast learning algorithm for deep belief nets (2006), G. Hinton et al.
 [[http://nuyoo.utm.mx/~jjf/rna/A8%20A%20fast%20learning%20algorithm%20for%20deep%20belief%20nets.pdf][[pdf]]]
-** Gradient-based learning applied to document recognition (1998), Y. LeCun et al.
+- Gradient-based learning applied to document recognition (1998), Y. LeCun et al.
 [[http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf][[pdf]]]
-** Long short-term memory (1997), S. Hochreiter and J. Schmidhuber.
+- Long short-term memory (1997), S. Hochreiter and J. Schmidhuber.
 [[http://www.mitpressjournals.org/doi/pdfplus/10.1162/neco.1997.9.8.1735][[pdf]]]
 
-* HW / SW / Dataset
-** OpenAI gym (2016), G. Brockman et al.
+** HW / SW / Dataset
+- OpenAI gym (2016), G. Brockman et al.
   [[https://arxiv.org/pdf/1606.01540][[pdf]]]
-** TensorFlow: Large-scale machine learning on heterogeneous distributed systems (2016), M. Abadi et al.
+- TensorFlow: Large-scale machine learning on heterogeneous distributed systems (2016), M. Abadi et al.
   [[http://arxiv.org/pdf/1603.04467][[pdf]]]
-** Theano: A Python framework for fast computation of mathematical expressions, R. Al-Rfou et al.
-** Torch7: A matlab-like environment for machine learning, R. Collobert et al.
+- Theano: A Python framework for fast computation of mathematical expressions, R. Al-Rfou et al.
+- Torch7: A matlab-like environment for machine learning, R. Collobert et al.
   [[https://ronan.collobert.com/pub/matos/2011_torch7_nipsw.pdf][[pdf]]]
-** MatConvNet: Convolutional neural networks for matlab (2015), A.
+- MatConvNet: Convolutional neural networks for matlab (2015), A.
   Vedaldi and K. Lenc [[http://arxiv.org/pdf/1412.4564][[pdf]]]
-** Imagenet large scale visual recognition challenge (2015), O.
+- Imagenet large scale visual recognition challenge (2015), O.
   Russakovsky et al. [[http://arxiv.org/pdf/1409.0575][[pdf]]]
-** Caffe: Convolutional architecture for fast feature embedding (2014),
+- Caffe: Convolutional architecture for fast feature embedding (2014),
   Y. Jia et al. [[http://arxiv.org/pdf/1408.5093][[pdf]]]
 
-* Book / Survey / Review
-** On the Origin of Deep Learning (2017), H. Wang and Bhiksha Raj.
+** Book / Survey / Review
+- On the Origin of Deep Learning (2017), H. Wang and Bhiksha Raj.
   [[https://arxiv.org/pdf/1702.07800][[pdf]]]
-** Deep Reinforcement Learning: An Overview (2017), Y. Li,
+- Deep Reinforcement Learning: An Overview (2017), Y. Li,
   [[http://arxiv.org/pdf/1701.07274v2.pdf][[pdf]]]
-** Neural Machine Translation and Sequence-to-sequence Models(2017): A
+- Neural Machine Translation and Sequence-to-sequence Models(2017): A
   Tutorial, G. Neubig. [[http://arxiv.org/pdf/1703.01619v1.pdf][[pdf]]]
-** Neural Network and Deep Learning (Book, Jan 2017), Michael Nielsen.
+- Neural Network and Deep Learning (Book, Jan 2017), Michael Nielsen.
   [[http://neuralnetworksanddeeplearning.com/index.html][[html]]]
-** Deep learning (Book, 2016), Goodfellow et al.
+- Deep learning (Book, 2016), Goodfellow et al.
   [[http://www.deeplearningbook.org/][[html]]]
-** LSTM: A search space odyssey (2016), K. Greff et al.
+- LSTM: A search space odyssey (2016), K. Greff et al.
   [[https://arxiv.org/pdf/1503.04069.pdf?utm_content=buffereddc5&utm_medium=social&utm_source=plus.google.com&utm_campaign=buffer][[pdf]]]
-** Tutorial on Variational Autoencoders (2016), C. Doersch.
+- Tutorial on Variational Autoencoders (2016), C. Doersch.
   [[https://arxiv.org/pdf/1606.05908][[pdf]]]
-** Deep learning (2015), Y. LeCun, Y. Bengio and G. Hinton
+- Deep learning (2015), Y. LeCun, Y. Bengio and G. Hinton
   [[https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf][[pdf]]]
-** Deep learning in neural networks: An overview (2015), J. Schmidhuber
+- Deep learning in neural networks: An overview (2015), J. Schmidhuber
   [[http://arxiv.org/pdf/1404.7828][[pdf]]]
-** Representation learning: A review and new perspectives (2013), Y.
+- Representation learning: A review and new perspectives (2013), Y.
   Bengio et al. [[http://arxiv.org/pdf/1206.5538][[pdf]]]
 
-* Video Lectures / Tutorials / Blogs
-** (Lectures) 
-*** CS231n, Convolutional Neural Networks for Visual Recognition, Stanford University 
+** Video Lectures / Tutorials / Blogs
+*** (Lectures) 
+- CS231n, Convolutional Neural Networks for Visual Recognition, Stanford University 
 [[http://cs231n.stanford.edu/][[web]]]
-*** CS224d, Deep Learning for Natural Language Processing, Stanford University  
+- CS224d, Deep Learning for Natural Language Processing, Stanford University  
 [[http://cs224d.stanford.edu/][[web]]]
-*** Oxford Deep NLP 2017, Deep Learning for Natural Language Processing, University of Oxford 
+- Oxford Deep NLP 2017, Deep Learning for Natural Language Processing, University of Oxford 
 [[https://github.com/oxford-cs-deepnlp-2017/lectures][[web]]]
 
-** (Tutorials) 
-*** NIPS 2016 Tutorials, Long Beach
+*** (Tutorials) 
+- NIPS 2016 Tutorials, Long Beach
 [[https://nips.cc/Conferences/2016/Schedule?type=Tutorial][[web]]]
-*** ICML 2016 Tutorials, New York City
+- ICML 2016 Tutorials, New York City
 [[http://techtalks.tv/icml/2016/tutorials/][[web]]]
-*** ICLR 2016 Videos, San Juan 
+- ICLR 2016 Videos, San Juan 
 [[http://videolectures.net/iclr2016_san_juan/][[web]]]
-*** Deep Learning Summer School 2016, Montreal
+- Deep Learning Summer School 2016, Montreal
 [[http://videolectures.net/deeplearning2016_montreal/][[web]]]
-*** Bay Area Deep Learning School 2016, Stanford
+- Bay Area Deep Learning School 2016, Stanford
 [[https://www.bayareadlschool.org/][[web]]]
 
-** (Blogs)
-*** OpenAI  
-[[https://www.openai.com/][[web]]]
-*** Distill
-[[http://distill.pub/][[web]]]
-*** Andrej Karpathy Blog
-[[http://karpathy.github.io/][[web]]]
-*** Colah's Blog
-[[http://colah.github.io/][[Web]]]
-*** WildML
-[[http://www.wildml.com/][[Web]]]
-*** FastML
-[[http://www.fastml.com/][[web]]]
-*** TheMorningPaper
-[[https://blog.acolyer.org][[web]]]
+*** (Blogs)
+- [[https://www.openai.com/][OpenAI]]  
+- [[http://distill.pub/][Distill]]
+- [[http://karpathy.github.io/][Andrej Karpathy Blog]]
+- [[http://colah.github.io/][Colah's Blog]]
+- [[http://www.wildml.com/][WildML]]
+- [[http://www.fastml.com/][FastML]]
+- [[https://blog.acolyer.org][TheMorningPaper]]
 
