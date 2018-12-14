@@ -768,23 +768,23 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
     :YEAR:    2015
     :URL:     http://colah.github.io/posts/2015-09-Visual-Information/ 
     :END:
-*** keypoints
-**** Shannon's Entropy formula - H(X)
-***** this is a way to estimate how many bits are needed to encode given information with certain distributions
-***** the estimated bits are from the best possible encodings ("optimized")
-***** H(X) = P(X)*log2(1/P(X)) where P(X) means probabilty of X
-**** some interesting permutation give conditional probabilities
-***** P(X,Y) = P(X)*P(Y|X) = P(Y)*P(X|Y)
-***** H(X,Y) = H(X) + H(Y|X) = H(Y) + H(X|Y)
-***** H(X|Y) = sum{P(X,Y)*log2(1/P(X|Y))}
-**** then we can derive "mutual" [I] and "variational" [V] information
-***** I(X,Y) = H(X,Y) - H(X) - H(Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)
-***** V(X,Y) = H(X,Y) - I(X,Y)
-**** KL-divergence [D] or [K]
-***** Dy(x) = K(X||Y) = H(X,Y) - H(X)
-***** This is a way to see how the new distribution (Y) is close to the original distribution (X)
-***** if it is the same, then KL is zero, otherwise it has value. 
-***** this is not a symmetric measure. K(X||Y) <> K(Y||X)
+ - keypoints
+  - Shannon's Entropy formula - H(X)
+   - this is a way to estimate how many bits are needed to encode given information with certain distributions
+   - the estimated bits are from the best possible encodings ("optimized")
+   - H(X) = P(X)*log2(1/P(X)) where P(X) means probabilty of X
+  - some interesting permutation give conditional probabilities
+   - P(X,Y) = P(X)*P(Y|X) = P(Y)*P(X|Y)
+   - H(X,Y) = H(X) + H(Y|X) = H(Y) + H(X|Y)
+   - H(X|Y) = sum{P(X,Y)*log2(1/P(X|Y))}
+  - then we can derive "mutual" [I] and "variational" [V] information
+   - I(X,Y) = H(X,Y) - H(X) - H(Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)
+   - V(X,Y) = H(X,Y) - I(X,Y)
+  - KL-divergence [D] or [K]
+   - Dy(x) = K(X||Y) = H(X,Y) - H(X)
+   - This is a way to see how the new distribution (Y) is close to the original distribution (X)
+   - if it is the same, then KL is zero, otherwise it has value. 
+   - this is not a symmetric measure. K(X||Y) <> K(Y||X)
 
 ** Snippets
 - asdf
@@ -824,39 +824,23 @@ et al. [[http://arxiv.org/pdf/1103.0398][[pdf]]]
 [[http://www.mitpressjournals.org/doi/pdfplus/10.1162/neco.1997.9.8.1735][[pdf]]]
 
 ** HW / SW / Dataset
-- OpenAI gym (2016), G. Brockman et al.
-  [[https://arxiv.org/pdf/1606.01540][[pdf]]]
-- TensorFlow: Large-scale machine learning on heterogeneous distributed systems (2016), M. Abadi et al.
-  [[http://arxiv.org/pdf/1603.04467][[pdf]]]
-- Theano: A Python framework for fast computation of mathematical expressions, R. Al-Rfou et al.
-- Torch7: A matlab-like environment for machine learning, R. Collobert et al.
-  [[https://ronan.collobert.com/pub/matos/2011_torch7_nipsw.pdf][[pdf]]]
-- MatConvNet: Convolutional neural networks for matlab (2015), A.
-  Vedaldi and K. Lenc [[http://arxiv.org/pdf/1412.4564][[pdf]]]
-- Imagenet large scale visual recognition challenge (2015), O.
-  Russakovsky et al. [[http://arxiv.org/pdf/1409.0575][[pdf]]]
-- Caffe: Convolutional architecture for fast feature embedding (2014),
-  Y. Jia et al. [[http://arxiv.org/pdf/1408.5093][[pdf]]]
+- [2016] [[https://arxiv.org/pdf/1606.01540][OpenAI gym, G. Brockman et al.]]
+- [2016] [[http://arxiv.org/pdf/1603.04467][TensorFlow: Large-scale machine learning on heterogeneous distributed systems, M. Abadi et al.]]
+- [2011] [[https://ronan.collobert.com/pub/matos/2011_torch7_nipsw.pdf][Torch7: A matlab-like environment for machine learning, R. Collobert et al.]]
+- [2015] [[http://arxiv.org/pdf/1412.4564][MatConvNet: Convolutional neural networks for matlab, A. Vedaldi and K. Lenc]]
+- [2015] [[http://arxiv.org/pdf/1409.0575][Imagenet large scale visual recognition challenge, O. Russakovsky et al.]]
+- [2014] [[http://arxiv.org/pdf/1408.5093][Caffe: Convolutional architecture for fast feature embedding,Y. Jia et al.]]
 
 ** Book / Survey / Review
-- On the Origin of Deep Learning (2017), H. Wang and Bhiksha Raj.
-  [[https://arxiv.org/pdf/1702.07800][[pdf]]]
-- Deep Reinforcement Learning: An Overview (2017), Y. Li,
-  [[http://arxiv.org/pdf/1701.07274v2.pdf][[pdf]]]
-- Neural Machine Translation and Sequence-to-sequence Models(2017): A
-  Tutorial, G. Neubig. [[http://arxiv.org/pdf/1703.01619v1.pdf][[pdf]]]
-- Neural Network and Deep Learning (Book, Jan 2017), Michael Nielsen.
-  [[http://neuralnetworksanddeeplearning.com/index.html][[html]]]
-- Deep learning (Book, 2016), Goodfellow et al.
-  [[http://www.deeplearningbook.org/][[html]]]
-- LSTM: A search space odyssey (2016), K. Greff et al.
-  [[https://arxiv.org/pdf/1503.04069.pdf?utm_content=buffereddc5&utm_medium=social&utm_source=plus.google.com&utm_campaign=buffer][[pdf]]]
-- Tutorial on Variational Autoencoders (2016), C. Doersch.
-  [[https://arxiv.org/pdf/1606.05908][[pdf]]]
-- Deep learning (2015), Y. LeCun, Y. Bengio and G. Hinton
-  [[https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf][[pdf]]]
-- Deep learning in neural networks: An overview (2015), J. Schmidhuber
-  [[http://arxiv.org/pdf/1404.7828][[pdf]]]
+- [2017] [[https://arxiv.org/pdf/1702.07800][On the Origin of Deep Learning, H. Wang and Bhiksha Raj.]]
+- [2017] [[http://arxiv.org/pdf/1701.07274v2.pdf][Deep Reinforcement Learning: An Overview, Y. Li,]]
+- [2017] [[http://arxiv.org/pdf/1703.01619v1.pdf][Neural Machine Translation and Sequence-to-sequence Models : A Tutorial, G. Neubig.]]
+- [2017] [[http://neuralnetworksanddeeplearning.com/index.html][Neural Network and Deep Learning (Book), Michael Nielsen.]]
+- [2016] [[http://www.deeplearningbook.org/][Deep learning (Book), Goodfellow et al.]]
+- [2016] [[https://arxiv.org/pdf/1503.04069.pdf][LSTM: A search space odyssey, K. Greff et al.]]
+- [2016] [[https://arxiv.org/pdf/1606.05908][Tutorial on Variational Autoencoders, C. Doersch.]]
+- [2015] [[https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf][Deep learning, Y. LeCun, Y. Bengio and G. Hinton]]
+- [2015] [[http://arxiv.org/pdf/1404.7828][Deep learning in neural networks: An overview, J. Schmidhuber]]
 - [2013] [[http://arxiv.org/pdf/1206.5538][Representation learning: A review and new perspectives, Y.Bengio et al.]]
 
 ** Video Lectures / Tutorials / Blogs
