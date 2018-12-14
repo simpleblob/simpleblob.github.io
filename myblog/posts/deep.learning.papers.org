@@ -446,135 +446,136 @@ list: https://competitions.codalab.org/
 to be moved here?
 
 ** Style Transfers
-Newly published papers (< 6 months) which are worth reading
-** Deep Photo Style Transfer (2017), F. Luan et al.
+- Deep Photo Style Transfer (2017), F. Luan et al.
 [[http://arxiv.org/pdf/1703.07511v1.pdf][[pdf]]]
-** Evolution Strategies as a Scalable Alternative to Reinforcement Learning (2017), T. Salimans et al. 
+
+** New papers
+- Evolution Strategies as a Scalable Alternative to Reinforcement Learning (2017), T. Salimans et al. 
 [[http://arxiv.org/pdf/1703.03864v1.pdf][[pdf]]]
-** Deformable Convolutional Networks (2017), J. Dai et al.
+- Deformable Convolutional Networks (2017), J. Dai et al.
 [[http://arxiv.org/pdf/1703.06211v2.pdf][[pdf]]]
-** Mask R-CNN (2017), K. He et al. 
+- Mask R-CNN (2017), K. He et al. 
 [[https://128.84.21.199/pdf/1703.06870][[pdf]]]
-** Learning to discover cross-domain relations with generative adversarial networks (2017), T. Kim et al. 
+- Learning to discover cross-domain relations with generative adversarial networks (2017), T. Kim et al. 
 [[http://arxiv.org/pdf/1703.05192v1.pdf][[pdf]]]
-** Deep voice: Real-time neural text-to-speech (2017), S. Arik et al.,
+- Deep voice: Real-time neural text-to-speech (2017), S. Arik et al.,
 [[http://arxiv.org/pdf/1702.07825v2.pdf][[pdf]]]
-** [2017] PixelNet: Representation of the pixels, by the pixels, and for the pixels  
+- [2017] PixelNet: Representation of the pixels, by the pixels, and for the pixels  
    :PROPERTIES:
    :AUTHOR:   A. Bansal et al.
    :YEAR:     2017
    :URL:      http://arxiv.org/pdf/1702.06506v1.pdf
    :END:
-*** keypoints
-**** This paper build on many recent ideas and introduces one big idea of its own (for segmentation)
-**** recent ideas is using "hypercolumn" map as an input the FC layer.
-***** "hypercolumn" means every feature map at every layer for a particular input pixel
-**** new idea is the "sampling only some pixels" for output instead of doing the whole image output prediction
-***** this is called "sparse prediction" vs "dense or full prediction"
-***** the premise is that as nearby pixels are highly correlated, just sampling is sufficient for learning.
-** Batch renormalization: Towards reducing minibatch dependence in batch-normalized models (2017), S. Ioffe.
+ - keypoints
+  - This paper build on many recent ideas and introduces one big idea of its own (for segmentation)
+  - recent ideas is using "hypercolumn" map as an input the FC layer.
+   - "hypercolumn" means every feature map at every layer for a particular input pixel
+  - new idea is the "sampling only some pixels" for output instead of doing the whole image output prediction
+   - this is called "sparse prediction" vs "dense or full prediction"
+   - the premise is that as nearby pixels are highly correlated, just sampling is sufficient for learning.
+- Batch renormalization: Towards reducing minibatch dependence in batch-normalized models (2017), S. Ioffe.
 [[https://arxiv.org/abs/1702.03275][[pdf]]]
-** Wasserstein GAN (2017), M. Arjovsky et al. 
+- Wasserstein GAN (2017), M. Arjovsky et al. 
 [[https://arxiv.org/pdf/1701.07875v1][[pdf]]]
-** Understanding deep learning requires rethinking generalization (2017), C. Zhang et al. 
+- Understanding deep learning requires rethinking generalization (2017), C. Zhang et al. 
 [[https://arxiv.org/pdf/1611.03530][[pdf]]]
-** Least squares generative adversarial networks (2016), X. Mao et al.
+- Least squares generative adversarial networks (2016), X. Mao et al.
 [[https://arxiv.org/abs/1611.04076v2][[pdf]]]
 
-* Credit card fraud detection
-** [2014] Literature Survey
+** Credit card fraud detection
+- [2014] Literature Survey
     :PROPERTIES:
     :AUTHOR:  Zeiler et al.
     :YEAR:     2014
     :URL:      http://www.ijmer.com/papers/Vol4_Issue9/Version-4/E0409_04-2431.pdf
     :END:
-*** keypoints
-***** algorithms
-****** HMM
-****** NN
-****** Decision Tree
-****** SVM
-****** Genetic Algorithm
-****** Meta Learning Strategy
-****** Biologicla Immune System
-* Weather Classification
-** Overall Summary as of [2018-10]
+ - keypoints
+  - algorithms
+   - HMM
+   - NN
+   - Decision Tree
+   - SVM
+   - Genetic Algorithm
+   - Meta Learning Strategy
+   - Biologicla Immune System
+** Weather Classification
+- Overall Summary as of [2018-10]
 There are no agreed upon public dataset and very few DL papers dedicated to the topic. 
 
 The common dataset used is [2014] sunny/cloudy dataset with 10k images. Other recent papers [2018] have contructed their own dataset which are not opened to public yet. However, BDD100K dataset also has weather attribute labeled, so we should be considering using that.
 
 There are 3 type of models proposed thus far.
-- [2014] traditional feature engineering then use SVM/other clustering methods.
-- [2015] pure CNN feature extraction then classify
-- [2018] CNN-RNN and/or the combination of DL and traditional features.
+1. [2014] traditional feature engineering then use SVM/other clustering methods.
+2. [2015] pure CNN feature extraction then classify
+3. [2018] CNN-RNN and/or the combination of DL and traditional features.
 
 so far the DL method did aggressively out-perform traditional ones.
 
 New alternative would be to add new sensor data (temperature/humidity) and ensemble with CNN model. For that matter, how accurate would predictions from sensor data alone be?
-** [2018] (2 Dataset) A CNN–RNN architecture for multi-label weather recognition
+
+- [2018] (2 Dataset) A CNN–RNN architecture for multi-label weather recognition
     :PROPERTIES:
     :AUTHOR:   Zhao et al.
     :YEAR:     2018
     :URL:      use sci-hub
     :END:
-*** keypoints
-**** recognize that weather classes are not exclusive to each other (for example, can be both sunny and foggy) so should classify accordingly (not using softmax or binary)
-**** add 2 new datasets (8k - 7 classes) and (10k - 5 classes) for multi-labeling comparison
-**** use CNNs as feature extractor
-**** use "channel-wise attentions" which is a set of weights to amplify/lower each channel' response.
-**** use "Convolutional" LSTM to retain spatial information (not flattening to 1-D vectors) 
-**** flatten the output "hidden state" to predict weather class
-**** then we repeat the step (in LSTM + getting new attention weights) to predict next weather class. If there are 5 classes, the LSTM will run for 5 steps. (This is weird.. because the problem is not time-based. and this runs from single image input)
-** [2018] (Dataset)(Bad) Weather Classification: A new multi-class dataset, data augmentation approach and comprehensive evaluations of CNNs
+ - keypoints
+  - recognize that weather classes are not exclusive to each other (for example, can be both sunny and foggy) so should classify accordingly (not using softmax or binary)
+  - add 2 new datasets (8k - 7 classes) and (10k - 5 classes) for multi-labeling comparison
+  - use CNNs as feature extractor
+  - use "channel-wise attentions" which is a set of weights to amplify/lower each channel' response.
+  - use "Convolutional" LSTM to retain spatial information (not flattening to 1-D vectors) 
+  - flatten the output "hidden state" to predict weather class
+  - then we repeat the step (in LSTM + getting new attention weights) to predict next weather class. If there are 5 classes, the LSTM will run for 5 steps. (This is weird.. because the problem is not time-based. and this runs from single image input)
+- [2018] (Dataset)(Bad) Weather Classification: A new multi-class dataset, data augmentation approach and comprehensive evaluations of CNNs
     :PROPERTIES:
     :AUTHOR:   Guerra et al.
     :YEAR:     2018
     :URL:      https://arxiv.org/abs/1808.00588v1
     :END:
-*** keypoints
-**** new dataset (3K) - use 3 classes (rain, fog, snow) with equal split
-**** later add sunny/cloudy from past dataset to get 5k (again, equal split)
-**** In addition to raw image, they use superpixel (algo to cluster pixels together for further processing - google it) to ovelay on the image then feed to CNN feature extractors
-**** finally, use some sort of SVMs as binary classifier for each class
-**** overall achieved around 80-90% accuracy, with Resnet50 being the best extractor overall.
-**** however, no mention of baseline (w/o superpixel) comparison. No justification of doing things, even just running their model through old sunny/cloudy dataset for comparison. bad paper.
-** [2017] (Dataset) (Bad) Transfer Learning for Rain Detection in Images
+ - keypoints
+  - new dataset (3K) - use 3 classes (rain, fog, snow) with equal split
+  - later add sunny/cloudy from past dataset to get 5k (again, equal split)
+  - In addition to raw image, they use superpixel (algo to cluster pixels together for further processing - google it) to ovelay on the image then feed to CNN feature extractors
+  - finally, use some sort of SVMs as binary classifier for each class
+  - overall achieved around 80-90% accuracy, with Resnet50 being the best extractor overall.
+  - however, no mention of baseline (w/o superpixel) comparison. No justification of doing things, even just running their model through old sunny/cloudy dataset for comparison. bad paper.
+- [2017] (Dataset) (Bad) Transfer Learning for Rain Detection in Images
     :PROPERTIES:
     :AUTHOR:   Alecci et al.
     :YEAR:     2017
     :URL:      https://repository.tudelft.nl/islandora/object/uuid%3A3bf546c0-a254-4c72-9ee4-02a0919c1624
     :END:
-*** keypoints
-**** tried Resnet-18 with various experiments on custom 400k rain-no-rain dataset
-**** just bad all around. specific optimization to specific dataset. no baseline model. not useful.
-** [2015] Weather Classification with Deep Convolutional Network
+ - keypoints
+  - tried Resnet-18 with various experiments on custom 400k rain-no-rain dataset
+  - just bad all around. specific optimization to specific dataset. no baseline model. not useful.
+- [2015] Weather Classification with Deep Convolutional Network
     :PROPERTIES:
     :AUTHOR:   Elhoseiny et al.
     :YEAR:     2015
     :URL:    http://www.academia.edu/18539252/WEATHER_CLASSIFICATION_WITH_DEEP_CONVOLUTIONAL_NEURAL_NETWORKs
     :END:
-*** keypoints
-**** use sunny/cloudy 10k dataset
-**** applies AlexNet architecture to this problem
-**** also compared the pretrained with ImageNet AlexNet + SVM vs train with weather data from scratch - conclusion is earlier base layers are quite general
-**** achieved 91% accuracy (82% normalized)
-** [2014] (Dataset) Two-class Weather Classification (with sunny/cloudy 10k dataset)
+ - keypoints
+  - use sunny/cloudy 10k dataset
+  - applies AlexNet architecture to this problem
+  - also compared the pretrained with ImageNet AlexNet + SVM vs train with weather data from scratch - conclusion is earlier base layers are quite general
+  - achieved 91% accuracy (82% normalized)
+- [2014] (Dataset) Two-class Weather Classification (with sunny/cloudy 10k dataset)
     :PROPERTIES:
     :AUTHOR:  Lu et al.
     :YEAR:     2014
     :URL:      http://www.cse.cuhk.edu.hk/leojia/projects/weatherclassify/index.htm
     :END:
-*** keypoints
-**** introduces the 10k weather dataset with 2 classes - sunny and cloudy
-**** use traditional computer vision method to classify
-***** custom feature engineering extracting 5 features -- sky, shadow, reflection, contrast, haze.
-***** concat all features into 621-D vectors then use complex voting schemes to classify based on the existing of combinations of features. Tried SVM but didn't work well.
-***** achieved 76% accuracy (53% normalized)
-* Autonomous car driving
-** overview paper
-*** [2017-02] https://www.mdpi.com/2075-1702/5/1/6
-* Face Detection
-** Dataset: WiderFace
+ - keypoints
+  - introduces the 10k weather dataset with 2 classes - sunny and cloudy
+  - use traditional computer vision method to classify
+   - custom feature engineering extracting 5 features -- sky, shadow, reflection, contrast, haze.
+   - concat all features into 621-D vectors then use complex voting schemes to classify based on the existing of combinations of features. Tried SVM but didn't work well.
+   - achieved 76% accuracy (53% normalized)
+** Autonomous driving
+- [2017-02] [[https://www.mdpi.com/2075-1702/5/1/6][overview paper]]
+** Face Detection
+- Dataset: WiderFace
 *** http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/
 *** 30K images, 400k faces.
 *** metric is PR curve, split by easy / medium / hard cases
