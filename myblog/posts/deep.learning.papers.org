@@ -575,53 +575,51 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
 ** Autonomous driving
 - [2017-02] [[https://www.mdpi.com/2075-1702/5/1/6][overview paper]]
 ** Face Detection
-- Dataset: WiderFace
-*** http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/
-*** 30K images, 400k faces.
-*** metric is PR curve, split by easy / medium / hard cases
-** [2004] Robust Real-time Object Detection (Viola-Jones) 
-*** [link to paper](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-IJCV-01.pdf)
-*** Traditional system with impressive performance
+- Dataset: [[http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/][WiderFace]]
+ - 30K images, 400k faces.
+ - metric is PR curve, split by easy / medium / hard cases
+- [2004] [[https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-IJCV-01.pdf][Robust Real-time Object Detection (Viola-Jones)]] 
+ - Traditional system with impressive performance
+ 
     Input = 384x288 grayscale image, 15 FPS on 700 Mhz Intel Pentium III
-*** Algo = Simple Features + Adaboost + Cascade
+    
+ - Algo = Simple Features + Adaboost + Cascade
     1. Features = sum of two regions and diffs with each other (for every pixel coordinate)
     2. Since there are a lot of features, use Adaboost select a set of strongest weak classifiers
         weak classifer is basically this --> H = if single_feature > threshold then 1 else 0
     3. Attentional cascade - train a simple 2-feature classifier to simply reject no-face image. 
         Then queue up all the sub-windows (overlap cropping?), evaluate and reject, 
         then use stronger classifier from #2 on the remaining sub-windows.
-** [2014] One millisecond face alignment with an ensemble of regression trees - Dlib uses this 
-*** [link to paper](https://pdfs.semanticscholar.org/d78b/6a5b0dcaa81b1faea5fb0000045a62513567.pdf)
-*** Use cascade of regressor method to detect facial landmarks (given that the image is already cropped to face area)
+- [2014] [[https://pdfs.semanticscholar.org/d78b/6a5b0dcaa81b1faea5fb0000045a62513567.pdf][One millisecond face alignment with an ensemble of regression trees - Dlib uses this ]]
+ - Use cascade of regressor method to detect facial landmarks (given that the image is already cropped to face area)
     claims 1 ms performance with unknown CPU. has error rate of 0.049 on HELEN face dataset. (2,000 training / 500 test image)
-*** Algo = Default positions + features + gradient boosting + cascade
-    * we can set up a default landmark (smiley face) in the image center or do an average of positions from a big dataset.  
-    * then we regress -- computing an update regressors for each landmark x,y --> moving them closer to the face in image.
-    * the features for regressions are diff in pixel intensities, the pixel coordinate is relative to the default face shape.  
+ - Algo = Default positions + features + gradient boosting + cascade  
+  - we can set up a default landmark (smiley face) in the image center or do an average of positions from a big dataset.  
+  - then we regress -- computing an update regressors for each landmark x,y --> moving them closer to the face in image.
+  - the features for regressions are diff in pixel intensities, the pixel coordinate is relative to the default face shape.  
+- [2017] FaceBoxes: A CPU Real-time Face Detector with High Accuracy   ( [link to paper](https://arxiv.org/abs/1708.05234) )
+ - custom (light-weight) CNN architecture. No novel idea. (the paper has a good summary of past papers however)
+  - runs at 20 FPS on a single CPU core and 125 FPS using a GPU for VGA (640x480) images.
+ - some strategy for lightweighted architecture
+  - reduce spatial size of input as quickly as possible
+  - choose suitable kernel size - in their case it's 7x7, 5x5, 3x3
+  - reduce number of output channel
+  - use multi-scale anchor boxes output, but know where to have "dense" number of predictions.
+ - postprocessing is common pipeline: lots of prediction > thresholding prob > NMS.
 
-  #### [2017] FaceBoxes: A CPU Real-time Face Detector with High Accuracy   ( [link to paper](https://arxiv.org/abs/1708.05234) )
-*** custom (light-weight) CNN architecture. No novel idea. (the paper has a good summary of past papers however)
-    * runs at 20 FPS on a single CPU core and 125 FPS using a GPU for VGA (640x480) images.
-*** some strategy for lightweighted architecture
-    * reduce spatial size of input as quickly as possible
-    * choose suitable kernel size - in their case it's 7x7, 5x5, 3x3
-    * reduce number of output channel
-    * use multi-scale anchor boxes output, but know where to have "dense" number of predictions.
-*** postprocessing is common pipeline: lots of prediction > thresholding prob > NMS.
+- [2017] Deep Face Recognition: A Survey 
+ - [link to paper](https://arxiv.org/abs/1804.06655v1) )
+ - Good review of modern face recognition systems. collections of recent techniques. It`s not face detection though.
+- [2018] SFace: An Efficient Network for Face Detection in Large Scale Variations (Megvii Inc. Face++)
+ - [link to paper](https://arxiv.org/abs/1804.06559v2)
+ - A new dataset called 4K-Face is also introduced to evaluate the performance of face detection with extreme large scale variations.  
+  - The SFace architecture shows promising results on the new 4K-Face benchmarks. 
+  - In addition, our method can run at 50 frames per second (fps) with an accuracy of 80% AP on the standard WIDER FACE dataset, which outperforms the state-of-art algorithms by almost one order of magnitude in speed while achieves comparative performance.
+- Benchmark - Labeled Faces in the Wild (LFW) dataset - [state of the art results](http://vis-www.cs.umass.edu/lfw/results.html#UnrestrictedLb)
+ - most commercial systems get > 99.0% classification accuracy, including Dlib
+ - update as of beginning of 2018
 
-** [2017] Deep Face Recognition: A Survey 
-*** [link to paper](https://arxiv.org/abs/1804.06655v1) )
-*** Good review of modern face recognition systems. collections of recent techniques. It`s not face detection though.
-** [2018] SFace: An Efficient Network for Face Detection in Large Scale Variations (Megvii Inc. Face++)
-*** [link to paper](https://arxiv.org/abs/1804.06559v2)
-*** A new dataset called 4K-Face is also introduced to evaluate the performance of face detection with extreme large scale variations.  
-**** The SFace architecture shows promising results on the new 4K-Face benchmarks. 
-**** In addition, our method can run at 50 frames per second (fps) with an accuracy of 80% AP on the standard WIDER FACE dataset, which outperforms the state-of-art algorithms by almost one order of magnitude in speed while achieves comparative performance.
-** Benchmark - Labeled Faces in the Wild (LFW) dataset - [state of the art results](http://vis-www.cs.umass.edu/lfw/results.html#UnrestrictedLb)
-*** most commercial systems get > 99.0% classification accuracy, including Dlib
-*** update as of beginning of 2018
-
-* Own discovery of Research Papers
+** Own discovery of Research Papers
 ** Mobilenets
 *** [[https://arxiv.org/pdf/1704.04861.pdf#page=1&zoom=140,-205,792]]
 *** from google
