@@ -620,43 +620,41 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
  - update as of beginning of 2018
 
 ** Own discovery of Research Papers
-** Mobilenets
-*** [[https://arxiv.org/pdf/1704.04861.pdf#page=1&zoom=140,-205,792]]
-*** from google
-** [2011] Adaptive Deconvolutional Networks for Mid and High Level Feature Learning
+- [2017] [[https://arxiv.org/pdf/1704.04861.pdf][Mobilenets]]
+- [2011] [[http://www.matthewzeiler.com/pubs/iccv2011/iccv2011.pdf][Adaptive Deconvolutional Networks for Mid and High Level Feature Learning]]
     :PROPERTIES:
     :AUTHOR:  Zeiler et al.
     :YEAR:     2011
     :URL:      http://www.matthewzeiler.com/pubs/iccv2011/iccv2011.pdf
     :END:
-*** keypoints
-***** iterations from the 2010 paper, add unpooling reconstrucitons with switches (location info for the max-pool values)
-***** they are able to re-create the input-size map for all layers
-** [2010] Deconvolutional Networks
+ - keypoints
+  - iterations from the 2010 paper, add unpooling reconstrucitons with switches (location info for the max-pool values)
+  - they are able to re-create the input-size map for all layers
+- [2010] Deconvolutional Networks
     :PROPERTIES:
     :AUTHOR:  Zeiler et al.
     :YEAR:     2010
     :URL:      http://www.matthewzeiler.com/pubs/cvpr2010/cvpr2010.pdf
     :END:
-*** keypoints
-***** Deconvolution is actually "transposed convolution"
-***** essentially, it uses feature map to compose back to the original images, like legos.
-***** The kernels are different from the feed-forward kernels, of course.
-***** the usage of "sparse coding" made this possible. see: [[http://deeplearning.net/software/theano_versions/dev/tutorial/conv_arithmetic.html#transposed-convolution-arithmetic][tranposed convolution arithmetic]]
-***** see answer from here: [[https://datascience.stackexchange.com/questions/6107/what-are-deconvolutional-layers][stackexchange]]
-***** good slide here: http://cs.nyu.edu/~fergus/drafts/utexas2.pdf
-** [2016] Learning Deep Features for Discriminative Localization (global average pooling)
+ - keypoints
+  - Deconvolution is actually "transposed convolution"
+  - essentially, it uses feature map to compose back to the original images, like legos.
+  - The kernels are different from the feed-forward kernels, of course.
+  - the usage of "sparse coding" made this possible. see: [[http://deeplearning.net/software/theano_versions/dev/tutorial/conv_arithmetic.html#transposed-convolution-arithmetic][tranposed convolution arithmetic]]
+  - [[https://datascience.stackexchange.com/questions/6107/what-are-deconvolutional-layers][see stackexchange answer from here]]
+  - [[http://cs.nyu.edu/~fergus/drafts/utexas2.pdf][good slide here] 
+- [2016] [[http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf][Learning Deep Features for Discriminative Localization (global average pooling)]]
     :PROPERTIES:
     :AUTHOR:  Bolei Zhou
     :YEAR:     2016
     :URL:      http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf
     :END:
-*** keypoints
-***** using "global average pooling" method with each featuremap on the last layer of CNN.
-***** then we can use the FC weights to combined the GAP values.
-***** this effectively "focuses" the network activations before connecting to FC layer.
-***** with this we can generate heatmap to see the activation overlays
-** [2015] SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation
+ - keypoints
+  - using "global average pooling" method with each featuremap on the last layer of CNN.
+  - then we can use the FC weights to combined the GAP values.
+  - this effectively "focuses" the network activations before connecting to FC layer.
+  - with this we can generate heatmap to see the activation overlays
+- [2015] SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation
     :PROPERTIES:
     :AUTHOR:  Vijay Badrinarayanan
     :YEAR:     2015
@@ -664,7 +662,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
     :END:
 *** keypoints
 ***** this is basically an autodecoder, except for CNN architecture. Also use final targets as the segmentation labels.
-** [2011] How Brains Are Built: Principles of Computational Neuroscience
+- [2011] How Brains Are Built: Principles of Computational Neuroscience
     :PROPERTIES:
     :AUTHOR:  Richard Granger
     :YEAR:     2011
@@ -683,8 +681,8 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
 ****** basal ganglia -- this is the area that receive sensory input, manage reward and punishments mechanism, and learn motor skills. We are close to computationally simulate this.
 ****** neocortex -- yeah, no way we are close. Interestingly, the neocortex is connected with basal ganglia through a loop. We are close to successfully creating all the sensory prosthetics, but no way close to simulating the neocortex (higher thoughts).
 ****** the most exciting area of research today is about how the neocortex encode the internal representations of concepts and objects.
-* Other papers still unassorted
-** [2017] A Joint Many-Task Model: Growing a Neural Network for Multiple NLP Tasks
+** Other papers still unassorted
+- [2017] A Joint Many-Task Model: Growing a Neural Network for Multiple NLP Tasks
     :PROPERTIES:
     :AUTHOR:  Kazuma Hashimoto, Caiming Xiong, Yoshimasa Tsuruoka, Richard Socher
     :YEAR:     2017
@@ -697,7 +695,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
 ***** We use a simple regularization term to allow for optimizing all model weights to improve one task’s loss without exhibiting catastrophic interference of the other tasks. Our single end-to-end trainable model obtains state-of-the-art results on chunking, dependency parsing, semantic relatedness and textual entailment. 
 ***** It also performs competitively on POS tagging. Our dependency parsing layer relies only on a single feed-forward pass and does not require a beam search.
 **** This is kind of like Ensembling models, but they are more "joined" at the end (softmax layer and feature layer), rather than just averaging results from softmax.
-** [2017] Hierarchical Memory Networks
+- [2017] Hierarchical Memory Networks
     :PROPERTIES:
     :AUTHOR:  Sarath Chandar, Sungjin Ahn, Hugo Larochelle, Pascal Vincent, Gerald Tesauro, Yoshua Bengio
     :YEAR:     2017
@@ -713,8 +711,8 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
 ***** The memory is organized in a hierarchical structure such that reading from it is done with less computation than soft attention over a flat memory, while also being easier to train than hard attention over a flat memory.  
 ***** Specifically, we propose to incorporate Maximum Inner Product Search (MIPS) in the training and inference procedures for our hierarchical memory network.  
 ***** We explore the use of various state-of-the art approximate MIPS techniques and report results on SimpleQuestions, a challenging large scale factoid question answering task.
-* Articles and Videos
-** [2017] The End of Human Doctors (series)
+** Articles and Videos
+- [2017] The End of Human Doctors (series)
     :PROPERTIES:
     :AUTHOR:  Luke Rayner
     :YEAR:     2017
@@ -748,7 +746,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
 **** They were better than individual dermatologists at identifying lesions that needed biopsy, with more true positives and less false positives.
 **** While there are possible regulatory issues, the team appears to have a working smartphone application already. I would expect something like this to be available to consumers in the next year or two.
 **** The impact on dermatology is unclear. We could actually see shortages of dermatologists as demand for biopsy services increases, at least in the short term.
-** [2017] (Video) Geometric Deep Learning | || Radcliffe Institute
+- [2017] (Video) Geometric Deep Learning - Radcliffe Institute
     :PROPERTIES:
     :AUTHOR:  Michael Bronstein
     :YEAR:     2017
@@ -764,7 +762,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
 ***** Thee kind of techniques have been use to recognize diferent faces, including identical twins.
 ***** Geometric deep learning: applying CNNs on 3D surface via heat diffusion equation.
 ****** Use Case: Recognition, social network analysis, recommender systems
-** [2015] Visual explanation of Information Theory
+- [2015] Visual explanation of Information Theory
     :PROPERTIES:
     :AUTHOR:  Colah
     :YEAR:    2015
@@ -859,29 +857,20 @@ et al. [[http://arxiv.org/pdf/1103.0398][[pdf]]]
   [[https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf][[pdf]]]
 - Deep learning in neural networks: An overview (2015), J. Schmidhuber
   [[http://arxiv.org/pdf/1404.7828][[pdf]]]
-- Representation learning: A review and new perspectives (2013), Y.
-  Bengio et al. [[http://arxiv.org/pdf/1206.5538][[pdf]]]
+- [2013] [[http://arxiv.org/pdf/1206.5538][Representation learning: A review and new perspectives, Y.Bengio et al.]]
 
 ** Video Lectures / Tutorials / Blogs
 *** (Lectures) 
-- CS231n, Convolutional Neural Networks for Visual Recognition, Stanford University 
-[[http://cs231n.stanford.edu/][[web]]]
-- CS224d, Deep Learning for Natural Language Processing, Stanford University  
-[[http://cs224d.stanford.edu/][[web]]]
-- Oxford Deep NLP 2017, Deep Learning for Natural Language Processing, University of Oxford 
-[[https://github.com/oxford-cs-deepnlp-2017/lectures][[web]]]
+- [[http://cs231n.stanford.edu/][CS231n, Convolutional Neural Networks for Visual Recognition, Stanford University ]]
+- [[http://cs224d.stanford.edu/][CS224d, Deep Learning for Natural Language Processing, Stanford University  ]]
+- [[https://github.com/oxford-cs-deepnlp-2017/lectures][Oxford Deep NLP 2017, Deep Learning for Natural Language Processing]]
 
 *** (Tutorials) 
-- NIPS 2016 Tutorials, Long Beach
-[[https://nips.cc/Conferences/2016/Schedule?type=Tutorial][[web]]]
-- ICML 2016 Tutorials, New York City
-[[http://techtalks.tv/icml/2016/tutorials/][[web]]]
-- ICLR 2016 Videos, San Juan 
-[[http://videolectures.net/iclr2016_san_juan/][[web]]]
-- Deep Learning Summer School 2016, Montreal
-[[http://videolectures.net/deeplearning2016_montreal/][[web]]]
-- Bay Area Deep Learning School 2016, Stanford
-[[https://www.bayareadlschool.org/][[web]]]
+- [[https://nips.cc/Conferences/2016/Schedule?type=Tutorial][NIPS 2016 Tutorials, Long Beach]]
+- [[http://techtalks.tv/icml/2016/tutorials/][ICML 2016 Tutorials, New York City]]
+- [[http://videolectures.net/iclr2016_san_juan/][ICLR 2016 Videos, San Juan ]]
+- [[http://videolectures.net/deeplearning2016_montreal/][Deep Learning Summer School 2016, Montreal]]
+- [[https://www.bayareadlschool.org/][Bay Area Deep Learning School 2016, Stanford]]
 
 *** (Blogs)
 - [[https://www.openai.com/][OpenAI]]  
