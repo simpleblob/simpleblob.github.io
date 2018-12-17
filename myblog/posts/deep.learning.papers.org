@@ -264,36 +264,36 @@ list: https://competitions.codalab.org/
   [[https://hal-enpc.archives-ouvertes.fr/docs/00/74/20/77/PDF/farabet-pami-13.pdf][[pdf]]]
 
 ** Image / Video / Etc
-- *Image Super-Resolution Using Deep Convolutional Networks* (2016), C.
+- Image Super-Resolution Using Deep Convolutional Networks* (2016), C.
   Dong et al. [[https://arxiv.org/pdf/1501.00092v3.pdf][[pdf]]]
-- *A neural algorithm of artistic style* (2015), L. Gatys et al.
+- A neural algorithm of artistic style* (2015), L. Gatys et al.
   [[https://arxiv.org/pdf/1508.06576][[pdf]]]
-- *Deep visual-semantic alignments for generating image descriptions*
+- Deep visual-semantic alignments for generating image descriptions*
   (2015), A. Karpathy and L. Fei-Fei
   [[http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Karpathy_Deep_Visual-Semantic_Alignments_2015_CVPR_paper.pdf][[pdf]]]
-- *Show, attend and tell: Neural image caption generation with visual
+- Show, attend and tell: Neural image caption generation with visual
   attention* (2015), K. Xu et al.
   [[http://arxiv.org/pdf/1502.03044][[pdf]]]
-- *Show and tell: A neural image caption generator (2015)*, O. Vinyals et al.
+- Show and tell: A neural image caption generator (2015)*, O. Vinyals et al.
   [[http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vinyals_Show_and_Tell_2015_CVPR_paper.pdf][[pdf]]]
-- *Long-term recurrent convolutional networks for visual recognition
+- Long-term recurrent convolutional networks for visual recognition
   and description* (2015), J. Donahue et al.
   [[http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Donahue_Long-Term_Recurrent_Convolutional_2015_CVPR_paper.pdf][[pdf]]]
-- *VQA: Visual question answering* (2015), S. Antol et al.
+- VQA: Visual question answering* (2015), S. Antol et al.
   [[http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Antol_VQA_Visual_Question_ICCV_2015_paper.pdf][[pdf]]]
-- *DeepFace: Closing the gap to human-level performance in face
+- DeepFace: Closing the gap to human-level performance in face
   verification* (2014), Y. Taigman et al.
   [[http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Taigman_DeepFace_Closing_the_2014_CVPR_paper.pdf][[pdf]]]:
-- *Large-scale video classification with convolutional neural networks*
+- Large-scale video classification with convolutional neural networks*
   (2014), A. Karpathy et al.
   [[http://vision.stanford.edu/pdf/karpathy14.pdf][[pdf]]]
-- *DeepPose: Human pose estimation via deep neural networks* (2014), A.
+- DeepPose: Human pose estimation via deep neural networks* (2014), A.
   Toshev and C. Szegedy
   [[http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Toshev_DeepPose_Human_Pose_2014_CVPR_paper.pdf][[pdf]]]
-- *Two-stream convolutional networks for action recognition in videos*
+- Two-stream convolutional networks for action recognition in videos*
   (2014), K. Simonyan et al.
   [[http://papers.nips.cc/paper/5353-two-stream-convolutional-networks-for-action-recognition-in-videos.pdf][[pdf]]]
-- *3D convolutional neural networks for human action recognition*
+- 3D convolutional neural networks for human action recognition*
    (2013), S. Ji et al.
    [[http://machinelearning.wustl.edu/mlpapers/paper_files/icml2010_JiXYY10.pdf][[pdf]]]
 
@@ -343,24 +343,24 @@ list: https://competitions.codalab.org/
    Graves. [[https://arxiv.org/pdf/1308.0850][[pdf]]]
 
 ** Speech / Other Domain
-- *End-to-end attention-based large vocabulary speech recognition*
+- End-to-end attention-based large vocabulary speech recognition*
   (2016), D. Bahdanau et al.
   [[https://arxiv.org/pdf/1508.04395][[pdf]]]
-- *Deep speech 2: End-to-end speech recognition in English and
+- Deep speech 2: End-to-end speech recognition in English and
   Mandarin* (2015), D. Amodei et al.
   [[https://arxiv.org/pdf/1512.02595][[pdf]]]
-- *Speech recognition with deep recurrent neural networks* (2013), A.
+- Speech recognition with deep recurrent neural networks* (2013), A.
   Graves [[http://arxiv.org/pdf/1303.5778.pdf][[pdf]]]
-- *Deep neural networks for acoustic modeling in speech recognition:
+- Deep neural networks for acoustic modeling in speech recognition:
   The shared views of four research groups* (2012), G. Hinton et al.
   [[http://www.cs.toronto.edu/~asamir/papers/SPM_DNN_12.pdf][[pdf]]]
-- *Context-dependent pre-trained deep neural networks for
+- Context-dependent pre-trained deep neural networks for
   large-vocabulary speech recognition* (2012) G. Dahl et al.
   [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.337.7548&rep=rep1&type=pdf][[pdf]]]
-- *Acoustic modeling using deep belief networks* (2012), A. Mohamed et al.
+- Acoustic modeling using deep belief networks* (2012), A. Mohamed et al.
    [[http://www.cs.toronto.edu/~asamir/papers/speechDBN_jrnl.pdf][[pdf]]]
 
-- [2017] CTC (Connectionist Temporal Classification Loss) Explained
+- [2017] [[https://gab41.lab41.org/speech-recognition-you-down-with-ctc-8d3b558943f0][CTC (Connectionist Temporal Classification Loss) Explained]]
     :PROPERTIES:
     :AUTHOR:  Karl N.
     :YEAR:    2017
@@ -372,25 +372,25 @@ list: https://competitions.codalab.org/
   - so obviously we need to get rid of the silence and repeats, the way to do that is CTC.
   - Essentially, the equation defines the loss that makes good probability distribution over good paths
 ** Reinforcement Learning / Robotics
-- *End-to-end training of deep visuomotor policies* (2016), S. Levine
+- End-to-end training of deep visuomotor policies* (2016), S. Levine
   et al.
   [[http://www.jmlr.org/papers/volume17/15-522/source/15-522.pdf][[pdf]]]
-- *Learning Hand-Eye Coordination for Robotic Grasping with Deep Learning and Large-Scale Data Collection* (2016), S. Levine et al.
+- Learning Hand-Eye Coordination for Robotic Grasping with Deep Learning and Large-Scale Data Collection* (2016), S. Levine et al.
   [[https://arxiv.org/pdf/1603.02199][[pdf]]]
-- *Asynchronous methods for deep reinforcement learning* (2016), V. Mnih et al.
+- Asynchronous methods for deep reinforcement learning* (2016), V. Mnih et al.
   [[http://www.jmlr.org/proceedings/papers/v48/mniha16.pdf][[pdf]]]
-- *Deep Reinforcement Learning with Double Q-Learning* (2016), H.
+- Deep Reinforcement Learning with Double Q-Learning* (2016), H.
   Hasselt et al. [[https://arxiv.org/pdf/1509.06461.pdf][[pdf]]]
-- *Mastering the game of Go with deep neural networks and tree search*
+- Mastering the game of Go with deep neural networks and tree search*
   (2016), D. Silver et al.
   [[http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html][[pdf]]]
-- *Continuous control with deep reinforcement learning* (2015), T.
+- Continuous control with deep reinforcement learning* (2015), T.
   Lillicrap et al. [[https://arxiv.org/pdf/1509.02971][[pdf]]]
-- *Human-level control through deep reinforcement learning* (2015), V. Mnih et al.
+- Human-level control through deep reinforcement learning* (2015), V. Mnih et al.
   [[http://www.davidqiu.com:8888/research/nature14236.pdf][[pdf]]]
-- *Deep learning for detecting robotic grasps* (2015), I. Lenz et al.
+- Deep learning for detecting robotic grasps* (2015), I. Lenz et al.
   [[http://www.cs.cornell.edu/~asaxena/papers/lenz_lee_saxena_deep_learning_grasping_ijrr2014.pdf][[pdf]]]
-- [2012] A painless Q-learning tutorial 
+- [2012] [[http://mnemstudio.org/path-finding-q-learning-tutorial.htm][A painless Q-learning tutorial ]]
    :PROPERTIES:
    :AUTHOR:   John McCullock
    :YEAR:     2012
@@ -412,7 +412,7 @@ list: https://competitions.codalab.org/
     - Gamma = discount factor
     - This assumes a learning rate of 1. If we want a different learning rate, we can do:
      - Q_new = Q_old + learning_rate * (Q_update - Q_old)
-- [2013] Playing atari with deep reinforcement learning  
+- [2013] [[http://arxiv.org/pdf/1312.5602.pdf][Playing atari with deep reinforcement learning]]
    :PROPERTIES:
    :AUTHOR:   V. Mnih et al.
    :YEAR:     2013
@@ -420,7 +420,7 @@ list: https://competitions.codalab.org/
    :END:
  - keypoints
   - aasdf
-- [2017] A Brief Survey of Deep Reinforcement Learning
+- [2017] [[https://arxiv.org/pdf/1708.05866][A Brief Survey of Deep Reinforcement Learning]]
    :PROPERTIES:
    :AUTHOR:   Kai Arulkumaran
    :YEAR:     2016
@@ -468,41 +468,6 @@ list: https://competitions.codalab.org/
       - Deep sequences, no branching --> many-steps (MC) TD learning
       - Deep sequence, many branching --> exhaustive search
 
-
-
-** New papers
-- Evolution Strategies as a Scalable Alternative to Reinforcement Learning (2017), T. Salimans et al. 
-[[http://arxiv.org/pdf/1703.03864v1.pdf][[pdf]]]
-- Deformable Convolutional Networks (2017), J. Dai et al.
-[[http://arxiv.org/pdf/1703.06211v2.pdf][[pdf]]]
-- Mask R-CNN (2017), K. He et al. 
-[[https://128.84.21.199/pdf/1703.06870][[pdf]]]
-- Learning to discover cross-domain relations with generative adversarial networks (2017), T. Kim et al. 
-[[http://arxiv.org/pdf/1703.05192v1.pdf][[pdf]]]
-- Deep voice: Real-time neural text-to-speech (2017), S. Arik et al.,
-[[http://arxiv.org/pdf/1702.07825v2.pdf][[pdf]]]
-- [2017] PixelNet: Representation of the pixels, by the pixels, and for the pixels  
-   :PROPERTIES:
-   :AUTHOR:   A. Bansal et al.
-   :YEAR:     2017
-   :URL:      http://arxiv.org/pdf/1702.06506v1.pdf
-   :END:
- - keypoints
-  - This paper build on many recent ideas and introduces one big idea of its own (for segmentation)
-  - recent ideas is using "hypercolumn" map as an input the FC layer.
-   - "hypercolumn" means every feature map at every layer for a particular input pixel
-  - new idea is the "sampling only some pixels" for output instead of doing the whole image output prediction
-   - this is called "sparse prediction" vs "dense or full prediction"
-   - the premise is that as nearby pixels are highly correlated, just sampling is sufficient for learning.
-- Batch renormalization: Towards reducing minibatch dependence in batch-normalized models (2017), S. Ioffe.
-[[https://arxiv.org/abs/1702.03275][[pdf]]]
-- Wasserstein GAN (2017), M. Arjovsky et al. 
-[[https://arxiv.org/pdf/1701.07875v1][[pdf]]]
-- Understanding deep learning requires rethinking generalization (2017), C. Zhang et al. 
-[[https://arxiv.org/pdf/1611.03530][[pdf]]]
-- Least squares generative adversarial networks (2016), X. Mao et al.
-[[https://arxiv.org/abs/1611.04076v2][[pdf]]]
-
 ** Credit card fraud detection
 - [2014] Literature Survey
     :PROPERTIES:
@@ -510,15 +475,14 @@ list: https://competitions.codalab.org/
     :YEAR:     2014
     :URL:      http://www.ijmer.com/papers/Vol4_Issue9/Version-4/E0409_04-2431.pdf
     :END:
- - keypoints
-  - algorithms
-   - HMM
-   - NN
-   - Decision Tree
-   - SVM
-   - Genetic Algorithm
-   - Meta Learning Strategy
-   - Biologicla Immune System
+ - algorithms
+  - HMM
+  - NN
+  - Decision Tree
+  - SVM
+  - Genetic Algorithm
+  - Meta Learning Strategy
+  - Biologicla Immune System
 ** Weather Classification
 - Overall Summary as of [2018-10]
 There are no agreed upon public dataset and very few DL papers dedicated to the topic. 
@@ -548,7 +512,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
   - use "Convolutional" LSTM to retain spatial information (not flattening to 1-D vectors) 
   - flatten the output "hidden state" to predict weather class
   - then we repeat the step (in LSTM + getting new attention weights) to predict next weather class. If there are 5 classes, the LSTM will run for 5 steps. (This is weird.. because the problem is not time-based. and this runs from single image input)
-- [2018] (Dataset)(Bad) Weather Classification: A new multi-class dataset, data augmentation approach and comprehensive evaluations of CNNs
+- [2018] [[https://arxiv.org/abs/1808.00588v1][(Dataset)(Bad) Weather Classification: A new multi-class dataset, data augmentation approach and comprehensive evaluations of CNNs]]
     :PROPERTIES:
     :AUTHOR:   Guerra et al.
     :YEAR:     2018
@@ -561,7 +525,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
   - finally, use some sort of SVMs as binary classifier for each class
   - overall achieved around 80-90% accuracy, with Resnet50 being the best extractor overall.
   - however, no mention of baseline (w/o superpixel) comparison. No justification of doing things, even just running their model through old sunny/cloudy dataset for comparison. bad paper.
-- [2017] (Dataset) (Bad) Transfer Learning for Rain Detection in Images
+- [2017] [[https://repository.tudelft.nl/islandora/object/uuid%3A3bf546c0-a254-4c72-9ee4-02a0919c1624][(Dataset) (Bad) Transfer Learning for Rain Detection in Images]]
     :PROPERTIES:
     :AUTHOR:   Alecci et al.
     :YEAR:     2017
@@ -570,7 +534,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
  - keypoints
   - tried Resnet-18 with various experiments on custom 400k rain-no-rain dataset
   - just bad all around. specific optimization to specific dataset. no baseline model. not useful.
-- [2015] Weather Classification with Deep Convolutional Network
+- [2015] [[http://www.academia.edu/18539252/WEATHER_CLASSIFICATION_WITH_DEEP_CONVOLUTIONAL_NEURAL_NETWORKs][Weather Classification with Deep Convolutional Network]]
     :PROPERTIES:
     :AUTHOR:   Elhoseiny et al.
     :YEAR:     2015
@@ -581,7 +545,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
   - applies AlexNet architecture to this problem
   - also compared the pretrained with ImageNet AlexNet + SVM vs train with weather data from scratch - conclusion is earlier base layers are quite general
   - achieved 91% accuracy (82% normalized)
-- [2014] (Dataset) Two-class Weather Classification (with sunny/cloudy 10k dataset)
+- [2014] [[http://www.cse.cuhk.edu.hk/leojia/projects/weatherclassify/index.htm][(Dataset) Two-class Weather Classification (with sunny/cloudy 10k dataset)]]
     :PROPERTIES:
     :AUTHOR:  Lu et al.
     :YEAR:     2014
