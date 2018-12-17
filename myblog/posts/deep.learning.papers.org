@@ -68,6 +68,13 @@ list: https://competitions.codalab.org/
   - a little trick for G to get sizable gradients, the loss used is instead: maximize D(G(z))
  - note that the theory calls for optimizing P_g but in practive we approximate with function G. the better or more powerful G, the closer to P_g
 - [2016] [[https://arxiv.org/abs/1605.09782][Adversarial Feature Learning (BiGAN), Donahue]]
+ - add an Encoder to do inverse mapping. the setup is like this:
+  - (G)enerator: G(z) approximates `x`
+  - (E)ncoder: E(x) approximates the latent space vector `z` (200D of [-1,1])
+  - (D)iscriminator: recieves input tuple of either z,G(z) or E(x),x then output a probability of input being real
+ - this papers show proof that if we have a perfect Discriminator, the G and E must be an inverse mapping of each other
+ - they tried with MNIST, works quite well. Then failed with Imagenet -- the model fails to generate realistic looking images, although comparing x and G(E(x)) shows some superficial consistency, like same structure or color etc.
+ - need to read more about comparison of BiGAN with Autoencoders.
 - [2016] [[http://papers.nips.cc/paper/6125-improved-techniques-for-training-gans.pdf][Improved techniques for training GANs, T. Salimans et al.]]
 
 ** Style Transfers
