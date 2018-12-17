@@ -773,16 +773,16 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
     :YEAR:     2017
     :URL:      https://www.youtube.com/watch?v=ptcBmEHDWds
     :END:
-*** keypoints
-**** Identical twins (Alex & Michael) -- study and worked in the same field (Computer Vision)
-**** Invented what became the Kinect camera sensor
-**** Keys for recognizing face:
-***** Humans actually recognize people based on "texture" appearance, not the 3D geometry
-***** facial expressions changed the projected texture to 2D, but not the actual texture if projected on the plane
-***** Therefore, we can use the "geodesic" distance instead of euclidean distance to measure the actual distance between important face features. If the distances are approximately the same, then it's the same face.
-***** Thee kind of techniques have been use to recognize diferent faces, including identical twins.
-***** Geometric deep learning: applying CNNs on 3D surface via heat diffusion equation.
-****** Use Case: Recognition, social network analysis, recommender systems
+ - keypoints
+  - Identical twins (Alex & Michael) -- study and worked in the same field (Computer Vision)
+  - Invented what became the Kinect camera sensor
+  - Keys for recognizing face:
+   - Humans actually recognize people based on "texture" appearance, not the 3D geometry
+   - facial expressions changed the projected texture to 2D, but not the actual texture if projected on the plane
+   - Therefore, we can use the "geodesic" distance instead of euclidean distance to measure the actual distance between important face features. If the distances are approximately the same, then it's the same face.
+   - Thee kind of techniques have been use to recognize diferent faces, including identical twins.
+   - Geometric deep learning: applying CNNs on 3D surface via heat diffusion equation.
+    - Use Case: Recognition, social network analysis, recommender systems
 - [2015] Visual explanation of Information Theory
     :PROPERTIES:
     :AUTHOR:  Colah
@@ -811,34 +811,21 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
 - asdf
 
 ** Classic Paperspublished before 2012
-- [2011] An analysis of single-layer networks in unsupervised feature learning, A. Coates et al.
-[[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_CoatesNL11.pdf][[pdf]]]
-- [2011] Deep sparse rectifier neural networks, X. Glorot et al.
-[[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_GlorotBB11.pdf][[pdf]]]
-- [2011] Natural language processing (almost) from scratch, R. Collobert
-et al. [[http://arxiv.org/pdf/1103.0398][[pdf]]]
-- [2010] Recurrent neural network based language model, T. Mikolov et al.
-[[http://www.fit.vutbr.cz/research/groups/speech/servite/2010/rnnlm_mikolov.pdf][[pdf]]]
-- [2010] Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion, P. Vincent et al.
-[[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.297.3484&rep=rep1&type=pdf][[pdf]]]
-- [2010] Learning mid-level features for recognition, Y. Boureau
-[[http://ece.duke.edu/~lcarin/boureau-cvpr-10.pdf][[pdf]]]
-- [2010] A practical guide to training restricted boltzmann machines, G. Hinton
-[[http://www.csri.utoronto.ca/~hinton/absps/guideTR.pdf][[pdf]]]
-- [2010] Understanding the difficulty of training deep feedforward neural networks, X. Glorot and Y. Bengio
-[[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_GlorotB10.pdf][[pdf]]]
-- [2010] Why does unsupervised pre-training help deep learning, D. Erhan et al.
-[[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_ErhanCBV10.pdf][[pdf]]]
-- [2009] Learning deep architectures for AI, Y. Bengio.
-[[http://sanghv.com/download/soft/machine%20learning,%20artificial%20intelligence,%20mathematics%20ebooks/ML/learning%20deep%20architectures%20for%20AI%20(2009).pdf][[pdf]]]
+- [2011] [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_CoatesNL11.pdf][An analysis of single-layer networks in unsupervised feature learning, A. Coates et al.]]
+- [2011] [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_GlorotBB11.pdf][Deep sparse rectifier neural networks, X. Glorot et al.]]
+- [2011] [[http://arxiv.org/pdf/1103.0398][Natural language processing (almost) from scratch, R. Collobert et al.]]
+- [2010] [[http://www.fit.vutbr.cz/research/groups/speech/servite/2010/rnnlm_mikolov.pdf][Recurrent neural network based language model, T. Mikolov et al.]]
+- [2010] [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.297.3484&rep=rep1&type=pdf][Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion, P. Vincent et al.]]
+- [2010] [[http://ece.duke.edu/~lcarin/boureau-cvpr-10.pdf][Learning mid-level features for recognition, Y. Boureau]]
+- [2010] [[http://www.csri.utoronto.ca/~hinton/absps/guideTR.pdf][A practical guide to training restricted boltzmann machines, G. Hinton]]
+- [2010] [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_GlorotB10.pdf][Understanding the difficulty of training deep feedforward neural networks, X. Glorot and Y. Bengio]]
+- [2010] [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_ErhanCBV10.pdf][Why does unsupervised pre-training help deep learning, D. Erhan et al.]]
+- [2009] [[http://sanghv.com/download/soft/machine%20learning,%20artificial%20intelligence,%20mathematics%20ebooks/ML/learning%20deep%20architectures%20for%20AI%20(2009).pdf][Learning deep architectures for AI, Y. Bengio.]]
 - [2009] Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations, H. Lee et al.
 [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.149.802&rep=rep1&type=pdf][[pdf]]]
-- [2007] Greedy layer-wise training of deep networks, Y. Bengio et al.
-[[http://machinelearning.wustl.edu/mlpapers/paper_files/NIPS2006_739.pdf][[pdf]]]
-- [2006] Reducing the dimensionality of data with neural networks, G. Hinton and R. Salakhutdinov.
-[[http://homes.mpimf-heidelberg.mpg.de/~mhelmsta/pdf/2006%20Hinton%20Salakhudtkinov%20Science.pdf][[pdf]]]
-- [2006] A fast learning algorithm for deep belief nets, G. Hinton et al.
-[[http://nuyoo.utm.mx/~jjf/rna/A8%20A%20fast%20learning%20algorithm%20for%20deep%20belief%20nets.pdf][[pdf]]]
+- [2007] [[http://machinelearning.wustl.edu/mlpapers/paper_files/NIPS2006_739.pdf][Greedy layer-wise training of deep networks, Y. Bengio et al.]]
+- [2006] [[http://homes.mpimf-heidelberg.mpg.de/~mhelmsta/pdf/2006%20Hinton%20Salakhudtkinov%20Science.pdf][Reducing the dimensionality of data with neural networks, G. Hinton and R. Salakhutdinov.]]
+- [2006] [[http://nuyoo.utm.mx/~jjf/rna/A8%20A%20fast%20learning%20algorithm%20for%20deep%20belief%20nets.pdf][A fast learning algorithm for deep belief nets, G. Hinton et al.]]
 - [1998] [[http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf][Gradient-based learning applied to document recognition, Y. LeCun et al.]]
 - [1997] [[http://www.mitpressjournals.org/doi/pdfplus/10.1162/neco.1997.9.8.1735][Long short-term memory, S. Hochreiter and J. Schmidhuber.]]
 
