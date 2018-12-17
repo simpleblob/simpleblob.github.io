@@ -709,65 +709,65 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
     :YEAR:     2017
     :URL:      https://openreview.net/forum?id=SJZAb5cel
     :END:
-*** keypoints
-**** ABSTRACT: 
-***** Transfer and multi-task learning have traditionally focused on either a single source-target pair or very few, similar tasks. 
-***** Ideally, the linguistic levels of morphology, syntax and semantics would benefit each other by being trained in a single model. We introduce such a joint many-task model together with a strategy for successively growing its depth to solve increasingly complex tasks. All layers include shortcut connections to both word representations and lower-level task predictions. 
-***** We use a simple regularization term to allow for optimizing all model weights to improve one task’s loss without exhibiting catastrophic interference of the other tasks. Our single end-to-end trainable model obtains state-of-the-art results on chunking, dependency parsing, semantic relatedness and textual entailment. 
-***** It also performs competitively on POS tagging. Our dependency parsing layer relies only on a single feed-forward pass and does not require a beam search.
-**** This is kind of like Ensembling models, but they are more "joined" at the end (softmax layer and feature layer), rather than just averaging results from softmax.
+ - ABSTRACT: 
+  - Transfer and multi-task learning have traditionally focused on either a single source-target pair or very few, similar tasks. 
+  - Ideally, the linguistic levels of morphology, syntax and semantics would benefit each other by being trained in a single model. We introduce such a joint many-task model together with a strategy for successively growing its depth to solve increasingly complex tasks. All layers include shortcut connections to both word representations and lower-level task predictions. 
+  - We use a simple regularization term to allow for optimizing all model weights to improve one task’s loss without exhibiting catastrophic interference of the other tasks. Our single end-to-end trainable model obtains state-of-the-art results on chunking, dependency parsing, semantic relatedness and textual entailment. 
+  - It also performs competitively on POS tagging. Our dependency parsing layer relies only on a single feed-forward pass and does not require a beam search.
+ - This is kind of like Ensembling models, but they are more "joined" at the end (softmax layer and feature layer), rather than just averaging results from softmax.
 - [2017] Hierarchical Memory Networks
     :PROPERTIES:
     :AUTHOR:  Sarath Chandar, Sungjin Ahn, Hugo Larochelle, Pascal Vincent, Gerald Tesauro, Yoshua Bengio
     :YEAR:     2017
     :URL:      https://arxiv.org/pdf/1704.03855.pdf
     :END:
-*** keypoints
-**** ABSTRACT:
-***** Memory networks are neural networks with an explicit memory component that can be both read and written to by the network. 
-***** The memory is often addressed in a soft way using a softmax function, making end-to-end training with backpropagation possible. 
-***** However, this is not computationally scalable for applications which require the network to read from extremely large memories.  
-***** On the other hand, it is well known that hard attention mechanisms based on reinforcement learning are challenging to train successfully.  
-***** In this paper, we explore a form of hierarchical memory network, which can be considered as a hybrid between hard and soft attention memory networks.  
-***** The memory is organized in a hierarchical structure such that reading from it is done with less computation than soft attention over a flat memory, while also being easier to train than hard attention over a flat memory.  
-***** Specifically, we propose to incorporate Maximum Inner Product Search (MIPS) in the training and inference procedures for our hierarchical memory network.  
-***** We explore the use of various state-of-the art approximate MIPS techniques and report results on SimpleQuestions, a challenging large scale factoid question answering task.
+ - ABSTRACT:
+  - Memory networks are neural networks with an explicit memory component that can be both read and written to by the network. 
+  - The memory is often addressed in a soft way using a softmax function, making end-to-end training with backpropagation possible. 
+  - However, this is not computationally scalable for applications which require the network to read from extremely large memories.  
+  - On the other hand, it is well known that hard attention mechanisms based on reinforcement learning are challenging to train successfully.  
+  - In this paper, we explore a form of hierarchical memory network, which can be considered as a hybrid between hard and soft attention memory networks.  
+  - The memory is organized in a hierarchical structure such that reading from it is done with less computation than soft attention over a flat memory, while also being easier to train than hard attention over a flat memory.  
+  - Specifically, we propose to incorporate Maximum Inner Product Search (MIPS) in the training and inference procedures for our hierarchical memory network.  
+  - We explore the use of various state-of-the art approximate MIPS techniques and report results on SimpleQuestions, a challenging large scale factoid question answering task.
+  
 ** Articles and Videos
-- [2017] The End of Human Doctors (series)
+- [2017] [[https://lukeoakdenrayner.wordpress.com/2017/04/20/the-end-of-human-doctors-introduction/][The End of Human Doctors (series)]]
     :PROPERTIES:
     :AUTHOR:  Luke Rayner
     :YEAR:     2017
     :URL:      https://lukeoakdenrayner.wordpress.com/2017/04/20/the-end-of-human-doctors-introduction/
     :END:
-*** Part 2: Understanding Medicine
-**** Most of the tasks Medical doctors do are related to "perception", not "decision making". The later part is relatively fast and has been done better by the Machine since MYCIN.
-**** perceptual tasks like identifying tree-shape patterns in X-rays -- Deep learning is very good at it.
-**** Most susceptible specialties are Radiology and Pathology, comprising of 25% of doctors (in Australia).
-*** Part 3: Understanding Automation
-**** Automation replaces tasks, not jobs. How much time the task takes a human determines how many jobs are lost.
-**** Machines that “help” or “augment” humans still destroy jobs and lower wages.
-**** Hybrid-chess does not prove that human/machine teams are better than computers alone. STOP SAYING THIS, tech people!
-**** Deep learning threatens tasks that make up a terrifyingly large portion of doctors’ jobs.
-**** In the developed world, demand for medical services may be unable to increase as prices fall due to automation, which normally protects jobs.
-*** Part 4: Radiology Escape Velocity
-**** even if the rate of automation of 5% per year, in 30 years there will still be one-third the current radiologist workforce remaining.
-*** Part 5: Understanding Regulation
-**** In case of USA, it usually takes 3 to 10 years to go through the whole process from concept to approval to use in the medical industry.
-**** "measurements"-related technology can opt to go through case-I (low-risk type) route with substantially shorter time to approval.
-**** There are two approach in using computer technology
-***** measurements to aid doctors' decisions. (CADe) --  doctors disliked them, not doing well as a result.
-***** measurements AND diagnosis (CADx) -- never been approved by FDA before.
-**** Conclusion: current regulation in developed countries is SUPER conservative and so it will take a lot of time and money to get new technology adopted. Not so for developing world, we might see it much faster there.
-*** Part 6: Current State-of-the-Art results and impact
-**** Stanford (and collaborators) trained a system to identify skin lesions that need a biopsy. Skin cancer is the most common malignancy in light-skinned populations.
-**** This is a useful clinical task, and is a large part of current dermatological practice.
-**** They used 130,000 skin lesion photographs for training, and enriched their training and test sets with more positive cases than would be typical clinically.
-**** The images were downsampled heavily, discarding  around 90% of the pixels.
-**** They used a “tree ontology” to organise the training data, allowing them to improve their accuracy by training to recognise 757 classes of disease. This even improved their results on higher level tasks, like “does this lesion need a biopsy?”
-**** They were better than individual dermatologists at identifying lesions that needed biopsy, with more true positives and less false positives.
-**** While there are possible regulatory issues, the team appears to have a working smartphone application already. I would expect something like this to be available to consumers in the next year or two.
-**** The impact on dermatology is unclear. We could actually see shortages of dermatologists as demand for biopsy services increases, at least in the short term.
-- [2017] (Video) Geometric Deep Learning - Radcliffe Institute
+ - Part 2: Understanding Medicine
+  - Most of the tasks Medical doctors do are related to "perception", not "decision making". The later part is relatively fast and has been done better by the Machine since MYCIN.
+  - perceptual tasks like identifying tree-shape patterns in X-rays -- Deep learning is very good at it.
+  - Most susceptible specialties are Radiology and Pathology, comprising of 25% of doctors (in Australia).
+ - Part 3: Understanding Automation
+  - Automation replaces tasks, not jobs. How much time the task takes a human determines how many jobs are lost.
+  - Machines that “help” or “augment” humans still destroy jobs and lower wages.
+  - Hybrid-chess does not prove that human/machine teams are better than computers alone. STOP SAYING THIS, tech people!
+  - Deep learning threatens tasks that make up a terrifyingly large portion of doctors’ jobs.
+  - In the developed world, demand for medical services may be unable to increase as prices fall due to automation, which normally protects jobs.
+ - Part 4: Radiology Escape Velocity
+  - even if the rate of automation of 5% per year, in 30 years there will still be one-third the current radiologist workforce remaining.
+ - Part 5: Understanding Regulation
+  - In case of USA, it usually takes 3 to 10 years to go through the whole process from concept to approval to use in the medical industry.
+  - "measurements"-related technology can opt to go through case-I (low-risk type) route with substantially shorter time to approval.
+  - There are two approach in using computer technology
+   - measurements to aid doctors' decisions. (CADe) --  doctors disliked them, not doing well as a result.
+   - measurements AND diagnosis (CADx) -- never been approved by FDA before.
+  - Conclusion: current regulation in developed countries is SUPER conservative and so it will take a lot of time and money to get new technology adopted. Not so for developing world, we might see it much faster there.
+ - Part 6: Current State-of-the-Art results and impact
+  - Stanford (and collaborators) trained a system to identify skin lesions that need a biopsy. Skin cancer is the most common malignancy in light-skinned populations.
+  - This is a useful clinical task, and is a large part of current dermatological practice.
+  - They used 130,000 skin lesion photographs for training, and enriched their training and test sets with more positive cases than would be typical clinically.
+  - The images were downsampled heavily, discarding  around 90% of the pixels.
+  - They used a “tree ontology” to organise the training data, allowing them to improve their accuracy by training to recognise 757 classes of disease. This even improved their results on higher level tasks, like “does this lesion need a biopsy?”
+  - They were better than individual dermatologists at identifying lesions that needed biopsy, with more true positives and less false positives.
+  - While there are possible regulatory issues, the team appears to have a working smartphone application already. I would expect something like this to be available to consumers in the next year or two.
+  - The impact on dermatology is unclear. We could actually see shortages of dermatologists as demand for biopsy services increases, at least in the short term.
+
+- [2017] [[https://www.youtube.com/watch?v=ptcBmEHDWds][(Video) Geometric Deep Learning - Radcliffe Institute]]
     :PROPERTIES:
     :AUTHOR:  Michael Bronstein
     :YEAR:     2017
@@ -783,7 +783,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
    - Thee kind of techniques have been use to recognize diferent faces, including identical twins.
    - Geometric deep learning: applying CNNs on 3D surface via heat diffusion equation.
     - Use Case: Recognition, social network analysis, recommender systems
-- [2015] Visual explanation of Information Theory
+- [2015] [[http://colah.github.io/posts/2015-09-Visual-Information/ ][Visual explanation of Information Theory]]
     :PROPERTIES:
     :AUTHOR:  Colah
     :YEAR:    2015
@@ -807,9 +807,6 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
    - if it is the same, then KL is zero, otherwise it has value. 
    - this is not a symmetric measure. K(X||Y) <> K(Y||X)
 
-** Snippets
-- asdf
-
 ** Classic Paperspublished before 2012
 - [2011] [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_CoatesNL11.pdf][An analysis of single-layer networks in unsupervised feature learning, A. Coates et al.]]
 - [2011] [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_GlorotBB11.pdf][Deep sparse rectifier neural networks, X. Glorot et al.]]
@@ -821,8 +818,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
 - [2010] [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_GlorotB10.pdf][Understanding the difficulty of training deep feedforward neural networks, X. Glorot and Y. Bengio]]
 - [2010] [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_ErhanCBV10.pdf][Why does unsupervised pre-training help deep learning, D. Erhan et al.]]
 - [2009] [[http://sanghv.com/download/soft/machine%20learning,%20artificial%20intelligence,%20mathematics%20ebooks/ML/learning%20deep%20architectures%20for%20AI%20(2009).pdf][Learning deep architectures for AI, Y. Bengio.]]
-- [2009] Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations, H. Lee et al.
-[[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.149.802&rep=rep1&type=pdf][[pdf]]]
+- [2009] [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.149.802&rep=rep1&type=pdf][Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations, H. Lee et al.]]
 - [2007] [[http://machinelearning.wustl.edu/mlpapers/paper_files/NIPS2006_739.pdf][Greedy layer-wise training of deep networks, Y. Bengio et al.]]
 - [2006] [[http://homes.mpimf-heidelberg.mpg.de/~mhelmsta/pdf/2006%20Hinton%20Salakhudtkinov%20Science.pdf][Reducing the dimensionality of data with neural networks, G. Hinton and R. Salakhutdinov.]]
 - [2006] [[http://nuyoo.utm.mx/~jjf/rna/A8%20A%20fast%20learning%20algorithm%20for%20deep%20belief%20nets.pdf][A fast learning algorithm for deep belief nets, G. Hinton et al.]]
