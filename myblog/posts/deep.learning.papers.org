@@ -56,6 +56,24 @@ list: https://competitions.codalab.org/
 - [2018] [NIPS'18] [[https://nips.cc/Conferences/2018/Schedule?showEvent=11927][Deep Anomaly Detection Using Geometric Transformations]]
 - [2018] [NIPS'18] [[https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection][A loss framework for calibrated anomaly detection]]
 
+** Generative Adversarial Networks (GANs)
+- [2014] [[http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf][Generative adversarial nets, I. Goodfellow et al.]]
+ - Objective is to get distribution of generated sample (P_g) to be as close to distribution of real data (P_y) as much as possible
+ - using a minimax game of fight between discriminator (D) and generator (G)
+ - the learning process is like this: uniform z --> G(z) --> D(G(z))
+ - we switch between D(x) and D(G(z)) to learn D
+ - the loss is like this: C(D,G) = minimize log(D(x)) + log(1 - D(G(z)))
+  - this is equivalent to C(D,G) = -log(4) + 2*JS(P_x || P_g)
+   - JS is Jensen-Shannon Divergence
+  - a little trick for G to get sizable gradients, the loss used is instead: maximize D(G(z))
+ - note that the theory calls for optimizing P_g but in practive we approximate with function G. the better or more powerful G, the closer to P_g
+- [2016] [[https://arxiv.org/abs/1605.09782][Adversarial Feature Learning (BiGAN), Donahue]]
+- [2016] [[http://papers.nips.cc/paper/6125-improved-techniques-for-training-gans.pdf][Improved techniques for training GANs, T. Salimans et al.]]
+
+** Style Transfers
+- [2017] [[http://arxiv.org/pdf/1703.07511v1.pdf][Deep Photo Style Transfer, F. Luan et al.]]
+- [2018] [[https://arxiv.org/abs/1812.04948][A Style-Based Generator Architecture for Generative Adversarial Networks, Karras et al.]]
+
 ** Understanding / Generalization / Transfer
 
 - [2014] [[http://papers.nips.cc/paper/5347-how-transferable-are-features-in-deep-neural-networks.pdf][How transferable are features in deep neural networks?]]
@@ -159,23 +177,15 @@ list: https://competitions.codalab.org/
   - Adam - has first and second moments of gradients. essentially Momentum + RMSprop
   - AdaMax - generalized Adam to n moments
   - Nadam - Nesterov + Adam 
+
+  
 ** Unsupervised / Generative Models
 - [2013] [[http://arxiv.org/pdf/1312.6114][Auto-encoding variational Bayes, D. Kingma and M. Welling]]
 - [2013] [[http://arxiv.org/pdf/1112.6209][Building high-level features using large scale unsupervised learning, Q. Le et al.]]
-- [2014] [[http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf][Generative adversarial nets, I. Goodfellow et al.]]
- - Objective is to get distribution of generated sample (P_g) to be as close to distribution of real data (P_y) as much as possible
- - using a minimax game of fight between discriminator (D) and generator (G)
- - the learning process is like this: uniform z --> G(z) --> D(G(z))
- - we switch between D(x) and D(G(z)) to learn D
- - the loss is like this: C(D,G) = minimize log(D(x)) + log(1 - D(G(z)))
-  - this is equivalent to C(D,G) = -log(4) + 2*JS(P_x || P_g)
-   - JS is Jensen-Shannon Divergence
-  - a little trick for G to get sizable gradients, the loss used is instead: maximize D(G(z))
- - note that the theory calls for optimizing P_g but in practive we approximate with function G. the better or more powerful G, the closer to P_g
 - [2015] [[https://arxiv.org/pdf/1511.06434v2][Unsupervised representation learning with deep convolutional generative adversarial networks, A. Radford et al.]]
 - [2015] [[http://arxiv.org/pdf/1502.04623][DRAW: A recurrent neural network for image generation, K.Gregor et al.]]
 - [2016] [[http://arxiv.org/pdf/1601.06759v2.pdf][Pixel recurrent neural networks (PixelRNN), A. Oord et al.]]
-- [2016] [[http://papers.nips.cc/paper/6125-improved-techniques-for-training-gans.pdf][Improved techniques for training GANs, T. Salimans et al.]]
+
 
 ** CNN Feature Extractors
 - Backbone feature extractor short summary / [[https://arxiv.org/pdf/1804.06215.pdf][source]] 
@@ -442,12 +452,8 @@ list: https://competitions.codalab.org/
       - Shallow sequence, many branching --> dynamic programming
       - Deep sequences, no branching --> many-steps (MC) TD learning
       - Deep sequence, many branching --> exhaustive search
-** GANs
-to be moved here?
 
-** Style Transfers
-- Deep Photo Style Transfer (2017), F. Luan et al.
-[[http://arxiv.org/pdf/1703.07511v1.pdf][[pdf]]]
+
 
 ** New papers
 - Evolution Strategies as a Scalable Alternative to Reinforcement Learning (2017), T. Salimans et al. 
