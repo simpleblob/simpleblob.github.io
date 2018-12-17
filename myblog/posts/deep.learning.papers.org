@@ -48,6 +48,14 @@ list: https://competitions.codalab.org/
     - where D_f is a function to get mid-level features from D
   - total_loss A(x) = lambda * DL(x) + (1 - lambda) * RL(x) where they found lamda = 0.1 works best
 - [2018] [[https://arxiv.org/abs/1802.06222][Efficient GAN-Based Anomaly Detection, Zenati]] / [[https://openreview.net/forum?id=BkXADmJDM][open-review]] / [[https://github.com/houssamzenati/Efficient-GAN-Anomaly-Detection][code]]
+ - From AnoGAN, replacing DCGAN with BiGAN, so that we can have (E)ncoder as inverse mapping from x to z
+ - they use the following score function to detect anomalies
+  - total score A(x) = alpha*LG(x) + (1 - alpha)*LD(x)
+  - reconstruction loss LG(x) = abs( x - G(E(x)) )
+  - Discriminator loss LD(x) can be defined in two ways
+   - cross-entropy (CE): between D(x,E(x)) and 1
+   - feature-matching (FM): L0 loss (absolute-diff) between mid-level logits of D(x,E(x)) and D(G(E(x)),E(x))
+   - experiments show that performance between CE and FM is data-specific
 - [2017] [[https://arxiv.org/abs/1706.02690][Enhancing The Reliability of Out-of-distribution Image Detection in Neural Networks, Liang]] / [[https://openreview.net/forum?id=H1VGkIxRZ][open-review]]
 - [2018] [[https://arxiv.org/abs/1810.01392][Generative Ensembles for Robust Anomaly Detection]]
 - [2018] [[https://sdm.lbl.gov/snta/2018/SNTA18_KWON.pdf][An Empirical Study on Network Anomaly Detection using Convolutional Neural Networks (slides)]]
