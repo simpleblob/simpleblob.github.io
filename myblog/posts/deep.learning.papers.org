@@ -582,7 +582,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
   - we can set up a default landmark (smiley face) in the image center or do an average of positions from a big dataset.  
   - then we regress -- computing an update regressors for each landmark x,y --> moving them closer to the face in image.
   - the features for regressions are diff in pixel intensities, the pixel coordinate is relative to the default face shape.  
-- [2017] FaceBoxes: A CPU Real-time Face Detector with High Accuracy   ( [link to paper](https://arxiv.org/abs/1708.05234) )
+- [2017] [[https://arxiv.org/abs/1708.05234][FaceBoxes: A CPU Real-time Face Detector with High Accuracy]] 
  - custom (light-weight) CNN architecture. No novel idea. (the paper has a good summary of past papers however)
   - runs at 20 FPS on a single CPU core and 125 FPS using a GPU for VGA (640x480) images.
  - some strategy for lightweighted architecture
@@ -592,15 +592,13 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
   - use multi-scale anchor boxes output, but know where to have "dense" number of predictions.
  - postprocessing is common pipeline: lots of prediction > thresholding prob > NMS.
 
-- [2017] Deep Face Recognition: A Survey 
- - [link to paper](https://arxiv.org/abs/1804.06655v1) )
+- [2017] [[https://arxiv.org/abs/1804.06655v1][Deep Face Recognition: A Survey]] 
  - Good review of modern face recognition systems. collections of recent techniques. It`s not face detection though.
-- [2018] SFace: An Efficient Network for Face Detection in Large Scale Variations (Megvii Inc. Face++)
- - [link to paper](https://arxiv.org/abs/1804.06559v2)
+- [2018] [[https://arxiv.org/abs/1804.06559v2][SFace: An Efficient Network for Face Detection in Large Scale Variations (Megvii Inc. Face++)]]
  - A new dataset called 4K-Face is also introduced to evaluate the performance of face detection with extreme large scale variations.  
   - The SFace architecture shows promising results on the new 4K-Face benchmarks. 
   - In addition, our method can run at 50 frames per second (fps) with an accuracy of 80% AP on the standard WIDER FACE dataset, which outperforms the state-of-art algorithms by almost one order of magnitude in speed while achieves comparative performance.
-- Benchmark - Labeled Faces in the Wild (LFW) dataset - [state of the art results](http://vis-www.cs.umass.edu/lfw/results.html#UnrestrictedLb)
+- Benchmark - Labeled Faces in the Wild (LFW) dataset - [[http://vis-www.cs.umass.edu/lfw/results.html#UnrestrictedLb][state of the art results]]
  - most commercial systems get > 99.0% classification accuracy, including Dlib
  - update as of beginning of 2018
 
