@@ -811,38 +811,36 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
 - asdf
 
 ** Classic Paperspublished before 2012
-- An analysis of single-layer networks in unsupervised feature learning (2011), A. Coates et al.
+- [2011] An analysis of single-layer networks in unsupervised feature learning, A. Coates et al.
 [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_CoatesNL11.pdf][[pdf]]]
-- Deep sparse rectifier neural networks (2011), X. Glorot et al.
+- [2011] Deep sparse rectifier neural networks, X. Glorot et al.
 [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_GlorotBB11.pdf][[pdf]]]
-- Natural language processing (almost) from scratch (2011), R. Collobert
+- [2011] Natural language processing (almost) from scratch, R. Collobert
 et al. [[http://arxiv.org/pdf/1103.0398][[pdf]]]
-- Recurrent neural network based language model (2010), T. Mikolov et al.
+- [2010] Recurrent neural network based language model, T. Mikolov et al.
 [[http://www.fit.vutbr.cz/research/groups/speech/servite/2010/rnnlm_mikolov.pdf][[pdf]]]
-- Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion (2010), P. Vincent et al.
+- [2010] Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion, P. Vincent et al.
 [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.297.3484&rep=rep1&type=pdf][[pdf]]]
-- Learning mid-level features for recognition (2010), Y. Boureau
+- [2010] Learning mid-level features for recognition, Y. Boureau
 [[http://ece.duke.edu/~lcarin/boureau-cvpr-10.pdf][[pdf]]]
-- A practical guide to training restricted boltzmann machines (2010), G. Hinton
+- [2010] A practical guide to training restricted boltzmann machines, G. Hinton
 [[http://www.csri.utoronto.ca/~hinton/absps/guideTR.pdf][[pdf]]]
-- Understanding the difficulty of training deep feedforward neural networks (2010), X. Glorot and Y. Bengio
+- [2010] Understanding the difficulty of training deep feedforward neural networks, X. Glorot and Y. Bengio
 [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_GlorotB10.pdf][[pdf]]]
-- Why does unsupervised pre-training help deep learning (2010), D. Erhan et al.
+- [2010] Why does unsupervised pre-training help deep learning, D. Erhan et al.
 [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_ErhanCBV10.pdf][[pdf]]]
-- Learning deep architectures for AI (2009), Y. Bengio.
+- [2009] Learning deep architectures for AI, Y. Bengio.
 [[http://sanghv.com/download/soft/machine%20learning,%20artificial%20intelligence,%20mathematics%20ebooks/ML/learning%20deep%20architectures%20for%20AI%20(2009).pdf][[pdf]]]
-- Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations (2009), H. Lee et al.
+- [2009] Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations, H. Lee et al.
 [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.149.802&rep=rep1&type=pdf][[pdf]]]
-- Greedy layer-wise training of deep networks (2007), Y. Bengio et al.
+- [2007] Greedy layer-wise training of deep networks, Y. Bengio et al.
 [[http://machinelearning.wustl.edu/mlpapers/paper_files/NIPS2006_739.pdf][[pdf]]]
-- Reducing the dimensionality of data with neural networks, G. Hinton and R. Salakhutdinov.
+- [2006] Reducing the dimensionality of data with neural networks, G. Hinton and R. Salakhutdinov.
 [[http://homes.mpimf-heidelberg.mpg.de/~mhelmsta/pdf/2006%20Hinton%20Salakhudtkinov%20Science.pdf][[pdf]]]
-- A fast learning algorithm for deep belief nets (2006), G. Hinton et al.
+- [2006] A fast learning algorithm for deep belief nets, G. Hinton et al.
 [[http://nuyoo.utm.mx/~jjf/rna/A8%20A%20fast%20learning%20algorithm%20for%20deep%20belief%20nets.pdf][[pdf]]]
-- Gradient-based learning applied to document recognition (1998), Y. LeCun et al.
-[[http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf][[pdf]]]
-- Long short-term memory (1997), S. Hochreiter and J. Schmidhuber.
-[[http://www.mitpressjournals.org/doi/pdfplus/10.1162/neco.1997.9.8.1735][[pdf]]]
+- [1998] [[http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf][Gradient-based learning applied to document recognition, Y. LeCun et al.]]
+- [1997] [[http://www.mitpressjournals.org/doi/pdfplus/10.1162/neco.1997.9.8.1735][Long short-term memory, S. Hochreiter and J. Schmidhuber.]]
 
 ** HW / SW / Dataset
 - [2016] [[https://arxiv.org/pdf/1606.01540][OpenAI gym, G. Brockman et al.]]
