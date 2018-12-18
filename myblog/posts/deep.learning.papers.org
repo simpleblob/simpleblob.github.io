@@ -78,6 +78,7 @@ list: https://competitions.codalab.org/
 
 
 ** Generative Adversarial Networks (GANs)
+- [2018] (Articles) [[https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b][GAN Series (from the beginning to the end)]]
 - [2014] [[http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf][Generative adversarial nets, I. Goodfellow et al.]]
  - Objective is to get distribution of generated sample (P_g) to be as close to distribution of real data (P_y) as much as possible
  - using a minimax game of fight between discriminator (D) and generator (G)
