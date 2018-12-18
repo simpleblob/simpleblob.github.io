@@ -57,13 +57,12 @@ list: https://competitions.codalab.org/
    - feature-matching (FM): L0 loss (absolute-diff) between mid-level logits of D(x,E(x)) and D(G(E(x)),E(x))
    - experiments show that performance between CE and FM is data-specific
 - [2017] [[https://arxiv.org/abs/1706.02690][Enhancing The Reliability of Out-of-distribution Image Detection in Neural Networks, Liang]] / [[https://openreview.net/forum?id=H1VGkIxRZ][open-review]]
+- [2019] [ICLR'19] [[https://openreview.net/forum?id=H1xwNhCcYm][Do Deep Generative Models Know What They Don't Know?]]
 - [2018] [[https://arxiv.org/abs/1810.01392][Generative Ensembles for Robust Anomaly Detection]]
-- [2018] [[https://sdm.lbl.gov/snta/2018/SNTA18_KWON.pdf][An Empirical Study on Network Anomaly Detection using Convolutional Neural Networks (slides)]]
-  - Convolve 1D features of non-image data. not really a good use of CNN.
 - [2018] [[https://arxiv.org/abs/1801.03149][An overview of deep learning based methods for unsupervised and semi-supervised anomaly detection in videos, Kiran]]
 - [2018] [NIPS'18] [[https://nips.cc/Conferences/2018/Schedule?showEvent=11927][Deep Anomaly Detection Using Geometric Transformations]]
 - [2018] [NIPS'18] [[https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection][A loss framework for calibrated anomaly detection]]
-- [2019] [ICLR'19] [[https://openreview.net/forum?id=H1xwNhCcYm][Do Deep Generative Models Know What They Don't Know?]]
+
 
 ** Generative Adversarial Networks (GANs)
 - [2014] [[http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf][Generative adversarial nets, I. Goodfellow et al.]]
