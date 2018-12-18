@@ -63,6 +63,7 @@ list: https://competitions.codalab.org/
 - [2018] [[https://arxiv.org/abs/1801.03149][An overview of deep learning based methods for unsupervised and semi-supervised anomaly detection in videos, Kiran]]
 - [2018] [NIPS'18] [[https://nips.cc/Conferences/2018/Schedule?showEvent=11927][Deep Anomaly Detection Using Geometric Transformations]]
 - [2018] [NIPS'18] [[https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection][A loss framework for calibrated anomaly detection]]
+- [2019] [ICLR'19] [[https://openreview.net/forum?id=H1xwNhCcYm][Do Deep Generative Models Know What They Don't Know?]]
 
 ** Generative Adversarial Networks (GANs)
 - [2014] [[http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf][Generative adversarial nets, I. Goodfellow et al.]]
