@@ -60,6 +60,19 @@ list: https://competitions.codalab.org/
 - [2019] [ICLR'19] [[https://openreview.net/forum?id=H1xwNhCcYm][Do Deep Generative Models Know What They Don't Know?]]
 - [2018] [[https://arxiv.org/abs/1810.01392][Generative Ensembles for Robust Anomaly Detection]]
 - [2018] [[https://arxiv.org/abs/1801.03149][An overview of deep learning based methods for unsupervised and semi-supervised anomaly detection in videos, Kiran]]
+ - this applies specifically to anomaly detection in videos, with these datasets:
+  - UCSD Dataset: pedestrians (normal) vs cyclist/wheelchairs (abn) etc.
+  - CUHK Avenue Dataset: unusual object or behaviors in Subway
+  - UMN Dataset: unusual crowd activity
+  - Train Dataset: unusual movement of people on trains
+  - London U-turn dataset: normal traffic vs jaywalking/firetruck
+ - Methods categorized as following
+  - Representation learning: PCA, Autoencoders (AEs) --> monitor deviation
+  - Predictive modeling: autoregressive models, LSTMs --> predict next frame distributions
+  - Generative model: VAEs, GANs, adversarial AEs (AAEs) --> likelihood
+  - evalutaion:
+   - there are two input options: raw images or optical flow. Flow works much better across the board
+   - no model came out consistently on top, and PCA with flow did surprisingly well.
 - [2018] [NIPS'18] [[https://nips.cc/Conferences/2018/Schedule?showEvent=11927][Deep Anomaly Detection Using Geometric Transformations]]
 - [2018] [NIPS'18] [[https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection][A loss framework for calibrated anomaly detection]]
 
