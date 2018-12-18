@@ -19,6 +19,9 @@ importance: 1
 - Optimality
  - For Health
  - For Longevity
+
+** Models of food & body interaction
+- Calorie in vs Calorie out: Pure energy calculation
  
 ** Optimal Diets Research
  - Ketogenic
