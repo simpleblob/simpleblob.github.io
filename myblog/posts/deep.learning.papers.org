@@ -313,66 +313,56 @@ list: https://competitions.codalab.org/
 
 
 ** Natural Language Processing / RNNs
-- *Neural Architectures for Named Entity Recognition* (2016), G. Lample
+- Neural Architectures for Named Entity Recognition* (2016), G. Lample
   et al. [[http://aclweb.org/anthology/N/N16/N16-1030.pdf][[pdf]]]
-- *Exploring the limits of language modeling* (2016), R. Jozefowicz et
+- Exploring the limits of language modeling* (2016), R. Jozefowicz et
   al. [[http://arxiv.org/pdf/1602.02410][[pdf]]]
-- *Teaching machines to read and comprehend* (2015), K. Hermann et al.
+- Teaching machines to read and comprehend* (2015), K. Hermann et al.
   [[http://papers.nips.cc/paper/5945-teaching-machines-to-read-and-comprehend.pdf][[pdf]]]
-- *Effective approaches to attention-based neural machine translation*
+- Effective approaches to attention-based neural machine translation*
   (2015), M. Luong et al. [[https://arxiv.org/pdf/1508.04025][[pdf]]]
-- *Conditional random fields as recurrent neural networks* (2015), S.
+- Conditional random fields as recurrent neural networks* (2015), S.
   Zheng and S. Jayasumana.
   [[http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Zheng_Conditional_Random_Fields_ICCV_2015_paper.pdf][[pdf]]]
-- *Memory networks* (2014), J. Weston et al.
+- Memory networks* (2014), J. Weston et al.
   [[https://arxiv.org/pdf/1410.3916][[pdf]]]
-- *Neural turing machines* (2014), A. Graves et al.
+- Neural turing machines* (2014), A. Graves et al.
   [[https://arxiv.org/pdf/1410.5401][[pdf]]]
-- *Neural machine translation by jointly learning to align and
+- Neural machine translation by jointly learning to align and
   translate* (2014), D. Bahdanau et al.
   [[http://arxiv.org/pdf/1409.0473][[pdf]]]
-- *Sequence to sequence learning with neural networks* (2014), I.
+- Sequence to sequence learning with neural networks* (2014), I.
   Sutskever et al.
   [[http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf][[pdf]]]
-- *Learning phrase representations using RNN encoder-decoder for
+- Learning phrase representations using RNN encoder-decoder for
   statistical machine translation* (2014), K. Cho et al.
   [[http://arxiv.org/pdf/1406.1078][[pdf]]]
-- *A convolutional neural network for modeling sentences* (2014), N.
+- A convolutional neural network for modeling sentences* (2014), N.
   Kalchbrenner et al. [[http://arxiv.org/pdf/1404.2188v1][[pdf]]]
-- *Convolutional neural networks for sentence classification* (2014),
+- Convolutional neural networks for sentence classification* (2014),
   Y. Kim [[http://arxiv.org/pdf/1408.5882][[pdf]]]
-- *Glove: Global vectors for word representation* (2014), J. Pennington
+- Glove: Global vectors for word representation* (2014), J. Pennington
   et al. [[http://anthology.aclweb.org/D/D14/D14-1162.pdf][[pdf]]]
-- *Distributed representations of sentences and documents* (2014), Q.
+- Distributed representations of sentences and documents* (2014), Q.
   Le and T. Mikolov [[http://arxiv.org/pdf/1405.4053][[pdf]]]
-- *Distributed representations of words and phrases and their
+- Distributed representations of words and phrases and their
   compositionality* (2013), T. Mikolov et al.
   [[http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf][[pdf]]]
-- *Efficient estimation of word representations in vector space*
+- Efficient estimation of word representations in vector space*
   (2013), T. Mikolov et al. [[http://arxiv.org/pdf/1301.3781][[pdf]]]
-- *Recursive deep models for semantic compositionality over a sentiment
+- Recursive deep models for semantic compositionality over a sentiment
   treebank* (2013), R. Socher et al.
   [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.383.1327&rep=rep1&type=pdf][[pdf]]]
-- *Generating sequences with recurrent neural networks* (2013), A.
+- Generating sequences with recurrent neural networks* (2013), A.
    Graves. [[https://arxiv.org/pdf/1308.0850][[pdf]]]
 
 ** Speech / Other Domain
-- End-to-end attention-based large vocabulary speech recognition*
-  (2016), D. Bahdanau et al.
-  [[https://arxiv.org/pdf/1508.04395][[pdf]]]
-- Deep speech 2: End-to-end speech recognition in English and
-  Mandarin* (2015), D. Amodei et al.
-  [[https://arxiv.org/pdf/1512.02595][[pdf]]]
-- Speech recognition with deep recurrent neural networks* (2013), A.
-  Graves [[http://arxiv.org/pdf/1303.5778.pdf][[pdf]]]
-- Deep neural networks for acoustic modeling in speech recognition:
-  The shared views of four research groups* (2012), G. Hinton et al.
-  [[http://www.cs.toronto.edu/~asamir/papers/SPM_DNN_12.pdf][[pdf]]]
-- Context-dependent pre-trained deep neural networks for
-  large-vocabulary speech recognition* (2012) G. Dahl et al.
-  [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.337.7548&rep=rep1&type=pdf][[pdf]]]
-- Acoustic modeling using deep belief networks* (2012), A. Mohamed et al.
-   [[http://www.cs.toronto.edu/~asamir/papers/speechDBN_jrnl.pdf][[pdf]]]
+- [2016] [[https://arxiv.org/pdf/1508.04395][End-to-end attention-based large vocabulary speech recognition, D. Bahdanau et al.]]
+- [2015] [[https://arxiv.org/pdf/1512.02595][Deep speech 2: End-to-end speech recognition in English and Mandarin, D. Amodei et al.]]
+- [2013] [[http://arxiv.org/pdf/1303.5778.pdf][Speech recognition with deep recurrent neural networks, A. Graves]]
+- [2012] [[http://www.cs.toronto.edu/~asamir/papers/SPM_DNN_12.pdf][Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups, G. Hinton et al.]]
+- [2012] [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.337.7548&rep=rep1&type=pdf][Context-dependent pre-trained deep neural networks for large-vocabulary speech recognition, G. Dahl et al.]]
+- [2012] [[http://www.cs.toronto.edu/~asamir/papers/speechDBN_jrnl.pdf][Acoustic modeling using deep belief networks, A. Mohamed et al.]]
 
 - [2017] [[https://gab41.lab41.org/speech-recognition-you-down-with-ctc-8d3b558943f0][CTC (Connectionist Temporal Classification Loss) Explained]]
     :PROPERTIES:
@@ -657,27 +647,26 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
     :YEAR:     2015
     :URL:      https://arxiv.org/pdf/1511.00561.pdf
     :END:
-*** keypoints
-***** this is basically an autodecoder, except for CNN architecture. Also use final targets as the segmentation labels.
+ - this is basically an autodecoder, except for CNN architecture. Also use final targets as the segmentation labels.
 - [2011] How Brains Are Built: Principles of Computational Neuroscience
     :PROPERTIES:
     :AUTHOR:  Richard Granger
     :YEAR:     2011
     :URL:      https://arxiv.org/pdf/1704.03855.pdf
     :END:
-*** keypoints
-***** precise simulation of the brain chemically is very difficult. However, we can possibly create the brain model that is "computationally" accurate. we can even use this model to experiment and fix what's wrong with our brain.
-***** Computationally means to understand the subject functions -- enough to create a replica of them. For example, we don't yet understand everything about kidneys about we can create artificial ones that works well now.
-***** What we know now: very little, but we know some "constraint" rules
-****** brain component allometry -- relative size of the brain components vs overall size. The relationship holds across all animal size.
-****** telencephalic uniformity -- neurons throughout the forebrain has similar, repeatable designs with only few exceptions. This means there is a general representation of a wide variety of tasks -- audio, visual , touch etc.
-****** anatomical and physiological imprecision -- the neurons are slow and sloppy (probabilistic). However, the brain is overall working in a robust way.. how?
-****** task specification -- a classification given freeform input. One example is a call support desk. Given a free-form input, direct the customer to appropriate channels. It is highly contextual and no hard rules applied.
-****** parallel processing -- the neuron circuits are painfully slow compared to computer CPU, it seems that the power of the brain lies in its massively parrallel computing power.
-***** Current progress
-****** basal ganglia -- this is the area that receive sensory input, manage reward and punishments mechanism, and learn motor skills. We are close to computationally simulate this.
-****** neocortex -- yeah, no way we are close. Interestingly, the neocortex is connected with basal ganglia through a loop. We are close to successfully creating all the sensory prosthetics, but no way close to simulating the neocortex (higher thoughts).
-****** the most exciting area of research today is about how the neocortex encode the internal representations of concepts and objects.
+ - precise simulation of the brain chemically is very difficult. However, we can possibly create the brain model that is "computationally" accurate. we can even use this model to experiment and fix what's wrong with our brain.
+ - Computationally means to understand the subject functions -- enough to create a replica of them. For example, we don't yet understand everything about kidneys about we can create artificial ones that works well now.
+ - What we know now: very little, but we know some "constraint" rules
+  - brain component allometry -- relative size of the brain components vs overall size. The relationship holds across all animal size.
+  - telencephalic uniformity -- neurons throughout the forebrain has similar, repeatable designs with only few exceptions. This means there is a general representation of a wide variety of tasks -- audio, visual , touch etc.
+  - anatomical and physiological imprecision -- the neurons are slow and sloppy (probabilistic). However, the brain is overall working in a robust way.. how?
+  - task specification -- a classification given freeform input. One example is a call support desk. Given a free-form input, direct the customer to appropriate channels. It is highly contextual and no hard rules applied.
+  - parallel processing -- the neuron circuits are painfully slow compared to computer CPU, it seems that the power of the brain lies in its massively parrallel computing power.
+ - Current progress
+  - basal ganglia -- this is the area that receive sensory input, manage reward and punishments mechanism, and learn motor skills. We are close to computationally simulate this.
+  - neocortex -- yeah, no way we are close. Interestingly, the neocortex is connected with basal ganglia through a loop. We are close to successfully creating all the sensory prosthetics, but no way close to simulating the neocortex (higher thoughts).
+  - the most exciting area of research today is about how the neocortex encode the internal representations of concepts and objects.
+
 ** Other papers still unassorted
 - [2017] A Joint Many-Task Model: Growing a Neural Network for Multiple NLP Tasks
     :PROPERTIES:
