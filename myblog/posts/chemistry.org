@@ -16,6 +16,6 @@ importance: 1
 ** Crash Course summary
 - Everything is made of Atoms
  - Very old theory since B.C., finally Einstein proved it.
-  - someone noticed small Pollen jiggle under microscope. It was actually caused from brownian motions from invisible (to the eye) molecules.
+  - someone noticed a small pollen jiggling under microscope without anything near it. That was actually caused by brownian motions of the surrounding invisible (to the eye) molecules.
   - with the motion equation, we can predict the pollen trajectory perfectly.
   
