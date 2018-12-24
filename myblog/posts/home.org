@@ -13,8 +13,8 @@ importance: 1
 ** Links of interest
 - [Japan][[https://resources.realestate.co.jp/living/how-much-living-space-does-the-average-household-have-in-japan/][How much living space does the average household have in Japan?]] 
 - [lundman's wiki][[http://lundman.net/wiki/index.php/Tokyo_house][Building a house in Tokyo]]
-- [[https://wiki.earlyretirementextreme.com/][ERE's wiki]] (scroll down to housing topic under `Practical Matters`)
+- [[https://wiki.earlyretirementextreme.com/][ERE's wiki]] (scroll down to housing topic under ~Practical Matters~)
 
 ** Thoughts
-- `home` or `living space` comprises of many parts to satisfy a person's need
+- ~home~ or ~living space~ comprises of many parts to satisfy a person's need
 - we can optimize by choosing each part careful, to lower cost and increase utility
