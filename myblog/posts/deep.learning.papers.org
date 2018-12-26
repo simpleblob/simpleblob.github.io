@@ -30,7 +30,7 @@ list: https://competitions.codalab.org/
  :URL: http://image-net.org/about-stats
  :END:
 
-** Anomaly Detection
+** Anomaly Detection (Images / Videos)
 - Overview
  - currently there are 3 main approaches
    1. clustering or nearest neighbor
@@ -77,6 +77,14 @@ list: https://competitions.codalab.org/
 - [2018] [NIPS'18] [[https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection][A loss framework for calibrated anomaly detection]]
 - [2018] [[https://arxiv.org/abs/1805.06725][GANomaly: Semi-Supervised Anomaly Detection via Adversarial Training]]
 
+** Anomaly Detection (Time Series)
+- Overview
+ - 3 main approaches
+  - classification - input sequence window ==> output Good / Bad
+  - detection - input sequence window ==> output t+1 sequence
+  - reconstruction - input squence window ==> Encoder-Decoder ==> check reconstruction loss
+- [2018] [[https://arxiv.org/abs/1809.04356][Deep learning for time series classification: a review]]
+- [2018] [[https://arxiv.org/abs/1708.02635][Anomaly Detection in Multivariate Non-stationary Time Series for Automatic DBMS Diagnosis]]
 
 ** Generative Adversarial Networks (GANs)
 - [2018] (Articles) [[https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b][GAN Series (from the beginning to the end)]]
