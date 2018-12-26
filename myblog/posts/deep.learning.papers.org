@@ -75,6 +75,7 @@ list: https://competitions.codalab.org/
    - no model came out consistently on top, and PCA with flow did surprisingly well.
 - [2018] [NIPS'18] [[https://nips.cc/Conferences/2018/Schedule?showEvent=11927][Deep Anomaly Detection Using Geometric Transformations]]
 - [2018] [NIPS'18] [[https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection][A loss framework for calibrated anomaly detection]]
+- [2018] [[https://arxiv.org/abs/1805.06725][GANomaly: Semi-Supervised Anomaly Detection via Adversarial Training]]
 
 
 ** Generative Adversarial Networks (GANs)
