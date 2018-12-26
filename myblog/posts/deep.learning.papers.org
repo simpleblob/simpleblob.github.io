@@ -74,7 +74,7 @@ list: https://competitions.codalab.org/
    - there are two input options: raw images or optical flow. Flow works much better across the board
    - no model came out consistently on top, and PCA with flow did surprisingly well.
 - [2017] [[https://arxiv.org/abs/1706.02690][Enhancing The Reliability of Out-of-distribution Image Detection in Neural Networks, Liang]] / [[https://openreview.net/forum?id=H1VGkIxRZ][open-review]]
- - train a DNN model with class of in-distribution data == 1 and others == 0. (I think for training time, the target is always 1)
+ - train a DNN model with class of in-distribution data = 1 and others = 0. (I think at training time, the target is always 1)
  - at test time, two transformations are proposed for better detection
   - temperature scaling (T) of softmax probabilities (per Hinton's [[https://arxiv.org/abs/1503.02531][distillation paper]]. ~T~ is within range [1,1000]
   - small perturbations by a gradient of its own raw image's softmax-score. the scaling factor is in [0,0.004]
