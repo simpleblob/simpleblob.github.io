@@ -81,7 +81,7 @@ list: https://competitions.codalab.org/
 - Overview
  - 3 main approaches
   - classification - input sequence window ==> output Good / Bad
-  - detection - input sequence window ==> output t+1 sequence
+  - detection - input sequence window ==> output t+1 sequence and compare diff with DTW
   - reconstruction - input squence window ==> Encoder-Decoder ==> check reconstruction loss
 - [2018] [[https://arxiv.org/abs/1809.04356][Deep learning for time series classification: a review]]
 - [2018] [[https://arxiv.org/abs/1708.02635][Anomaly Detection in Multivariate Non-stationary Time Series for Automatic DBMS Diagnosis]]
