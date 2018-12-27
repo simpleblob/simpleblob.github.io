@@ -35,7 +35,7 @@ list: https://competitions.codalab.org/
  - currently there are 3 main approaches
    1. clustering or nearest neighbor
    2. learn from 1-class (normal) data and draw a boundary using SVM etc.
-   3. feature reconstruction of what is considered "normal" and compared against the sample.
+   3. feature reconstruction of what is considered "normal" and compared diff against the sample.
  - recently DL methods focus on the 3rd approach using autoencoders and GANs
 - [[https://github.com/hoya012/awesome-anomaly-detection][Awesome list of anomaly detection]]
 - [2017] [[https://arxiv.org/abs/1703.05921][Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery (AnoGAN), Schlegl.]] / [[https://github.com/tkwoo/anogan-keras][code]]
@@ -56,7 +56,6 @@ list: https://competitions.codalab.org/
    - cross-entropy (CE): between D(x,E(x)) and 1
    - feature-matching (FM): L0 loss (absolute-diff) between mid-level logits of D(x,E(x)) and D(G(E(x)),E(x))
    - experiments show that performance between CE and FM is data-specific
-
 - [2019] [ICLR'19] [[https://openreview.net/forum?id=H1xwNhCcYm][Do Deep Generative Models Know What They Don't Know?]]
 - [2018] [[https://arxiv.org/abs/1810.01392][Generative Ensembles for Robust Anomaly Detection]]
 - [2018] [[https://arxiv.org/abs/1801.03149][An overview of deep learning based methods for unsupervised and semi-supervised anomaly detection in videos, Kiran]]
@@ -84,6 +83,7 @@ list: https://competitions.codalab.org/
 - [2018] [NIPS'18] [[https://nips.cc/Conferences/2018/Schedule?showEvent=11927][Deep Anomaly Detection Using Geometric Transformations]]
 - [2018] [NIPS'18] [[https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection][A loss framework for calibrated anomaly detection]]
 - [2018] [[https://arxiv.org/abs/1805.06725][GANomaly: Semi-Supervised Anomaly Detection via Adversarial Training]]
+- [2018] [[https://arxiv.org/abs/1807.02011][Improving Unsupervised Defect Segmentation by Applying Structural Similarity to Autoencoders]]
 
 ** Anomaly Detection (Time Series)
 - Overview
