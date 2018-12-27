@@ -81,6 +81,12 @@ list: https://competitions.codalab.org/
   - ~Temperature scaling~ makes the network less sure and expand the outlier area (90-100% prob. part)
   - ~Perturbations~ mainly affects in-distribution data, almost has no effect for out-distribution data
 - [2018] [NIPS'18] [[https://nips.cc/Conferences/2018/Schedule?showEvent=11927][Deep Anomaly Detection Using Geometric Transformations]]
+ - using target as "transformation #i" for the labels while training
+ - for simple normality score, take the softmaxed prediction for each Transformation, then compute mean. The higher, the more likely to be normal image.
+ - for full dirichlet normality score, we need to estimate alpha first and the formula is a bit more complex.
+ - intuition is that:
+  - while training (which are all normal images), the model will learn to detect types of geometric transformation.
+  - on testing, if we have abnormal images, the model will be less sure of the type of transformation used.
 - [2018] [NIPS'18] [[https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection][A loss framework for calibrated anomaly detection]]
 - [2018] [[https://arxiv.org/abs/1805.06725][GANomaly: Semi-Supervised Anomaly Detection via Adversarial Training]]
 - [2018] [[https://arxiv.org/abs/1807.02011][Improving Unsupervised Defect Segmentation by Applying Structural Similarity to Autoencoders]]
