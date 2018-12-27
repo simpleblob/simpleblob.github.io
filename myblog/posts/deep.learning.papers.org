@@ -84,6 +84,8 @@ list: https://competitions.codalab.org/
 - [2018] [NIPS'18] [[https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection][A loss framework for calibrated anomaly detection]]
 - [2018] [[https://arxiv.org/abs/1805.06725][GANomaly: Semi-Supervised Anomaly Detection via Adversarial Training]]
 - [2018] [[https://arxiv.org/abs/1807.02011][Improving Unsupervised Defect Segmentation by Applying Structural Similarity to Autoencoders]]
+ - for reconstruction-type anomaly segmentation, using SSIM instead of L2 Loss improved the quality substantially. 
+ - these guys are from Machine vision company, so this idea is probably in actual production.
 
 ** Anomaly Detection (Time Series)
 - Overview
