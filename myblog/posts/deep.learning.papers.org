@@ -56,6 +56,8 @@ list: https://competitions.codalab.org/
    - cross-entropy (CE): between D(x,E(x)) and 1
    - feature-matching (FM): L0 loss (absolute-diff) between mid-level logits of D(x,E(x)) and D(G(E(x)),E(x))
    - experiments show that performance between CE and FM is data-specific
+- [2018] [[https://arxiv.org/abs/1812.02288][Adversarially Learned Anomaly Detection (ALAD)]] / [[https://github.com/houssamzenati/Adversarially-Learned-Anomaly-Detection][code]]
+ - This is the follow-up work from the Efficient Anogan paper author
 - [2019] [ICLR'19] [[https://openreview.net/forum?id=H1xwNhCcYm][Do Deep Generative Models Know What They Don't Know?]]
 - [2018] [[https://arxiv.org/abs/1810.01392][Generative Ensembles for Robust Anomaly Detection]]
 - [2018] [[https://arxiv.org/abs/1801.03149][An overview of deep learning based methods for unsupervised and semi-supervised anomaly detection in videos, Kiran]]
