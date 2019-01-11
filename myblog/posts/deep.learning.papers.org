@@ -405,17 +405,16 @@ list: https://competitions.codalab.org/
   - so obviously we need to get rid of the silence and repeats, the way to do that is CTC.
   - Essentially, the equation defines the loss that makes good probability distribution over good paths
 ** Reinforcement Learning / Robotics
-- End-to-end training of deep visuomotor policies* (2016), S. Levine
+- [2016] End-to-end training of deep visuomotor policies, S. Levine
   et al.
   [[http://www.jmlr.org/papers/volume17/15-522/source/15-522.pdf][[pdf]]]
-- Learning Hand-Eye Coordination for Robotic Grasping with Deep Learning and Large-Scale Data Collection* (2016), S. Levine et al.
+- [2016] Learning Hand-Eye Coordination for Robotic Grasping with Deep Learning and Large-Scale Data Collection, S. Levine et al.
   [[https://arxiv.org/pdf/1603.02199][[pdf]]]
-- Asynchronous methods for deep reinforcement learning* (2016), V. Mnih et al.
+- [2016] Asynchronous methods for deep reinforcement learning, V. Mnih et al.
   [[http://www.jmlr.org/proceedings/papers/v48/mniha16.pdf][[pdf]]]
-- Deep Reinforcement Learning with Double Q-Learning* (2016), H.
+- [2016] Deep Reinforcement Learning with Double Q-Learning, H.
   Hasselt et al. [[https://arxiv.org/pdf/1509.06461.pdf][[pdf]]]
-- Mastering the game of Go with deep neural networks and tree search*
-  (2016), D. Silver et al.
+- [2016] Mastering the game of Go with deep neural networks and tree search, D. Silver et al.
   [[http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html][[pdf]]]
 - Continuous control with deep reinforcement learning* (2015), T.
   Lillicrap et al. [[https://arxiv.org/pdf/1509.02971][[pdf]]]
