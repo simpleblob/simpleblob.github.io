@@ -1,4 +1,4 @@
-### Linear Algebra (Matrix/Vector)
+*** Linear Algebra (Matrix/Vector)
 - 3brown1blue videos
 - basis vectors
  - think of vector as an arrow point on the map, with origin at [0,0]
