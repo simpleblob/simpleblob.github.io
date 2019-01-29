@@ -1,0 +1,11 @@
+### Linear Algebra (Matrix/Vector)
+- 3brown1blue videos
+- basis vectors
+ - think of vector as an arrow point on the map, with origin at [0,0]
+ - think of basis vector i and j and each x and y coordinate on the map
+- linear transformation 
+ - the linear transformation can be thought of the squishing or enlarging the nD dimensional space
+  - it won't be linear if the origin moves or the spacing becomes unequal
+ - we can put the "new" basis vector as column 1, 2,... of the transformation matrix. we use the dot product to apply the transofmration
+ - 2x3 transformation matrix means we are squishing from 3D to 2D coordinates.
+- 
