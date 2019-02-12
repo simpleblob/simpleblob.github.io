@@ -32,18 +32,17 @@ list: https://competitions.codalab.org/
 
 ** Body pose estimation
 *** Dataset
-[big list of both body and hand dataset](http://liris.cnrs.fr/voir/wiki/doku.php?id=datasets)
-- [[2017] Posetrack benchmark Dataset](https://posetrack.net/)
+[[big list of both body and hand dataset][http://liris.cnrs.fr/voir/wiki/doku.php?id=datasets]]
+- [2017] [[https://posetrack.net/][Posetrack benchmark Dataset]]
   - 20K RGB images (from 500 videos) with 120K body pose labeled
-  - main purpose for the [ICCV 2017 human pose challenge](https://posetrack.net/workshops/iccv2017/#people) evaluation (23rd Oct!)
-- [[2016] COCO keypoint challenge](http://cocodataset.org/#keypoints-challenge2016) - **good**
+  - main purpose for the [[https://posetrack.net/workshops/iccv2017/#people][ICCV 2017 human pose challenge]] evaluation
+- [2016] [[[http://cocodataset.org/#keypoints-challenge2016][COCO keypoint challenge]] - *good*
   - 90K RGB images
-  - 2016 winner is the openpose paper
-
+  - 2016 winner is the openpose paper below
 *** Papers
-- [[2016] Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields](https://arxiv.org/abs/1611.08050) - **openpose**
-  - state-of-the-art accuracy and speed
-- [[2017] VNect: Real-time 3D Human Pose Estimation with a Single RGB Camera](http://gvv.mpi-inf.mpg.de/projects/VNect/)
+- [2016] [[https://arxiv.org/abs/1611.08050][Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields]] - *openpose paper*
+ - state-of-the-art accuracy and speed
+- [2017] [[http://gvv.mpi-inf.mpg.de/projects/VNect/][VNect: Real-time 3D Human Pose Estimation with a Single RGB Camera]]
   - single-person, real-time **3D** body pose estimation.
   - RGB data >> crop single-person (tracked) >> CNN pose regression >> Kinematic skeleton fitting
   - So far they only shown a full-body result. Upper-half images only might be a problem (kinematic)
@@ -55,33 +54,33 @@ list: https://competitions.codalab.org/
 The most challenging part about this is not the architecture, but the lack of large, clean, public dataset.
 
 *** Dataset
-- [[2017] BigHand2.2M Dataset](http://www.iis.ee.ic.ac.uk/ComputerVision/hand/Hands2016)
+- [2017] [[http://www.iis.ee.ic.ac.uk/ComputerVision/hand/Hands2016][BigHand2.2M Dataset]]
   - 2.2 million Depth and (maybe) RGB images
   - no public link.
-- [[2017] First-Person Hand Action Dataset](https://arxiv.org/abs/1704.02463)
+- [2017] [[https://arxiv.org/abs/1704.02463][First-Person Hand Action Dataset]]
   - 100K RGB+D images
   - no public link
   - First-person camera only (like selfies)
-- [[2017] Hands Challenge 2017 Dataset](http://icvl.ee.ic.ac.uk/hands17/challenge/)
+- [2017] [[http://icvl.ee.ic.ac.uk/hands17/challenge/][Hands Challenge 2017 Dataset]]
   - sampled from both of the above two dataset
-  - main purpose is for evaluation in the 2017 competition (talks due this 23rd Oct!)
+  - main purpose is for evaluation in the 2017 competition
   - dataset available via email request, non-commercial purpose only
-- [[2017] Multiview 3D Hand Pose Dataset](http://www.rovit.ua.es/dataset/mhpdataset/) - **so-so** | **real** | **ground-truth not accurate**
+- [2017] [[http://www.rovit.ua.es/dataset/mhpdataset/][Multiview 3D Hand Pose Dataset]] - *so-so* | *real* | *ground-truth not accurate*
   - 20K RGB images with 2D,3D, bounding box annotation
-- [[2017] Synthetic dataset from Zimmerman et.al](https://lmb.informatik.uni-freiburg.de/resources/datasets/RenderedHandposeDataset.en.html ) - **good** | **CG**
+- [2017] [[https://lmb.informatik.uni-freiburg.de/resources/datasets/RenderedHandposeDataset.en.html][Synthetic dataset from Zimmerman et.al]] - *good* | *CG*
   - 41K RGB+D images from 20 different characters 3D models (with 1K random background).
-  - Basically Zimmerman generated this dataset for [his own architecture](https://arxiv.org/abs/1705.01389) use
-- [[2016] Capturing Hands in Action using Discriminative Salient Points ...](http://files.is.tue.mpg.de/dtzionas/Hand-Object-Capture/) **good** | **real**
+  - Basically Zimmerman generated this dataset for [his own architecture][https://arxiv.org/abs/1705.01389) use
+- [2016] [[http://files.is.tue.mpg.de/dtzionas/Hand-Object-Capture/][Capturing Hands in Action using Discriminative Salient Points]] *good* | *real*
   - pretty good label for Hand-Hand Interaction. (RGB-D)
-- [[2014] RWTH-PHOENIX-Weather MS Handshapes](https://www-i6.informatik.rwth-aachen.de/~koller/1miohands-data/) - **potential** | **real** | **no keypoints**
+- [2014] [[RWTH-PHOENIX-Weather MS Handshapes][https://www-i6.informatik.rwth-aachen.de/~koller/1miohands-data/]] - *potential* | *real* | *no keypoints*
   - 1 million RGB sign-language hand images with classification label.
   - only has "shape" level classification label. Also the cropping might not be close enough
-- [[2013] polish sign language database](http://sun.aei.polsl.pl/~mkawulok/gestures/) - **good** | **real**
+- [2013] [[polish sign language database][http://sun.aei.polsl.pl/~mkawulok/gestures/]] - *good* | *real*
   - 1,500 annotated RGB dataset
-- [[2013] Dexter 1 dataset](http://handtracker.mpi-inf.mpg.de/projects/handtracker_iccv2013/dexter1.htm)
+- [2013] [[Dexter 1 dataset][http://handtracker.mpi-inf.mpg.de/projects/handtracker_iccv2013/dexter1.htm]]
   - 3K RGB+D images
   - only 6 joints
-- [[2014] NYU hand pose Dataset](http://cims.nyu.edu/~tompson/NYU_Hand_Pose_Dataset.htm#overview)
+- [2014] [[NYU hand pose Dataset][http://cims.nyu.edu/~tompson/NYU_Hand_Pose_Dataset.htm#overview]]
   - 80K RGB+D images (mostly from a single user)
   - generally used for paper evaluation
   - Not good RGB images according to Zimmerman paper
@@ -95,10 +94,10 @@ Most of the papers use Depth-only or RGB+D data to estimate hand-pose...
 It is probably possible to convert RGB to depth with another model, but it might be even slower.
 
 List of generally good papers with performance benchmark here --> [Awesome hand pose estimation](https://github.com/xinghaochen/awesome-hand-pose-estimation)
-List of papers with notes from researcher student's personal wiki --> [inria wiki](https://github.com/hassony2/inria-research-wiki/wiki/hand-papers)
+List of papers with notes from researcher student's personal wiki --> [[https://github.com/hassony2/inria-research-wiki/wiki/hand-papers][inria wiki]]
 [Accepted papers from Hands 2017 conference](http://icvl.ee.ic.ac.uk/hands17/program/program-details/)
 
-- [[2017] Hand Keypoint Detection in Single Images using Multiview Bootstrapping](https://arxiv.org/abs/1704.07809) - **openpose**
+- [2017] [[https://arxiv.org/abs/1704.07809][Hand Keypoint Detection in Single Images using Multiview Bootstrapping]] - **openpose**
   - good accuracy but speed is quite slow. the paper says it can be run in real-time but never provide benchmark any.
   - 2D hand pose estimation from RGB image
   - starts from building multiview dataset with good labels 
@@ -107,7 +106,7 @@ List of papers with notes from researcher student's personal wiki --> [inria wik
     - average & contrain in 3D space from multiple view (but same hand instance)
     - get 3D point labels (use as ground truth for next interations)
     - continue until all the images are properly labeled
-  - Detector Architecture: based on [CPM](https://arxiv.org/pdf/1602.00134.pdf) with some modifications
+  - Detector Architecture: based on [[https://arxiv.org/pdf/1602.00134.pdf][CPM]] with some modifications
     - Stage 1: 
        - Pass input images into a few CNN+Pooling layers to extract feature-maps.
        - pass through a few more CNN layers to predict belief maps
@@ -116,19 +115,18 @@ List of papers with notes from researcher student's personal wiki --> [inria wik
        - concatenate with belief maps from Stage 1
        - use that to pass through a few more CNN layers to predict a more refined belief maps
     - Stage 3 and onward: Use stage 2 architecture and repeat.
-- [[2017] Learning to Estimate 3D Hand Pose from Single RGB Images](https://arxiv.org/abs/1705.01389)
+- [2017] [[Learning to Estimate 3D Hand Pose from Single RGB Images][https://arxiv.org/abs/1705.01389]]
   - This is the Zimmerman paper
   - 3 Networks are used sequentially
     - hand localization through segmentation
     - 21 keypoint (2D) localization in hand
     - deduction of 3D hand pose from 2D keypoints
-- [[2017] SubUNets: End-to-end Hand Shape and Continuous Sign Language Recognition](http://epubs.surrey.ac.uk/841837/1/camgoz2017iccv.pdf)
+- [2017] [[SubUNets: End-to-end Hand Shape and Continuous Sign Language Recognition](http://epubs.surrey.ac.uk/841837/1/camgoz2017iccv.pdf)
   - architecture: CNN+LSTM+Seq2seq (CTC) >> classification
   - the CTC part is used for doing continuous prediction
-  - https://www-i6.informatik.rwth-aachen.de/~koller/
+  - [[https://www-i6.informatik.rwth-aachen.de/~koller/][https://www-i6.informatik.rwth-aachen.de/~koller/]]
   - WITH 1 million hand sign-language dataset (per above)
-- [[2015] A novel finger and hand pose estimation technique for real-time hand
-gesture recognition](https://sci-hub.io/http://www.sciencedirect.com/science/article/pii/S0031320315002745) - **potential**
+- [2015] [[https://sci-hub.io/http://www.sciencedirect.com/science/article/pii/S0031320315002745][A novel finger and hand pose estimation technique for real-time hand gesture recognition]] - *potential*
   - several ways to represent the hand model, with varying complexities -- good way to think about feature representation
   - This is not a deep learning paper, but there are several techniques for pre-processing the RGB images to make them easier for the architecture to learn hand pose.
   
