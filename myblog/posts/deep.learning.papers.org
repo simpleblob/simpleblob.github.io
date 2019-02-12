@@ -498,6 +498,9 @@ It is probably possible to convert RGB to depth with another model, but it might
    :END:
  - keypoints
   - aasdf
+- [2015] [[http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html][David Silver's excellent reinforcement learning course with video]]
+  - Agents, Environments, Actions, Rewards
+  - partially observable markovs (POMDP)
 - [2017] [[https://arxiv.org/pdf/1708.05866][A Brief Survey of Deep Reinforcement Learning]]
    :PROPERTIES:
    :AUTHOR:   Kai Arulkumaran
