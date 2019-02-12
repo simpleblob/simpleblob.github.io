@@ -299,12 +299,9 @@ list: https://competitions.codalab.org/
    :END:
  - keypoints
   - demonstrate an fully CNN without FC layers at the end -- without additional manual manipulation
-- *Rich feature hierarchies for accurate object detection and semantic segmentation* (2014), R. Girshick et al.
-  [[http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf][[pdf]]]
-- *Semantic image segmentation with deep convolutional nets and fully connected CRFs*, L. Chen et al.
-  [[https://arxiv.org/pdf/1412.7062][[pdf]]]
-- *Learning hierarchical features for scene labeling* (2013), C. Farabet et al.
-  [[https://hal-enpc.archives-ouvertes.fr/docs/00/74/20/77/PDF/farabet-pami-13.pdf][[pdf]]]
+- [2014] [[http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf][Rich feature hierarchies for accurate object detection and semantic segmentation, R. Girshick et al.]]
+- [2015] [[https://arxiv.org/pdf/1412.7062][Semantic image segmentation with deep convolutional nets and fully connected CRFs, L. Chen et al.]]
+- [2013] [[https://hal-enpc.archives-ouvertes.fr/docs/00/74/20/77/PDF/farabet-pami-13.pdf][Learning hierarchical features for scene labeling, C. Farabet et al.]]
 
 ** Image / Video / Etc
 - Image Super-Resolution Using Deep Convolutional Networks* (2016), C.
