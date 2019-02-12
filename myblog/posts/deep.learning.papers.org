@@ -500,7 +500,11 @@ It is probably possible to convert RGB to depth with another model, but it might
   - aasdf
 - [2015] [[http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html][David Silver's excellent reinforcement learning course with video]]
   - Agents, Environments, Actions, Rewards
+  - Full information game --> Agent state = Environment state
+  - History = sequences of Observations, Agent States and Actions.
+  - Markov process means P(St) = P(St | St+1..), so previous states don't matter.
   - partially observable markovs (POMDP)
+  - Policy = function that maps from Agent state to Action
 - [2017] [[https://arxiv.org/pdf/1708.05866][A Brief Survey of Deep Reinforcement Learning]]
    :PROPERTIES:
    :AUTHOR:   Kai Arulkumaran
