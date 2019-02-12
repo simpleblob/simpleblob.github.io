@@ -32,7 +32,7 @@ list: https://competitions.codalab.org/
 
 ** Body pose estimation
 *** Dataset
-[[big list of both body and hand dataset][http://liris.cnrs.fr/voir/wiki/doku.php?id=datasets]]
+[[http://liris.cnrs.fr/voir/wiki/doku.php?id=datasets][big list of both body and hand dataset]]
 - [2017] [[https://posetrack.net/][Posetrack benchmark Dataset]]
   - 20K RGB images (from 500 videos) with 120K body pose labeled
   - main purpose for the [[https://posetrack.net/workshops/iccv2017/#people][ICCV 2017 human pose challenge]] evaluation
@@ -43,7 +43,7 @@ list: https://competitions.codalab.org/
 - [2016] [[https://arxiv.org/abs/1611.08050][Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields]] - *openpose paper*
  - state-of-the-art accuracy and speed
 - [2017] [[http://gvv.mpi-inf.mpg.de/projects/VNect/][VNect: Real-time 3D Human Pose Estimation with a Single RGB Camera]]
-  - single-person, real-time **3D** body pose estimation.
+  - single-person, real-time *3D* body pose estimation.
   - RGB data >> crop single-person (tracked) >> CNN pose regression >> Kinematic skeleton fitting
   - So far they only shown a full-body result. Upper-half images only might be a problem (kinematic)
   - not sure about performance.
@@ -72,16 +72,16 @@ The most challenging part about this is not the architecture, but the lack of la
   - Basically Zimmerman generated this dataset for [his own architecture][https://arxiv.org/abs/1705.01389) use
 - [2016] [[http://files.is.tue.mpg.de/dtzionas/Hand-Object-Capture/][Capturing Hands in Action using Discriminative Salient Points]] *good* | *real*
   - pretty good label for Hand-Hand Interaction. (RGB-D)
-- [2014] [[RWTH-PHOENIX-Weather MS Handshapes][https://www-i6.informatik.rwth-aachen.de/~koller/1miohands-data/]] - *potential* | *real* | *no keypoints*
+- [2014] [[https://www-i6.informatik.rwth-aachen.de/~koller/1miohands-data/][RWTH-PHOENIX-Weather MS Handshapes]] - *potential* | *real* | *no keypoints*
   - 1 million RGB sign-language hand images with classification label.
   - only has "shape" level classification label. Also the cropping might not be close enough
-- [2013] [[polish sign language database][http://sun.aei.polsl.pl/~mkawulok/gestures/]] - *good* | *real*
+- [2013] [[http://sun.aei.polsl.pl/~mkawulok/gestures/][polish sign language database]] - *good* | *real*
   - 1,500 annotated RGB dataset
-- [2013] [[Dexter 1 dataset][http://handtracker.mpi-inf.mpg.de/projects/handtracker_iccv2013/dexter1.htm]]
+- [2013] [[http://handtracker.mpi-inf.mpg.de/projects/handtracker_iccv2013/dexter1.htm][Dexter 1 dataset]]
   - 3K RGB+D images
   - only 6 joints
-- [2014] [[NYU hand pose Dataset][http://cims.nyu.edu/~tompson/NYU_Hand_Pose_Dataset.htm#overview]]
-  - 80K RGB+D images (mostly from a single user)
+- [2014] [[http://cims.nyu.edu/~tompson/NYU_Hand_Pose_Dataset.htm#overview][NYU hand pose Dataset]]
+  - 80K RGB+D images (mostly from a single person)
   - generally used for paper evaluation
   - Not good RGB images according to Zimmerman paper
 
@@ -93,11 +93,11 @@ list of more datasets here
 Most of the papers use Depth-only or RGB+D data to estimate hand-pose...
 It is probably possible to convert RGB to depth with another model, but it might be even slower.
 
-List of generally good papers with performance benchmark here --> [Awesome hand pose estimation](https://github.com/xinghaochen/awesome-hand-pose-estimation)
+List of generally good papers with performance benchmark here --> [[https://github.com/xinghaochen/awesome-hand-pose-estimation][Awesome hand pose estimation]]
 List of papers with notes from researcher student's personal wiki --> [[https://github.com/hassony2/inria-research-wiki/wiki/hand-papers][inria wiki]]
-[Accepted papers from Hands 2017 conference](http://icvl.ee.ic.ac.uk/hands17/program/program-details/)
+[[http://icvl.ee.ic.ac.uk/hands17/program/program-details/][Accepted papers from Hands 2017 conference]]
 
-- [2017] [[https://arxiv.org/abs/1704.07809][Hand Keypoint Detection in Single Images using Multiview Bootstrapping]] - **openpose**
+- [2017] [[https://arxiv.org/abs/1704.07809][Hand Keypoint Detection in Single Images using Multiview Bootstrapping]] - *openpose*
   - good accuracy but speed is quite slow. the paper says it can be run in real-time but never provide benchmark any.
   - 2D hand pose estimation from RGB image
   - starts from building multiview dataset with good labels 
@@ -111,17 +111,17 @@ List of papers with notes from researcher student's personal wiki --> [[https://
        - Pass input images into a few CNN+Pooling layers to extract feature-maps.
        - pass through a few more CNN layers to predict belief maps
     - Stage 2:
-       - Again, pass input images into a few CNN+Pooling layers to extract feature-maps. **These layers have different weights from Stage 1**
+       - Again, pass input images into a few CNN+Pooling layers to extract feature-maps. *These layers have different weights from Stage 1*
        - concatenate with belief maps from Stage 1
        - use that to pass through a few more CNN layers to predict a more refined belief maps
     - Stage 3 and onward: Use stage 2 architecture and repeat.
-- [2017] [[Learning to Estimate 3D Hand Pose from Single RGB Images][https://arxiv.org/abs/1705.01389]]
+- [2017] [[https://arxiv.org/abs/1705.01389][Learning to Estimate 3D Hand Pose from Single RGB Images]]
   - This is the Zimmerman paper
   - 3 Networks are used sequentially
     - hand localization through segmentation
     - 21 keypoint (2D) localization in hand
     - deduction of 3D hand pose from 2D keypoints
-- [2017] [[SubUNets: End-to-end Hand Shape and Continuous Sign Language Recognition](http://epubs.surrey.ac.uk/841837/1/camgoz2017iccv.pdf)
+- [2017] [[http://epubs.surrey.ac.uk/841837/1/camgoz2017iccv.pdf][SubUNets: End-to-end Hand Shape and Continuous Sign Language Recognition]]
   - architecture: CNN+LSTM+Seq2seq (CTC) >> classification
   - the CTC part is used for doing continuous prediction
   - [[https://www-i6.informatik.rwth-aachen.de/~koller/][https://www-i6.informatik.rwth-aachen.de/~koller/]]
@@ -628,7 +628,7 @@ so far the DL method did aggressively out-perform traditional ones.
 
 New alternative would be to add new sensor data (temperature/humidity) and ensemble with CNN model. For that matter, how accurate would predictions from sensor data alone be?
 
-- [2018] (2 Dataset) A CNN–RNN architecture for multi-label weather recognition
+- [2018] (2 Dataset) A CNN–RNN architecture for multi-label weather recognition (use sci-hub to get the link)
     :PROPERTIES:
     :AUTHOR:   Zhao et al.
     :YEAR:     2018
@@ -743,7 +743,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
  - keypoints
   - iterations from the 2010 paper, add unpooling reconstrucitons with switches (location info for the max-pool values)
   - they are able to re-create the input-size map for all layers
-- [2010] Deconvolutional Networks
+- [2010] [[http://www.matthewzeiler.com/pubs/cvpr2010/cvpr2010.pdf][Deconvolutional Networks]]
     :PROPERTIES:
     :AUTHOR:  Zeiler et al.
     :YEAR:     2010
@@ -755,7 +755,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
   - The kernels are different from the feed-forward kernels, of course.
   - the usage of "sparse coding" made this possible. see: [[http://deeplearning.net/software/theano_versions/dev/tutorial/conv_arithmetic.html#transposed-convolution-arithmetic][tranposed convolution arithmetic]]
   - [[https://datascience.stackexchange.com/questions/6107/what-are-deconvolutional-layers][see stackexchange answer from here]]
-  - [[http://cs.nyu.edu/~fergus/drafts/utexas2.pdf][good slide here] 
+  - [[http://cs.nyu.edu/~fergus/drafts/utexas2.pdf][good slide here]] 
 - [2016] [[http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf][Learning Deep Features for Discriminative Localization (global average pooling)]]
     :PROPERTIES:
     :AUTHOR:  Bolei Zhou
@@ -767,14 +767,14 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
   - then we can use the FC weights to combined the GAP values.
   - this effectively "focuses" the network activations before connecting to FC layer.
   - with this we can generate heatmap to see the activation overlays
-- [2015] SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation
+- [2015] [[https://arxiv.org/pdf/1511.00561.pdf][SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation]]
     :PROPERTIES:
     :AUTHOR:  Vijay Badrinarayanan
     :YEAR:     2015
     :URL:      https://arxiv.org/pdf/1511.00561.pdf
     :END:
  - this is basically an autodecoder, except for CNN architecture. Also use final targets as the segmentation labels.
-- [2011] How Brains Are Built: Principles of Computational Neuroscience
+- [2011] [[https://arxiv.org/pdf/1704.03855.pdf][How Brains Are Built: Principles of Computational Neuroscience]]
     :PROPERTIES:
     :AUTHOR:  Richard Granger
     :YEAR:     2011
@@ -794,7 +794,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
   - the most exciting area of research today is about how the neocortex encode the internal representations of concepts and objects.
 
 ** Other papers still unassorted
-- [2017] A Joint Many-Task Model: Growing a Neural Network for Multiple NLP Tasks
+- [2017] [[https://openreview.net/forum?id=SJZAb5cel][A Joint Many-Task Model: Growing a Neural Network for Multiple NLP Tasks]]
     :PROPERTIES:
     :AUTHOR:  Kazuma Hashimoto, Caiming Xiong, Yoshimasa Tsuruoka, Richard Socher
     :YEAR:     2017
@@ -806,7 +806,7 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
   - We use a simple regularization term to allow for optimizing all model weights to improve one task’s loss without exhibiting catastrophic interference of the other tasks. Our single end-to-end trainable model obtains state-of-the-art results on chunking, dependency parsing, semantic relatedness and textual entailment. 
   - It also performs competitively on POS tagging. Our dependency parsing layer relies only on a single feed-forward pass and does not require a beam search.
  - This is kind of like Ensembling models, but they are more "joined" at the end (softmax layer and feature layer), rather than just averaging results from softmax.
-- [2017] Hierarchical Memory Networks
+- [2017] [[https://arxiv.org/pdf/1704.03855.pdf][Hierarchical Memory Networks]]
     :PROPERTIES:
     :AUTHOR:  Sarath Chandar, Sungjin Ahn, Hugo Larochelle, Pascal Vincent, Gerald Tesauro, Yoshua Bengio
     :YEAR:     2017
