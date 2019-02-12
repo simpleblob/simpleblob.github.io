@@ -405,83 +405,73 @@ It is probably possible to convert RGB to depth with another model, but it might
 - [2013] [[https://hal-enpc.archives-ouvertes.fr/docs/00/74/20/77/PDF/farabet-pami-13.pdf][Learning hierarchical features for scene labeling, C. Farabet et al.]]
 
 ** Image / Video / Etc
-- Image Super-Resolution Using Deep Convolutional Networks* (2016), C.
-  Dong et al. [[https://arxiv.org/pdf/1501.00092v3.pdf][[pdf]]]
-- A neural algorithm of artistic style* (2015), L. Gatys et al.
-  [[https://arxiv.org/pdf/1508.06576][[pdf]]]
-- Deep visual-semantic alignments for generating image descriptions*
-  (2015), A. Karpathy and L. Fei-Fei
-  [[http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Karpathy_Deep_Visual-Semantic_Alignments_2015_CVPR_paper.pdf][[pdf]]]
-- Show, attend and tell: Neural image caption generation with visual
-  attention* (2015), K. Xu et al.
-  [[http://arxiv.org/pdf/1502.03044][[pdf]]]
-- Show and tell: A neural image caption generator (2015)*, O. Vinyals et al.
-  [[http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vinyals_Show_and_Tell_2015_CVPR_paper.pdf][[pdf]]]
-- Long-term recurrent convolutional networks for visual recognition
-  and description* (2015), J. Donahue et al.
-  [[http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Donahue_Long-Term_Recurrent_Convolutional_2015_CVPR_paper.pdf][[pdf]]]
-- VQA: Visual question answering* (2015), S. Antol et al.
-  [[http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Antol_VQA_Visual_Question_ICCV_2015_paper.pdf][[pdf]]]
-- DeepFace: Closing the gap to human-level performance in face
-  verification* (2014), Y. Taigman et al.
-  [[http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Taigman_DeepFace_Closing_the_2014_CVPR_paper.pdf][[pdf]]]:
-- Large-scale video classification with convolutional neural networks*
-  (2014), A. Karpathy et al.
-  [[http://vision.stanford.edu/pdf/karpathy14.pdf][[pdf]]]
-- DeepPose: Human pose estimation via deep neural networks* (2014), A.
-  Toshev and C. Szegedy
-  [[http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Toshev_DeepPose_Human_Pose_2014_CVPR_paper.pdf][[pdf]]]
-- Two-stream convolutional networks for action recognition in videos*
-  (2014), K. Simonyan et al.
-  [[http://papers.nips.cc/paper/5353-two-stream-convolutional-networks-for-action-recognition-in-videos.pdf][[pdf]]]
-- 3D convolutional neural networks for human action recognition*
-   (2013), S. Ji et al.
-   [[http://machinelearning.wustl.edu/mlpapers/paper_files/icml2010_JiXYY10.pdf][[pdf]]]
+- [2016] [[https://arxiv.org/pdf/1501.00092v3.pdf][Image Super-Resolution Using Deep Convolutional Networks, C.
+  Dong et al.]]
+- [2015] 
+  [[https://arxiv.org/pdf/1508.06576][A neural algorithm of artistic style, L. Gatys et al.]]
+- [2015] 
+  [[http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Karpathy_Deep_Visual-Semantic_Alignments_2015_CVPR_paper.pdf][Deep visual-semantic alignments for generating image descriptions, A. Karpathy and L. Fei-Fei]]
+- [2015] 
+  [[http://arxiv.org/pdf/1502.03044][Show, attend and tell: Neural image caption generation with visual attention, K. Xu et al.]]
+- [2015] 
+  [[http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vinyals_Show_and_Tell_2015_CVPR_paper.pdf][Show and tell: A neural image caption generator, O. Vinyals et al.]]
+- [2015] Long-term recurrent convolutional networks for visual recognition and description, J. Donahue et al.
+  [[http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Donahue_Long-Term_Recurrent_Convolutional_2015_CVPR_paper.pdf][]]
+- [2015] VQA: Visual question answering, S. Antol et al.
+  [[http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Antol_VQA_Visual_Question_ICCV_2015_paper.pdf][]]
+- [2014] DeepFace: Closing the gap to human-level performance in face verification, Y. Taigman et al.
+  [[http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Taigman_DeepFace_Closing_the_2014_CVPR_paper.pdf][]]:
+- [2014] Large-scale video classification with convolutional neural networks, A. Karpathy et al.
+  [[http://vision.stanford.edu/pdf/karpathy14.pdf][]]
+- [2014] DeepPose: Human pose estimation via deep neural networks, A.Toshev and C. Szegedy
+  [[http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Toshev_DeepPose_Human_Pose_2014_CVPR_paper.pdf][]]
+- [2014] Two-stream convolutional networks for action recognition in videos, K. Simonyan et al.
+  [[http://papers.nips.cc/paper/5353-two-stream-convolutional-networks-for-action-recognition-in-videos.pdf][]]
+- [2013] 3D convolutional neural networks for human action recognition, S. Ji et al.
+   [[http://machinelearning.wustl.edu/mlpapers/paper_files/icml2010_JiXYY10.pdf][]]
 
 
 ** Natural Language Processing / RNNs
 - Neural Architectures for Named Entity Recognition* (2016), G. Lample
-  et al. [[http://aclweb.org/anthology/N/N16/N16-1030.pdf][[pdf]]]
+  et al. [[http://aclweb.org/anthology/N/N16/N16-1030.pdf][]]
 - Exploring the limits of language modeling* (2016), R. Jozefowicz et
-  al. [[http://arxiv.org/pdf/1602.02410][[pdf]]]
+  al. [[http://arxiv.org/pdf/1602.02410][]]
 - Teaching machines to read and comprehend* (2015), K. Hermann et al.
-  [[http://papers.nips.cc/paper/5945-teaching-machines-to-read-and-comprehend.pdf][[pdf]]]
+  [[http://papers.nips.cc/paper/5945-teaching-machines-to-read-and-comprehend.pdf][]]
 - Effective approaches to attention-based neural machine translation*
-  (2015), M. Luong et al. [[https://arxiv.org/pdf/1508.04025][[pdf]]]
+  (2015), M. Luong et al. [[https://arxiv.org/pdf/1508.04025][]]
 - Conditional random fields as recurrent neural networks* (2015), S.
   Zheng and S. Jayasumana.
-  [[http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Zheng_Conditional_Random_Fields_ICCV_2015_paper.pdf][[pdf]]]
+  [[http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Zheng_Conditional_Random_Fields_ICCV_2015_paper.pdf][]]
 - Memory networks* (2014), J. Weston et al.
-  [[https://arxiv.org/pdf/1410.3916][[pdf]]]
+  [[https://arxiv.org/pdf/1410.3916][]]
 - Neural turing machines* (2014), A. Graves et al.
-  [[https://arxiv.org/pdf/1410.5401][[pdf]]]
+  [[https://arxiv.org/pdf/1410.5401][]]
 - Neural machine translation by jointly learning to align and
   translate* (2014), D. Bahdanau et al.
-  [[http://arxiv.org/pdf/1409.0473][[pdf]]]
+  [[http://arxiv.org/pdf/1409.0473][]]
 - Sequence to sequence learning with neural networks* (2014), I.
   Sutskever et al.
-  [[http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf][[pdf]]]
+  [[http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf][]]
 - Learning phrase representations using RNN encoder-decoder for
   statistical machine translation* (2014), K. Cho et al.
-  [[http://arxiv.org/pdf/1406.1078][[pdf]]]
+  [[http://arxiv.org/pdf/1406.1078][]]
 - A convolutional neural network for modeling sentences* (2014), N.
-  Kalchbrenner et al. [[http://arxiv.org/pdf/1404.2188v1][[pdf]]]
+  Kalchbrenner et al. [[http://arxiv.org/pdf/1404.2188v1][]]
 - Convolutional neural networks for sentence classification* (2014),
-  Y. Kim [[http://arxiv.org/pdf/1408.5882][[pdf]]]
+  Y. Kim [[http://arxiv.org/pdf/1408.5882][]]
 - Glove: Global vectors for word representation* (2014), J. Pennington
-  et al. [[http://anthology.aclweb.org/D/D14/D14-1162.pdf][[pdf]]]
+  et al. [[http://anthology.aclweb.org/D/D14/D14-1162.pdf][]]
 - Distributed representations of sentences and documents* (2014), Q.
-  Le and T. Mikolov [[http://arxiv.org/pdf/1405.4053][[pdf]]]
+  Le and T. Mikolov [[http://arxiv.org/pdf/1405.4053][]]
 - Distributed representations of words and phrases and their
   compositionality* (2013), T. Mikolov et al.
-  [[http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf][[pdf]]]
-- Efficient estimation of word representations in vector space*
-  (2013), T. Mikolov et al. [[http://arxiv.org/pdf/1301.3781][[pdf]]]
-- Recursive deep models for semantic compositionality over a sentiment
-  treebank* (2013), R. Socher et al.
-  [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.383.1327&rep=rep1&type=pdf][[pdf]]]
-- Generating sequences with recurrent neural networks* (2013), A.
-   Graves. [[https://arxiv.org/pdf/1308.0850][[pdf]]]
+  [[http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf][]]
+- [2013] Efficient estimation of word representations in vector space, T. Mikolov et al. [[http://arxiv.org/pdf/1301.3781][]]
+- [2013] Recursive deep models for semantic compositionality over a sentiment
+  treebank, R. Socher et al.[[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.383.1327&rep=rep1&type=pdf][]]
+- [2013] [[https://arxiv.org/pdf/1308.0850][Generating sequences with recurrent neural networks, A.
+   Graves.]]
 
 ** Speech / Other Domain
 - [2016] [[https://arxiv.org/pdf/1508.04395][End-to-end attention-based large vocabulary speech recognition, D. Bahdanau et al.]]
