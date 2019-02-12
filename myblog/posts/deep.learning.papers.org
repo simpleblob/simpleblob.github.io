@@ -505,6 +505,7 @@ It is probably possible to convert RGB to depth with another model, but it might
   - Markov process means P(St) = P(St | St+1..), so previous states don't matter.
   - partially observable markovs (POMDP)
   - Policy = function that maps from Agent state to Action
+  - Value function = estimates total future reward given current state St
 - [2017] [[https://arxiv.org/pdf/1708.05866][A Brief Survey of Deep Reinforcement Learning]]
    :PROPERTIES:
    :AUTHOR:   Kai Arulkumaran
