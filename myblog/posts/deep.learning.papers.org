@@ -86,16 +86,16 @@ The most challenging part about this is not the architecture, but the lack of la
   - Not good RGB images according to Zimmerman paper
 
 list of more datasets here 
-[Hand, Hand Grasp, Hand Action and Gesture Databases](http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm#gesture)
-[big list of both body and hand dataset](http://liris.cnrs.fr/voir/wiki/doku.php?id=datasets)
+- [[http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm#gesture][Hand, Hand Grasp, Hand Action and Gesture Databases]]
+- [[http://liris.cnrs.fr/voir/wiki/doku.php?id=datasets][big list of both body and hand dataset]]
 
 *** Hand Papers
 Most of the papers use Depth-only or RGB+D data to estimate hand-pose...
 It is probably possible to convert RGB to depth with another model, but it might be even slower.
 
-List of generally good papers with performance benchmark here --> [[https://github.com/xinghaochen/awesome-hand-pose-estimation][Awesome hand pose estimation]]
-List of papers with notes from researcher student's personal wiki --> [[https://github.com/hassony2/inria-research-wiki/wiki/hand-papers][inria wiki]]
-[[http://icvl.ee.ic.ac.uk/hands17/program/program-details/][Accepted papers from Hands 2017 conference]]
+- List of generally good papers with performance benchmark here --> [[https://github.com/xinghaochen/awesome-hand-pose-estimation][Awesome hand pose estimation]]
+- List of papers with notes from researcher student's personal wiki --> [[https://github.com/hassony2/inria-research-wiki/wiki/hand-papers][inria wiki]]
+- [[http://icvl.ee.ic.ac.uk/hands17/program/program-details/][Accepted papers from Hands 2017 conference]]
 
 - [2017] [[https://arxiv.org/abs/1704.07809][Hand Keypoint Detection in Single Images using Multiview Bootstrapping]] - *openpose*
   - good accuracy but speed is quite slow. the paper says it can be run in real-time but never provide benchmark any.
