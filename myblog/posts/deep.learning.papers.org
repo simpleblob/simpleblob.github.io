@@ -428,23 +428,17 @@ It is probably possible to convert RGB to depth with another model, but it might
 - [2015] [[http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Zheng_Conditional_Random_Fields_ICCV_2015_paper.pdf][Conditional random fields as recurrent neural networks, S.Zheng and S. Jayasumana.]]
 - [2014] [[https://arxiv.org/pdf/1410.3916][Memory networks, J. Weston et al.]]
 - [2014] [[https://arxiv.org/pdf/1410.5401][Neural turing machines, A. Graves et al.]]
-- [2014] Neural machine translation by jointly learning to align and translate, D. Bahdanau et al.
-  [[http://arxiv.org/pdf/1409.0473][]]
-- [2014] Sequence to sequence learning with neural networks, I. Sutskever et al.
-  [[http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf][]]
-- [2014] Learning phrase representations using RNN encoder-decoder for
-  statistical machine translation, K. Cho et al.
-  [[http://arxiv.org/pdf/1406.1078][]]
-- [2014] A convolutional neural network for modeling sentences, N. Kalchbrenner et al. [[http://arxiv.org/pdf/1404.2188v1][]]
-- [2014] Convolutional neural networks for sentence classification, Y. Kim [[http://arxiv.org/pdf/1408.5882][]]
-- [2014] Glove: Global vectors for word representation, J. Pennington et al. [[http://anthology.aclweb.org/D/D14/D14-1162.pdf][]]
-- [2014] Distributed representations of sentences and documents, Q.Le and T. Mikolov [[http://arxiv.org/pdf/1405.4053][]]
-- [2013] Distributed representations of words and phrases and their compositionality, T. Mikolov et al.
-  [[http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf][]]
-- [2013] Efficient estimation of word representations in vector space, T. Mikolov et al. [[http://arxiv.org/pdf/1301.3781][]]
-- [2013] Recursive deep models for semantic compositionality over a sentiment treebank, R. Socher et al.[[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.383.1327&rep=rep1&type=pdf][]]
-- [2013] [[https://arxiv.org/pdf/1308.0850][Generating sequences with recurrent neural networks, A.
-   Graves.]]
+- [2014] [[http://arxiv.org/pdf/1409.0473][Neural machine translation by jointly learning to align and translate, D. Bahdanau et al.]]
+- [2014] [[http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf][Sequence to sequence learning with neural networks, I. Sutskever et al.]]
+- [2014] [[http://arxiv.org/pdf/1406.1078][Learning phrase representations using RNN encoder-decoder for statistical machine translation, K. Cho et al.]]
+- [2014] [[http://arxiv.org/pdf/1404.2188v1][A convolutional neural network for modeling sentences, N. Kalchbrenner et al.]]
+- [2014] [[http://arxiv.org/pdf/1408.5882][Convolutional neural networks for sentence classification, Y. Kim]]
+- [2014] [[http://anthology.aclweb.org/D/D14/D14-1162.pdf][Glove: Global vectors for word representation, J. Pennington et al.]]
+- [2014] [[http://arxiv.org/pdf/1405.4053][Distributed representations of sentences and documents, Q.Le and T. Mikolov]]
+- [2013] [[http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf][Distributed representations of words and phrases and their compositionality, T. Mikolov et al.]]
+- [2013] [[http://arxiv.org/pdf/1301.3781][Efficient estimation of word representations in vector space, T. Mikolov et al.]]
+- [2013] [[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.383.1327&rep=rep1&type=pdf][Recursive deep models for semantic compositionality over a sentiment treebank, R. Socher et al.]]
+- [2013] [[https://arxiv.org/pdf/1308.0850][Generating sequences with recurrent neural networks, A. Graves.]]
 
 ** Speech / Other Domain
 - [2016] [[https://arxiv.org/pdf/1508.04395][End-to-end attention-based large vocabulary speech recognition, D. Bahdanau et al.]]
@@ -466,24 +460,15 @@ It is probably possible to convert RGB to depth with another model, but it might
   - so obviously we need to get rid of the silence and repeats, the way to do that is CTC.
   - Essentially, the equation defines the loss that makes good probability distribution over good paths
 ** Reinforcement Learning / Robotics
-- [2016] End-to-end training of deep visuomotor policies, S. Levine
-  et al.
-  [[http://www.jmlr.org/papers/volume17/15-522/source/15-522.pdf][[pdf]]]
-- [2016] Learning Hand-Eye Coordination for Robotic Grasping with Deep Learning and Large-Scale Data Collection, S. Levine et al.
-  [[https://arxiv.org/pdf/1603.02199][[pdf]]]
-- [2016] Asynchronous methods for deep reinforcement learning, V. Mnih et al.
-  [[http://www.jmlr.org/proceedings/papers/v48/mniha16.pdf][[pdf]]]
-- [2016] Deep Reinforcement Learning with Double Q-Learning, H.
-  Hasselt et al. [[https://arxiv.org/pdf/1509.06461.pdf][[pdf]]]
-- [2016] Mastering the game of Go with deep neural networks and tree search, D. Silver et al.
-  [[http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html][[pdf]]]
-- Continuous control with deep reinforcement learning* (2015), T.
-  Lillicrap et al. [[https://arxiv.org/pdf/1509.02971][[pdf]]]
-- Human-level control through deep reinforcement learning* (2015), V. Mnih et al.
-  [[http://www.davidqiu.com:8888/research/nature14236.pdf][[pdf]]]
-- Deep learning for detecting robotic grasps* (2015), I. Lenz et al.
-  [[http://www.cs.cornell.edu/~asaxena/papers/lenz_lee_saxena_deep_learning_grasping_ijrr2014.pdf][[pdf]]]
-- [2012] [[http://mnemstudio.org/path-finding-q-learning-tutorial.htm][A painless Q-learning tutorial ]]
+- [2016] [[http://www.jmlr.org/papers/volume17/15-522/source/15-522.pdf][End-to-end training of deep visuomotor policies, S. Levine et al.]]
+- [2016] [[https://arxiv.org/pdf/1603.02199][Learning Hand-Eye Coordination for Robotic Grasping with Deep Learning and Large-Scale Data Collection, S. Levine et al.]]
+- [2016] [[http://www.jmlr.org/proceedings/papers/v48/mniha16.pdf][Asynchronous methods for deep reinforcement learning, V. Mnih et al.]]
+- [2016] [[https://arxiv.org/pdf/1509.06461.pdf][Deep Reinforcement Learning with Double Q-Learning, H. Hasselt et al.]]
+- [2016] [[http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html][Mastering the game of Go with deep neural networks and tree search, D. Silver et al.]]
+- [2015] [[https://arxiv.org/pdf/1509.02971][Continuous control with deep reinforcement learning, T. Lillicrap et al.]]
+- [2015] [[http://www.davidqiu.com:8888/research/nature14236.pdf][Human-level control through deep reinforcement learning, V. Mnih et al.]]
+- [2015] [[http://www.cs.cornell.edu/~asaxena/papers/lenz_lee_saxena_deep_learning_grasping_ijrr2014.pdf][Deep learning for detecting robotic grasps, I. Lenz et al.]]
+- [2012] [[http://mnemstudio.org/path-finding-q-learning-tutorial.htm][A painless Q-learning tutorial]]
    :PROPERTIES:
    :AUTHOR:   John McCullock
    :YEAR:     2012
