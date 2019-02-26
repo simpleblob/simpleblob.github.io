@@ -54,6 +54,12 @@ To understand a system, it is helpful to identify degrees of freedom and constra
   - has vast knowledge and experience in solving complex problems efficiently, therefore can do in-sourcing of many things (doing tax, repairs, painting house, cooking) which reduces cash outflows considerably.
   - potentially has assets and investments in various type of businesses.
   - In a sense, a person do can make/do anything. a local leader and inspiration to other people.
+- Succession and cycle of change: one type is more popular at certain stage
+ - each "species" is adapted to thrive in a very specific environment
+ - if the conditions change, the existing species will be outcompeted by a species which is better adapted to new ones.
+ - Succession occurs because the dominance of one species gradually changes the environment.
+- Ergodicity and destiny
+ - 
 
 ** Plan vs Strategy
   -  A plan is a string of actions. One action fail, all fail. Fragile.
