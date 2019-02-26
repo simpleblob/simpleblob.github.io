@@ -48,9 +48,12 @@ To understand a system, it is helpful to identify degrees of freedom and constra
   - tight coupling to one or few businesses. convex payoff.
   - job is find solution to problems, relying on assets and other people.
   - need to quickly solve things, due to competition.
- - *renaissance man* (loose/non-linear): 
-
-
+ - *renaissance man* (loose/non-linear): a combination of those 3 types.
+  - competent in variety of fields, can take on full-time job as needed.
+  - also a generalist, many vocational skills to pickup work based on supply/demand.
+  - has vast knowledge and experience in solving complex problems efficiently, therefore can do in-sourcing of many things (doing tax, repairs, painting house, cooking) which reduces cash outflows considerably.
+  - potentially has assets and investments in various type of businesses.
+  - In a sense, a person do can make/do anything. a local leader and inspiration to other people.
 
 ** Plan vs Strategy
   -  A plan is a string of actions. One action fail, all fail. Fragile.
