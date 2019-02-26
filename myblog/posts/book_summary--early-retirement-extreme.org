@@ -34,12 +34,21 @@ To understand a system, it is helpful to identify degrees of freedom and constra
 - we will use this economic "coupling" graph for analysis
  - horizontal axis: *coupling* from loose to tight. loosely coupled system is less likely to fail.
  - vertical axis: *organization* from linear to non-linear. non-linear feedbacks will have affect on input -> output. (convex payoff)
-- there are mainly 4 archetypes of working person. for each group, the "norm" behavior/culture is different.
+- there are mainly 4 archetypes of a working person. for each group, the "norm" behavior/culture is different.
  - *salary man* (tight/linear): fragile to business change, rewards (less than) linearly scale with efforts. 
   - have options, but do not create options.
   - both work and consumption are well-controlled. eg. cog in the machine.
   - one income --> all consumption
- - asdf
+ - *working man* (loose/linear): (freelancers etc.) uncertain income, but less fragile. linear rewards.
+  - often have emergency fund due to uncertainty of cash flow, which makes them more anti-fragile.
+  - has many clients, unlike one big client per salary man.
+  - consumer pattern similar to salary man.
+ - *business man* (tight/non-linear): owns one or more business.
+  - personal cash flow is minimal compared to business cash flow they controlled.
+  - tight coupling to one or few businesses. convex payoff.
+  - job is find solution to problems, relying on assets and other people.
+  - need to quickly solve things, due to competition.
+ - *renaissance man* (loose/non-linear): 
 
 
 
