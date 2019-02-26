@@ -4,7 +4,7 @@ subtitle: Financial Independence
 description: None
 tags: FI, antifragile
 created: 2016-12-03
-published: 2017-11-26
+published: 2019-02-26
 status: draft
 confidence: log
 importance: 1
@@ -30,6 +30,16 @@ importance: 1
 
 ** Economic degrees of freedom
 To understand a system, it is helpful to identify degrees of freedom and constraints.
+
+- we will use this economic "coupling" graph for analysis
+ - horizontal axis: *coupling* from loose to tight. loosely coupled system is less likely to fail.
+ - vertical axis: *organization* from linear to non-linear. non-linear feedbacks will have affect on input -> output. (convex payoff)
+- there are mainly 4 archetypes of working person. for each group, the "norm" behavior/culture is different.
+ - *salary man* (tight/linear): fragile to business change, rewards (less than) linearly scale with efforts. 
+  - have options, but do not create options.
+  - both work and consumption are well-controlled. eg. cog in the machine.
+  - one income --> all consumption
+ - asdf
 
 
 
