@@ -10,6 +10,20 @@ confidence: log
 importance: 1
 ---
 
+** The lock-in
+- Mass delusion of spending money = one sign of success
+- Comparison of delusion with [[https://en.wikipedia.org/wiki/Allegory_of_the_Cave][Plato's cave]]
+ - common life track: school -> university -> career. not so efficient.
+ - cost of specialization (degrees/career): fragile to change. generalists fare better.
+ - corporate ladder is more like a pyramid. survivorship bias.
+- The problem with personal finance
+ - cash flow problem: one stream of (stable?) income, many debt.
+ - consumer debt, unlike business debt, does not generate income.
+  - major consumer debt means borrowing from the future, where income is uncertain.
+ - saving rate close to zero. (probably U.S. specifically)
+- retirement: a relatively new phenomenon in 20th century.
+  
+
 ** Plan vs Strategy
   -  A plan is a string of actions. One action fail, all fail. Fragile.
   -  A strategy is a web of actions. can't go this way then go another
