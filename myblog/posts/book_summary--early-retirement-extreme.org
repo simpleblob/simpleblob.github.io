@@ -22,7 +22,16 @@ importance: 1
   - major consumer debt means borrowing from the future, where income is uncertain.
  - saving rate close to zero. (probably U.S. specifically)
 - retirement: a relatively new phenomenon in 20th century.
-  
+ - most common early retirement resembles long vacation. a net negative in society productivity. (spending past accumulated wealth?)
+- breaking out of "the lock-in"
+ - reduce waste and increase efficiency. (lower-cost living with same benefits)
+ - invest the gain (from waste reduction) in businesses
+ - find something meaningful to do instead of work.
+
+** Economic degrees of freedom
+To understand a system, it is helpful to identify degrees of freedom and constraints.
+
+
 
 ** Plan vs Strategy
   -  A plan is a string of actions. One action fail, all fail. Fragile.
