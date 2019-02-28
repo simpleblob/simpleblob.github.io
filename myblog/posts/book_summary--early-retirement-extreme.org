@@ -63,11 +63,21 @@ To understand a system, it is helpful to identify degrees of freedom and constra
  - However, what Jacob mean by using ergodicity is slightly different: with certain set of behaviors, over time, that species will end up where it "deserves". luck will play a part in short term, but not long term.
  - Therefore, to achieve any kind of long-term goals/outcomes, we need to have *agency* to follow a set of behaviors -- either by habit or sheer willpower -- over a period of time.
  - Agency is the attitude that any problem can be fixed, given enough resources in the form of time, effort, and determination. Agency is generally transferable to different fields. To build agency, it is recommended to grit through something that is considered very difficult, at least once in your life.
+ - Our current world: climax stage
+  - We have an economic model that is based on pulling resources out of the ground, turning them into unnecessary products, getting people to buy them, then getting people to throw those away for newer products. this kind of GDP is not sustainable.
 
-** Plan vs Strategy
-  -  A plan is a string of actions. One action fail, all fail. Fragile.
-  -  A strategy is a web of actions. can't go this way then go another
-    way. it means having logical constraints in your head (similar to
-    numerical programming) which exposes you to a set of path you can
-    choose to execute (and diverge later as long as the new path satisfies
-    the constraints)
+** The Renaissance ideal
+- Human capital and necessary personal assets
+- The Renaissance education
+- Gauging mastery
+- Decoupling and increasing complexity
+
+** Strategy, tactics, and guiding principles
+- Plan vs Strategy
+ - A plan is a string of action (follow certain path)
+ - A strategy is a web of actions (consider multiple path, take optimal steps, then reevaluate -- multi-arm bandits)
+- Strategic principles
+- Tactical principles
+
+
+
