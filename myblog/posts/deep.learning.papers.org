@@ -32,7 +32,11 @@ list: https://competitions.codalab.org/
 
 ** 6D pose estimation
 - [2017] [[https://arxiv.org/abs/1711.08848][Real-Time Seamless Single Shot 6D Object Pose Prediction (MSF)]]
+ - problem is from 2D RGB image, infer a 3D box on the object. (coordinate still on 2D?)
+ - real-time (50 fps on Titan X), use YOLO-like architecture, then apply PnP algorithm
 - [2018] [[https://arxiv.org/abs/1809.10790][Deep Object Pose Estimation for Semantic Robotic Grasping of Household Objects (Nvidia)]]
+ - use synthetic generated data, better accuracy than previous methods
+ - architecture inspired by Convolutional pose machines (similar to openpose)
 - [2018] [[https://arxiv.org/abs/1804.03959][Making Deep Heatmaps Robust to Partial Occlusions for 3D Object Pose Estimation]]
 - [2019] [[https://arxiv.org/abs/1901.08043][Bottom-up Object Detection by Grouping Extreme and Center Points]]
 
