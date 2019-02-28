@@ -30,13 +30,24 @@ list: https://competitions.codalab.org/
  :URL: http://image-net.org/about-stats
  :END:
 
+** 6D pose estimation
+- [2017] [[https://arxiv.org/abs/1711.08848][Real-Time Seamless Single Shot 6D Object Pose Prediction (MSF)]]
+- [2018] [[https://arxiv.org/abs/1809.10790][Deep Object Pose Estimation for Semantic Robotic Grasping of Household Objects (Nvidia)]]
+- [2018] [[https://arxiv.org/abs/1804.03959][Making Deep Heatmaps Robust to Partial Occlusions for 3D Object Pose Estimation]]
+- [2019] [[https://arxiv.org/abs/1901.08043][Bottom-up Object Detection by Grouping Extreme and Center Points]]
+
+** Others
+- [2017] [[https://arxiv.org/abs/1706.02633v2][Real-valued (Medical) Time Series Generation with Recurrent Conditional GANs]]
+- [2018] [[https://arxiv.org/abs/1812.02463v2][Anomaly detection with Wasserstein GAN]]
+- [2019] [[https://arxiv.org/abs/1901.08740][Model-based Deep Reinforcement Learning for Dynamic Portfolio Optimization]]
+
 ** Body pose estimation
 *** Dataset
 [[http://liris.cnrs.fr/voir/wiki/doku.php?id=datasets][big list of both body and hand dataset]]
 - [2017] [[https://posetrack.net/][Posetrack benchmark Dataset]]
   - 20K RGB images (from 500 videos) with 120K body pose labeled
   - main purpose for the [[https://posetrack.net/workshops/iccv2017/#people][ICCV 2017 human pose challenge]] evaluation
-- [2016] [[[http://cocodataset.org/#keypoints-challenge2016][COCO keypoint challenge]] - *good*
+- [2016] [[http://cocodataset.org/#keypoints-challenge2016][COCO keypoint challenge]] - *good*
   - 90K RGB images
   - 2016 winner is the openpose paper below
 *** Papers
