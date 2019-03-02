@@ -68,6 +68,20 @@ To understand a system, it is helpful to identify degrees of freedom and constra
 
 ** The Renaissance ideal
 - Human capital and necessary personal assets
+ - Physiological
+  - maintain optimal levels of physical and mental health
+  - know how the human body functions and physiologically adapts to imposed demands like stress, overeating, lack of exercise, and their opposites
+  - know why and which kinds of food promote health and which kinds destroy health
+  - maintain good habits. know how to preserve food and how to tesll when food is spoiled.
+  - be able to compete in local sports competitions. 
+  - be able to perform physically while exhausted, hungry, or tired. Test: carrying an unconscious person out of a burning house, or pulling oneself up and hanging from a gutter.
+  - know at least basic first aid
+ - Intellectual
+ - Economic
+ - Emotional
+ - Social
+ - Technical
+ - Ecological
 - The Renaissance education
 - Gauging mastery
 - Decoupling and increasing complexity
