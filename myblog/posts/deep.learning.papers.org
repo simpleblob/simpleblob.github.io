@@ -45,6 +45,9 @@ list: https://competitions.codalab.org/
 - [2018] [[https://arxiv.org/abs/1812.02463v2][Anomaly detection with Wasserstein GAN]]
 - [2019] [[https://arxiv.org/abs/1901.08740][Model-based Deep Reinforcement Learning for Dynamic Portfolio Optimization]]
 
+** Grasping
+- [2018] [[https://arxiv.org/abs/1804.05172][Closing the Loop for Robotic Grasping: A Real-time, Generative Grasp Synthesis Approach]]
+
 ** Body pose estimation
 *** Dataset
 [[http://liris.cnrs.fr/voir/wiki/doku.php?id=datasets][big list of both body and hand dataset]]
