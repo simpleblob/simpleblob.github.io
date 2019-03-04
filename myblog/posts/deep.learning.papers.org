@@ -47,6 +47,12 @@ list: https://competitions.codalab.org/
 
 ** Grasping
 - [2018] [[https://arxiv.org/abs/1804.05172][Closing the Loop for Robotic Grasping: A Real-time, Generative Grasp Synthesis Approach]]
+ - a 6-layer segmentation CNN to do real-time closed loop grasping (20 ms or 50 hz using desktop GPU)
+ - input: 300x300 inpainted pixel depthmap
+ - output: a *g* vector comprises of
+  - heatmap of grasp quality *Q* [0,1]
+  - heatmap of grasp width *W* [0,150]
+  - heatmap of grasp angle *phi* [-pi/2, +pi/2]
 
 ** Body pose estimation
 *** Dataset
