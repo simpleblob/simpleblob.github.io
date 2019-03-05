@@ -46,6 +46,12 @@ list: https://competitions.codalab.org/
 - [2019] [[https://arxiv.org/abs/1901.08740][Model-based Deep Reinforcement Learning for Dynamic Portfolio Optimization]]
 
 ** Grasping
+
+*** Dataset
+- [2016] [[https://arxiv.org/abs/1609.05258v2][ACRV Picking Benchmark (APB)]]
+- [2015] [[https://arxiv.org/abs/1502.03143][YCB Object Set]]
+
+*** Papers
 - [2018] [[https://arxiv.org/abs/1804.05172][Closing the Loop for Robotic Grasping: A Real-time, Generative Grasp Synthesis Approach]]
  - a 6-layer segmentation CNN to do real-time closed loop grasping (20 ms or 50 hz using desktop GPU)
  - input: 300x300 inpainted pixel depthmap
