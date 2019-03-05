@@ -51,6 +51,7 @@ list: https://competitions.codalab.org/
 - [2016] [[https://arxiv.org/abs/1609.05258v2][ACRV Picking Benchmark (APB)]]
 - [2015] [[https://arxiv.org/abs/1502.03143][YCB Object Set]]
 - GGCNN paper proposes a set of 20 reproducible items for testing, com-prising comprising 8 3D printed adversarial objects from Dex-Net paper and 12 items from the APB and YCB object sets, which provide a wide enough range of sizes, shapes and difficulties to effectively compare results while not excluding use by any common robots, grippers or camera
+- [2013] [[http://pr.cs.cornell.edu/deepgrasping/][Cornell grasping dataset]] - 1k RGBD with grasp bbox labels
 
 *** Papers
 - [2017] [[https://arxiv.org/abs/1703.09312][Dex-Net 2.0: Deep Learning to Plan Robust Grasps with Synthetic Point Clouds and Analytic Grasp Metrics]]
