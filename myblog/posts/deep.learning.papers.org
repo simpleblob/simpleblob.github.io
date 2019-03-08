@@ -30,6 +30,10 @@ list: https://competitions.codalab.org/
  :URL: http://image-net.org/about-stats
  :END:
 
+** RGB-D data and its usage
+- [2017] [[https://blog.cometlabs.io/depth-sensors-are-the-key-to-unlocking-next-level-computer-vision-applications-3499533d3246][Depth sensors are the key to unlocking next level computer vision applications.]] -- introduction to depth sensing methods
+- [2018] [[https://bair.berkeley.edu/blog/2018/10/23/depth-sensing/][RGB-D and deep learning]]
+
 ** 6D pose estimation
 - [2017] [[https://arxiv.org/abs/1711.08848][Real-Time Seamless Single Shot 6D Object Pose Prediction (MSF)]]
  - problem is from 2D RGB image, infer a 3D box on the object. (coordinate still on 2D?)
