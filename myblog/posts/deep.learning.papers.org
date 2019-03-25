@@ -43,7 +43,7 @@ list: https://competitions.codalab.org/
  - architecture inspired by Convolutional pose machines (similar to openpose)
 - [2018] [[https://arxiv.org/abs/1804.03959][Making Deep Heatmaps Robust to Partial Occlusions for 3D Object Pose Estimation]]
   - we want to predict heatmaps of each point in a GT 3D bounding box
-  - instead of using full image as an input, we sample small patches, then predict a full-image heatmap.
+  - instead of using full image as an input, we sample small patches, then predict full-size heatmaps. we aggregate all the output heatmaps then choose the peak in heatmap as predicted points.
   - this way it learns to "infer" the point position out of frame, using only partial object image patches. hopefully reducing the occlusion problem.
 - [2019] [[https://arxiv.org/abs/1901.08043][Bottom-up Object Detection by Grouping Extreme and Center Points]]
   - use heatmaps to predict 5 extreme points (TL,TR,BL,BR, and center)
