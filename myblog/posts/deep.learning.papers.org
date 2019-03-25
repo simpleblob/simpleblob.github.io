@@ -42,7 +42,15 @@ list: https://competitions.codalab.org/
  - use synthetic generated data, better accuracy than previous methods
  - architecture inspired by Convolutional pose machines (similar to openpose)
 - [2018] [[https://arxiv.org/abs/1804.03959][Making Deep Heatmaps Robust to Partial Occlusions for 3D Object Pose Estimation]]
+  - asdf
 - [2019] [[https://arxiv.org/abs/1901.08043][Bottom-up Object Detection by Grouping Extreme and Center Points]]
+  - use heatmaps to predict 5 extreme points (TL,TR,BL,BR, and center)
+  - then enumerating all the pairings and calculate the "centeredness" score --> higher means better pairings of those points.
+  - the heatmap network architecture is "hourglass" network.
+  - pros
+    - seems robust, get more granualr mask of object shapes
+  - cons
+    - maybe speed?
 
 ** Others
 - [2017] [[https://arxiv.org/abs/1706.02633v2][Real-valued (Medical) Time Series Generation with Recurrent Conditional GANs]]
