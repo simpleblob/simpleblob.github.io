@@ -38,6 +38,7 @@ list: https://competitions.codalab.org/
     - absolute distance accuracy.
   - [[http://www.lmf.bgu.tum.de/ibims1/][new dataset]] attached and SOTA methods evaluated.
 - [2018] [[https://arxiv.org/pdf/1803.08673.pdf][Revisiting Single Image Depth Estimation:Toward Higher Resolution Maps with Accurate Object Boundaries]]
+  - custom loss to lessen blurry-ness and more detail preservation. results look good.
 - [2019] [[https://arxiv.org/abs/1901.09402][Monocular Depth Estimation: A Survey]]
 
 ** RGB-D data and its usage
