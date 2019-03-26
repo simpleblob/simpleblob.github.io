@@ -29,6 +29,9 @@ list: https://competitions.codalab.org/
  :TOPIC: Image classification, detection, segmentation
  :URL: http://image-net.org/about-stats
  :END:
+ 
+** Monocular Depth Estimation: A Survey
+- [2019] [[https://arxiv.org/abs/1901.09402][Monocular Depth Estimation: A Survey]]
 
 ** RGB-D data and its usage
 - [2017] [[https://blog.cometlabs.io/depth-sensors-are-the-key-to-unlocking-next-level-computer-vision-applications-3499533d3246][Depth sensors are the key to unlocking next level computer vision applications.]] -- introduction to depth sensing methods
