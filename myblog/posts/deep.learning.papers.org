@@ -31,7 +31,7 @@ list: https://competitions.codalab.org/
  :END:
  
 ** Monocular Depth Estimation
-- [2018] [[https://arxiv.org/pdf/1805.01328.pdf][Evaluation of CNN-based Single-Image DepthEstimation Methods]]
+- [2018] [[https://arxiv.org/pdf/1805.01328.pdf][Evaluation of CNN-based Single-Image Depth Estimation Methods]]
   - novel quality criterion, allowing for a more detailed analysis.
     - the preservation of edges and planar regions, 
     - depth consistency
