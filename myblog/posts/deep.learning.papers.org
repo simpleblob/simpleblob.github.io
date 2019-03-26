@@ -32,10 +32,11 @@ list: https://competitions.codalab.org/
  
 ** Monocular Depth Estimation
 - [2018] [[https://arxiv.org/pdf/1805.01328.pdf][Evaluation of CNN-based Single-Image Depth Estimation Methods]]
+  - common criteria: (y - gt) / gt in various forms (abs, sq, sqrt, log, etc.)
   - novel quality criterion, allowing for a more detailed analysis.
-    - the preservation of edges and planar regions, 
-    - depth consistency
-    - absolute distance accuracy.
+    - planar consistency -- given that we have gt of wall orientation, we can do comparison of the diffs (dist and angle)
+    - edge consistency -- given we have some edge gt, can do dist error
+    - absolute distance accuracy -- the predicted depth in the plan shouldnt stray too far.
   - [[http://www.lmf.bgu.tum.de/ibims1/][new dataset]] attached and SOTA methods evaluated.
 - [2018] [[https://arxiv.org/pdf/1803.08673.pdf][Revisiting Single Image Depth Estimation:Toward Higher Resolution Maps with Accurate Object Boundaries]]
   - custom loss to lessen blurry-ness and more detail preservation. results look good.
