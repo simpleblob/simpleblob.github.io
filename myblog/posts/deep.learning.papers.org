@@ -65,6 +65,7 @@ list: https://competitions.codalab.org/
   - the heatmap network architecture is "hourglass" network.
   - *pros:* seems robust, get more granualr mask of object shapes
   - *cons:* maybe speed?
+- [2019] [[https://arxiv.org/pdf/1903.03273v1.pdf][FastDepth:  Fast  Monocular  Depth  Estimation  on  Embedded  Systems]]
 
 ** Others
 - [2017] [[https://arxiv.org/abs/1706.02633v2][Real-valued (Medical) Time Series Generation with Recurrent Conditional GANs]]
