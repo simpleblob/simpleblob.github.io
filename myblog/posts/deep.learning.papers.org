@@ -32,7 +32,11 @@ list: https://competitions.codalab.org/
  
 ** Monocular Depth Estimation
 - [2018] [[https://arxiv.org/pdf/1805.01328.pdf][Evaluation of CNN-based Single-Image DepthEstimation Methods]]
-  - We propose a set of novel quality criteria, allowing for a more detailed analysis by focusing onspecific characteristics of depth maps. In particular, we address the preservation of edges and planar regions, depth consistency,and absolute distance accuracy.
+  - novel quality criterion, allowing for a more detailed analysis.
+    - the preservation of edges and planar regions, 
+    - depth consistency
+    - absolute distance accuracy.
+  - [[http://www.lmf.bgu.tum.de/ibims1/][new dataset]] attached and SOTA methods evaluated.
 - [2018] [[https://arxiv.org/pdf/1803.08673.pdf][Revisiting Single Image Depth Estimation:Toward Higher Resolution Maps with Accurate Object Boundaries]]
 - [2019] [[https://arxiv.org/abs/1901.09402][Monocular Depth Estimation: A Survey]]
 
