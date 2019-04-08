@@ -42,6 +42,8 @@ list: https://competitions.codalab.org/
   - custom loss to lessen blurry-ness and more detail preservation. results look good.
 - [2019] [[https://arxiv.org/abs/1901.09402][Monocular Depth Estimation: A Survey]]
 - [2019] [[https://arxiv.org/pdf/1903.03273v1.pdf][FastDepth: Fast Monocular Depth Estimation on Embedded Systems]]
+- [2018] [[https://sci-hub.tw/10.1109/ccdc.2018.8407902][Monocular Dense Reconstruction by Depth Estimation Fusion]]
+ - one way to fuse sparse depth sensor data with dense (but unscaled) depth estimation.
 
 ** RGB-D data and its usage
 - [2017] [[https://blog.cometlabs.io/depth-sensors-are-the-key-to-unlocking-next-level-computer-vision-applications-3499533d3246][Depth sensors are the key to unlocking next level computer vision applications.]] -- introduction to depth sensing methods
