@@ -30,7 +30,7 @@ list: https://competitions.codalab.org/
  :URL: http://image-net.org/about-stats
  :END:
  
-** Monocular Depth Estimation
+** Depth Estimation
 - [2018] [[https://arxiv.org/pdf/1805.01328.pdf][Evaluation of CNN-based Single-Image Depth Estimation Methods]]
   - common criteria: (y - gt) / gt in various forms (abs, sq, sqrt, log, etc.)
   - novel quality criterion, allowing for a more detailed analysis.
@@ -46,6 +46,7 @@ list: https://competitions.codalab.org/
 - [2018] [[https://www.slideshare.net/yuhuang/depth-fusion-from-rgb-and-depth-sensors][overview slides]
 - [2018] [[https://sci-hub.tw/10.1109/ccdc.2018.8407902][Monocular Dense Reconstruction by Depth Estimation Fusion]]
  - one way to fuse sparse depth sensor data with dense (but unscaled) depth estimation.
+- [2018] [[http://openaccess.thecvf.com/content_ECCV_2018/papers/Sameh_Khamis_StereoNet_Guided_Hierarchical_ECCV_2018_paper.pdf][StereoNet: Guided Hierarchical Refinement forReal-Time Edge-Aware Depth Prediction]]
 
 ** RGB-D data and its usage
 - [2017] [[https://blog.cometlabs.io/depth-sensors-are-the-key-to-unlocking-next-level-computer-vision-applications-3499533d3246][Depth sensors are the key to unlocking next level computer vision applications.]] -- introduction to depth sensing methods
