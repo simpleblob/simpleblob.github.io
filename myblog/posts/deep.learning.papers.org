@@ -43,7 +43,7 @@ list: https://competitions.codalab.org/
 - [2019] [[https://arxiv.org/abs/1901.09402][Monocular Depth Estimation: A Survey]]
 - [2019] [[https://arxiv.org/pdf/1903.03273v1.pdf][FastDepth: Fast Monocular Depth Estimation on Embedded Systems]]
 ** Depth Fusion
-- [2018] [[https://www.slideshare.net/yuhuang/depth-fusion-from-rgb-and-depth-sensors][overview slides]
+- [2018] [[https://www.slideshare.net/yuhuang/depth-fusion-from-rgb-and-depth-sensors][overview slides]]
 - [2018] [[https://sci-hub.tw/10.1109/ccdc.2018.8407902][Monocular Dense Reconstruction by Depth Estimation Fusion]]
  - one way to fuse sparse depth sensor data with dense (but unscaled) depth estimation.
 - [2018] [[http://openaccess.thecvf.com/content_ECCV_2018/papers/Sameh_Khamis_StereoNet_Guided_Hierarchical_ECCV_2018_paper.pdf][StereoNet: Guided Hierarchical Refinement forReal-Time Edge-Aware Depth Prediction]]
