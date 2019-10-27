@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>notebook - deep learning paper reading notes</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    </head>
+    <main>
+    <body>
+        <div id="header">
+            <div id="logo">
+                <a href="../">My Notebook</a>
+            </div>
+            <div id="navigation">
+                <a href="../">Home</a>
+                <!-- <a href="../about.html">About</a> -->
+                <a href="../contact.html">Contact</a>
+                <a href="../archive.html">Archive</a>
+            </div>
+        </div>
+
+        <div id="content">
+            <h1>deep learning paper reading notes</h1>
+
+            <div class="info">
+    <em>
+    creation date: 2018-01-11, 
+    latest update: 2018-01-11
+    </em>
+</div>
+
+<h2 id="background">Background</h2>
+<p>Based on <a href="https://github.com/terryum/awesome-deep-learning-papers">Awesome Deep Learning Papers</a> plus my own addition of literature summary</p>
+<h2 id="famous-machine-learning-conferences">Famous Machine Learning Conferences</h2>
+<ul>
+<li><a href="https://nips.cc/">NIPS</a> - general machine learning (US)</li>
+<li><a href="https://icml.cc/">ICML</a> - general machine learning (international)</li>
+<li><a href="http://cvpr2019.thecvf.com/">CVPR</a> - computer vision (US)</li>
+<li><a href="https://eccv2018.org/">ECCV</a> - computer vision (european)</li>
+<li><a href="http://iccv2019.thecvf.com/submission/timeline">ICCV</a> - computer vision (international)</li>
+<li><a href="https://www.siggraph.org/">SIGGRAPH</a> - animation, computer graphic</li>
+</ul>
+<h2 id="famous-challenges-dataset">Famous Challenges / Dataset</h2>
+<p>list: <a href="https://competitions.codalab.org/" class="uri">https://competitions.codalab.org/</a></p>
+<ul>
+<li><p>[2010-2017] <a href="http://image-net.org/about-stats">ImageNet</a></p></li>
+<li><p>[2005-2012] <a href="http://image-net.org/about-stats">Pascal VOC</a></p></li>
+</ul>
+<h2 id="depth-estimation">Depth Estimation</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="depth-fusion">Depth Fusion</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="rgb-d-data-and-its-usage">RGB-D data and its usage</h2>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<h2 id="d-pose-estimation">6D pose estimation</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="others">Others</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="grasping">Grasping</h2>
+<h3 id="dataset">Dataset</h3>
+<ul>
+<li></li>
+<li></li>
+<li>GGCNN paper proposes a set of 20 reproducible items for testing, com-prising comprising 8 3D printed adversarial objects from Dex-Net paper and 12 items from the APB and YCB object sets, which provide a wide enough range of sizes, shapes and difficulties to effectively compare results while not excluding use by any common robots, grippers or camera</li>
+<li></li>
+</ul>
+<h3 id="papers">Papers</h3>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<h2 id="body-pose-estimation">Body pose estimation</h2>
+<h3 id="dataset-1">Dataset</h3>
+<p><a href="http://liris.cnrs.fr/voir/wiki/doku.php?id=datasets">big list of both body and hand dataset</a></p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<h3 id="papers-1">Papers</h3>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<p>===================================================================</p>
+<h2 id="hand-pose-estimation">Hand pose estimation</h2>
+<p>The most challenging part about this is not the architecture, but the lack of large, clean, public dataset.</p>
+<h3 id="dataset-2">Dataset</h3>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<p>list of more datasets here</p>
+<ul>
+<li><a href="http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm#gesture">Hand, Hand Grasp, Hand Action and Gesture Databases</a></li>
+<li><a href="http://liris.cnrs.fr/voir/wiki/doku.php?id=datasets">big list of both body and hand dataset</a></li>
+</ul>
+<h3 id="hand-papers">Hand Papers</h3>
+<p>Most of the papers use Depth-only or RGB+D data to estimate hand-pose... It is probably possible to convert RGB to depth with another model, but it might be even slower.</p>
+<ul>
+<li>List of generally good papers with performance benchmark here --&gt; <a href="https://github.com/xinghaochen/awesome-hand-pose-estimation">Awesome hand pose estimation</a></li>
+<li>List of papers with notes from researcher student's personal wiki --&gt; <a href="https://github.com/hassony2/inria-research-wiki/wiki/hand-papers">inria wiki</a></li>
+<li><p><a href="http://icvl.ee.ic.ac.uk/hands17/program/program-details/">Accepted papers from Hands 2017 conference</a></p></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="anomaly-detection-images-videos">Anomaly Detection (Images / Videos)</h2>
+<ul>
+<li>Overview
+<ul>
+<li>currently there are 3 main approaches
+<ol>
+<li>clustering or nearest neighbor</li>
+<li>learn from 1-class (normal) data and draw a boundary using SVM etc.</li>
+<li>feature reconstruction of what is considered &quot;normal&quot; and compared diff against the sample.</li>
+</ol></li>
+<li>recently DL methods focus on the 3rd approach using autoencoders and GANs</li>
+</ul></li>
+<li><a href="https://github.com/hoya012/awesome-anomaly-detection">Awesome list of anomaly detection</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="anomaly-detection-time-series">Anomaly Detection (Time Series)</h2>
+<ul>
+<li>Overview
+<ul>
+<li>3 main approaches
+<ul>
+<li>classification - input sequence window ==&gt; output Good / Bad</li>
+<li>detection - input sequence window ==&gt; output t+1 sequence and compare diff with DTW</li>
+<li>reconstruction - input squence window ==&gt; Encoder-Decoder ==&gt; check reconstruction loss</li>
+</ul></li>
+</ul></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="generative-adversarial-networks-gans">Generative Adversarial Networks (GANs)</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="style-transfers">Style Transfers</h2>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<h2 id="understanding-generalization-transfer">Understanding / Generalization / Transfer</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="optimization-training-techniques">Optimization / Training Techniques</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="unsupervised-generative-models">Unsupervised / Generative Models</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="cnn-feature-extractors">CNN Feature Extractors</h2>
+<ul>
+<li>Backbone feature extractor short summary / <a href="https://arxiv.org/pdf/1804.06215.pdf">source</a>
+<ul>
+<li>The backbone network for object detection are usually borrowed from the ImageNet classification.</li>
+<li>Many new networks are designed to get higher performance for ImageNet. AlexNet (2012) is among the first to try to increase the depth of CNN. In order to reduce the network computation and increase the valid receptive field, AlexNet down-samples the feature map with 32 strides which is a standard setting for the following works. It also implemented group convolutions (branch into two CNN tracks to train on seperate GPU simutaneously) but mostly because of engineering constraint (3GB VRAM limit)</li>
+<li>VGGNet (2014) stacks 3x3 convolution operation to build a deeper network, while still involves 32 strides in feature maps. Most of the following researches adopt VGG like structure, and design a better component in each stage (split by stride).</li>
+<li>GoogleNet (2015) proposes a novel inception block to involve more diversity features.</li>
+<li>ResNet (2015) adopts “bottleneck” design with residual sum operation in each stage, which has been proved a simple and efficient way to build a deeper neural network.</li>
+<li>ResNext (2016) and Xception (2016) use group convolution layer to replace the traditional convolution. It reduces the parameters and increases the accuracy simultaneously.</li>
+<li>DenseNet densely concat several layers, it further reduces parameters while keeping competitive accuracy. Another different research is Dilated Residual Network which extracts features with less strides. DRN achieves notable results on segmentation, while has little discussion on object detection. There are still lots of research for efficient backbone, such as [17,15,16]. However they are usually designed for classification.</li>
+</ul></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="image-object-detection">Image: Object Detection</h2>
+<ul>
+<li>Overview paper: [2018-09] <a href="https://arxiv.org/pdf/1809.03193.pdf">recent advances in object detection in the age of deep CNNs</a>
+<ul>
+<li>YOLO family
+<ul>
+<li>YOLOv1
+<ul>
+<li>simple network design, one-shot detector</li>
+<li>result (voc 07-12) - mAP(0.5) 63.4 with 45 FPS at 554x554 on Titan X</li>
+</ul></li>
+<li>YOLOv2
+<ul>
+<li>add batch normalization, able to train deeper network</li>
+<li>double input resolution 224x224 --&gt; 448x448 (also in Imagenet pretraining)</li>
+<li>add anchor box priors, will custom clustering to find best priors</li>
+<li>result (voc 07-12) - mAP(0.5) 78.6 with 40 FPS at 554x554 on Titan X</li>
+</ul></li>
+<li>YOLOv3
+<ul>
+<li>predict boxes at 3 different scales (similar to SSD)</li>
+<li>use skip connection (upsampled then concat layers)</li>
+<li>much deeper feature extractors (Darknet-53)</li>
+<li>result (COCO) - mAP(0.5) 57.9 with 20 FPS at 608x608 on Titan X</li>
+</ul></li>
+</ul></li>
+<li><a href="http://cs231n.stanford.edu/slides/2018/cs231n_2018_ds06.pdf">R-CNN family</a>
+<ul>
+<li>R-CNN: Selective search → Cropped Image → CNN</li>
+<li>Fast R-CNN: Selective search → Crop feature map of CNN</li>
+<li>Faster R-CNN: CNN → Region-Proposal Network → Crop feature map of CN**</li>
+<li>Best accuracy but slow</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="image-segmentation">Image: Segmentation</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="image-video-etc">Image / Video / Etc</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="natural-language-processing-rnns">Natural Language Processing / RNNs</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="speech-other-domain">Speech / Other Domain</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="reinforcement-learning-robotics">Reinforcement Learning / Robotics</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="credit-card-fraud-detection">Credit card fraud detection</h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="weather-classification">Weather Classification</h2>
+<ul>
+<li>Overall Summary as of [2018-10]</li>
+</ul>
+<p>There are no agreed upon public dataset and very few DL papers dedicated to the topic.</p>
+<p>The common dataset used is <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> sunny/cloudy dataset with 10k images. Other recent papers <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> have contructed their own dataset which are not opened to public yet. However, BDD100K dataset also has weather attribute labeled, so we should be considering using that.</p>
+<p>There are 3 type of models proposed thus far.</p>
+<ol>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+<p>so far the DL method did aggressively out-perform traditional ones.</p>
+<p>New alternative would be to add new sensor data (temperature/humidity) and ensemble with CNN model. For that matter, how accurate would predictions from sensor data alone be?</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="autonomous-driving">Autonomous driving</h2>
+<ul>
+<li>[2017-02] <a href="https://www.mdpi.com/2075-1702/5/1/6">overview paper</a></li>
+</ul>
+<h2 id="face-detection">Face Detection</h2>
+<ul>
+<li>Dataset: <a href="http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/">WiderFace</a>
+<ul>
+<li>30K images, 400k faces.</li>
+<li>metric is PR curve, split by easy / medium / hard cases</li>
+</ul></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li>Benchmark - Labeled Faces in the Wild (LFW) dataset - <a href="http://vis-www.cs.umass.edu/lfw/results.html#UnrestrictedLb">state of the art results</a>
+<ul>
+<li>most commercial systems get &gt; 99.0% classification accuracy, including Dlib</li>
+<li>update as of beginning of 2018</li>
+</ul></li>
+</ul>
+<h2 id="own-discovery-of-research-papers">Own discovery of Research Papers</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="other-papers-still-unassorted">Other papers still unassorted</h2>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<h2 id="articles-and-videos">Articles and Videos</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="classic-paperspublished-before-2012">Classic Paperspublished before 2012</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="hw-sw-dataset">HW / SW / Dataset</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="book-survey-review">Book / Survey / Review</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h2 id="video-lectures-tutorials-blogs">Video Lectures / Tutorials / Blogs</h2>
+<h3 id="lectures">(Lectures)</h3>
+<ul>
+<li><a href="http://cs231n.stanford.edu/">CS231n, Convolutional Neural Networks for Visual Recognition, Stanford University </a></li>
+<li><a href="http://cs224d.stanford.edu/">CS224d, Deep Learning for Natural Language Processing, Stanford University </a></li>
+<li><a href="https://github.com/oxford-cs-deepnlp-2017/lectures">Oxford Deep NLP 2017, Deep Learning for Natural Language Processing</a></li>
+</ul>
+<h3 id="tutorials">(Tutorials)</h3>
+<ul>
+<li><a href="https://nips.cc/Conferences/2016/Schedule?type=Tutorial">NIPS 2016 Tutorials, Long Beach</a></li>
+<li><a href="http://techtalks.tv/icml/2016/tutorials/">ICML 2016 Tutorials, New York City</a></li>
+<li><a href="http://videolectures.net/iclr2016_san_juan/">ICLR 2016 Videos, San Juan </a></li>
+<li><a href="http://videolectures.net/deeplearning2016_montreal/">Deep Learning Summer School 2016, Montreal</a></li>
+<li><a href="https://www.bayareadlschool.org/">Bay Area Deep Learning School 2016, Stanford</a></li>
+</ul>
+<h3 id="blogs">(Blogs)</h3>
+<ul>
+<li><a href="https://www.openai.com/">OpenAI</a></li>
+<li><a href="http://distill.pub/">Distill</a></li>
+<li><a href="http://karpathy.github.io/">Andrej Karpathy Blog</a></li>
+<li><a href="http://colah.github.io/">Colah's Blog</a></li>
+<li><a href="http://www.wildml.com/">WildML</a></li>
+<li><a href="http://www.fastml.com/">FastML</a></li>
+<li><a href="https://blog.acolyer.org">TheMorningPaper</a></li>
+</ul>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="http://arxiv.org/pdf/1408.5093">Caffe: Convolutional architecture for fast feature embedding,Y. Jia et al.</a><a href="#fnref1">↩</a></p></li>
+<li id="fn2"><a href="https://arxiv.org/abs/1804.06559v2">SFace: An Efficient Network for Face Detection in Large Scale Variations (Megvii Inc. Face++)</a>
+<ul>
+<li>A new dataset called 4K-Face is also introduced to evaluate the performance of face detection with extreme large scale variations.
+<ul>
+<li>The SFace architecture shows promising results on the new 4K-Face benchmarks.</li>
+<li>In addition, our method can run at 50 frames per second (fps) with an accuracy of 80% AP on the standard WIDER FACE dataset, which outperforms the state-of-art algorithms by almost one order of magnitude in speed while achieves comparative performance.</li>
+</ul></li>
+</ul>
+<a href="#fnref2">↩</a></li>
+</ol>
+</div>
+
+
+        </div>
+        <div id="footer">
+            Site generated by Python script.
+        </div>
+
+    <!-- MathJax is library for displaying math nicely -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    </body>
+    </main>
+</html>

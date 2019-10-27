@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -14,7 +15,7 @@
             </div>
             <div id="navigation">
                 <a href="../">Home</a>
-                <!-- <a href="/about.html">About</a> -->
+                <!-- <a href="../about.html">About</a> -->
                 <a href="../contact.html">Contact</a>
                 <a href="../archive.html">Archive</a>
             </div>
@@ -26,9 +27,8 @@
             <div class="info">
     <em>
     creation date: 2017-12-04, 
-    latest update: 2017-12-25
+    latest update: 2017-12-16
     </em>
-    
 </div>
 
 <h2 id="link-of-interest">Link of interest</h2>
@@ -47,10 +47,10 @@
 <ol>
 <li>write C sourcecode in file</li>
 <li>file is compiled into machine-level codes</li>
-<li>machine-level codes (binary code-map) are executed by a chipset – register, memory, ALU.</li>
+<li>machine-level codes (binary code-map) are executed by a chipset -- register, memory, ALU.</li>
 <li>all the hardware stuff in 3. &gt;&gt; they are all logic-gates.</li>
 </ol></li>
-<li>abstractions - we use it to “split off” complex projects into simple parts, as we did here.</li>
+<li>abstractions - we use it to &quot;split off&quot; complex projects into simple parts, as we did here.</li>
 </ul>
 <h2 id="lesson-01-boolean-and-logic-gates">Lesson 01: Boolean and Logic Gates</h2>
 <ul>
@@ -63,47 +63,47 @@
 <li>NOT X = NAND(X,X)</li>
 <li>X OR Y = NAND(NAND(X,X),NAND(Y,Y))</li>
 <li>X AND Y = NAND(NAND(X,Y),NAND(X,Y))</li>
-<li>Trivia: NOR can do these too. we call them “universal gates”</li>
+<li>Trivia: NOR can do these too. we call them &quot;universal gates&quot;</li>
 </ul></li>
 <li>With these we can build up complex functions</li>
 <li>For logic gates, we start with truth table work backwards to construct functions that can implement addition and multiplication etc.</li>
-<li>We start with having an input of 1-bit. However, later on we will have more bit (16-bits etc.) to manipulate. It is better to thing of them as one group – “bus” (latin for “many”)</li>
+<li>We start with having an input of 1-bit. However, later on we will have more bit (16-bits etc.) to manipulate. It is better to thing of them as one group -- &quot;bus&quot; (latin for &quot;many&quot;)</li>
 <li>Building up from NANDs, the basic blocks are NOT,AND,OR,XOR,MUX,DMUX. (can be many-bits version).</li>
-<li>Mux and Demux is useful when shared communication over a single line. (selecting by feeding certain frequencies to the “select” channel of Mux/Demux)</li>
-<li>We can do 3-way or more combining inputs by cumulatively applying the basic blocks. for DMUX, it’s similar to branching out and vice versa for MUX.</li>
+<li>Mux and Demux is useful when shared communication over a single line. (selecting by feeding certain frequencies to the &quot;select&quot; channel of Mux/Demux)</li>
+<li>We can do 3-way or more combining inputs by cumulatively applying the basic blocks. for DMUX, it's similar to branching out and vice versa for MUX.</li>
 </ul>
 <h2 id="lesson-02-boolean-arithmetic-and-alu">Lesson 02: Boolean Arithmetic and ALU</h2>
 <ul>
 <li>How to convert from decimal to binary
 <ul>
-<li>find the biggest “buckets” that decimal number can fit then down to the next biggest one.</li>
+<li>find the biggest &quot;buckets&quot; that decimal number can fit then down to the next biggest one.</li>
 <li>Example, 99 is 64 + 32 + 0 + 0 + 0 + 2 + 1</li>
 <li>Therefore, in binary form, it is 1100011</li>
 </ul></li>
 <li>The following are the basic arithmetics we want to have: Add, Subtract, which is greater, Multiply, Divide</li>
-<li>First we will get “Add”, then we get “Subtract” and “which is greater” for free
+<li>First we will get &quot;Add&quot;, then we get &quot;Subtract&quot; and &quot;which is greater&quot; for free
 <ul>
-<li>“Subtract” is adding another negative number together (this depends on how to represent negative numbers in a clever way)</li>
-<li>“Greater” means we can subtract the two numbers and see whether result is positive.</li>
+<li>&quot;Subtract&quot; is adding another negative number together (this depends on how to represent negative numbers in a clever way)</li>
+<li>&quot;Greater&quot; means we can subtract the two numbers and see whether result is positive.</li>
 </ul></li>
 <li>How to build Multi-bits Adder
 <ol>
-<li>Build Half-Adder –&gt; input a,b and output a sum and carry (I call this a H-carry)</li>
-<li>Build Full-Adder –&gt; input a,b,H-carry then output “true sum” and “true carry”</li>
-<li>Build multi-bits Adder by stacking the Full-Adder cumulatively – digits by digits</li>
+<li>Build Half-Adder --&gt; input a,b and output a sum and carry (called H-carry)</li>
+<li>Build Full-Adder --&gt; input a,b,H-carry then output &quot;true sum&quot; and &quot;true carry&quot;</li>
+<li>Build multi-bits Adder by stacking the Full-Adder cumulatively -- digits by digits</li>
 </ol></li>
-<li>About “ALU” inside a cpu
+<li>About &quot;ALU&quot; inside a cpu
 <ul>
 <li>generally used to compute integer and logic stuff. other computation can be implemented later in software.</li>
-<li>in “Hack ALU” design, there are 2 16-bit inputs, 1 function select, and 1 16-bit output</li>
+<li>in &quot;Hack ALU&quot; design, there are 2 16-bit inputs, 1 function select, and 1 16-bit output</li>
 </ul></li>
 </ul>
 <h2 id="lesson-03-memory">Lesson 03: Memory</h2>
 <ul>
 <li>Why do we need memory?
 <ul>
-<li>for loop, memory “states”, counters</li>
-<li>deal with physical speed - the gap in one discrete “clock” cycle to make sure all electrical/transistor input/output changes are done before one ticks.</li>
+<li>for loop, memory &quot;states&quot;, counters</li>
+<li>deal with physical speed - the gap in one discrete &quot;clock&quot; cycle to make sure all electrical/transistor input/output changes are done before one ticks.</li>
 </ul></li>
 <li>Types of logic
 <ul>
@@ -120,9 +120,9 @@
 </ul></li>
 <li>RAM (our actual memory unit)
 <ul>
-<li>stores both data and code to run. remember von neumann…</li>
+<li>stores both data and code to run. remember von neumann...</li>
 <li>this is just a bunch of registers stacked together</li>
-<li>select register to manipulate by setting “address” and turn on “load” flag</li>
+<li>select register to manipulate by setting &quot;address&quot; and turn on &quot;load&quot; flag</li>
 </ul></li>
 <li>Counter
 <ul>
@@ -130,47 +130,11 @@
 <li>counter interface: RESET, NEXT, GOTO</li>
 </ul></li>
 </ul>
-<h2 id="lesson-04-machine-language">Lesson 04: Machine Language</h2>
-<ul>
-<li>Universal Turing Machine: a base representation of any computing machine.
-<ul>
-<li>Tool 1: An infinitely long tape with encoded binary code/data on it.</li>
-<li>Tool 2: a magic box that looks at one digit at the time (on the time), then change its internal state, (maybe) modify that digit, then move on to another digits.</li>
-<li>Given Tool 1 and Tool 2, all computation problems can be converted to this format</li>
-<li>Turing Complete = can do all the things the turing machine can do</li>
-</ul></li>
-<li>Von Neumann architecture: one possible (practical) realization of a computing machine</li>
-<li>Machine Language: used to control the machine at the lowest level to do simple things
-<ul>
-<li>read the instruction code of a certain part of memory</li>
-<li>grab the data (from specific memory address)</li>
-<li>do some computation (and maybe write down result)</li>
-<li>move to next instruction</li>
-</ul></li>
-<li>Assembly Language: This is just a convenient “shorthand” for human, since the machine language is all binary code. There will be some compiler to compile the asm to binary form.</li>
-<li>CPU has a small register inside to do small computation (like adding registers together)</li>
-<li>I/O devices can have drivers that do (virtual) memory-mapping to known local addresses. then we can send input/output data that way.</li>
-<li>HACK computer system
-<ul>
-<li>instruction &gt;&gt; CPU (computation / jump ) &gt;&gt; memory I/O</li>
-<li>register A=Address, M=Mapped/selected, D=Data to be computed</li>
-<li>instructions
-<ul>
-<li>A-instruction: select memory addresses</li>
-<li>C-instruction: dest = comp ; jump</li>
-</ul></li>
-<li>Every IO devices are mapped into certain RAM addresses. we can see it as just data manipulation
-<ul>
-<li>For example, Screen can have 600 x 400 x 16 bit mapped.</li>
-<li>Keyboard has 16-bit area mapped.</li>
-</ul></li>
-</ul></li>
-</ul>
+
 
         </div>
         <div id="footer">
-            Site generated by
-            <a href="http://jaspervdj.be/hakyll">Hakyll</a>.
+            Site generated by Python script.
         </div>
 
     <!-- MathJax is library for displaying math nicely -->
