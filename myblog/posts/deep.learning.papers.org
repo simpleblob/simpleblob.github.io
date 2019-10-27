@@ -3,6 +3,18 @@
 #+LINK: https://github.com/terryum/awesome-deep-learning-papers
 #+KEYWORDS: CNN
 
+---
+title: deep learning paper reading notes
+subtitle: none
+description: dl paper notes
+tags: deep_learning
+created: 2018-01-11
+published: 2018-01-11
+status: ongoing
+confidence: log
+importance: 1
+---
+
 * Background
 Before this list, there exist other awesome deep We believe that there exist 
 /classic/ deep learning papers which are worth reading regardless of their application domain. 
