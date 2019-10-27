@@ -4,29 +4,12 @@ from os.path import basename,splitext,join
 import subprocess
 import shutil
 
-def main():
-
-    checkcwd = os.getcwd().split("/")[-1]
-    if checkcwd != "myblog":
-        print("please run this inside 'myblog' directory!")
-        quit()
-
-    # get the templates
-    with open("./templates/default.html","r") as fi:
-        default_tpl = fi.read()
-    with open("./templates/post.html","r") as fi:
-        post_tpl = fi.read()
-
+def generate_posts_html(default_tpl, post_tpl):
+    #------ gen posts
     # form the full template
     post_html = default_tpl.replace("$body$",post_tpl)
     # correct relative directories
     post_html = post_html.replace('href="/','href="../')
-
-    # remove old files
-    shutil.rmtree("../posts/")
-    os.makedirs("../posts/")
-
-    #------ gen posts
     posts_org = glob("./posts/*.org")
     posts_name = []
     posts_published = []
@@ -36,7 +19,7 @@ def main():
         print(orgname)
         with open(orgname,"r") as fi:
             post_org = fi.read()
-        
+
         sp = post_org.split("---")
 
         # read header information
@@ -49,7 +32,7 @@ def main():
 
         print(desc)
 
-        # convert org content to html 
+        # convert org content to html
         content = "".join(sp[2:])
 
         with open("./tmp.org","w") as fi:
@@ -80,15 +63,59 @@ def main():
         posts_published.append(desc["published"])
         posts_title.append(desc["title"])
 
+    # remove tmp stuff
+    os.remove("./tmp.org")
+    os.remove("./tmp.html")
+
+    return posts_name, posts_published, posts_title
+
+def generate_archive_html(default_tpl, archive_tpl,
+                          posts_name, posts_published, posts_title):
+    print("generate archive.html ...")
     # --- make Archives.html
-    archives_html = default_tpl
 
     # create post link list
     list_html = "\n<ul>\n"
-    for pub,title,name in zip(posts_published,posts_name,posts_title):
-        list_html += "<li>" + "<a href='./posts/" + name + "'>"
-        pub + " - " + title + "</a></li>\n"
+    for pub,name, title in zip(posts_published,posts_name,posts_title):
+        list_html += "<li>\n" + pub + " - <a href='./posts/" + name + "'>" + \
+         title + "</a></li>\n"
     list_html += "</ul>\n"
+
+    archive_final = default_tpl.replace("$body$",archive_tpl)
+    archive_final = archive_final.replace('href="/','href="./')
+    archive_final = archive_final.replace("$title$","Archives")
+    archive_final = archive_final.replace("$post-list$",list_html)
+
+    save_name = "../archive.html"
+    with open(save_name,"w") as fi:
+        fi.write(archive_final)
+
+    print("done")
+
+
+def main():
+
+    checkcwd = os.getcwd().split("/")[-1]
+    if checkcwd != "myblog":
+        print("please run this inside 'myblog' directory!")
+        quit()
+
+    # get the templates
+    with open("./templates/default.html","r") as fi:
+        default_tpl = fi.read()
+    with open("./templates/post.html","r") as fi:
+        post_tpl = fi.read()
+    with open("./templates/archive.html","r") as fi:
+        archive_tpl = fi.read()
+
+    # remove old files
+    shutil.rmtree("../posts/")
+    os.makedirs("../posts/")
+
+    posts_name, posts_published, posts_title = generate_posts_html(default_tpl, post_tpl)
+    generate_archive_html(default_tpl, archive_tpl,
+                           posts_name, posts_published, posts_title)
+
 
 
 if __name__ == "__main__":
