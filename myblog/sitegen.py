@@ -33,6 +33,7 @@ def main():
     posts_title = []
 
     for orgname in posts_org:
+        print(orgname)
         with open(orgname,"r") as fi:
             post_org = fi.read()
         

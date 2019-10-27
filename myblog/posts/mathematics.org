@@ -1,4 +1,16 @@
-*** Linear Algebra (Matrix/Vector)
+---
+title: Mathematics
+subtitle: None
+description: None
+tags: math
+created: 2018-01-02
+published: 2018-12-02
+status: draft
+confidence: log
+importance: 1
+---
+
+** Linear Algebra (Matrix/Vector)
 [[https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab][3brown1blue videos playlist]]
 - basis vectors
  - think of vector as an arrow point on the map, with origin at [0,0]
