@@ -20,8 +20,7 @@ def main():
     # form the full template
     post_html = default_tpl.replace("$body$",post_tpl)
     # correct relative directories
-    post_html = post_html.replace("href=/","href=../")
-
+    post_html = post_html.replace('href="/','href="../')
 
     # remove old files
     shutil.rmtree("../posts/")
@@ -31,6 +30,7 @@ def main():
     posts_org = glob("./posts/*.org")
     posts_name = []
     posts_published = []
+    posts_title = []
 
     for orgname in posts_org:
         with open(orgname,"r") as fi:
@@ -58,6 +58,8 @@ def main():
 
         with open("./tmp.html","r") as fi:
             content = fi.read()
+            # correct relative directories
+            content = content.replace('href="/','href="../')
 
         # print(content)
 
