@@ -4,16 +4,100 @@ subtitle: Financial Independence
 description: None
 tags: FI, antifragile
 created: 2016-12-03
-published: 2017-11-26
+published: 2019-02-26
 status: draft
 confidence: log
 importance: 1
 ---
 
-** Plan vs Strategy
-  -  A plan is a string of actions. One action fail, all fail. Fragile.
-  -  A strategy is a web of actions. can't go this way then go another
-    way. it means having logical constraints in your head (similar to
-    numerical programming) which exposes you to a set of path you can
-    choose to execute (and diverge later as long as the new path satisfies
-    the constraints)
+** The lock-in
+- Mass delusion of spending money = one sign of success
+- Comparison of delusion with [[https://en.wikipedia.org/wiki/Allegory_of_the_Cave][Plato's cave]]
+ - common life track: school -> university -> career. not so efficient.
+ - cost of specialization (degrees/career): fragile to change. generalists fare better.
+ - corporate ladder is more like a pyramid. survivorship bias.
+- The problem with personal finance
+ - cash flow problem: one stream of (stable?) income, many debt.
+ - consumer debt, unlike business debt, does not generate income.
+  - major consumer debt means borrowing from the future, where income is uncertain.
+ - saving rate close to zero. (probably U.S. specifically)
+- retirement: a relatively new phenomenon in 20th century.
+ - most common early retirement resembles long vacation. a net negative in society productivity. (spending past accumulated wealth?)
+- breaking out of "the lock-in"
+ - reduce waste and increase efficiency. (lower-cost living with same benefits)
+ - invest the gain (from waste reduction) in businesses
+ - find something meaningful to do instead of work.
+
+** Economic degrees of freedom
+To understand a system, it is helpful to identify degrees of freedom and constraints.
+
+- we will use this economic "coupling" graph for analysis
+ - horizontal axis: *coupling* from loose to tight. loosely coupled system is less likely to fail.
+ - vertical axis: *organization* from linear to non-linear. non-linear feedbacks will have affect on input -> output. (convex payoff)
+- there are mainly 4 archetypes of a working person. for each group, the "norm" behavior/culture is different.
+ - *salary man* (tight/linear): fragile to business change, rewards (less than) linearly scale with efforts. 
+  - have options, but do not create options.
+  - both work and consumption are well-controlled. eg. cog in the machine.
+  - one income --> all consumption
+ - *working man* (loose/linear): (freelancers etc.) uncertain income, but less fragile. linear rewards.
+  - often have emergency fund due to uncertainty of cash flow, which makes them more anti-fragile.
+  - has many clients, unlike one big client per salary man.
+  - consumer pattern similar to salary man.
+ - *business man* (tight/non-linear): owns one or more business.
+  - personal cash flow is minimal compared to business cash flow they controlled.
+  - tight coupling to one or few businesses. convex payoff.
+  - job is find solution to problems, relying on assets and other people.
+  - need to quickly solve things, due to competition.
+ - *renaissance man* (loose/non-linear): a combination of those 3 types.
+  - competent in variety of fields, can take on full-time job as needed.
+  - also a generalist, many vocational skills to pickup work based on supply/demand.
+  - has vast knowledge and experience in solving complex problems efficiently, therefore can do in-sourcing of many things (doing tax, repairs, painting house, cooking) which reduces cash outflows considerably.
+  - potentially has assets and investments in various type of businesses.
+  - In a sense, a person do can make/do anything. a local leader and inspiration to other people.
+- Succession and cycle of change: one type is more popular at certain stage
+ - each "species" is adapted to thrive in a very specific environment
+ - if the conditions change, the existing species will be outcompeted by a species which is better adapted to new ones.
+ - Succession occurs because the dominance of one species gradually changes the environment.
+- Ergodicity and destiny
+ - [[https://www.barbellstrategy.com/blog/post-9mwgp-gw568][What is ergodicity?]]: The simple statement is that the space average is the same as the time average. Which means that if you look at one point over time you’ll get the same answer if you look at all of space at one time. 
+ - However, what Jacob mean by using ergodicity is slightly different: with certain set of behaviors, over time, that species will end up where it "deserves". luck will play a part in short term, but not long term.
+ - Therefore, to achieve any kind of long-term goals/outcomes, we need to have *agency* to follow a set of behaviors -- either by habit or sheer willpower -- over a period of time.
+ - Agency is the attitude that any problem can be fixed, given enough resources in the form of time, effort, and determination. Agency is generally transferable to different fields. To build agency, it is recommended to grit through something that is considered very difficult, at least once in your life.
+ - Our current world: climax stage
+  - We have an economic model that is based on pulling resources out of the ground, turning them into unnecessary products, getting people to buy them, then getting people to throw those away for newer products. this kind of GDP is not sustainable.
+
+** The Renaissance ideal
+- Human capital and necessary personal assets
+ - Physiological
+  - maintain optimal levels of physical and mental health
+  - know how the human body functions and physiologically adapts to imposed demands like stress, overeating, lack of exercise, and their opposites
+  - know why and which kinds of food promote health and which kinds destroy health
+  - maintain good habits. know how to preserve food and how to tesll when food is spoiled.
+  - be able to compete in local sports competitions. 
+  - be able to perform physically while exhausted, hungry, or tired. Test: carrying an unconscious person out of a burning house, or pulling oneself up and hanging from a gutter.
+  - know at least basic first aid
+ - Intellectual
+  - be able to prioritize the relevance of information and be able to quickly research and find relevant information in many different areas. Learn independently and have an interest in doing so.
+  - have enough generalized knowledge to be able to understand the information and put it into the context of a mental framework, a model or a procedure, and use it to ask further questions.
+  - recognize which problems the model applies to, take the solution to one problem, generalize it, and apply it to another problem.
+  - be able to critically analyze the model, refine it, and combine different models to achieve an objective. Practice critical thinking in all aspects of life to reach a degree of rational certainty. Be open to new ideas but do not accept anything without examination.
+  - synthesize interdiscilinary information and laterally connect similarities which are not immediately apprent, discovering new models and precedures.
+  - evaluate different methods, models, and precedures while effectively ranking them for utility, and piking the best one while recognizing the pertinence of other methods. Pursue relevant and correct knowledge persistently and consistently. Master the fundamentals.
+ - Economic
+ - Emotional
+ - Social
+ - Technical
+ - Ecological
+- The Renaissance education
+- Gauging mastery
+- Decoupling and increasing complexity
+
+** Strategy, tactics, and guiding principles
+- Plan vs Strategy
+ - A plan is a string of action (follow certain path)
+ - A strategy is a web of actions (consider multiple path, take optimal steps, then reevaluate -- multi-arm bandits)
+- Strategic principles
+- Tactical principles
+
+
+

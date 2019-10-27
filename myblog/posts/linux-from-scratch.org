@@ -1,0 +1,16 @@
+---
+title: building linux system from scratch -- a note
+subtitle: info dump and thoughts
+description: None
+tags: linux, programming
+created: 2019-01-03
+published: 2019-01-03
+status: draft
+confidence: log
+importance: 1
+---
+
+** Links of interest
+- [[http://www.linuxfromscratch.org/lfs/view/stable-systemd/index.html][Linux From Scratch - Systemd]]
+- [[https://www.youtube.com/watch?v=YQxi3S6eSIQ&list=PL8DNKRW0HDsPDBCWEexsXmECNgIqVTscx&index=4][Youtube video series (type-along)]]
+- [[https://nilisnotnull.blogspot.com/2015/02/installing-lfs-with-qemu.html][How to make QEMU runs on headless mode and login through ssh]]
