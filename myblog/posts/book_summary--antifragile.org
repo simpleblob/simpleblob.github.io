@@ -1,0 +1,17 @@
+---
+title: Book Summary - Antifragile
+subtitle: None
+description: None
+tags: antifragile
+created: 2019-11-09
+published: 2019-11-09
+status: draft
+confidence: log
+importance: 1
+---
+
+** Book I - Introduction
+  -  Opposite of fragile is not robust (unharmed). It is antifragile (improved)
+
+** Book II - Modernity and the Denial of Antifragility
+  -  asdf
