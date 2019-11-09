@@ -11,7 +11,16 @@ importance: 1
 ---
 
 ** Book I - Introduction
-  -  Opposite of fragile is not robust (unharmed). It is antifragile (improved)
+  - Opposite of fragile is not robust (unharmed), it is antifragile (improved).
+  - Complex societies >> more specialization >> more vulnerable to collapse
+    (easier to topple balance)
+  - Some histories
+    - Mithridatization = small dose of substance until immune to it
+    - Hormesis = small dose of harmful substance actually beneficial, act as
+      medicine
+    - a fast (caloric restriction)
+  - Domain dependence = rich person has someone carry bag for him, to go to the
+    gym to exercise
 
 ** Book II - Modernity and the Denial of Antifragility
   -  asdf
