@@ -17,10 +17,12 @@ importance: 1
   - Some histories
     - Mithridatization = small dose of substance until immune to it
     - Hormesis = small dose of harmful substance actually beneficial, act as
-      medicine
+      medicine --> a form of creating redundancy in systems
     - a fast (caloric restriction)
   - Domain dependence = rich person has someone carry bag for him, to go to the
     gym to exercise
+  - Under-compensation (no stressors, too bored) and over-compensation (good
+    level of stressors)
 
 ** Book II - Modernity and the Denial of Antifragility
   -  asdf
