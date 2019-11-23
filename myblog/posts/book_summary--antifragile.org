@@ -23,6 +23,16 @@ importance: 1
     gym to exercise
   - Under-compensation (no stressors, too bored) and over-compensation (good
     level of stressors)
+  - Stressors are information that system can use to improve (after it
+    survives that stressor, or if not, the group can still benefit from the
+    info)
+  - humans tend to do better with low freq/high severity stressors, with ample
+    rest time
+  - Evolution is group benefiting from sacrifice of the few. Individuals might
+    not become stronger, but the group is, after surviving stressors (with
+    valuable information)
+  - be careful of mistaking some cases as individual improvement rather than
+    culling out the weak
 
 ** Book II - Modernity and the Denial of Antifragility
   -  asdf
