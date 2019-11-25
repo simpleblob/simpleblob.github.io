@@ -31,8 +31,15 @@ importance: 1
   - Evolution is group benefiting from sacrifice of the few. Individuals might
     not become stronger, but the group is, after surviving stressors (with
     valuable information)
-  - be careful of mistaking some cases as individual improvement rather than
+  - Be careful of mistaking some cases as individual improvement rather than
     culling out the weak
 
 ** Book II - Modernity and the Denial of Antifragility
-  -  asdf
+  -  Artisans (taxi drivers etc.) has seen explicit volatility of day-by-day
+    income, hence can adjust strategy accordingly. Permanent employees however,
+    are generally unprepared for the (hidden) coming layoff or job changes. The
+    problem is exacerbated by the low-freq / high-sev of these events.
+  - Usually the more variability is observed in a system, the less Black
+    Swan-prone it is.
+  - Centralized state (Russia) is fragile, while City state (Switzerland) is
+    antifragile.
