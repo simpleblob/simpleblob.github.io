@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>notebook - deep learning paper reading notes</title>
+        <title>notebook - Deep Learning Paper Reading Notes</title>
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
     </head>
     <main>
@@ -22,12 +22,12 @@
         </div>
 
         <div id="content">
-            <h1>deep learning paper reading notes</h1>
+            <h1>Deep Learning Paper Reading Notes</h1>
 
             <div class="info">
     <em>
     creation date: 2018-01-11, 
-    latest update: 2018-01-11
+    latest update: 2020-06-17
     </em>
 </div>
 
@@ -50,77 +50,183 @@
 </ul>
 <h2 id="depth-estimation">Depth Estimation</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2018) <a href="https://arxiv.org/pdf/1805.01328.pdf">Evaluation of CNN-based Single-Image Depth Estimation Methods</a>
+<ul>
+<li>common criteria: (y - gt) / gt in various forms (abs, sq, sqrt, log, etc.)</li>
+<li>novel quality criterion, allowing for a more detailed analysis.
+<ul>
+<li>planar consistency -- given that we have gt of wall orientation, we can do comparison of the diffs (dist and angle)</li>
+<li>edge consistency -- given we have some edge gt, can do dist error</li>
+<li>absolute distance accuracy -- the predicted depth in the plan shouldnt stray too far.</li>
+</ul></li>
+<li><a href="http://www.lmf.bgu.tum.de/ibims1/">new dataset</a> attached and SOTA methods evaluated.</li>
+</ul></li>
+<li>(2018) <a href="https://arxiv.org/pdf/1803.08673.pdf">Revisiting Single Image Depth Estimation:Toward Higher Resolution Maps with Accurate Object Boundaries</a>
+<ul>
+<li>custom loss to lessen blurry-ness and more detail preservation. results look good.</li>
+</ul></li>
+<li>(2019) <a href="https://arxiv.org/abs/1901.09402">Monocular Depth Estimation: A Survey</a></li>
+<li>(2019) <a href="https://arxiv.org/pdf/1903.03273v1.pdf">FastDepth: Fast Monocular Depth Estimation on Embedded Systems</a></li>
 </ul>
 <h2 id="depth-fusion">Depth Fusion</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li>(2018) <a href="https://www.slideshare.net/yuhuang/depth-fusion-from-rgb-and-depth-sensors">overview slides</a></li>
+<li>(2018) <a href="https://sci-hub.tw/10.1109/ccdc.2018.8407902">Monocular Dense Reconstruction by Depth Estimation Fusion</a>
+<ul>
+<li>one way to fuse sparse depth sensor data with dense (but unscaled) depth estimation.</li>
+</ul></li>
+<li>(2018) <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sameh_Khamis_StereoNet_Guided_Hierarchical_ECCV_2018_paper.pdf">StereoNet: Guided Hierarchical Refinement forReal-Time Edge-Aware Depth Prediction</a></li>
 </ul>
 <h2 id="rgb-d-data-and-its-usage">RGB-D data and its usage</h2>
 <ul>
-<li></li>
-<li></li>
+<li>(2017) <a href="https://blog.cometlabs.io/depth-sensors-are-the-key-to-unlocking-next-level-computer-vision-applications-3499533d3246">Depth sensors are the key to unlocking next level computer vision applications.</a> -- introduction to depth sensing methods</li>
+<li>(2018) <a href="https://bair.berkeley.edu/blog/2018/10/23/depth-sensing/">RGB-D and deep learning</a></li>
 </ul>
 <h2 id="d-pose-estimation">6D pose estimation</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2017) <a href="https://arxiv.org/abs/1711.08848">Real-Time Seamless Single Shot 6D Object Pose Prediction (MSF)</a>
+<ul>
+<li>problem is from 2D RGB image, infer a 3D box on the object. (coordinate still on 2D?)</li>
+<li>real-time (50 fps on Titan X), use YOLO-like architecture, then apply PnP algorithm</li>
+</ul></li>
+<li>(2018) (Data related) <a href="https://arxiv.org/pdf/1802.00383.pdf">Annotation-Free and One-Shot Learning for Instance Segmentation of Homogeneous Object Clusters</a></li>
+<li>(2018) <a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Sergey_Prokudin_Deep_Directional_Statistics_ECCV_2018_paper.pdf">Deep Directional Statistics:Pose Estimation withUncertainty Quantification</a>
+<ul>
+<li>pose orientation estimation with directional statistics (von mises distributions)</li>
+</ul></li>
+<li>(2018) <a href="https://arxiv.org/abs/1809.10790">Deep Object Pose Estimation for Semantic Robotic Grasping of Household Objects (Nvidia)</a>
+<ul>
+<li>use synthetic generated data, better accuracy than previous methods</li>
+<li>architecture inspired by Convolutional pose machines (similar to openpose)</li>
+</ul></li>
+<li>(2018) <a href="https://arxiv.org/abs/1804.03959">Making Deep Heatmaps Robust to Partial Occlusions for 3D Object Pose Estimation</a>
+<ul>
+<li>we want to predict heatmaps of each point in a GT 3D bounding box</li>
+<li>instead of using full image as an input, we sample small patches, then predict full-size heatmaps. we aggregate all the output heatmaps then choose the peak in heatmap as predicted points.</li>
+<li>this way it learns to &quot;infer&quot; the point position out of frame, using only partial object image patches. hopefully reducing the occlusion problem.</li>
+</ul></li>
+<li>(2019) <a href="https://arxiv.org/abs/1901.08043">Bottom-up Object Detection by Grouping Extreme and Center Points</a>
+<ul>
+<li>use heatmaps to predict 5 extreme points (TL,TR,BL,BR, and center)</li>
+<li>then enumerating all the pairings and calculate the &quot;centeredness&quot; score --&gt; higher means better pairings of those points.</li>
+<li>the heatmap network architecture is &quot;hourglass&quot; network.</li>
+<li><strong>pros:</strong> seems robust, get more granualr mask of object shapes</li>
+<li><strong>cons:</strong> maybe speed?</li>
+</ul></li>
 </ul>
 <h2 id="others">Others</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li>(2017) <a href="https://arxiv.org/abs/1706.02633v2">Real-valued (Medical) Time Series Generation with Recurrent Conditional GANs</a></li>
+<li>(2018) <a href="https://arxiv.org/abs/1812.02463v2">Anomaly detection with Wasserstein GAN</a></li>
+<li>(2019) <a href="https://arxiv.org/abs/1901.08740">Model-based Deep Reinforcement Learning for Dynamic Portfolio Optimization</a></li>
 </ul>
 <h2 id="grasping">Grasping</h2>
 <h3 id="dataset">Dataset</h3>
 <ul>
-<li></li>
-<li></li>
+<li>(2016) <a href="https://arxiv.org/abs/1609.05258v2">ACRV Picking Benchmark (APB)</a></li>
+<li>(2015) <a href="https://arxiv.org/abs/1502.03143">YCB Object Set</a></li>
 <li>GGCNN paper proposes a set of 20 reproducible items for testing, com-prising comprising 8 3D printed adversarial objects from Dex-Net paper and 12 items from the APB and YCB object sets, which provide a wide enough range of sizes, shapes and difficulties to effectively compare results while not excluding use by any common robots, grippers or camera</li>
-<li></li>
+<li>(2013) <a href="http://pr.cs.cornell.edu/deepgrasping/">Cornell grasping dataset</a> - 1k RGBD with grasp bbox labels</li>
 </ul>
 <h3 id="papers">Papers</h3>
 <ul>
-<li></li>
-<li></li>
+<li>(2017) <a href="https://arxiv.org/abs/1703.09312">Dex-Net 2.0: Deep Learning to Plan Robust Grasps with Synthetic Point Clouds and Analytic Grasp Metrics</a></li>
+<li>(2018) <a href="https://arxiv.org/abs/1804.05172">Closing the Loop for Robotic Grasping: A Real-time, Generative Grasp Synthesis Approach (GGCNN)</a>
+<ul>
+<li>a 6-layer segmentation CNN to do real-time closed loop grasping (20 ms or 50 hz using desktop GPU)</li>
+<li>input: 300x300 inpainted pixel depthmap</li>
+<li>output: a <strong>g</strong> vector comprises of
+<ul>
+<li>heatmap of grasp quality <strong>Q</strong> [0,1]</li>
+<li>heatmap of grasp width <strong>W</strong> [0,150]</li>
+<li>heatmap of grasp angle <strong>phi</strong> [-pi/2, +pi/2]</li>
+</ul></li>
+</ul></li>
 </ul>
 <h2 id="body-pose-estimation">Body pose estimation</h2>
 <h3 id="dataset-1">Dataset</h3>
 <p><a href="http://liris.cnrs.fr/voir/wiki/doku.php?id=datasets">big list of both body and hand dataset</a></p>
 <ul>
-<li></li>
-<li></li>
+<li>(2017) <a href="https://posetrack.net/">Posetrack benchmark Dataset</a>
+<ul>
+<li>20K RGB images (from 500 videos) with 120K body pose labeled</li>
+<li>main purpose for the <a href="https://posetrack.net/workshops/iccv2017/#people">ICCV 2017 human pose challenge</a> evaluation</li>
+</ul></li>
+<li>(2016) <a href="http://cocodataset.org/#keypoints-challenge2016">COCO keypoint challenge</a> - <strong>good</strong>
+<ul>
+<li>90K RGB images</li>
+<li>2016 winner is the openpose paper below</li>
+</ul></li>
 </ul>
 <h3 id="papers-1">Papers</h3>
 <ul>
-<li></li>
-<li></li>
+<li>(2016) <a href="https://arxiv.org/abs/1611.08050">Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields</a> - <strong>openpose paper</strong>
+<ul>
+<li>state-of-the-art accuracy and speed</li>
+</ul></li>
+<li>(2017) <a href="http://gvv.mpi-inf.mpg.de/projects/VNect/">VNect: Real-time 3D Human Pose Estimation with a Single RGB Camera</a>
+<ul>
+<li>single-person, real-time <strong>3D</strong> body pose estimation.</li>
+<li>RGB data &gt;&gt; crop single-person (tracked) &gt;&gt; CNN pose regression &gt;&gt; Kinematic skeleton fitting</li>
+<li>So far they only shown a full-body result. Upper-half images only might be a problem (kinematic)</li>
+<li>not sure about performance.</li>
+</ul></li>
 </ul>
 <p>===================================================================</p>
 <h2 id="hand-pose-estimation">Hand pose estimation</h2>
 <p>The most challenging part about this is not the architecture, but the lack of large, clean, public dataset.</p>
 <h3 id="dataset-2">Dataset</h3>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2017) <a href="http://www.iis.ee.ic.ac.uk/ComputerVision/hand/Hands2016">BigHand2.2M Dataset</a>
+<ul>
+<li>2.2 million Depth and (maybe) RGB images</li>
+<li>no public link.</li>
+</ul></li>
+<li>(2017) <a href="https://arxiv.org/abs/1704.02463">First-Person Hand Action Dataset</a>
+<ul>
+<li>100K RGB+D images</li>
+<li>no public link</li>
+<li>First-person camera only (like selfies)</li>
+</ul></li>
+<li>(2017) <a href="http://icvl.ee.ic.ac.uk/hands17/challenge/">Hands Challenge 2017 Dataset</a>
+<ul>
+<li>sampled from both of the above two dataset</li>
+<li>main purpose is for evaluation in the 2017 competition</li>
+<li>dataset available via email request, non-commercial purpose only</li>
+</ul></li>
+<li>(2017) <a href="http://www.rovit.ua.es/dataset/mhpdataset/">Multiview 3D Hand Pose Dataset</a> - <strong>so-so</strong> | <strong>real</strong> | <strong>ground-truth not accurate</strong>
+<ul>
+<li>20K RGB images with 2D,3D, bounding box annotation</li>
+</ul></li>
+<li>(2017) <a href="https://lmb.informatik.uni-freiburg.de/resources/datasets/RenderedHandposeDataset.en.html">Synthetic dataset from Zimmerman et.al</a> - <strong>good</strong> | <strong>CG</strong>
+<ul>
+<li>41K RGB+D images from 20 different characters 3D models (with 1K random background).</li>
+<li>Basically Zimmerman generated this dataset for [his own architecture][<a href="https://arxiv.org/abs/1705.01389" class="uri">https://arxiv.org/abs/1705.01389</a>) use</li>
+</ul></li>
+<li>(2016) <a href="http://files.is.tue.mpg.de/dtzionas/Hand-Object-Capture/">Capturing Hands in Action using Discriminative Salient Points</a> <strong>good</strong> | <strong>real</strong>
+<ul>
+<li>pretty good label for Hand-Hand Interaction. (RGB-D)</li>
+</ul></li>
+<li>(2014) <a href="https://www-i6.informatik.rwth-aachen.de/~koller/1miohands-data/">RWTH-PHOENIX-Weather MS Handshapes</a> - <strong>potential</strong> | <strong>real</strong> | <strong>no keypoints</strong>
+<ul>
+<li>1 million RGB sign-language hand images with classification label.</li>
+<li>only has &quot;shape&quot; level classification label. Also the cropping might not be close enough</li>
+</ul></li>
+<li>(2013) <a href="http://sun.aei.polsl.pl/~mkawulok/gestures/">polish sign language database</a> - <strong>good</strong> | <strong>real</strong>
+<ul>
+<li>1,500 annotated RGB dataset</li>
+</ul></li>
+<li>(2013) <a href="http://handtracker.mpi-inf.mpg.de/projects/handtracker_iccv2013/dexter1.htm">Dexter 1 dataset</a>
+<ul>
+<li>3K RGB+D images</li>
+<li>only 6 joints</li>
+</ul></li>
+<li>(2014) <a href="http://cims.nyu.edu/~tompson/NYU_Hand_Pose_Dataset.htm#overview">NYU hand pose Dataset</a>
+<ul>
+<li>80K RGB+D images (mostly from a single person)</li>
+<li>generally used for paper evaluation</li>
+<li>Not good RGB images according to Zimmerman paper</li>
+</ul></li>
 </ul>
 <p>list of more datasets here</p>
 <ul>
@@ -133,10 +239,56 @@
 <li>List of generally good papers with performance benchmark here --&gt; <a href="https://github.com/xinghaochen/awesome-hand-pose-estimation">Awesome hand pose estimation</a></li>
 <li>List of papers with notes from researcher student's personal wiki --&gt; <a href="https://github.com/hassony2/inria-research-wiki/wiki/hand-papers">inria wiki</a></li>
 <li><p><a href="http://icvl.ee.ic.ac.uk/hands17/program/program-details/">Accepted papers from Hands 2017 conference</a></p></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2017) <a href="https://arxiv.org/abs/1704.07809">Hand Keypoint Detection in Single Images using Multiview Bootstrapping</a> - <strong>openpose</strong>
+<ul>
+<li>good accuracy but speed is quite slow. the paper says it can be run in real-time but never provide benchmark any.</li>
+<li>2D hand pose estimation from RGB image</li>
+<li>starts from building multiview dataset with good labels
+- <strong><strong>important</strong></strong> - crop each hand images using body pose to estimate area
+<ul>
+<li>train a detector to predict joint location on each images</li>
+<li>average &amp; contrain in 3D space from multiple view (but same hand instance)</li>
+<li>get 3D point labels (use as ground truth for next interations)</li>
+<li>continue until all the images are properly labeled</li>
+</ul></li>
+<li>Detector Architecture: based on <a href="https://arxiv.org/pdf/1602.00134.pdf">CPM</a> with some modifications
+<ul>
+<li>Stage 1:
+<ul>
+<li>Pass input images into a few CNN+Pooling layers to extract feature-maps.</li>
+<li>pass through a few more CNN layers to predict belief maps</li>
+</ul></li>
+<li>Stage 2:
+<ul>
+<li>Again, pass input images into a few CNN+Pooling layers to extract feature-maps. <strong>These layers have different weights from Stage 1</strong></li>
+<li>concatenate with belief maps from Stage 1</li>
+<li>use that to pass through a few more CNN layers to predict a more refined belief maps</li>
+</ul></li>
+<li>Stage 3 and onward: Use stage 2 architecture and repeat.</li>
+</ul></li>
+</ul></li>
+<li>(2017) <a href="https://arxiv.org/abs/1705.01389">Learning to Estimate 3D Hand Pose from Single RGB Images</a>
+<ul>
+<li>This is the Zimmerman paper</li>
+<li>3 Networks are used sequentially
+<ul>
+<li>hand localization through segmentation</li>
+<li>21 keypoint (2D) localization in hand</li>
+<li>deduction of 3D hand pose from 2D keypoints</li>
+</ul></li>
+</ul></li>
+<li>(2017) <a href="http://epubs.surrey.ac.uk/841837/1/camgoz2017iccv.pdf">SubUNets: End-to-end Hand Shape and Continuous Sign Language Recognition</a>
+<ul>
+<li>architecture: CNN+LSTM+Seq2seq (CTC) &gt;&gt; classification</li>
+<li>the CTC part is used for doing continuous prediction</li>
+<li><a href="https://www-i6.informatik.rwth-aachen.de/~koller/"><a href="https://www-i6.informatik.rwth-aachen.de/~koller/" class="uri">https://www-i6.informatik.rwth-aachen.de/~koller/</a></a></li>
+<li>WITH 1 million hand sign-language dataset (per above)</li>
+</ul></li>
+<li>(2015) <a href="https://sci-hub.io/http://www.sciencedirect.com/science/article/pii/S0031320315002745">A novel finger and hand pose estimation technique for real-time hand gesture recognition</a> - <strong>potential</strong>
+<ul>
+<li>several ways to represent the hand model, with varying complexities -- good way to think about feature representation</li>
+<li>This is not a deep learning paper, but there are several techniques for pre-processing the RGB images to make them easier for the architecture to learn hand pose.</li>
+</ul></li>
 </ul>
 <h2 id="anomaly-detection-images-videos">Anomaly Detection (Images / Videos)</h2>
 <ul>
@@ -151,17 +303,98 @@
 <li>recently DL methods focus on the 3rd approach using autoencoders and GANs</li>
 </ul></li>
 <li><a href="https://github.com/hoya012/awesome-anomaly-detection">Awesome list of anomaly detection</a></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2017) <a href="https://arxiv.org/abs/1703.05921">Unsupervised Anomaly Detection with Generative Adversarial Networks to Guide Marker Discovery (AnoGAN), Schlegl.</a> / <a href="https://github.com/tkwoo/anogan-keras">code</a>
+<ul>
+<li>train normal GAN setup to get D and G (in this case they use DCGAN)</li>
+<li>now get new (potential anomaly) image called `x`</li>
+<li>back-optimize the input `z` of G, using `x`</li>
+<li>we then use 2 kind of losses to measure anomaly score
+<ul>
+<li>residual loss RL(x) = sum(abs(x - G(z)))</li>
+<li>feature discrimination loss DL(X) = sum(abs(D<sub>f</sub>(x) - D<sub>f</sub>(G(z)))
+<ul>
+<li>where D<sub>f</sub> is a function to get mid-level features from D</li>
+</ul></li>
+<li>total<sub>loss</sub> A(x) = lambda * DL(x) + (1 - lambda) * RL(x) where they found lamda = 0.1 works best</li>
+</ul></li>
+</ul></li>
+<li>(2018) <a href="https://arxiv.org/abs/1802.06222">Efficient GAN-Based Anomaly Detection, Zenati</a> / <a href="https://openreview.net/forum?id=BkXADmJDM">open-review</a> / <a href="https://github.com/houssamzenati/Efficient-GAN-Anomaly-Detection">code</a>
+<ul>
+<li>From AnoGAN, replacing DCGAN with BiGAN, so that we can have (E)ncoder as inverse mapping from x to z</li>
+<li>they use the following score function to detect anomalies
+<ul>
+<li>total score A(x) = alpha*LG(x) + (1 - alpha)*LD(x)</li>
+<li>reconstruction loss LG(x) = abs( x - G(E(x)) )</li>
+<li>Discriminator loss LD(x) can be defined in two ways
+<ul>
+<li>cross-entropy (CE): between D(x,E(x)) and 1</li>
+<li>feature-matching (FM): L0 loss (absolute-diff) between mid-level logits of D(x,E(x)) and D(G(E(x)),E(x))</li>
+<li>experiments show that performance between CE and FM is data-specific</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>(2018) <a href="https://arxiv.org/abs/1812.02288">Adversarially Learned Anomaly Detection (ALAD)</a> / <a href="https://github.com/houssamzenati/Adversarially-Learned-Anomaly-Detection">code</a>
+<ul>
+<li>This is the follow-up work from the Efficient Anogan paper author</li>
+<li>they added Spectral Normalization and additional Discriminators to get higher accuracy. (All reasonable ideas, however the improvement isn't that clear-cut, looking at the ablation study)</li>
+<li>Dataset Tested: KDD, Arrhythmia, CIFAR10, SVHN</li>
+</ul></li>
+<li>(2019) [ICLR'19] <a href="https://openreview.net/forum?id=H1xwNhCcYm">Do Deep Generative Models Know What They Don't Know?</a></li>
+<li>(2018) <a href="https://arxiv.org/abs/1810.01392">Generative Ensembles for Robust Anomaly Detection</a></li>
+<li>(2018) <a href="https://arxiv.org/abs/1801.03149">An overview of deep learning based methods for unsupervised and semi-supervised anomaly detection in videos, Kiran</a>
+<ul>
+<li>this applies specifically to anomaly detection in videos, with these datasets:
+<ul>
+<li>UCSD Dataset: pedestrians (normal) vs cyclist/wheelchairs (abn) etc.</li>
+<li>CUHK Avenue Dataset: unusual object or behaviors in Subway</li>
+<li>UMN Dataset: unusual crowd activity</li>
+<li>Train Dataset: unusual movement of people on trains</li>
+<li>London U-turn dataset: normal traffic vs jaywalking/firetruck</li>
+</ul></li>
+<li>Methods categorized as following
+<ul>
+<li>Representation learning: PCA, Autoencoders (AEs) --&gt; monitor deviation</li>
+<li>Predictive modeling: autoregressive models, LSTMs --&gt; predict next frame distributions</li>
+<li>Generative model: VAEs, GANs, adversarial AEs (AAEs) --&gt; likelihood</li>
+<li>evalutaion:
+<ul>
+<li>there are two input options: raw images or optical flow. Flow works much better across the board</li>
+<li>no model came out consistently on top, and PCA with flow did surprisingly well.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>(2017) <a href="https://arxiv.org/abs/1706.02690">Enhancing The Reliability of Out-of-distribution Image Detection in Neural Networks, Liang</a> / <a href="https://openreview.net/forum?id=H1VGkIxRZ">open-review</a>
+<ul>
+<li>train a DNN model with class of in-distribution data = 1 and others = 0. (I think at training time, the target is always 1)</li>
+<li>at test time, two transformations are proposed for better detection
+<ul>
+<li>temperature scaling (T) of softmax probabilities (per Hinton's <a href="https://arxiv.org/abs/1503.02531">distillation paper</a>. <code>T</code> is within range [1,1000]</li>
+<li>small perturbations by a gradient of its own raw image's softmax-score. the scaling factor is in [0,0.004]</li>
+</ul></li>
+<li>two key insights:
+<ul>
+<li><code>Temperature scaling</code> makes the network less sure and expand the outlier area (90-100% prob. part)</li>
+<li><code>Perturbations</code> mainly affects in-distribution data, almost has no effect for out-distribution data</li>
+</ul></li>
+</ul></li>
+<li>(2018) [NIPS'18] <a href="https://nips.cc/Conferences/2018/Schedule?showEvent=11927">Deep Anomaly Detection Using Geometric Transformations</a>
+<ul>
+<li>using target as &quot;transformation #i&quot; for the labels while training</li>
+<li>for simple normality score, take the softmaxed prediction for each Transformation, then compute mean. The higher, the more likely to be normal image.</li>
+<li>for full dirichlet normality score, we need to estimate alpha first and the formula is a bit more complex.</li>
+<li>intuition is that:
+<ul>
+<li>while training (which are all normal images), the model will learn to detect types of geometric transformation.</li>
+<li>on testing, if we have abnormal images, the model will be less sure of the type of transformation used.</li>
+</ul></li>
+</ul></li>
+<li>(2018) [NIPS'18] <a href="https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection">A loss framework for calibrated anomaly detection</a></li>
+<li>(2018) <a href="https://arxiv.org/abs/1805.06725">GANomaly: Semi-Supervised Anomaly Detection via Adversarial Training</a></li>
+<li>(2018) <a href="https://arxiv.org/abs/1807.02011">Improving Unsupervised Defect Segmentation by Applying Structural Similarity to Autoencoders</a>
+<ul>
+<li>for reconstruction-type anomaly segmentation, using SSIM instead of L2 Loss improved the quality substantially.</li>
+<li>these guys are from Machine vision company, so this idea is probably in actual production.</li>
+</ul></li>
 </ul>
 <h2 id="anomaly-detection-time-series">Anomaly Detection (Time Series)</h2>
 <ul>
@@ -174,48 +407,145 @@
 <li>reconstruction - input squence window ==&gt; Encoder-Decoder ==&gt; check reconstruction loss</li>
 </ul></li>
 </ul></li>
-<li></li>
-<li></li>
+<li>(2018) <a href="https://arxiv.org/abs/1809.04356">Deep learning for time series classification: a review</a></li>
+<li>(2018) <a href="https://arxiv.org/abs/1708.02635">Anomaly Detection in Multivariate Non-stationary Time Series for Automatic DBMS Diagnosis</a></li>
 </ul>
 <h2 id="generative-adversarial-networks-gans">Generative Adversarial Networks (GANs)</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2018) (Articles) <a href="https://medium.com/@jonathan_hui/gan-gan-series-2d279f906e7b">GAN Series (from the beginning to the end)</a></li>
+<li>(2014) <a href="http://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf">Generative adversarial nets, I. Goodfellow et al.</a>
+<ul>
+<li>Objective is to get distribution of generated sample (P<sub>g</sub>) to be as close to distribution of real data (P<sub>y</sub>) as much as possible</li>
+<li>using a minimax game of fight between discriminator (D) and generator (G)</li>
+<li>the learning process is like this: uniform z --&gt; G(z) --&gt; D(G(z))</li>
+<li>we switch between D(x) and D(G(z)) to learn D</li>
+<li>the loss is like this: C(D,G) = minimize log(D(x)) + log(1 - D(G(z)))
+<ul>
+<li>this is equivalent to C(D,G) = -log(4) + 2*JS(P<sub>x</sub> || P<sub>g</sub>)
+<ul>
+<li>JS is Jensen-Shannon Divergence</li>
+</ul></li>
+<li>a little trick for G to get sizable gradients, the loss used is instead: maximize D(G(z))</li>
+</ul></li>
+<li>note that the theory calls for optimizing P<sub>g</sub> but in practive we approximate with function G. the better or more powerful G, the closer to P<sub>g</sub></li>
+</ul></li>
+<li>(2016) <a href="https://arxiv.org/abs/1605.09782">Adversarial Feature Learning (BiGAN), Donahue</a>
+<ul>
+<li>add an Encoder to do inverse mapping. the setup is like this:
+<ul>
+<li>(G)enerator: G(z) approximates `x`</li>
+<li>(E)ncoder: E(x) approximates the latent space vector `z` (200D of [-1,1])</li>
+<li>(D)iscriminator: recieves input tuple of either z,G(z) or E(x),x then output a probability of input being real</li>
+</ul></li>
+<li>this papers show proof that if we have a perfect Discriminator, the G and E must be an inverse mapping of each other</li>
+<li>they tried with MNIST, works quite well. Then failed with Imagenet -- the model fails to generate realistic looking images, although comparing x and G(E(x)) shows some superficial consistency, like same structure or color etc.</li>
+<li>need to read more about comparison of BiGAN with Autoencoders.</li>
+</ul></li>
+<li>(2016) <a href="http://papers.nips.cc/paper/6125-improved-techniques-for-training-gans.pdf">Improved techniques for training GANs, T. Salimans et al.</a></li>
 </ul>
 <h2 id="style-transfers">Style Transfers</h2>
 <ul>
-<li></li>
-<li></li>
+<li>(2017) <a href="http://arxiv.org/pdf/1703.07511v1.pdf">Deep Photo Style Transfer, F. Luan et al.</a></li>
+<li>(2018) <a href="https://arxiv.org/abs/1812.04948">A Style-Based Generator Architecture for Generative Adversarial Networks, Karras et al.</a></li>
 </ul>
 <h2 id="understanding-generalization-transfer">Understanding / Generalization / Transfer</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li><p>(2014) <a href="http://papers.nips.cc/paper/5347-how-transferable-are-features-in-deep-neural-networks.pdf">How transferable are features in deep neural networks?</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>through empirical evidence, researchers notice that for all CNN models, the first 1-3 layers are similar</li>
+<li>the higher layers (after three) are more specific to the classification task</li>
+<li>we want to test how &quot;general&quot; or &quot;specific&quot; for each layer</li>
+<li>train a real-image classification CNN (7 layers) model-A and model-B, using completely seperate classes</li>
+<li>freeze 3 lowest layers from model A, then put the 4 higher layer with random weight, then train with model B dataset</li>
+<li>the resulting accuracy does not change</li>
+<li>and actually if we don't freeze (let it fine-tune), the accuracy is higher (it generalizes better)</li>
+</ul></li>
+</ul></li>
+<li><p>(2014) <a href="http://www.cv-foundation.org//openaccess/content_cvpr_workshops_2014/W15/papers/Razavian_CNN_Features_Off-the-Shelf_2014_CVPR_paper.pdf">CNN features off-the-Shelf: An astounding baseline for recognition</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>comparison of state-of-the-art &quot;manual&quot; feature engineering (SIFT etc.) vs &quot;OVERFEAT&quot; CNN</li>
+<li>Summary from the paper:</li>
+</ul>
+<p>It’s all about the features! SIFT and HOG descriptors produced big performance gains a decade ago and now deep convolutional features are providing a similar breakthroughfor recognition.</p>
+<p>Thus, applying the well-established com-puter vision procedures on CNN representations should potentially push the reported results even further. In any case,if you develop any new algorithm for a recognition task thenitmustbe compared against the strong baseline ofgenericdeep features+simple classifier.</p></li>
+</ul></li>
+<li><p>(2014) <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Oquab_Learning_and_Transferring_2014_CVPR_paper.pdf">Learning and transferring mid-Level image representations using convolutional neural networks</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>same idea as the &quot;transferable features in DNN&quot; paper</li>
+<li>use the pre-trained weights from task A (ImageNet) to apply to task B (Pascal)</li>
+<li>they transferred all the weights (all CNN and FCs layers), froze them , and added 2 FC layers at the end to adapt to new output</li>
+<li>for task B (Pascal), the pictures are cropped to specific object, so they use a sliding window to generate new pics + &quot;background&quot; class</li>
+</ul></li>
+</ul></li>
+<li><p>(2014) <a href="http://arxiv.org/pdf/1311.2901">Visualizing and understanding convolutional networks</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>Building from 2011 papers, they use deconvnet to analyze the CNN layers.</li>
+</ul></li>
+</ul></li>
+<li>(2014) <a href="http://arxiv.org/pdf/1310.1531">Decaf: A deep convolutional activation feature for generic visual recognition, J. Donahue et al.</a></li>
+<li><p>(2015) <a href="http://arxiv.org/pdf/1503.02531">Distilling the knowledge in a neural network</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>train the complex model first (model-A)</li>
+<li>then train a simpler one using loss function that combines (same dataset) and (model-A prediction)</li>
+<li>divide by certain constant (lambda) to change how sensitive the difference for each classes is</li>
+</ul></li>
+</ul></li>
+<li><p>(2015) <a href="http://arxiv.org/pdf/1412.1897">Deep neural networks are easily fooled: High confidence predictions for unrecognizable images</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>use the CNN model's prediction probabilities as input</li>
+<li>use an evolution algorithm to evolve a random image to fool the model</li>
+<li>some images are similar to the &quot;real&quot; thing, some looks just like static TV noise</li>
+<li>using the &quot;static&quot; images to retrain, still difficult to patch up the weakness</li>
+<li>is this similar to adversarial network?</li>
+</ul></li>
+</ul></li>
 </ul>
 <h2 id="optimization-training-techniques">Optimization / Training Techniques</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li><p>(2012) <a href="http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a">Random search for hyper-parameter optimization</a></p></li>
+<li>(2015) <a href="http://arxiv.org/pdf/1502.03167">Batch normalization: Accelerating deep network training by reducing internal covariate shift, S. Loffe and C. Szegedy</a></li>
+<li>(2015) <a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/He_Delving_Deep_into_ICCV_2015_paper.pdf">Delving deep into rectifiers: Surpassing human-level performance on imagenet classification, K. He et al.</a></li>
+<li>(2014) <a href="http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf">Dropout: A simple way to prevent neural networks from overfitting, N. Srivastava et al.</a></li>
+<li>(2014) <a href="http://arxiv.org/pdf/1412.6980">Adam: A method for stochastic optimization, D. Kingma and J.Ba</a></li>
+<li>(2012) <a href="http://arxiv.org/pdf/1207.0580.pdf">Improving neural networks by preventing co-adaptation of feature detectors, G. Hinton et al.</a></li>
+<li><p>(2017) <a href="http://ruder.io/optimizing-gradient-descent/index.html#gradientdescentoptimizationalgorithms">A summary of gradient descent optimization algorithms</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li><strong>TLDR; - Use Adam, then try others if it doesn't work</strong></li>
+<li>SGD - basic gradient descent</li>
+<li>mini-batch - update once every batch</li>
+<li>online - update once every sample</li>
+<li>momentum - running faster and faster into the general direction of local minima</li>
+<li>Nesterov - to prevent overshooting cause by momentum, we can &quot;correct&quot; it by first calculate momentum, then add the loss of current param diff with the momentum.</li>
+<li>Adagrad - it has a unique learning rate for each parameter i. The learning rate is normalized based on past gradient values of that parameters. Weakness is that it makes learning rates go infinitely small.</li>
+<li>Adadelta - fix the learning rate shrinking problem. by replacing the scaling term with RMSE.</li>
+<li>RMSprop - similar to Adadelta, developed by Hinton during class.</li>
+<li>Adam - has first and second moments of gradients. essentially Momentum + RMSprop</li>
+<li>AdaMax - generalized Adam to n moments</li>
+<li>Nadam - Nesterov + Adam</li>
+</ul></li>
+</ul></li>
 </ul>
 <h2 id="unsupervised-generative-models">Unsupervised / Generative Models</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2013) <a href="http://arxiv.org/pdf/1312.6114">Auto-encoding variational Bayes, D. Kingma and M. Welling</a></li>
+<li>(2013) <a href="http://arxiv.org/pdf/1112.6209">Building high-level features using large scale unsupervised learning, Q. Le et al.</a></li>
+<li>(2015) <a href="https://arxiv.org/pdf/1511.06434v2">Unsupervised representation learning with deep convolutional generative adversarial networks, A. Radford et al.</a></li>
+<li>(2015) <a href="http://arxiv.org/pdf/1502.04623">DRAW: A recurrent neural network for image generation, K.Gregor et al.</a></li>
+<li>(2016) <a href="http://arxiv.org/pdf/1601.06759v2.pdf">Pixel recurrent neural networks (PixelRNN), A. Oord et al.</a></li>
 </ul>
 <h2 id="cnn-feature-extractors">CNN Feature Extractors</h2>
 <ul>
@@ -229,19 +559,19 @@
 <li>ResNext (2016) and Xception (2016) use group convolution layer to replace the traditional convolution. It reduces the parameters and increases the accuracy simultaneously.</li>
 <li>DenseNet densely concat several layers, it further reduces parameters while keeping competitive accuracy. Another different research is Dilated Residual Network which extracts features with less strides. DRN achieves notable results on segmentation, while has little discussion on object detection. There are still lots of research for efficient backbone, such as [17,15,16]. However they are usually designed for classification.</li>
 </ul></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2012) <a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">(AlexNet) ImageNet classification with deep convolutional neural networks, A. Krizhevsky et al.</a></li>
+<li>(2013) <a href="http://arxiv.org/pdf/1312.6229">OverFeat: Integrated recognition, localization and detection using convolutional networks, P. Sermanet et al.</a></li>
+<li>(2013) <a href="http://arxiv.org/pdf/1302.4389v4">Maxout networks, I. Goodfellow et al.</a></li>
+<li>(2013) <a href="http://arxiv.org/pdf/1312.4400">Network in network, M. Lin et al.</a></li>
+<li>(2014) <a href="http://arxiv.org/pdf/1409.1556">Very deep convolutional networks for large-scale image recognition, K. Simonyan and A. Zisserman</a></li>
+<li>(2014) <a href="http://arxiv.org/pdf/1406.4729">Spatial pyramid pooling in deep convolutional networks for visual recognition, K. He et al.</a></li>
+<li>(2014) <a href="http://arxiv.org/pdf/1405.3531">Return of the devil in the details: delving deep into convolutional nets, K. Chatfield et al.</a></li>
+<li>(2015) <a href="http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf">Spatial transformer network, M. Jaderberg et al.</a></li>
+<li>(2015) <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Szegedy_Going_Deeper_With_2015_CVPR_paper.pdf">Going deeper with convolutions, C. Szegedy et al.</a></li>
+<li>(2016) <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf">Rethinking the inception architecture for computer vision,C. Szegedy et al.</a></li>
+<li>(2016) <a href="http://arxiv.org/pdf/1602.07261">Inception-v4, inception-resnet and the impact of residual connections on learning, C. Szegedy et al.</a></li>
+<li>(2016) <a href="https://arxiv.org/pdf/1603.05027v2.pdf">Identity Mappings in Deep Residual Networks, K. He et al.</a></li>
+<li>(2016) <a href="http://arxiv.org/pdf/1512.03385">Deep residual learning for image recognition, K. He et al.</a></li>
 </ul>
 <h2 id="image-object-detection">Image: Object Detection</h2>
 <ul>
@@ -280,96 +610,279 @@
 </ul>
 <h2 id="image-segmentation">Image: Segmentation</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li><p>(2015) <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf">Fully convolutional networks for semantic segmentation</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>demonstrate an fully CNN without FC layers at the end -- without additional manual manipulation</li>
+</ul></li>
+</ul></li>
+<li>(2014) <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf">Rich feature hierarchies for accurate object detection and semantic segmentation, R. Girshick et al.</a></li>
+<li>(2015) <a href="https://arxiv.org/pdf/1412.7062">Semantic image segmentation with deep convolutional nets and fully connected CRFs, L. Chen et al.</a></li>
+<li><p>(2013) <a href="https://hal-enpc.archives-ouvertes.fr/docs/00/74/20/77/PDF/farabet-pami-13.pdf">Learning hierarchical features for scene labeling, C. Farabet et al.</a></p></li>
 </ul>
 <h2 id="image-video-etc">Image / Video / Etc</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2016) <a href="https://arxiv.org/pdf/1501.00092v3.pdf">Image Super-Resolution Using Deep Convolutional Networks, C. Dong et al.</a></li>
+<li>(2015) <a href="https://arxiv.org/pdf/1508.06576">A neural algorithm of artistic style, L. Gatys et al.</a></li>
+<li>(2015) <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Karpathy_Deep_Visual-Semantic_Alignments_2015_CVPR_paper.pdf">Deep visual-semantic alignments for generating image descriptions, A. Karpathy and L. Fei-Fei</a></li>
+<li>(2015) <a href="http://arxiv.org/pdf/1502.03044">Show, attend and tell: Neural image caption generation with visual attention, K. Xu et al.</a></li>
+<li>(2015) <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vinyals_Show_and_Tell_2015_CVPR_paper.pdf">Show and tell: A neural image caption generator, O. Vinyals et al.</a></li>
+<li>(2015) <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Donahue_Long-Term_Recurrent_Convolutional_2015_CVPR_paper.pdf">Long-term recurrent convolutional networks for visual recognition and description, J. Donahue et al.</a></li>
+<li>(2015) <a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Antol_VQA_Visual_Question_ICCV_2015_paper.pdf">VQA: Visual question answering, S. Antol et al.</a></li>
+<li>(2014) <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Taigman_DeepFace_Closing_the_2014_CVPR_paper.pdf">DeepFace: Closing the gap to human-level performance in face verification, Y. Taigman et al.</a>:</li>
+<li>(2014) <a href="http://vision.stanford.edu/pdf/karpathy14.pdf">Large-scale video classification with convolutional neural networks, A. Karpathy et al.</a></li>
+<li>(2014) <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Toshev_DeepPose_Human_Pose_2014_CVPR_paper.pdf">DeepPose: Human pose estimation via deep neural networks, A.Toshev and C. Szegedy</a></li>
+<li>(2014) <a href="http://papers.nips.cc/paper/5353-two-stream-convolutional-networks-for-action-recognition-in-videos.pdf">Two-stream convolutional networks for action recognition in videos, K. Simonyan et al.</a></li>
+<li>(2013) <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/icml2010_JiXYY10.pdf">3D convolutional neural networks for human action recognition, S. Ji et al.</a></li>
 </ul>
 <h2 id="natural-language-processing-rnns">Natural Language Processing / RNNs</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2016) <a href="http://aclweb.org/anthology/N/N16/N16-1030.pdf">Neural Architectures for Named Entity Recognition, G. Lample et al.</a></li>
+<li>(2016) <a href="http://arxiv.org/pdf/1602.02410">Exploring the limits of language modeling, R. Jozefowicz et al.</a></li>
+<li>(2015) <a href="http://papers.nips.cc/paper/5945-teaching-machines-to-read-and-comprehend.pdf">Teaching machines to read and comprehend, K. Hermann et al.</a></li>
+<li>(2015) <a href="https://arxiv.org/pdf/1508.04025">Effective approaches to attention-based neural machine translation, M. Luong et al.</a></li>
+<li>(2015) <a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Zheng_Conditional_Random_Fields_ICCV_2015_paper.pdf">Conditional random fields as recurrent neural networks, S.Zheng and S. Jayasumana.</a></li>
+<li>(2014) <a href="https://arxiv.org/pdf/1410.3916">Memory networks, J. Weston et al.</a></li>
+<li>(2014) <a href="https://arxiv.org/pdf/1410.5401">Neural turing machines, A. Graves et al.</a></li>
+<li>(2014) <a href="http://arxiv.org/pdf/1409.0473">Neural machine translation by jointly learning to align and translate, D. Bahdanau et al.</a></li>
+<li>(2014) <a href="http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf">Sequence to sequence learning with neural networks, I. Sutskever et al.</a></li>
+<li>(2014) <a href="http://arxiv.org/pdf/1406.1078">Learning phrase representations using RNN encoder-decoder for statistical machine translation, K. Cho et al.</a></li>
+<li>(2014) <a href="http://arxiv.org/pdf/1404.2188v1">A convolutional neural network for modeling sentences, N. Kalchbrenner et al.</a></li>
+<li>(2014) <a href="http://arxiv.org/pdf/1408.5882">Convolutional neural networks for sentence classification, Y. Kim</a></li>
+<li>(2014) <a href="http://anthology.aclweb.org/D/D14/D14-1162.pdf">Glove: Global vectors for word representation, J. Pennington et al.</a></li>
+<li>(2014) <a href="http://arxiv.org/pdf/1405.4053">Distributed representations of sentences and documents, Q.Le and T. Mikolov</a></li>
+<li>(2013) <a href="http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf">Distributed representations of words and phrases and their compositionality, T. Mikolov et al.</a></li>
+<li>(2013) <a href="http://arxiv.org/pdf/1301.3781">Efficient estimation of word representations in vector space, T. Mikolov et al.</a></li>
+<li>(2013) <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.383.1327&amp;rep=rep1&amp;type=pdf">Recursive deep models for semantic compositionality over a sentiment treebank, R. Socher et al.</a></li>
+<li>(2013) <a href="https://arxiv.org/pdf/1308.0850">Generating sequences with recurrent neural networks, A. Graves.</a></li>
 </ul>
 <h2 id="speech-other-domain">Speech / Other Domain</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2016) <a href="https://arxiv.org/pdf/1508.04395">End-to-end attention-based large vocabulary speech recognition, D. Bahdanau et al.</a></li>
+<li>(2015) <a href="https://arxiv.org/pdf/1512.02595">Deep speech 2: End-to-end speech recognition in English and Mandarin, D. Amodei et al.</a></li>
+<li>(2013) <a href="http://arxiv.org/pdf/1303.5778.pdf">Speech recognition with deep recurrent neural networks, A. Graves</a></li>
+<li>(2012) <a href="http://www.cs.toronto.edu/~asamir/papers/SPM_DNN_12.pdf">Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups, G. Hinton et al.</a></li>
+<li>(2012) <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.337.7548&amp;rep=rep1&amp;type=pdf">Context-dependent pre-trained deep neural networks for large-vocabulary speech recognition, G. Dahl et al.</a></li>
+<li><p>(2012) <a href="http://www.cs.toronto.edu/~asamir/papers/speechDBN_jrnl.pdf">Acoustic modeling using deep belief networks, A. Mohamed et al.</a></p></li>
+<li><p>(2017) <a href="https://gab41.lab41.org/speech-recognition-you-down-with-ctc-8d3b558943f0">CTC (Connectionist Temporal Classification Loss) Explained</a></p>
+<ul>
+<li>Keypoints
+<ul>
+<li>In normal systems, we cut the audio signal into very small slices and feed them to RNN.</li>
+<li>The predictions then become something like (for &quot;CAT&quot;) -- &quot;...C..A..AA..A..AA.T..TT..&quot;</li>
+<li>so obviously we need to get rid of the silence and repeats, the way to do that is CTC.</li>
+<li>Essentially, the equation defines the loss that makes good probability distribution over good paths</li>
+</ul></li>
+</ul></li>
 </ul>
 <h2 id="reinforcement-learning-robotics">Reinforcement Learning / Robotics</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2016) <a href="http://www.jmlr.org/papers/volume17/15-522/source/15-522.pdf">End-to-end training of deep visuomotor policies, S. Levine et al.</a></li>
+<li>(2016) <a href="https://arxiv.org/pdf/1603.02199">Learning Hand-Eye Coordination for Robotic Grasping with Deep Learning and Large-Scale Data Collection, S. Levine et al.</a></li>
+<li>(2016) <a href="http://www.jmlr.org/proceedings/papers/v48/mniha16.pdf">Asynchronous methods for deep reinforcement learning, V. Mnih et al.</a></li>
+<li>(2016) <a href="https://arxiv.org/pdf/1509.06461.pdf">Deep Reinforcement Learning with Double Q-Learning, H. Hasselt et al.</a></li>
+<li>(2016) <a href="http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html">Mastering the game of Go with deep neural networks and tree search, D. Silver et al.</a></li>
+<li>(2015) <a href="https://arxiv.org/pdf/1509.02971">Continuous control with deep reinforcement learning, T. Lillicrap et al.</a></li>
+<li>(2015) <a href="http://www.davidqiu.com:8888/research/nature14236.pdf">Human-level control through deep reinforcement learning, V. Mnih et al.</a></li>
+<li>(2015) <a href="http://www.cs.cornell.edu/~asaxena/papers/lenz_lee_saxena_deep_learning_grasping_ijrr2014.pdf">Deep learning for detecting robotic grasps, I. Lenz et al.</a></li>
+<li><p>(2012) <a href="http://mnemstudio.org/path-finding-q-learning-tutorial.htm">A painless Q-learning tutorial</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>Q-learning is a reinforcement learning algorithm. It is suitable for problem which has finite number of states and we know the value of all state's immediate reward.</li>
+<li>the main idea is do semi-random exploring to eventually map out an expected rewards value of that state. The expected value is the sum of current and all future rewards value (given discount factors).</li>
+<li>So we will have a big rewards matrix (R) where row equals current state and column equals an action to next state. The values are the rewards when taking that action (and arriving at a new state).</li>
+<li>We will also have a memory matrix (Q). which contains a sum of expected immediate and future rewards. Row is current state and column is the next future state.</li>
+<li>the update formula is as follows:
+<ul>
+<li>Q(state,action) = R(current<sub>state</sub>,action) + Gamma * max[ Q(immediate<sub>nextstate</sub>,all<sub>actions</sub>) ]
+<ul>
+<li>where...</li>
+<li>R = reward matrix</li>
+<li>Q = memory matrix</li>
+<li>Gamma = discount factor</li>
+<li>This assumes a learning rate of 1. If we want a different learning rate, we can do:
+<ul>
+<li>Q<sub>new</sub> = Q<sub>old</sub> + learning<sub>rate</sub> * (Q<sub>update</sub> - Q<sub>old</sub>)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p>(2013) <a href="http://arxiv.org/pdf/1312.5602.pdf">Playing atari with deep reinforcement learning</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>aasdf</li>
+</ul></li>
+</ul></li>
+<li>(2015) <a href="http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html">David Silver's excellent reinforcement learning course with video</a>
+<ul>
+<li>Agents, Environments, Actions, Rewards</li>
+<li>Full information game --&gt; Agent state = Environment state</li>
+<li>History = sequences of Observations, Agent States and Actions.</li>
+<li>Markov process means P(St) = P(St | St+1..), so previous states don't matter.</li>
+<li>partially observable markovs (POMDP)</li>
+<li>Policy = function that maps from Agent state to Action</li>
+<li>Value function = estimates total future reward given current state St</li>
+</ul></li>
+<li><p>(2017) <a href="https://arxiv.org/pdf/1708.05866">A Brief Survey of Deep Reinforcement Learning</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>In this survey, we begin withan introduction to the general field of reinforcement learning, then progress to the main streams of value-based and policy-based methods. Our survey will cover central algorithms indeep reinforcement learning, including the deep Q-network,trust region policy optimisation, and asynchronous advantage actor-critic.</li>
+<li>General RL concepts
+<ul>
+<li>Reward-Driver Behavior
+<ul>
+<li>the essense of RL is interaction. the interaction loop is simple.
+<ol>
+<li>given current state --&gt; choose action</li>
+<li>execute action</li>
+<li>arrives at new state (received new state data and its rewards)</li>
+<li>go to 1. until terminal state</li>
+</ol></li>
+<li>Per sequence above, we want to derive &quot;optimal policy&quot; so that the agents can asymtotically get &quot;optimal&quot; rewards --&gt; which means a highest expected value of aggregated future rewards with a certain discount factor.</li>
+<li>Formally, RL can be described as a Markov decision process (MDP). For (only) partially-observable states like in the real world, there is a generalization of MDP called POMDP.</li>
+<li>Challenges in RL: long sequences until reward (credit assignment problem) and temporal sequence correlation</li>
+</ul></li>
+<li>Reinforcement Learning Algorithms
+<ul>
+<li>Concept I: estimating Value function (total expected Rewards)
+<ul>
+<li>Dynamic Programming:
+<ul>
+<li>define: V = total expected Rewards (R) , Q|s,a is conditional V given state s and action a</li>
+<li>define: Y = R(t) + disc * Q|s(t+1),a(t+1)</li>
+<li>define: Temporal difference (TD) error = Y - Q|s,a</li>
+<li>to get Q|s,a , we use Q-learning method and try to minimize the TD error</li>
+</ul></li>
+<li>Concept II: sampling -- random walk till the end to get all Rs
+<ul>
+<li>so instead of going breadth-search like [I], we do depth-first</li>
+<li>we can use Monte Carlo (MC) to get multiple returns and average them.</li>
+<li>it is easier to learn that one actions lead to much better consequences than the other (a fork in the road)</li>
+<li>define: relative advantage A = V - Q</li>
+<li>we use an idea of &quot;advantage update&quot; in many recent algorithms</li>
+</ul></li>
+<li>Concept III: policy search
+<ul>
+<li>instead of estimating value function, we try to contruct policy directly. (so we can sample actions from it)</li>
+<li>try several policies to get the optimal one, using either gradient-based or gradient-free optimization.</li>
+<li>Policy Gradients
+<ul>
+<li>get the approximate V diff from different policies</li>
+<li>interate policy parameters to know the diff on each one</li>
+<li>change the params to optimize policy</li>
+<li>there are several ways to estimate the diff -- Finite Diference, Likelihood Ratio etc.</li>
+</ul></li>
+<li>Actor-Critic Methods
+<ul>
+<li>Use Actor (policy driven) to choose actions and learn feedback from Critic (value function).</li>
+<li>Alphago uses this</li>
+</ul></li>
+</ul></li>
+<li>Summary
+<ul>
+<li>Shallow sequence, no branching --&gt; one-step TD learning</li>
+<li>Shallow sequence, many branching --&gt; dynamic programming</li>
+<li>Deep sequences, no branching --&gt; many-steps (MC) TD learning</li>
+<li>Deep sequence, many branching --&gt; exhaustive search</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
 </ul>
 <h2 id="credit-card-fraud-detection">Credit card fraud detection</h2>
 <ul>
-<li></li>
+<li><p>(2014) Literature Survey</p>
+<ul>
+<li>algorithms
+<ul>
+<li>HMM</li>
+<li>NN</li>
+<li>Decision Tree</li>
+<li>SVM</li>
+<li>Genetic Algorithm</li>
+<li>Meta Learning Strategy</li>
+<li>Biologicla Immune System</li>
+</ul></li>
+</ul></li>
 </ul>
 <h2 id="weather-classification">Weather Classification</h2>
 <ul>
 <li>Overall Summary as of [2018-10]</li>
 </ul>
 <p>There are no agreed upon public dataset and very few DL papers dedicated to the topic.</p>
-<p>The common dataset used is <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> sunny/cloudy dataset with 10k images. Other recent papers <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> have contructed their own dataset which are not opened to public yet. However, BDD100K dataset also has weather attribute labeled, so we should be considering using that.</p>
+<p>The common dataset used is (2014) sunny/cloudy dataset with 10k images. Other recent papers (2018) have contructed their own dataset which are not opened to public yet. However, BDD100K dataset also has weather attribute labeled, so we should be considering using that.</p>
 <p>There are 3 type of models proposed thus far.</p>
 <ol>
-<li></li>
-<li></li>
-<li></li>
+<li>(2014) traditional feature engineering then use SVM/other clustering methods.</li>
+<li>(2015) pure CNN feature extraction then classify</li>
+<li>(2018) CNN-RNN and/or the combination of DL and traditional features.</li>
 </ol>
 <p>so far the DL method did aggressively out-perform traditional ones.</p>
 <p>New alternative would be to add new sensor data (temperature/humidity) and ensemble with CNN model. For that matter, how accurate would predictions from sensor data alone be?</p>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li><p>(2018) (2 Dataset) A CNN–RNN architecture for multi-label weather recognition (use sci-hub to get the link)</p>
+<ul>
+<li>keypoints
+<ul>
+<li>recognize that weather classes are not exclusive to each other (for example, can be both sunny and foggy) so should classify accordingly (not using softmax or binary)</li>
+<li>add 2 new datasets (8k - 7 classes) and (10k - 5 classes) for multi-labeling comparison</li>
+<li>use CNNs as feature extractor</li>
+<li>use &quot;channel-wise attentions&quot; which is a set of weights to amplify/lower each channel' response.</li>
+<li>use &quot;Convolutional&quot; LSTM to retain spatial information (not flattening to 1-D vectors)</li>
+<li>flatten the output &quot;hidden state&quot; to predict weather class</li>
+<li>then we repeat the step (in LSTM + getting new attention weights) to predict next weather class. If there are 5 classes, the LSTM will run for 5 steps. (This is weird.. because the problem is not time-based. and this runs from single image input)</li>
+</ul></li>
+</ul></li>
+<li><p>(2018) <a href="https://arxiv.org/abs/1808.00588v1">(Dataset)(Bad) Weather Classification: A new multi-class dataset, data augmentation approach and comprehensive evaluations of CNNs</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>new dataset (3K) - use 3 classes (rain, fog, snow) with equal split</li>
+<li>later add sunny/cloudy from past dataset to get 5k (again, equal split)</li>
+<li>In addition to raw image, they use superpixel (algo to cluster pixels together for further processing - google it) to ovelay on the image then feed to CNN feature extractors</li>
+<li>finally, use some sort of SVMs as binary classifier for each class</li>
+<li>overall achieved around 80-90% accuracy, with Resnet50 being the best extractor overall.</li>
+<li>however, no mention of baseline (w/o superpixel) comparison. No justification of doing things, even just running their model through old sunny/cloudy dataset for comparison. bad paper.</li>
+</ul></li>
+</ul></li>
+<li><p>(2017) <a href="https://repository.tudelft.nl/islandora/object/uuid%3A3bf546c0-a254-4c72-9ee4-02a0919c1624">(Dataset) (Bad) Transfer Learning for Rain Detection in Images</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>tried Resnet-18 with various experiments on custom 400k rain-no-rain dataset</li>
+<li>just bad all around. specific optimization to specific dataset. no baseline model. not useful.</li>
+</ul></li>
+</ul></li>
+<li><p>(2015) <a href="http://www.academia.edu/18539252/WEATHER_CLASSIFICATION_WITH_DEEP_CONVOLUTIONAL_NEURAL_NETWORKs">Weather Classification with Deep Convolutional Network</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>use sunny/cloudy 10k dataset</li>
+<li>applies AlexNet architecture to this problem</li>
+<li>also compared the pretrained with ImageNet AlexNet + SVM vs train with weather data from scratch - conclusion is earlier base layers are quite general</li>
+<li>achieved 91% accuracy (82% normalized)</li>
+</ul></li>
+</ul></li>
+<li><p>(2014) <a href="http://www.cse.cuhk.edu.hk/leojia/projects/weatherclassify/index.htm">(Dataset) Two-class Weather Classification (with sunny/cloudy 10k dataset)</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>introduces the 10k weather dataset with 2 classes - sunny and cloudy</li>
+<li>use traditional computer vision method to classify
+<ul>
+<li>custom feature engineering extracting 5 features -- sky, shadow, reflection, contrast, haze.</li>
+<li>concat all features into 621-D vectors then use complex voting schemes to classify based on the existing of combinations of features. Tried SVM but didn't work well.</li>
+<li>achieved 76% accuracy (53% normalized)</li>
+</ul></li>
+</ul></li>
+</ul></li>
 </ul>
 <h2 id="autonomous-driving">Autonomous driving</h2>
 <ul>
@@ -383,10 +896,43 @@
 <li>metric is PR curve, split by easy / medium / hard cases</li>
 </ul></li>
 <li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2014) <a href="https://pdfs.semanticscholar.org/d78b/6a5b0dcaa81b1faea5fb0000045a62513567.pdf">One millisecond face alignment with an ensemble of regression trees - Dlib uses this </a>
+<ul>
+<li>Use cascade of regressor method to detect facial landmarks (given that the image is already cropped to face area) claims 1 ms performance with unknown CPU. has error rate of 0.049 on HELEN face dataset. (2,000 training / 500 test image)</li>
+<li>Algo = Default positions + features + gradient boosting + cascade
+<ul>
+<li>we can set up a default landmark (smiley face) in the image center or do an average of positions from a big dataset.</li>
+<li>then we regress -- computing an update regressors for each landmark x,y --&gt; moving them closer to the face in image.</li>
+<li>the features for regressions are diff in pixel intensities, the pixel coordinate is relative to the default face shape.</li>
+</ul></li>
+</ul></li>
+<li>(2017) <a href="https://arxiv.org/abs/1708.05234">FaceBoxes: A CPU Real-time Face Detector with High Accuracy</a>
+<ul>
+<li>custom (light-weight) CNN architecture. No novel idea. (the paper has a good summary of past papers however)
+<ul>
+<li>runs at 20 FPS on a single CPU core and 125 FPS using a GPU for VGA (640x480) images.</li>
+</ul></li>
+<li>some strategy for lightweighted architecture
+<ul>
+<li>reduce spatial size of input as quickly as possible</li>
+<li>choose suitable kernel size - in their case it's 7x7, 5x5, 3x3</li>
+<li>reduce number of output channel</li>
+<li>use multi-scale anchor boxes output, but know where to have &quot;dense&quot; number of predictions.</li>
+</ul></li>
+<li>postprocessing is common pipeline: lots of prediction &gt; thresholding prob &gt; NMS.</li>
+</ul></li>
+<li>(2017) <a href="https://arxiv.org/abs/1804.06655v1">Deep Face Recognition: A Survey</a>
+<ul>
+<li>Good review of modern face recognition systems. collections of recent techniques. It`s not face detection though.</li>
+</ul></li>
+<li>(2018) <a href="https://arxiv.org/abs/1804.06559v2">SFace: An Efficient Network for Face Detection in Large Scale Variations (Megvii Inc. Face++)</a>
+<ul>
+<li>A new dataset called 4K-Face is also introduced to evaluate the performance of face detection with extreme large scale variations.
+<ul>
+<li>The SFace architecture shows promising results on the new 4K-Face benchmarks.</li>
+<li>In addition, our method can run at 50 frames per second (fps) with an accuracy of 80% AP on the standard WIDER FACE dataset, which outperforms the state-of-art algorithms by almost one order of magnitude in speed while achieves comparative performance.</li>
+</ul></li>
+</ul></li>
 <li>Benchmark - Labeled Faces in the Wild (LFW) dataset - <a href="http://vis-www.cs.umass.edu/lfw/results.html#UnrestrictedLb">state of the art results</a>
 <ul>
 <li>most commercial systems get &gt; 99.0% classification accuracy, including Dlib</li>
@@ -395,64 +941,224 @@
 </ul>
 <h2 id="own-discovery-of-research-papers">Own discovery of Research Papers</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2017) <a href="https://arxiv.org/pdf/1704.04861.pdf">Mobilenets</a></li>
+<li><p>(2011) <a href="http://www.matthewzeiler.com/pubs/iccv2011/iccv2011.pdf">Adaptive Deconvolutional Networks for Mid and High Level Feature Learning</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>iterations from the 2010 paper, add unpooling reconstrucitons with switches (location info for the max-pool values)</li>
+<li>they are able to re-create the input-size map for all layers</li>
+</ul></li>
+</ul></li>
+<li><p>(2010) <a href="http://www.matthewzeiler.com/pubs/cvpr2010/cvpr2010.pdf">Deconvolutional Networks</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>Deconvolution is actually &quot;transposed convolution&quot;</li>
+<li>essentially, it uses feature map to compose back to the original images, like legos.</li>
+<li>The kernels are different from the feed-forward kernels, of course.</li>
+<li>the usage of &quot;sparse coding&quot; made this possible. see: <a href="http://deeplearning.net/software/theano_versions/dev/tutorial/conv_arithmetic.html#transposed-convolution-arithmetic">tranposed convolution arithmetic</a></li>
+<li><a href="https://datascience.stackexchange.com/questions/6107/what-are-deconvolutional-layers">see stackexchange answer from here</a></li>
+<li><a href="http://cs.nyu.edu/~fergus/drafts/utexas2.pdf">good slide here</a></li>
+</ul></li>
+</ul></li>
+<li><p>(2016) <a href="http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf">Learning Deep Features for Discriminative Localization (global average pooling)</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>using &quot;global average pooling&quot; method with each featuremap on the last layer of CNN.</li>
+<li>then we can use the FC weights to combined the GAP values.</li>
+<li>this effectively &quot;focuses&quot; the network activations before connecting to FC layer.</li>
+<li>with this we can generate heatmap to see the activation overlays</li>
+</ul></li>
+</ul></li>
+<li><p>(2015) <a href="https://arxiv.org/pdf/1511.00561.pdf">SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation</a></p>
+<ul>
+<li>this is basically an autodecoder, except for CNN architecture. Also use final targets as the segmentation labels.</li>
+</ul></li>
+<li><p>(2011) <a href="https://arxiv.org/pdf/1704.03855.pdf">How Brains Are Built: Principles of Computational Neuroscience</a></p>
+<ul>
+<li>precise simulation of the brain chemically is very difficult. However, we can possibly create the brain model that is &quot;computationally&quot; accurate. we can even use this model to experiment and fix what's wrong with our brain.</li>
+<li>Computationally means to understand the subject functions -- enough to create a replica of them. For example, we don't yet understand everything about kidneys about we can create artificial ones that works well now.</li>
+<li>What we know now: very little, but we know some &quot;constraint&quot; rules
+<ul>
+<li>brain component allometry -- relative size of the brain components vs overall size. The relationship holds across all animal size.</li>
+<li>telencephalic uniformity -- neurons throughout the forebrain has similar, repeatable designs with only few exceptions. This means there is a general representation of a wide variety of tasks -- audio, visual , touch etc.</li>
+<li>anatomical and physiological imprecision -- the neurons are slow and sloppy (probabilistic). However, the brain is overall working in a robust way.. how?</li>
+<li>task specification -- a classification given freeform input. One example is a call support desk. Given a free-form input, direct the customer to appropriate channels. It is highly contextual and no hard rules applied.</li>
+<li>parallel processing -- the neuron circuits are painfully slow compared to computer CPU, it seems that the power of the brain lies in its massively parrallel computing power.</li>
+</ul></li>
+<li>Current progress
+<ul>
+<li>basal ganglia -- this is the area that receive sensory input, manage reward and punishments mechanism, and learn motor skills. We are close to computationally simulate this.</li>
+<li>neocortex -- yeah, no way we are close. Interestingly, the neocortex is connected with basal ganglia through a loop. We are close to successfully creating all the sensory prosthetics, but no way close to simulating the neocortex (higher thoughts).</li>
+<li>the most exciting area of research today is about how the neocortex encode the internal representations of concepts and objects.</li>
+</ul></li>
+</ul></li>
 </ul>
 <h2 id="other-papers-still-unassorted">Other papers still unassorted</h2>
 <ul>
-<li></li>
-<li></li>
+<li><p>(2017) <a href="https://openreview.net/forum?id=SJZAb5cel">A Joint Many-Task Model: Growing a Neural Network for Multiple NLP Tasks</a></p>
+<ul>
+<li>ABSTRACT:
+<ul>
+<li>Transfer and multi-task learning have traditionally focused on either a single source-target pair or very few, similar tasks.</li>
+<li>Ideally, the linguistic levels of morphology, syntax and semantics would benefit each other by being trained in a single model. We introduce such a joint many-task model together with a strategy for successively growing its depth to solve increasingly complex tasks. All layers include shortcut connections to both word representations and lower-level task predictions.</li>
+<li>We use a simple regularization term to allow for optimizing all model weights to improve one task’s loss without exhibiting catastrophic interference of the other tasks. Our single end-to-end trainable model obtains state-of-the-art results on chunking, dependency parsing, semantic relatedness and textual entailment.</li>
+<li>It also performs competitively on POS tagging. Our dependency parsing layer relies only on a single feed-forward pass and does not require a beam search.</li>
+</ul></li>
+<li>This is kind of like Ensembling models, but they are more &quot;joined&quot; at the end (softmax layer and feature layer), rather than just averaging results from softmax.</li>
+</ul></li>
+<li><p>(2017) <a href="https://arxiv.org/pdf/1704.03855.pdf">Hierarchical Memory Networks</a></p>
+<ul>
+<li>ABSTRACT:
+<ul>
+<li>Memory networks are neural networks with an explicit memory component that can be both read and written to by the network.</li>
+<li>The memory is often addressed in a soft way using a softmax function, making end-to-end training with backpropagation possible.</li>
+<li>However, this is not computationally scalable for applications which require the network to read from extremely large memories.</li>
+<li>On the other hand, it is well known that hard attention mechanisms based on reinforcement learning are challenging to train successfully.</li>
+<li>In this paper, we explore a form of hierarchical memory network, which can be considered as a hybrid between hard and soft attention memory networks.</li>
+<li>The memory is organized in a hierarchical structure such that reading from it is done with less computation than soft attention over a flat memory, while also being easier to train than hard attention over a flat memory.</li>
+<li>Specifically, we propose to incorporate Maximum Inner Product Search (MIPS) in the training and inference procedures for our hierarchical memory network.</li>
+<li>We explore the use of various state-of-the art approximate MIPS techniques and report results on SimpleQuestions, a challenging large scale factoid question answering task.</li>
+</ul></li>
+</ul></li>
 </ul>
 <h2 id="articles-and-videos">Articles and Videos</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li><p>(2017) <a href="https://lukeoakdenrayner.wordpress.com/2017/04/20/the-end-of-human-doctors-introduction/">The End of Human Doctors (series)</a></p>
+<ul>
+<li>Part 2: Understanding Medicine
+<ul>
+<li>Most of the tasks Medical doctors do are related to &quot;perception&quot;, not &quot;decision making&quot;. The later part is relatively fast and has been done better by the Machine since MYCIN.</li>
+<li>perceptual tasks like identifying tree-shape patterns in X-rays -- Deep learning is very good at it.</li>
+<li>Most susceptible specialties are Radiology and Pathology, comprising of 25% of doctors (in Australia).</li>
+</ul></li>
+<li>Part 3: Understanding Automation
+<ul>
+<li>Automation replaces tasks, not jobs. How much time the task takes a human determines how many jobs are lost.</li>
+<li>Machines that “help” or “augment” humans still destroy jobs and lower wages.</li>
+<li>Hybrid-chess does not prove that human/machine teams are better than computers alone. STOP SAYING THIS, tech people!</li>
+<li>Deep learning threatens tasks that make up a terrifyingly large portion of doctors’ jobs.</li>
+<li>In the developed world, demand for medical services may be unable to increase as prices fall due to automation, which normally protects jobs.</li>
+</ul></li>
+<li>Part 4: Radiology Escape Velocity
+<ul>
+<li>even if the rate of automation of 5% per year, in 30 years there will still be one-third the current radiologist workforce remaining.</li>
+</ul></li>
+<li>Part 5: Understanding Regulation
+<ul>
+<li>In case of USA, it usually takes 3 to 10 years to go through the whole process from concept to approval to use in the medical industry.</li>
+<li>&quot;measurements&quot;-related technology can opt to go through case-I (low-risk type) route with substantially shorter time to approval.</li>
+<li>There are two approach in using computer technology
+<ul>
+<li>measurements to aid doctors' decisions. (CADe) -- doctors disliked them, not doing well as a result.</li>
+<li>measurements AND diagnosis (CADx) -- never been approved by FDA before.</li>
+</ul></li>
+<li>Conclusion: current regulation in developed countries is SUPER conservative and so it will take a lot of time and money to get new technology adopted. Not so for developing world, we might see it much faster there.</li>
+</ul></li>
+<li>Part 6: Current State-of-the-Art results and impact
+<ul>
+<li>Stanford (and collaborators) trained a system to identify skin lesions that need a biopsy. Skin cancer is the most common malignancy in light-skinned populations.</li>
+<li>This is a useful clinical task, and is a large part of current dermatological practice.</li>
+<li>They used 130,000 skin lesion photographs for training, and enriched their training and test sets with more positive cases than would be typical clinically.</li>
+<li>The images were downsampled heavily, discarding around 90% of the pixels.</li>
+<li>They used a “tree ontology” to organise the training data, allowing them to improve their accuracy by training to recognise 757 classes of disease. This even improved their results on higher level tasks, like “does this lesion need a biopsy?”</li>
+<li>They were better than individual dermatologists at identifying lesions that needed biopsy, with more true positives and less false positives.</li>
+<li>While there are possible regulatory issues, the team appears to have a working smartphone application already. I would expect something like this to be available to consumers in the next year or two.</li>
+<li>The impact on dermatology is unclear. We could actually see shortages of dermatologists as demand for biopsy services increases, at least in the short term.</li>
+</ul></li>
+</ul></li>
+<li><p>(2017) <a href="https://www.youtube.com/watch?v=ptcBmEHDWds">(Video) Geometric Deep Learning - Radcliffe Institute</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>Identical twins (Alex &amp; Michael) -- study and worked in the same field (Computer Vision)</li>
+<li>Invented what became the Kinect camera sensor</li>
+<li>Keys for recognizing face:
+<ul>
+<li>Humans actually recognize people based on &quot;texture&quot; appearance, not the 3D geometry</li>
+<li>facial expressions changed the projected texture to 2D, but not the actual texture if projected on the plane</li>
+<li>Therefore, we can use the &quot;geodesic&quot; distance instead of euclidean distance to measure the actual distance between important face features. If the distances are approximately the same, then it's the same face.</li>
+<li>Thee kind of techniques have been use to recognize diferent faces, including identical twins.</li>
+<li>Geometric deep learning: applying CNNs on 3D surface via heat diffusion equation.
+<ul>
+<li>Use Case: Recognition, social network analysis, recommender systems</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p>(2015) <a href="http://colah.github.io/posts/2015-09-Visual-Information/ ">Visual explanation of Information Theory</a></p>
+<ul>
+<li>keypoints
+<ul>
+<li>Shannon's Entropy formula - H(X)
+<ul>
+<li>this is a way to estimate how many bits are needed to encode given information with certain distributions</li>
+<li>the estimated bits are from the best possible encodings (&quot;optimized&quot;)</li>
+<li>H(X) = P(X)*log2(1/P(X)) where P(X) means probabilty of X</li>
+</ul></li>
+<li>some interesting permutation give conditional probabilities
+<ul>
+<li>P(X,Y) = P(X)*P(Y|X) = P(Y)*P(X|Y)</li>
+<li>H(X,Y) = H(X) + H(Y|X) = H(Y) + H(X|Y)</li>
+<li>H(X|Y) = sum{P(X,Y)*log2(1/P(X|Y))}</li>
+</ul></li>
+<li>then we can derive &quot;mutual&quot; [I] and &quot;variational&quot; [V] information
+<ul>
+<li>I(X,Y) = H(X,Y) - H(X) - H(Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)</li>
+<li>V(X,Y) = H(X,Y) - I(X,Y)</li>
+</ul></li>
+<li>KL-divergence [D] or [K]
+<ul>
+<li>Dy(x) = K(X||Y) = H(X,Y) - H(X)</li>
+<li>This is a way to see how the new distribution (Y) is close to the original distribution (X)</li>
+<li>if it is the same, then KL is zero, otherwise it has value.</li>
+<li>this is not a symmetric measure. K(X||Y) &lt;&gt; K(Y||X)</li>
+</ul></li>
+</ul></li>
+</ul></li>
 </ul>
 <h2 id="classic-paperspublished-before-2012">Classic Paperspublished before 2012</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2011) <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_CoatesNL11.pdf">An analysis of single-layer networks in unsupervised feature learning, A. Coates et al.</a></li>
+<li>(2011) <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_GlorotBB11.pdf">Deep sparse rectifier neural networks, X. Glorot et al.</a></li>
+<li>(2011) <a href="http://arxiv.org/pdf/1103.0398">Natural language processing (almost) from scratch, R. Collobert et al.</a></li>
+<li>(2010) <a href="http://www.fit.vutbr.cz/research/groups/speech/servite/2010/rnnlm_mikolov.pdf">Recurrent neural network based language model, T. Mikolov et al.</a></li>
+<li>(2010) <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.297.3484&amp;rep=rep1&amp;type=pdf">Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion, P. Vincent et al.</a></li>
+<li>(2010) <a href="http://ece.duke.edu/~lcarin/boureau-cvpr-10.pdf">Learning mid-level features for recognition, Y. Boureau</a></li>
+<li>(2010) <a href="http://www.csri.utoronto.ca/~hinton/absps/guideTR.pdf">A practical guide to training restricted boltzmann machines, G. Hinton</a></li>
+<li>(2010) <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_GlorotB10.pdf">Understanding the difficulty of training deep feedforward neural networks, X. Glorot and Y. Bengio</a></li>
+<li>(2010) <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2010_ErhanCBV10.pdf">Why does unsupervised pre-training help deep learning, D. Erhan et al.</a></li>
+<li>(2009) <a href="http://sanghv.com/download/soft/machine%20learning,%20artificial%20intelligence,%20mathematics%20ebooks/ML/learning%20deep%20architectures%20for%20AI%20(2009).pdf">Learning deep architectures for AI, Y. Bengio.</a></li>
+<li>(2009) <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.149.802&amp;rep=rep1&amp;type=pdf">Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations, H. Lee et al.</a></li>
+<li>(2007) <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/NIPS2006_739.pdf">Greedy layer-wise training of deep networks, Y. Bengio et al.</a></li>
+<li>(2006) <a href="http://homes.mpimf-heidelberg.mpg.de/~mhelmsta/pdf/2006%20Hinton%20Salakhudtkinov%20Science.pdf">Reducing the dimensionality of data with neural networks, G. Hinton and R. Salakhutdinov.</a></li>
+<li>(2006) <a href="http://nuyoo.utm.mx/~jjf/rna/A8%20A%20fast%20learning%20algorithm%20for%20deep%20belief%20nets.pdf">A fast learning algorithm for deep belief nets, G. Hinton et al.</a></li>
+<li>(1998) <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf">Gradient-based learning applied to document recognition, Y. LeCun et al.</a></li>
+<li>(1997) <a href="http://www.mitpressjournals.org/doi/pdfplus/10.1162/neco.1997.9.8.1735">Long short-term memory, S. Hochreiter and J. Schmidhuber.</a></li>
 </ul>
 <h2 id="hw-sw-dataset">HW / SW / Dataset</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2016) <a href="https://arxiv.org/pdf/1606.01540">OpenAI gym, G. Brockman et al.</a></li>
+<li>(2016) <a href="http://arxiv.org/pdf/1603.04467">TensorFlow: Large-scale machine learning on heterogeneous distributed systems, M. Abadi et al.</a></li>
+<li>(2011) <a href="https://ronan.collobert.com/pub/matos/2011_torch7_nipsw.pdf">Torch7: A matlab-like environment for machine learning, R. Collobert et al.</a></li>
+<li>(2015) <a href="http://arxiv.org/pdf/1412.4564">MatConvNet: Convolutional neural networks for matlab, A. Vedaldi and K. Lenc</a></li>
+<li>(2015) <a href="http://arxiv.org/pdf/1409.0575">Imagenet large scale visual recognition challenge, O. Russakovsky et al.</a></li>
+<li>(2014) <a href="http://arxiv.org/pdf/1408.5093">Caffe: Convolutional architecture for fast feature embedding,Y. Jia et al.</a></li>
 </ul>
 <h2 id="book-survey-review">Book / Survey / Review</h2>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>(2017) <a href="https://arxiv.org/pdf/1702.07800">On the Origin of Deep Learning, H. Wang and Bhiksha Raj.</a></li>
+<li>(2017) <a href="http://arxiv.org/pdf/1701.07274v2.pdf">Deep Reinforcement Learning: An Overview, Y. Li,</a></li>
+<li>(2017) <a href="http://arxiv.org/pdf/1703.01619v1.pdf">Neural Machine Translation and Sequence-to-sequence Models : A Tutorial, G. Neubig.</a></li>
+<li>(2017) <a href="http://neuralnetworksanddeeplearning.com/index.html">Neural Network and Deep Learning (Book), Michael Nielsen.</a></li>
+<li>(2016) <a href="http://www.deeplearningbook.org/">Deep learning (Book), Goodfellow et al.</a></li>
+<li>(2016) <a href="https://arxiv.org/pdf/1503.04069.pdf">LSTM: A search space odyssey, K. Greff et al.</a></li>
+<li>(2016) <a href="https://arxiv.org/pdf/1606.05908">Tutorial on Variational Autoencoders, C. Doersch.</a></li>
+<li>(2015) <a href="https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf">Deep learning, Y. LeCun, Y. Bengio and G. Hinton</a></li>
+<li>(2015) <a href="http://arxiv.org/pdf/1404.7828">Deep learning in neural networks: An overview, J. Schmidhuber</a></li>
+<li>(2013) <a href="http://arxiv.org/pdf/1206.5538">Representation learning: A review and new perspectives, Y.Bengio et al.</a></li>
 </ul>
 <h2 id="video-lectures-tutorials-blogs">Video Lectures / Tutorials / Blogs</h2>
 <h3 id="lectures">(Lectures)</h3>
@@ -479,21 +1185,6 @@
 <li><a href="http://www.fastml.com/">FastML</a></li>
 <li><a href="https://blog.acolyer.org">TheMorningPaper</a></li>
 </ul>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p><a href="http://arxiv.org/pdf/1408.5093">Caffe: Convolutional architecture for fast feature embedding,Y. Jia et al.</a><a href="#fnref1">↩</a></p></li>
-<li id="fn2"><a href="https://arxiv.org/abs/1804.06559v2">SFace: An Efficient Network for Face Detection in Large Scale Variations (Megvii Inc. Face++)</a>
-<ul>
-<li>A new dataset called 4K-Face is also introduced to evaluate the performance of face detection with extreme large scale variations.
-<ul>
-<li>The SFace architecture shows promising results on the new 4K-Face benchmarks.</li>
-<li>In addition, our method can run at 50 frames per second (fps) with an accuracy of 80% AP on the standard WIDER FACE dataset, which outperforms the state-of-art algorithms by almost one order of magnitude in speed while achieves comparative performance.</li>
-</ul></li>
-</ul>
-<a href="#fnref2">↩</a></li>
-</ol>
-</div>
 
 
         </div>
