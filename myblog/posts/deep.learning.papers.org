@@ -37,7 +37,12 @@ list: https://competitions.codalab.org/
  :TOPIC: Image classification, detection, segmentation
  :URL: http://image-net.org/about-stats
  :END:
- 
+** Activity Monitoring / Recognition
+Human Related
+- (2017) [[https://www.semanticscholar.org/paper/A-comprehensive-review-on-handcrafted-and-action-Sargano-Angelov/a87e37d43d4c47bef8992ace408de0f872739efc][A comprehensive review on handcrafted and learning-based action representation approaches for human activity recognition]]
+Baby Related
+- (2018) [[http://openaccess.thecvf.com/content_eccv_2018_workshops/w31/html/Hesse_Computer_Vision_for_Medical_Infant_Motion_Analysis_State_of_the_ECCVW_2018_paper.html][Computer Vision for Medical Infant Motion Analysis: State of the Art and RGB-D Data Set]]
+
 ** Depth Estimation
 - (2018) [[https://arxiv.org/pdf/1805.01328.pdf][Evaluation of CNN-based Single-Image Depth Estimation Methods]]
   - common criteria: (y - gt) / gt in various forms (abs, sq, sqrt, log, etc.)
@@ -80,7 +85,6 @@ list: https://competitions.codalab.org/
   - the heatmap network architecture is "hourglass" network.
   - *pros:* seems robust, get more granualr mask of object shapes
   - *cons:* maybe speed?
-
 
 ** Others
 - (2017) [[https://arxiv.org/abs/1706.02633v2][Real-valued (Medical) Time Series Generation with Recurrent Conditional GANs]]
@@ -205,7 +209,6 @@ It is probably possible to convert RGB to depth with another model, but it might
   - several ways to represent the hand model, with varying complexities -- good way to think about feature representation
   - This is not a deep learning paper, but there are several techniques for pre-processing the RGB images to make them easier for the architecture to learn hand pose.
   
-
 ** Anomaly Detection (Images / Videos)
 - Overview
  - currently there are 3 main approaches
@@ -412,14 +415,12 @@ It is probably possible to convert RGB to depth with another model, but it might
   - AdaMax - generalized Adam to n moments
   - Nadam - Nesterov + Adam 
 
-  
 ** Unsupervised / Generative Models
 - (2013) [[http://arxiv.org/pdf/1312.6114][Auto-encoding variational Bayes, D. Kingma and M. Welling]]
 - (2013) [[http://arxiv.org/pdf/1112.6209][Building high-level features using large scale unsupervised learning, Q. Le et al.]]
 - (2015) [[https://arxiv.org/pdf/1511.06434v2][Unsupervised representation learning with deep convolutional generative adversarial networks, A. Radford et al.]]
 - (2015) [[http://arxiv.org/pdf/1502.04623][DRAW: A recurrent neural network for image generation, K.Gregor et al.]]
 - (2016) [[http://arxiv.org/pdf/1601.06759v2.pdf][Pixel recurrent neural networks (PixelRNN), A. Oord et al.]]
-
 
 ** CNN Feature Extractors
 - Backbone feature extractor short summary / [[https://arxiv.org/pdf/1804.06215.pdf][source]] 
@@ -446,26 +447,29 @@ It is probably possible to convert RGB to depth with another model, but it might
 - (2016) [[http://arxiv.org/pdf/1512.03385][Deep residual learning for image recognition, K. He et al.]]
 
 ** Image: Object Detection
-- Overview paper: [2018-09] [[https://arxiv.org/pdf/1809.03193.pdf][recent advances in object detection in the age of deep CNNs]]
- - YOLO family
-  - YOLOv1
-   - simple network design, one-shot detector
-   - result (voc 07-12) - mAP(0.5) 63.4 with 45 FPS at 554x554 on Titan X
-  - YOLOv2
-   - add batch normalization, able to train deeper network
-   - double input resolution 224x224 --> 448x448 (also in Imagenet pretraining)
-   - add anchor box priors, will custom clustering to find best priors
-   - result (voc 07-12) - mAP(0.5) 78.6 with 40 FPS at 554x554 on Titan X
-  - YOLOv3
-   - predict boxes at 3 different scales (similar to SSD)
-   - use skip connection (upsampled then concat layers)
-   - much deeper feature extractors (Darknet-53)
-   - result (COCO) - mAP(0.5) 57.9 with 20 FPS at 608x608 on Titan X
- - [[http://cs231n.stanford.edu/slides/2018/cs231n_2018_ds06.pdf][R-CNN family]]
-  - R-CNN: Selective search → Cropped Image → CNN  
-  - Fast R-CNN: Selective search → Crop feature map of CNN
-  - Faster R-CNN: CNN → Region-Proposal Network → Crop feature map of CN** 
-  - Best accuracy but slow
+- (2020) [[https://blog.netcetera.com/object-detection-and-tracking-in-2020-f10fb6ff9af3][Object Detection and Tracking in 2020]] (medium article)
+- (2020) [[https://arxiv.org/abs/2005.05708v1][IterDet: Iterative Scheme for ObjectDetection in Crowded Environments]]
+  - could be useful for edge device, simialr to gif img loading.
+- (2018-09) [[https://arxiv.org/pdf/1809.03193.pdf][recent advances in object detection in the age of deep CNNs]]
+  - YOLO family
+    - YOLOv1
+      - simple network design, one-shot detector
+      - result (voc 07-12) - mAP(0.5) 63.4 with 45 FPS at 554x554 on Titan X
+    - YOLOv2
+      - add batch normalization, able to train deeper network
+      - double input resolution 224x224 --> 448x448 (also in Imagenet pretraining)
+      - add anchor box priors, will custom clustering to find best priors
+      - result (voc 07-12) - mAP(0.5) 78.6 with 40 FPS at 554x554 on Titan X
+    - YOLOv3
+      - predict boxes at 3 different scales (similar to SSD)
+      - use skip connection (upsampled then concat layers)
+      - much deeper feature extractors (Darknet-53)
+      - result (COCO) - mAP(0.5) 57.9 with 20 FPS at 608x608 on Titan X
+  - [[http://cs231n.stanford.edu/slides/2018/cs231n_2018_ds06.pdf][R-CNN family]]
+    - R-CNN: Selective search → Cropped Image → CNN
+    - Fast R-CNN: Selective search → Crop feature map of CNN
+    - Faster R-CNN: CNN → Region-Proposal Network → Crop feature map of CN**
+    - Best accuracy but slow
 ** Image: Segmentation
 - (2015) [[http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf][Fully convolutional networks for semantic segmentation]]
    :PROPERTIES:
@@ -494,7 +498,6 @@ It is probably possible to convert RGB to depth with another model, but it might
 - (2014) [[http://papers.nips.cc/paper/5353-two-stream-convolutional-networks-for-action-recognition-in-videos.pdf][Two-stream convolutional networks for action recognition in videos, K. Simonyan et al.]]
 - (2013) [[http://machinelearning.wustl.edu/mlpapers/paper_files/icml2010_JiXYY10.pdf][3D convolutional neural networks for human action recognition, S. Ji et al.]]
 
-
 ** Natural Language Processing / RNNs
 - (2016) [[http://aclweb.org/anthology/N/N16/N16-1030.pdf][Neural Architectures for Named Entity Recognition, G. Lample et al.]]
 - (2016) [[http://arxiv.org/pdf/1602.02410][Exploring the limits of language modeling, R. Jozefowicz et al.]]
@@ -516,6 +519,7 @@ It is probably possible to convert RGB to depth with another model, but it might
 - (2013) [[https://arxiv.org/pdf/1308.0850][Generating sequences with recurrent neural networks, A. Graves.]]
 
 ** Speech / Other Domain
+- (2020) [[https://www.gwern.net/newsletter/2020/05#gpt-3][Gwern's May newsletter about GPT-3 language model and its history]]
 - (2016) [[https://arxiv.org/pdf/1508.04395][End-to-end attention-based large vocabulary speech recognition, D. Bahdanau et al.]]
 - (2015) [[https://arxiv.org/pdf/1512.02595][Deep speech 2: End-to-end speech recognition in English and Mandarin, D. Amodei et al.]]
 - (2013) [[http://arxiv.org/pdf/1303.5778.pdf][Speech recognition with deep recurrent neural networks, A. Graves]]
@@ -718,13 +722,13 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
    - custom feature engineering extracting 5 features -- sky, shadow, reflection, contrast, haze.
    - concat all features into 621-D vectors then use complex voting schemes to classify based on the existing of combinations of features. Tried SVM but didn't work well.
    - achieved 76% accuracy (53% normalized)
-** Autonomous driving
+** Autonomous Driving
 - [2017-02] [[https://www.mdpi.com/2075-1702/5/1/6][overview paper]]
 ** Face Detection
 - Dataset: [[http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/][WiderFace]]
  - 30K images, 400k faces.
  - metric is PR curve, split by easy / medium / hard cases
-- [2004] [[https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-IJCV-01.pdf][Robust Real-time Object Detection (Viola-Jones)]] 
+- (2004) [[https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-IJCV-01.pdf][Robust Real-time Object Detection (Viola-Jones)]]
  - Traditional system with impressive performance
  
     Input = 384x288 grayscale image, 15 FPS on 700 Mhz Intel Pentium III
@@ -860,74 +864,73 @@ New alternative would be to add new sensor data (temperature/humidity) and ensem
     :YEAR:     2017
     :URL:      https://lukeoakdenrayner.wordpress.com/2017/04/20/the-end-of-human-doctors-introduction/
     :END:
- - Part 2: Understanding Medicine
-  - Most of the tasks Medical doctors do are related to "perception", not "decision making". The later part is relatively fast and has been done better by the Machine since MYCIN.
-  - perceptual tasks like identifying tree-shape patterns in X-rays -- Deep learning is very good at it.
-  - Most susceptible specialties are Radiology and Pathology, comprising of 25% of doctors (in Australia).
- - Part 3: Understanding Automation
-  - Automation replaces tasks, not jobs. How much time the task takes a human determines how many jobs are lost.
-  - Machines that “help” or “augment” humans still destroy jobs and lower wages.
-  - Hybrid-chess does not prove that human/machine teams are better than computers alone. STOP SAYING THIS, tech people!
-  - Deep learning threatens tasks that make up a terrifyingly large portion of doctors’ jobs.
-  - In the developed world, demand for medical services may be unable to increase as prices fall due to automation, which normally protects jobs.
- - Part 4: Radiology Escape Velocity
-  - even if the rate of automation of 5% per year, in 30 years there will still be one-third the current radiologist workforce remaining.
- - Part 5: Understanding Regulation
-  - In case of USA, it usually takes 3 to 10 years to go through the whole process from concept to approval to use in the medical industry.
-  - "measurements"-related technology can opt to go through case-I (low-risk type) route with substantially shorter time to approval.
-  - There are two approach in using computer technology
-   - measurements to aid doctors' decisions. (CADe) --  doctors disliked them, not doing well as a result.
-   - measurements AND diagnosis (CADx) -- never been approved by FDA before.
-  - Conclusion: current regulation in developed countries is SUPER conservative and so it will take a lot of time and money to get new technology adopted. Not so for developing world, we might see it much faster there.
- - Part 6: Current State-of-the-Art results and impact
-  - Stanford (and collaborators) trained a system to identify skin lesions that need a biopsy. Skin cancer is the most common malignancy in light-skinned populations.
-  - This is a useful clinical task, and is a large part of current dermatological practice.
-  - They used 130,000 skin lesion photographs for training, and enriched their training and test sets with more positive cases than would be typical clinically.
-  - The images were downsampled heavily, discarding  around 90% of the pixels.
-  - They used a “tree ontology” to organise the training data, allowing them to improve their accuracy by training to recognise 757 classes of disease. This even improved their results on higher level tasks, like “does this lesion need a biopsy?”
-  - They were better than individual dermatologists at identifying lesions that needed biopsy, with more true positives and less false positives.
-  - While there are possible regulatory issues, the team appears to have a working smartphone application already. I would expect something like this to be available to consumers in the next year or two.
-  - The impact on dermatology is unclear. We could actually see shortages of dermatologists as demand for biopsy services increases, at least in the short term.
-
+  - Part 2: Understanding Medicine
+    - Most of the tasks Medical doctors do are related to "perception", not "decision making". The later part is relatively fast and has been done better by the Machine since MYCIN.
+    - perceptual tasks like identifying tree-shape patterns in X-rays -- Deep learning is very good at it.
+    - Most susceptible specialties are Radiology and Pathology, comprising of 25% of doctors (in Australia).
+  - Part 3: Understanding Automation
+    - Automation replaces tasks, not jobs. How much time the task takes a human determines how many jobs are lost.
+    - Machines that “help” or “augment” humans still destroy jobs and lower wages.
+    - Hybrid-chess does not prove that human/machine teams are better than computers alone. STOP SAYING THIS, tech people!
+    - Deep learning threatens tasks that make up a terrifyingly large portion of doctors’ jobs.
+    - In the developed world, demand for medical services may be unable to increase as prices fall due to automation, which normally protects jobs.
+  - Part 4: Radiology Escape Velocity
+    - even if the rate of automation of 5% per year, in 30 years there will still be one-third the current radiologist workforce remaining.
+  - Part 5: Understanding Regulation
+    - In case of USA, it usually takes 3 to 10 years to go through the whole process from concept to approval to use in the medical industry.
+    - "measurements"-related technology can opt to go through case-I (low-risk type) route with substantially shorter time to approval.
+    - There are two approach in using computer technology
+      - measurements to aid doctors' decisions. (CADe) --  doctors disliked them, not doing well as a result.
+      - measurements AND diagnosis (CADx) -- never been approved by FDA before.
+    - Conclusion: current regulation in developed countries is SUPER conservative and so it will take a lot of time and money to get new technology adopted. Not so for developing world, we might see it much faster there.
+  - Part 6: Current State-of-the-Art results and impact
+    - Stanford (and collaborators) trained a system to identify skin lesions that need a biopsy. Skin cancer is the most common malignancy in light-skinned populations.
+    - This is a useful clinical task, and is a large part of current dermatological practice.
+    - They used 130,000 skin lesion photographs for training, and enriched their training and test sets with more positive cases than would be typical clinically.
+    - The images were downsampled heavily, discarding  around 90% of the pixels.
+    - They used a “tree ontology” to organise the training data, allowing them to improve their accuracy by training to recognise 757 classes of disease. This even improved their results on higher level tasks, like “does this lesion need a biopsy?”
+    - They were better than individual dermatologists at identifying lesions that needed biopsy, with more true positives and less false positives.
+    - While there are possible regulatory issues, the team appears to have a working smartphone application already. I would expect something like this to be available to consumers in the next year or two.
+    - The impact on dermatology is unclear. We could actually see shortages of dermatologists as demand for biopsy services increases, at least in the short term.
 - (2017) [[https://www.youtube.com/watch?v=ptcBmEHDWds][(Video) Geometric Deep Learning - Radcliffe Institute]]
     :PROPERTIES:
     :AUTHOR:  Michael Bronstein
     :YEAR:     2017
     :URL:      https://www.youtube.com/watch?v=ptcBmEHDWds
     :END:
- - keypoints
-  - Identical twins (Alex & Michael) -- study and worked in the same field (Computer Vision)
-  - Invented what became the Kinect camera sensor
-  - Keys for recognizing face:
-   - Humans actually recognize people based on "texture" appearance, not the 3D geometry
-   - facial expressions changed the projected texture to 2D, but not the actual texture if projected on the plane
-   - Therefore, we can use the "geodesic" distance instead of euclidean distance to measure the actual distance between important face features. If the distances are approximately the same, then it's the same face.
-   - Thee kind of techniques have been use to recognize diferent faces, including identical twins.
-   - Geometric deep learning: applying CNNs on 3D surface via heat diffusion equation.
-    - Use Case: Recognition, social network analysis, recommender systems
+  - keypoints
+    - Identical twins (Alex & Michael) -- study and worked in the same field (Computer Vision)
+    - Invented what became the Kinect camera sensor
+    - Keys for recognizing face:
+      - Humans actually recognize people based on "texture" appearance, not the 3D geometry
+      - facial expressions changed the projected texture to 2D, but not the actual texture if projected on the plane
+      - Therefore, we can use the "geodesic" distance instead of euclidean distance to measure the actual distance between important face features. If the distances are approximately the same, then it's the same face.
+      - Thee kind of techniques have been use to recognize diferent faces, including identical twins.
+      - Geometric deep learning: applying CNNs on 3D surface via heat diffusion equation.
+        - Use Case: Recognition, social network analysis, recommender systems
 - (2015) [[http://colah.github.io/posts/2015-09-Visual-Information/ ][Visual explanation of Information Theory]]
     :PROPERTIES:
     :AUTHOR:  Colah
     :YEAR:    2015
     :URL:     http://colah.github.io/posts/2015-09-Visual-Information/ 
     :END:
- - keypoints
-  - Shannon's Entropy formula - H(X)
-   - this is a way to estimate how many bits are needed to encode given information with certain distributions
-   - the estimated bits are from the best possible encodings ("optimized")
-   - H(X) = P(X)*log2(1/P(X)) where P(X) means probabilty of X
-  - some interesting permutation give conditional probabilities
-   - P(X,Y) = P(X)*P(Y|X) = P(Y)*P(X|Y)
-   - H(X,Y) = H(X) + H(Y|X) = H(Y) + H(X|Y)
-   - H(X|Y) = sum{P(X,Y)*log2(1/P(X|Y))}
-  - then we can derive "mutual" [I] and "variational" [V] information
-   - I(X,Y) = H(X,Y) - H(X) - H(Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)
-   - V(X,Y) = H(X,Y) - I(X,Y)
-  - KL-divergence [D] or [K]
-   - Dy(x) = K(X||Y) = H(X,Y) - H(X)
-   - This is a way to see how the new distribution (Y) is close to the original distribution (X)
-   - if it is the same, then KL is zero, otherwise it has value. 
-   - this is not a symmetric measure. K(X||Y) <> K(Y||X)
+  - keypoints
+    - Shannon's Entropy formula - H(X)
+      - this is a way to estimate how many bits are needed to encode given information with certain distributions
+      - the estimated bits are from the best possible encodings ("optimized")
+      - H(X) = P(X)*log2(1/P(X)) where P(X) means probabilty of X
+    - some interesting permutation give conditional probabilities
+      - P(X,Y) = P(X)*P(Y|X) = P(Y)*P(X|Y)
+      - H(X,Y) = H(X) + H(Y|X) = H(Y) + H(X|Y)
+      - H(X|Y) = sum{P(X,Y)*log2(1/P(X|Y))}
+    - then we can derive "mutual" [I] and "variational" [V] information
+      - I(X,Y) = H(X,Y) - H(X) - H(Y) = H(X) - H(X|Y) = H(Y) - H(Y|X)
+      - V(X,Y) = H(X,Y) - I(X,Y)
+    - KL-divergence [D] or [K]
+      - Dy(x) = K(X||Y) = H(X,Y) - H(X)
+      - This is a way to see how the new distribution (Y) is close to the original distribution (X)
+      - if it is the same, then KL is zero, otherwise it has value.
+      - this is not a symmetric measure. K(X||Y) <> K(Y||X)
 
 ** Classic Paperspublished before 2012
 - (2011) [[http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_CoatesNL11.pdf][An analysis of single-layer networks in unsupervised feature learning, A. Coates et al.]]

@@ -48,6 +48,15 @@
 <li><p>[2010-2017] <a href="http://image-net.org/about-stats">ImageNet</a></p></li>
 <li><p>[2005-2012] <a href="http://image-net.org/about-stats">Pascal VOC</a></p></li>
 </ul>
+<h2 id="activity-monitoring-recognition">Activity Monitoring / Recognition</h2>
+<p>Human Related</p>
+<ul>
+<li>(2017) <a href="https://www.semanticscholar.org/paper/A-comprehensive-review-on-handcrafted-and-action-Sargano-Angelov/a87e37d43d4c47bef8992ace408de0f872739efc">A comprehensive review on handcrafted and learning-based action representation approaches for human activity recognition</a></li>
+</ul>
+<p>Baby Related</p>
+<ul>
+<li>(2018) <a href="http://openaccess.thecvf.com/content_eccv_2018_workshops/w31/html/Hesse_Computer_Vision_for_Medical_Infant_Motion_Analysis_State_of_the_ECCVW_2018_paper.html">Computer Vision for Medical Infant Motion Analysis: State of the Art and RGB-D Data Set</a></li>
+</ul>
 <h2 id="depth-estimation">Depth Estimation</h2>
 <ul>
 <li>(2018) <a href="https://arxiv.org/pdf/1805.01328.pdf">Evaluation of CNN-based Single-Image Depth Estimation Methods</a>
@@ -575,7 +584,12 @@
 </ul>
 <h2 id="image-object-detection">Image: Object Detection</h2>
 <ul>
-<li>Overview paper: [2018-09] <a href="https://arxiv.org/pdf/1809.03193.pdf">recent advances in object detection in the age of deep CNNs</a>
+<li>(2020) <a href="https://blog.netcetera.com/object-detection-and-tracking-in-2020-f10fb6ff9af3">Object Detection and Tracking in 2020</a> (medium article)</li>
+<li>(2020) <a href="https://arxiv.org/abs/2005.05708v1">IterDet: Iterative Scheme for ObjectDetection in Crowded Environments</a>
+<ul>
+<li>could be useful for edge device, simialr to gif img loading.</li>
+</ul></li>
+<li>(2018-09) <a href="https://arxiv.org/pdf/1809.03193.pdf">recent advances in object detection in the age of deep CNNs</a>
 <ul>
 <li>YOLO family
 <ul>
@@ -659,6 +673,7 @@
 </ul>
 <h2 id="speech-other-domain">Speech / Other Domain</h2>
 <ul>
+<li>(2020) <a href="https://www.gwern.net/newsletter/2020/05#gpt-3">Gwern's May newsletter about GPT-3 language model and its history</a></li>
 <li>(2016) <a href="https://arxiv.org/pdf/1508.04395">End-to-end attention-based large vocabulary speech recognition, D. Bahdanau et al.</a></li>
 <li>(2015) <a href="https://arxiv.org/pdf/1512.02595">Deep speech 2: End-to-end speech recognition in English and Mandarin, D. Amodei et al.</a></li>
 <li>(2013) <a href="http://arxiv.org/pdf/1303.5778.pdf">Speech recognition with deep recurrent neural networks, A. Graves</a></li>
@@ -884,7 +899,7 @@
 </ul></li>
 </ul></li>
 </ul>
-<h2 id="autonomous-driving">Autonomous driving</h2>
+<h2 id="autonomous-driving">Autonomous Driving</h2>
 <ul>
 <li>[2017-02] <a href="https://www.mdpi.com/2075-1702/5/1/6">overview paper</a></li>
 </ul>
@@ -895,7 +910,17 @@
 <li>30K images, 400k faces.</li>
 <li>metric is PR curve, split by easy / medium / hard cases</li>
 </ul></li>
-<li></li>
+<li>(2004) <a href="https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-IJCV-01.pdf">Robust Real-time Object Detection (Viola-Jones)</a>
+<ul>
+<li><p>Traditional system with impressive performance</p>
+<p>Input = 384x288 grayscale image, 15 FPS on 700 Mhz Intel Pentium III</p></li>
+<li>Algo = Simple Features + Adaboost + Cascade
+<ol>
+<li>Features = sum of two regions and diffs with each other (for every pixel coordinate)</li>
+<li>Since there are a lot of features, use Adaboost select a set of strongest weak classifiers weak classifer is basically this --&gt; H = if single<sub>feature</sub> &gt; threshold then 1 else 0</li>
+<li>Attentional cascade - train a simple 2-feature classifier to simply reject no-face image. Then queue up all the sub-windows (overlap cropping?), evaluate and reject, then use stronger classifier from #2 on the remaining sub-windows.</li>
+</ol></li>
+</ul></li>
 <li>(2014) <a href="https://pdfs.semanticscholar.org/d78b/6a5b0dcaa81b1faea5fb0000045a62513567.pdf">One millisecond face alignment with an ensemble of regression trees - Dlib uses this </a>
 <ul>
 <li>Use cascade of regressor method to detect facial landmarks (given that the image is already cropped to face area) claims 1 ms performance with unknown CPU. has error rate of 0.049 on HELEN face dataset. (2,000 training / 500 test image)</li>
