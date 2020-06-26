@@ -652,14 +652,14 @@ It is probably possible to convert RGB to depth with another model, but it might
 - Overall Summary as of [2018-10]
 There are no agreed upon public dataset and very few DL papers dedicated to the topic. 
 
-The common dataset used is (2014) sunny/cloudy dataset with 10k images. Other recent papers (2018) have contructed their own dataset which are not opened to public yet. However, BDD100K dataset also has weather attribute labeled, so we should be considering using that.
+The common dataset used is (2014) sunny/cloudy dataset with 10k images. Other recent papers (2018) have contructed their own dataset which are not opened to public yet. However, BDD100K dataset also has weather attribute labeled, so we should consider using that.
 
 There are 3 type of models proposed thus far.
 1. (2014) traditional feature engineering then use SVM/other clustering methods.
 2. (2015) pure CNN feature extraction then classify
 3. (2018) CNN-RNN and/or the combination of DL and traditional features.
 
-so far the DL method did aggressively out-perform traditional ones.
+so far the DL method did out-perform traditional ones.
 
 New alternative would be to add new sensor data (temperature/humidity) and ensemble with CNN model. For that matter, how accurate would predictions from sensor data alone be?
 
