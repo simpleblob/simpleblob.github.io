@@ -1,0 +1,16 @@
+---
+title: Book Summary - Navy Seal Fitness Guide
+subtitle: None
+description: fitness
+tags: fitness
+created: 2020-08-13
+published: 2020-08-13
+status: draft
+confidence: log
+importance: 1
+---
+
+** Overview of Physical Fitness
+- asdf
+
+** to be written
