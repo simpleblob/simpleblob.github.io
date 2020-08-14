@@ -4,13 +4,34 @@ subtitle: None
 description: fitness
 tags: fitness
 created: 2020-08-13
-published: 2020-08-13
+published: 2020-08-14
 status: draft
 confidence: log
 importance: 1
 ---
 
-** Overview of Physical Fitness
-- asdf
+[[https://www.usuhs.edu/sites/default/files/media/mem/pdf/navysealfitnessguide.pdf][Original link to guide in PDF here.]]
 
-** to be written
+** Chapter 1: Overview of Physical Fitness
+- Navy-seal fitness components (look up definition in PDF)
+  - Skill-related: Agility, Balance, Coordination, Speed, Power, Reaction time
+  - Health-related: Cardiorespiratory endurance, Muscular endurance, Muscular strength, Body composition, Flexibility
+- Of the three muscle types (Cardiac, Skeletal, Smooth), we will only focus on skeletal muscle:
+
+    The proportion of muscle types depends on genetics at birth. However, all can be improved by endurance and power training.
+   
+  - Slow Twitch Oxidative (Type I) -- aerobic, slow but long, for endurance
+  - Fast Twitch Oxidative-Glycolytic (Type IIa) -- semi-aerobic, middle place
+  - Fast Twitch Glycolytic (Type IIb) -- anaerobic, fast but short-lived. glycogen as fuel = fatigue easily.
+- Principles of Physical training
+  - Overload: training at higher level than usual until body adapts to new level. aerobic training = 70%-90% of Max Heart Rate (HR) or at 130-170 HR (age 35)
+  - Specificity: training that focuses on achieving certain task. swimming vs running etc.
+  - Individual Differences: same program, difference responses per person
+  - Detraining: need to keep regular exercises to maintain fitness. FITT = Frequency, Intensity, Time & Type
+  - Active Recovery: continue exercises at moderate pace (30-50% MaxHR) warm-up and warm-down will determine how we feel several hours after workout.
+
+** Chapter 2: SEAL Mission-Related Physical Activities
+Not Relevant to me.
+
+** Chapter 3: Cardiorespiratory Conditioning
+ACSM recommendation: “Every US adult should accumulate 30 minutes or more of moderate intensity physical activity on most, preferably all, days of the week”
