@@ -12,7 +12,19 @@ importance: 1
 
 [[https://www.usuhs.edu/sites/default/files/media/mem/pdf/navysealfitnessguide.pdf][Original link to guide in PDF here.]]
 
-** Note : Navy Seal physical screening test
+** Note0 : My own minimal exercise program
+- Switch between Strength and Cardio. Do everyday. If really tired, then do long flexibility routine.
+- Strength / Calisthenics
+  - [07 min] [[https://www.youtube.com/watch?v=Q61E0w3SATw][Warm-ups]]
+  - [15 min] [[https://www.youtube.com/watch?v=FCnRqy1oYjE][MARSOC short card]] [[[https://www.marsoc.marines.mil/Portals/31/Documents/AssessmentandSelection-Prep-Guide.pdf][PDF]]] (decrease reps to 10 first, then add 5 each time after adapting)
+  - [09 min] [[https://www.youtube.com/watch?v=1Rw_LupMPzY][Warm-downs]]
+- Cardio (choose one)
+  - [40+10 min] Running (see program below on Chapter 4)
+  - [37 min] [[https://www.youtube.com/watch?v=fcN37TxBE_s][Fitness Blender Cardio]]
+- Flexibility
+  - [20 min] [[https://www.youtube.com/watch?v=2wYQhJdv2oI][Full body flexibility routine]]
+
+** Note1 : Navy Seal physical screening test
 - Swim 500 yards (457 m.) in 12.5 minutes or less
 - Rest 10 minutes
 - Do 42 push-ups in under 2 minutes
@@ -53,10 +65,63 @@ ACSM recommendation: “Every US adult should accumulate 30 minutes or more of m
 - Work rate: the rate of amount of work we can do in an exercise. for example, In cycling the unit is miles per hour. Other exercise can be kcal or watts per hour.
 
 ** Chapter 4: Running for fitness
-- Navy Seals should maintain running 20 to 40 miles (32 to 64) miles per week. (6 to 12 km, 5 days per week)
+- Navy Seals should maintain running 20 to 40 miles (32 to 64 km) per week. (6 to 12 km, 5 days per week)
 - Running Shoes Terminology and how to buy: read more in PDF
 - Building up Our Mileage. Increasing to quickly can cause injuries.
   - Run at least 3 to 4 times per week or every other day. (with 1-2 rest days per week)
   - Run at an even pace that we can talk comfortably.
   - when we can run continuously for 40 minutes, then start thinking about increasing distance.
-  - increase mileage by no more than 20% a week.
+  - increase mileage by no more than 20% a week. Do not increase speed and distance simultaneously.
+
+Table: *Example of Program to run 40 km per week*
+
+| Week  | Mon | Tues | Wed | Thur | Fri | Sat | Sun | Total |
+|-------+-----+------+-----+------+-----+-----+-----+-------|
+| One   |   4 | CT*  |   5 |    3 | CT  |   3 |   5 |    20 |
+| Three |   5 | CT   |   5 |    5 | CT  |   5 |   5 |    24 |
+| Five  |   5 | CT   |   6 |    6 | CT  |   6 |   6 |    29 |
+| Seven |   7 | CT   |   7 |    8 | CT  |   5 |   8 |    35 |
+| Nine  |   6 | CT   |   8 |    8 | CT  |   8 |  10 |    40 |
+
+- For Interval training:
+  - Restperiods between reps to train anaerobic systems should be equal or slightly less than time to cover distance
+  - Restperiods between reps to train aerobic systems should be equal or slightly less than one-half time to cover distance
+- 3 principles to prevent injuries while running
+  - Run Tall
+  - Run Relaxed
+  - Run Naturally
+
+
+** Chapter 5: Swimming for Fitness
+This is skipped, since we have no suitable pool nearby.
+
+** Chapter 6: Strength Training
+- Routines should be well balanced and work all muscle groups
+- Free weights, although take more skills, is probably better than gym equipment.
+- Exhale when moving a weight against gravity
+- FITT principles
+  - Frequency: more is better, but should not overtrain. 2-3 times per week.
+  - Intensity: most critical for strength training. as close to 60-90% of Repetition Maximum (RM) to build muscles. (no more than 12 reps per set). for endurance is 30-50% of RM or 20-60 reps per set.
+  - Time: 30-60 min is OK
+  - Type: should vary routines
+- warming up and down is necessary to prevent injuries.
+  - warm ups: jumping jacks / light weights
+  - warm downs: walking / stretching
+- Common problems
+  - Injuries: lack of warm-up and using improper form
+  - Overuse: too repetitive exercise, especially on knee, elbow, shoulder.
+  - Delayed Muscle Soreness: 24-48 hr after activity
+
+** Chapter 7: Flexibility
+- two types of flexibility
+  - Dynamic (or active): speed attained within a range of motion at the joint during physical performance. (ex. throwing a ball, neck roll, leg swings)
+  - Static: maximal range of motion of a joint during passive movement induced by an external source. (normal stretching)
+- The most effective stretches are performed slowly, and held for 15-30 seconds. (activate GTO, avoid excessive activation of muscle spindles.)
+- Stretching is not the same as a warm-up. We should do stretching (or other activities) after a warm-up.
+- Warm-up = light running, jumping jacks, other calisthenics to warm up body temperature and prepare muscles for heavier usage. slight sweating is a good indicator of sufficient warm-up.
+- Recommended Sequence: Warm-up, Stretch (Dynamic), Workout session, Warm-down, Stretch (Static)
+
+** Chapter 8: Calisthenics
+- asdf
+
+** Chapter 9-end: Not relevent to me. might read later.
