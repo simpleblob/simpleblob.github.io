@@ -68,26 +68,47 @@ To understand a system, it is helpful to identify degrees of freedom and constra
 
 ** The Renaissance ideal
 - Human capital and necessary personal assets
- - Physiological
-  - maintain optimal levels of physical and mental health
-  - know how the human body functions and physiologically adapts to imposed demands like stress, overeating, lack of exercise, and their opposites
-  - know why and which kinds of food promote health and which kinds destroy health
-  - maintain good habits. know how to preserve food and how to tesll when food is spoiled.
-  - be able to compete in local sports competitions. 
-  - be able to perform physically while exhausted, hungry, or tired. Test: carrying an unconscious person out of a burning house, or pulling oneself up and hanging from a gutter.
-  - know at least basic first aid
- - Intellectual
-  - be able to prioritize the relevance of information and be able to quickly research and find relevant information in many different areas. Learn independently and have an interest in doing so.
-  - have enough generalized knowledge to be able to understand the information and put it into the context of a mental framework, a model or a procedure, and use it to ask further questions.
-  - recognize which problems the model applies to, take the solution to one problem, generalize it, and apply it to another problem.
-  - be able to critically analyze the model, refine it, and combine different models to achieve an objective. Practice critical thinking in all aspects of life to reach a degree of rational certainty. Be open to new ideas but do not accept anything without examination.
-  - synthesize interdiscilinary information and laterally connect similarities which are not immediately apprent, discovering new models and precedures.
-  - evaluate different methods, models, and precedures while effectively ranking them for utility, and piking the best one while recognizing the pertinence of other methods. Pursue relevant and correct knowledge persistently and consistently. Master the fundamentals.
- - Economic
- - Emotional
- - Social
- - Technical
- - Ecological
+  - Physiological
+    - maintain optimal levels of physical and mental health
+    - know how the human body functions and physiologically adapts to imposed demands like stress, overeating, lack of exercise, and their opposites
+    - know why and which kinds of food promote health and which kinds destroy health
+    - maintain good habits. know how to preserve food and how to tesll when food is spoiled.
+    - be able to compete in local sports competitions.
+    - be able to perform physically while exhausted, hungry, or tired. Test: carrying an unconscious person out of a burning house, or pulling oneself up and hanging from a gutter.
+    - know at least basic first aid
+  - Intellectual
+    - be able to prioritize the relevance of information and be able to quickly research and find relevant information in many different areas. Learn independently and have an interest in doing so.
+    - have enough generalized knowledge to be able to understand the information and put it into the context of a mental framework, a model or a procedure, and use it to ask further questions.
+    - recognize which problems the model applies to, take the solution to one problem, generalize it, and apply it to another problem.
+    - be able to critically analyze the model, refine it, and combine different models to achieve an objective. Practice critical thinking in all aspects of life to reach a degree of rational certainty. Be open to new ideas but do not accept anything without examination.
+    - synthesize interdiscilinary information and laterally connect similarities which are not immediately apprent, discovering new models and precedures.
+    - evaluate different methods, models, and precedures while effectively ranking them for utility, and piking the best one while recognizing the pertinence of other methods. Pursue relevant and correct knowledge persistently and consistently. Master the fundamentals.
+  - Economic
+    - understand the difference between price and value. Value is psychological, price is determined by the market.
+    - learn to consider more than the immediate consequences of a choice. Also consider the future consequences -- for example, opportunity cost and time-value of money. Learn to see the unseen.
+    - learn to consider more than the consequences of a choice for just one group of people, but for all others as well.
+    - realize tha economic agents all represent special interests that typically interpret the situation according to their own interests or political views.
+    - understand the difference between assets and liabilities. Understand leveragte and cash flows. In particular, learn what is an investment (an income generating asset) and what is not an investment (items for personal use).
+    - know the law of supply and demand, the difference between savings and investments, and the difference between present and future value.
+    - understand how the stock, bond, and/or real estate markets work, both in theory and practice.
+    - be able to do your own tax return, make a budget, and balance a checkbook.
+  - Emotional
+    - be able to appraise value in all matters to make sound decisions.
+    - not waste time, money, effort, or resources.
+    - not be subject to emotional manipulation or egage in wishful, magical thinking, believing things are true because he would like them to be true -- or worse, believing he can influence external events by thinking positively about them.
+    - have a strong character, persist, cope with adversity, be resistant to stress, be calm, and displace frustration.
+    - develop a passion, appreciate the arts and what it means to be human, rather than just a "human resource".
+    - be empathetic and understand that people and situations are complex.
+    - make social connections and increase the value of interpersonal relationships.
+    - be able to patiently await a better solution and be willing to compromise and accept something that is close, but not exactly your ideal.
+  - Social
+    - get to know people outside your profession, hobby/club, religion, political party, socioeconomic stratum, country.
+    - start or join a co-op. This can be anything from buying groceries to participating in a tool shop, to sharing movies with other people.
+    - learn how to sell, barter, swap, and give things away.
+    - learn how to network and build your social capital.
+    - get involved in politices on some level.
+  - Technical
+  - Ecological
 - The Renaissance education
 - Gauging mastery
 - Decoupling and increasing complexity
