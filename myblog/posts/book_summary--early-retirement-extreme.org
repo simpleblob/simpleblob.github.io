@@ -135,11 +135,34 @@ To understand a system, it is helpful to identify degrees of freedom and constra
   - work switch has cost, depending on the nature of work. (Managers vs Hackers)
 
 ** Strategy, tactics, and guiding principles
-- Plan vs Strategy
- - A plan is a string of action (follow certain path)
- - A strategy is a web of actions (consider multiple path, take optimal steps, then reevaluate -- multi-arm bandits)
+- Plan vs Tactic vs Strategy
+  - A Tactic is a detailed concrete steps to reach a goal.
+  - A plan is a string of action (follow certain path) -- get a single error, stop.
+  - A strategy creates a web of actions -- a line gets cut, move to another line toward a goal.
 - Strategic principles
+  - Modular design: we should be able to "decouple/switch" between modules easily, therefore decreasing dependencies and increasing resiliency. For an example: being capable of getting more than one job (income module), or having several paths to get what we want (expense module) (a hair cut -- go to hair salon, doing it ourselves, or know a friend with the skill)
+  - Don't work to earn money. Work to learn new skills, gain new connections, and create new opportunities.
+  - Focus on hobbies/projects that are at least free or can produce values / earn money.
+  - Holon: prefer strong coupling within the project/module and loose/no coupling on the external world.
+  - Make modules simple, small, and not time-critical as much as possible. (can wait to buy stuff at better price etc.)
+  - Each action should be thought of a vector in multi-dimension goal-space (one goal per axis). each 2nd (to nth) order effect will change the direction and magnitude of that vector. To simplify, just think of the effect as positive or negative to each goal and combine them.
+  - per Vector thinking, to define goals as more like properties: losing/saving money, decrease/increase health etc.
 - Tactical principles
-
-
-
+  - Create a list of needs (or wants), ranked by value/preference.
+  - pick the ranked item, suitable to the resource at hand.
+  - fulfill them with "appropriate response", using minimum resource to achieve them, just right.
+** A Renaissance lifestyle
+more concretely describe the strategy, generally follow these guidelines:
+- Reduce wants and needs from the marketplace to a minimum to decouple the buy-work connection.
+- Decrease the volume and size but incrase the sophistication of your activities and possessions.
+- Measure prosperity by less activity, not more. Do fewer useless things.
+- Work for the purpose of earning money for no more than five years of your life or five hours a week.
+- Avoid generating waste and find ways to use the waste of others.
+- Learn to use the system to your advantage, but don't be evil!
+- Serve yourself rather than having others serve you. Instead, help them.
+- Keep running costs down but pay for value.
+- Maintain health to avoid the personal and monetary cost of sickness.
+- Build up the capital to live as a capitalist or the skills to always find a new job.
+- Focus on developing skills rather than on passive entertainment.
+- Gain the maximum in satisfaction with the minimum expenditure of money and energy.
+** Foundations of economics and finance
