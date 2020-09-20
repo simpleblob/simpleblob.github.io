@@ -183,3 +183,10 @@ To understand a system, it is helpful to identify degrees of freedom and constra
   - buy bulk, once a month, seasonal ingredients.
   - grow your own food (permaculture)
 ** Foundations of economics and finance
+- Every(?) ecosystem loop: Resources -> Producers -> Consumers -> Decomposers
+  - Modern economics only has Producers -> Consumers
+- Economy can't keep growing forever without killing itself if the cycle isn't completed.
+- Key goal for an ERE kind of investors is to create an ecosystem/asset that can sustain itself + the investor.
+- Since (full-salaried) pay often has more to do with negotiation skills, policis, or tenure rather than productivity, the workforce is divided into three kinds of people -- work horses (clueless), show horses (political), and horses' asses (doing minimum work since pay is the same).
+- Full-time salaried work is still good for fund accumulating phase, but do optimize/trade-off for time and freedom.
+- key numbers: 30 years of expense saved and SWR of 3% (long-term OK)
