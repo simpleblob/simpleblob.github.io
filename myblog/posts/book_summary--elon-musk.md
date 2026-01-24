@@ -12,13 +12,13 @@ importance: 1
 ---
 ## Chapter 1 - Introduction
 
--   "Do you think I\'m insane?\"
+-   "Do you think I'm insane?\"
 -   One goal. Make mankind an interplanetary species by colonizing mars
 -   Very risk taking - pump almost all the money into new ventures
 -   Extremely busy, hardworking. Expect employee to be the same..
     including working discipline.
 -   Split time only between work and children. Not enough time to
-    maintain girlfriend\|wife (divorced twice now)
+    maintain girlfriend or wife (divorced twice now)
 
 ## Chapter 2 - Africa
 

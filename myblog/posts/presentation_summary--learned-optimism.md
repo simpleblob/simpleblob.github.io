@@ -24,23 +24,23 @@ former you will give yourself ****more chance to become better.****
 
 ### Impersonal vs Personal
 
-They don\'t like my work because of me.
+They don't like my work because of me.
 
 vs
 
-They don\'t like my work because it lacks some features they want.
+They don't like my work because it lacks some features they want.
 
 ### General vs Specific
 
-They don\'t like my work because it probably sucks at everything.
+They don't like my work because it probably sucks at everything.
 
 vs
 
-They don\'t like my work because it probably lacks feature A.
+They don't like my work because it probably lacks feature A.
 
 ### Permanent vs Temporary
 
-They don\'t like my work, a guy told me on that day.
+They don't like my work, a guy told me on that day.
 
 vs
 

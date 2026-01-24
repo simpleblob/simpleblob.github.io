@@ -14,7 +14,7 @@ There are many ideas/beliefs in the world, but the way for them to
 spread and sustain themselves follow some rules.
 
 1.  it must have a spread/infect vector. Belief can be beneficial to
-    individual or to the group, combine with network effects work even
+    individual or to the group, combined with network effects work even
     better.
     -   example one: tit-for-tat, both benefits
     -   example two: christianity, believing in only \"one true god\"
@@ -27,13 +27,13 @@ spread and sustain themselves follow some rules.
 3.  it does not need to adhere to reality, as long as the whole group
     can be convinced to believe in it, and it follows the above two
     rules.
-    -   example one: critical theory of race. spread but shutting up
+    -   example one: critical theory of race. spread by shutting up
         non-believers with socially unacceptable labels.
 
 Humans, on average, might not be long-term smart enough to avoid
 \"catastrophic\" beliefs (cannot use reason/logic as anti-mind-virus,
 because they are already close-minded or have low rationality), so must
-be nudged/pursuaded/fooled away from those beliefs.
+be nudged/persuaded/fooled away from those beliefs.
 
 Some self-sustaining beliefs
 
@@ -46,7 +46,7 @@ but there are no object values.
 
 -   capitalism - mean wealth goes up, variance increase a lot
 -   communist - mean wealth goes down, variance effectively zero
--   dictatorship - mean welath goes down, variance is down. selected
+-   dictatorship - mean wealth goes down, variance is down. selected
     group wealth is through the roof.
 
 There are some evidence that once one belief is gone, it must be filled

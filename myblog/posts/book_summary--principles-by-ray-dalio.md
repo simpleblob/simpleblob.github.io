@@ -17,12 +17,12 @@ importance: 1
 -   Evolution - one of the greatest force in the universe, a natural
     movement towards adaptation. It applies to many human stuff,
     including morality \"good vs bad\".
--   Evolution as a goal - desire to evolve is humanity\'s most pervasive
+-   Evolution as a goal - desire to evolve is humanity's most pervasive
     driving force. \"personal evolutionary process\"
 -   Hyper-realism - Map vs Territory. We should strive for the truth,
-    accept it, or do something. Don\'t \"hope\" for better reality. An
+    accept it, or do something. Don't \"hope\" for better reality. An
     accurate understanding of reality is the essential foundation of
-    good outcomes. therefore \"Brutal honesty/.\"
+    good outcomes. therefore \"Brutal honesty.\"
 -   Independent thinking - consensus is often wrong (really? wisdom of
     crowds?) and bad opinions can be costly. So think for yourself and
     stress-test your idea with people smarter than you.

@@ -136,7 +136,7 @@ Baby Related
         \"centeredness\" score --\> higher means better pairings of
         those points.
     -   the heatmap network architecture is \"hourglass\" network.
-    -   **pros:** seems robust, get more granualr mask of object shapes
+    -   **pros:** seems robust, get more granular mask of object shapes
     -   **cons:** maybe speed?
 
 ## Others
@@ -156,7 +156,7 @@ Baby Related
     (APB)](https://arxiv.org/abs/1609.05258v2)
 -   \(2015\) [YCB Object Set](https://arxiv.org/abs/1502.03143)
 -   GGCNN paper proposes a set of 20 reproducible items for testing,
-    com-prising comprising 8 3D printed adversarial objects from Dex-Net
+    comprising 8 3D printed adversarial objects from Dex-Net
     paper and 12 items from the APB and YCB object sets, which provide a
     wide enough range of sizes, shapes and difficulties to effectively
     compare results while not excluding use by any common robots,
@@ -290,7 +290,7 @@ it might be even slower.
     [Awesome hand pose
     estimation](https://github.com/xinghaochen/awesome-hand-pose-estimation)
 
--   List of papers with notes from researcher student\'s personal wiki
+-   List of papers with notes from researcher student's personal wiki
     --\> [inria
     wiki](https://github.com/hassony2/inria-research-wiki/wiki/hand-papers)
 
@@ -307,10 +307,10 @@ it might be even slower.
         -   ****important**** - crop each hand images using body pose to
             estimate area
         -   train a detector to predict joint location on each images
-        -   average & contrain in 3D space from multiple view (but same
+        -   average & constrain in 3D space from multiple view (but same
             hand instance)
         -   get 3D point labels (use as ground truth for next
-            interations)
+            iterations)
         -   continue until all the images are properly labeled
     -   Detector Architecture: based on
         [CPM](https://arxiv.org/pdf/1602.00134.pdf) with some
@@ -409,11 +409,11 @@ it might be even slower.
         author
     -   they added Spectral Normalization and additional Discriminators
         to get higher accuracy. (All reasonable ideas, however the
-        improvement isn\'t that clear-cut, looking at the ablation
+        improvement isn't that clear-cut, looking at the ablation
         study)
     -   Dataset Tested: KDD, Arrhythmia, CIFAR10, SVHN
--   \(2019\) \[ICLR\'19\] [Do Deep Generative Models Know What They
-    Don\'t Know?](https://openreview.net/forum?id=H1xwNhCcYm)
+-   \(2019\) \[ICLR'19\] [Do Deep Generative Models Know What They
+    Don't Know?](https://openreview.net/forum?id=H1xwNhCcYm)
 -   \(2018\) [Generative Ensembles for Robust Anomaly
     Detection](https://arxiv.org/abs/1810.01392)
 -   \(2018\) [An overview of deep learning based methods for
@@ -435,7 +435,7 @@ it might be even slower.
             predict next frame distributions
         -   Generative model: VAEs, GANs, adversarial AEs (AAEs) --\>
             likelihood
-        -   evalutaion:
+        -   evaluation:
             -   there are two input options: raw images or optical flow.
                 Flow works much better across the board
             -   no model came out consistently on top, and PCA with flow
@@ -449,17 +449,17 @@ it might be even slower.
     -   at test time, two transformations are proposed for better
         detection
         -   temperature scaling (T) of softmax probabilities (per
-            Hinton\'s [distillation
+            Hinton's [distillation
             paper](https://arxiv.org/abs/1503.02531). `T` is within
             range \[1,1000\]
-        -   small perturbations by a gradient of its own raw image\'s
+        -   small perturbations by a gradient of its own raw image's
             softmax-score. the scaling factor is in \[0,0.004\]
     -   two key insights:
         -   `Temperature scaling` makes the network less sure and expand
             the outlier area (90-100% prob. part)
         -   `Perturbations` mainly affects in-distribution data, almost
             has no effect for out-distribution data
--   \(2018\) \[NIPS\'18\] [Deep Anomaly Detection Using Geometric
+-   \(2018\) \[NIPS'18\] [Deep Anomaly Detection Using Geometric
     Transformations](https://nips.cc/Conferences/2018/Schedule?showEvent=11927)
     -   using target as \"transformation #i\" for the labels while
         training
@@ -473,7 +473,7 @@ it might be even slower.
             learn to detect types of geometric transformation.
         -   on testing, if we have abnormal images, the model will be
             less sure of the type of transformation used.
--   \(2018\) \[NIPS\'18\] [A loss framework for calibrated anomaly
+-   \(2018\) \[NIPS'18\] [A loss framework for calibrated anomaly
     detection](https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection)
 -   \(2018\) [GANomaly: Semi-Supervised Anomaly Detection via
     Adversarial Training](https://arxiv.org/abs/1805.06725)
@@ -568,7 +568,7 @@ it might be even slower.
         -   freeze 3 lowest layers from model A, then put the 4 higher
             layer with random weight, then train with model B dataset
         -   the resulting accuracy does not change
-        -   and actually if we don\'t freeze (let it fine-tune), the
+        -   and actually if we don't freeze (let it fine-tune), the
             accuracy is higher (it generalizes better)
 
 -   \(2014\) [CNN features off-the-Shelf: An astounding baseline for
@@ -631,7 +631,7 @@ it might be even slower.
     images](http://arxiv.org/pdf/1412.1897)
 
     -   keypoints
-        -   use the CNN model\'s prediction probabilities as input
+        -   use the CNN model's prediction probabilities as input
         -   use an evolution algorithm to evolve a random image to fool
             the model
         -   some images are similar to the \"real\" thing, some looks
@@ -668,7 +668,7 @@ it might be even slower.
     algorithms](http://ruder.io/optimizing-gradient-descent/index.html#gradientdescentoptimizationalgorithms)
 
     -   keypoints
-        -   **TLDR; - Use Adam, then try others if it doesn\'t work**
+        -   **TLDR; - Use Adam, then try others if it doesn't work**
         -   SGD - basic gradient descent
         -   mini-batch - update once every batch
         -   online - update once every sample
@@ -910,7 +910,7 @@ it might be even slower.
 
 ## Speech / Other Domain
 
--   \(2020\) [Gwern\'s May newsletter about GPT-3 language model and its
+-   \(2020\) [Gwern's May newsletter about GPT-3 language model and its
     history](https://www.gwern.net/newsletter/2020/05#gpt-3)
 
 -   \(2016\) [End-to-end attention-based large vocabulary speech
@@ -982,7 +982,7 @@ it might be even slower.
     -   keypoints
         -   Q-learning is a reinforcement learning algorithm. It is
             suitable for problem which has finite number of states and
-            we know the value of all state\'s immediate reward.
+            we know the value of all state's immediate reward.
         -   the main idea is do semi-random exploring to eventually map
             out an expected rewards value of that state. The expected
             value is the sum of current and all future rewards value
@@ -1012,7 +1012,7 @@ it might be even slower.
     -   keypoints
         -   aasdf
 
--   \(2015\) [David Silver\'s excellent reinforcement learning course
+-   \(2015\) [David Silver's excellent reinforcement learning course
     with
     video](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 
@@ -1020,7 +1020,7 @@ it might be even slower.
     -   Full information game --\> Agent state = Environment state
     -   History = sequences of Observations, Agent States and Actions.
     -   Markov process means P(St) = P(St \| St+1..), so previous states
-        don\'t matter.
+        don't matter.
     -   partially observable markovs (POMDP)
     -   Policy = function that maps from Agent state to Action
     -   Value function = estimates total future reward given current
@@ -1162,7 +1162,7 @@ predictions from sensor data alone be?
             for multi-labeling comparison
         -   use CNNs as feature extractor
         -   use \"channel-wise attentions\" which is a set of weights to
-            amplify/lower each channel\' response.
+            amplify/lower each channel' response.
         -   use \"Convolutional\" LSTM to retain spatial information
             (not flattening to 1-D vectors)
         -   flatten the output \"hidden state\" to predict weather class
@@ -1225,7 +1225,7 @@ predictions from sensor data alone be?
                 shadow, reflection, contrast, haze.
             -   concat all features into 621-D vectors then use complex
                 voting schemes to classify based on the existing of
-                combinations of features. Tried SVM but didn\'t work
+                combinations of features. Tried SVM but didn't work
                 well.
             -   achieved 76% accuracy (53% normalized)
 
@@ -1281,7 +1281,7 @@ predictions from sensor data alone be?
             for VGA (640x480) images.
     -   some strategy for lightweighted architecture
         -   reduce spatial size of input as quickly as possible
-        -   choose suitable kernel size - in their case it\'s 7x7, 5x5,
+        -   choose suitable kernel size - in their case it's 7x7, 5x5,
             3x3
         -   reduce number of output channel
         -   use multi-scale anchor boxes output, but know where to have
@@ -1368,9 +1368,9 @@ predictions from sensor data alone be?
     -   precise simulation of the brain chemically is very difficult.
         However, we can possibly create the brain model that is
         \"computationally\" accurate. we can even use this model to
-        experiment and fix what\'s wrong with our brain.
+        experiment and fix what's wrong with our brain.
     -   Computationally means to understand the subject functions --
-        enough to create a replica of them. For example, we don\'t yet
+        enough to create a replica of them. For example, we don't yet
         understand everything about kidneys about we can create
         artificial ones that works well now.
     -   What we know now: very little, but we know some \"constraint\"
@@ -1502,7 +1502,7 @@ predictions from sensor data alone be?
             case-I (low-risk type) route with substantially shorter time
             to approval.
         -   There are two approach in using computer technology
-            -   measurements to aid doctors\' decisions. (CADe) --
+            -   measurements to aid doctors' decisions. (CADe) --
                 doctors disliked them, not doing well as a result.
             -   measurements AND diagnosis (CADx) -- never been approved
                 by FDA before.
@@ -1552,7 +1552,7 @@ predictions from sensor data alone be?
             -   Therefore, we can use the \"geodesic\" distance instead
                 of euclidean distance to measure the actual distance
                 between important face features. If the distances are
-                approximately the same, then it\'s the same face.
+                approximately the same, then it's the same face.
             -   Thee kind of techniques have been use to recognize
                 diferent faces, including identical twins.
             -   Geometric deep learning: applying CNNs on 3D surface via
@@ -1564,7 +1564,7 @@ predictions from sensor data alone be?
     Theory](http://colah.github.io/posts/2015-09-Visual-Information/ )
 
     -   keypoints
-        -   Shannon\'s Entropy formula - H(X)
+        -   Shannon's Entropy formula - H(X)
             -   this is a way to estimate how many bits are needed to
                 encode given information with certain distributions
             -   the estimated bits are from the best possible encodings
@@ -1704,7 +1704,7 @@ predictions from sensor data alone be?
 -   [OpenAI](https://www.openai.com/)
 -   [Distill](http://distill.pub/)
 -   [Andrej Karpathy Blog](http://karpathy.github.io/)
--   [Colah\'s Blog](http://colah.github.io/)
+-   [Colah's Blog](http://colah.github.io/)
 -   [WildML](http://www.wildml.com/)
 -   [FastML](http://www.fastml.com/)
 -   [TheMorningPaper](https://blog.acolyer.org)

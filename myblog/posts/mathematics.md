@@ -23,7 +23,7 @@ playlist](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_
 -   linear transformation
     -   the linear transformation can be thought of the squishing or
         enlarging the nD dimensional space
-        -   it won\'t be linear if the origin moves or the spacing
+        -   it won't be linear if the origin moves or the spacing
             becomes unequal
     -   we can put the \"new\" basis vector as column 1, 2,... of the
         transformation matrix. we use the dot product to apply the
@@ -47,7 +47,7 @@ playlist](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_
         means many possible inverses (I think)
 -   cross product
     -   (example: 2 dimension). the cross product between 2 vectors is
-        -   a unit vector orthogonalto both input vectors (which
+        -   a unit vector orthogonal to both input vectors (which
             direction depends on the right-hand order)
         -   then we scale this unit vector by the determinant (area) of
             the 2 input vectors
@@ -59,7 +59,7 @@ playlist](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_
     -   then we can make the transformation matrix C = inv~Q~ \* B \* Q
     -   then we can apply to A, getting A~hat~ = C \* A in basis~1~
 -   eigen vectors and eigen values
-    -   eigen vectors are the \"orthogonal\" vectors that don\'t not
+    -   eigen vectors are the \"orthogonal\" vectors that don't
         change direction after some transformation Q
     -   eigen values is the scaling value (lengthen/shorten) associated
         with certain eigen vectors
