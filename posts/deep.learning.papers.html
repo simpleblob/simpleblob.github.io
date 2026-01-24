@@ -185,7 +185,7 @@ center)</li>
 <li>then enumerating all the pairings and calculate the "centeredness"
 score –&gt; higher means better pairings of those points.</li>
 <li>the heatmap network architecture is "hourglass" network.</li>
-<li><strong>pros:</strong> seems robust, get more granualr mask of
+<li><strong>pros:</strong> seems robust, get more granular mask of
 object shapes</li>
 <li><strong>cons:</strong> maybe speed?</li>
 </ul></li>
@@ -208,11 +208,10 @@ Benchmark (APB)</a></li>
 <li>(2015) <a href="https://arxiv.org/abs/1502.03143">YCB Object
 Set</a></li>
 <li>GGCNN paper proposes a set of 20 reproducible items for testing,
-com-prising comprising 8 3D printed adversarial objects from Dex-Net
-paper and 12 items from the APB and YCB object sets, which provide a
-wide enough range of sizes, shapes and difficulties to effectively
-compare results while not excluding use by any common robots, grippers
-or camera</li>
+comprising 8 3D printed adversarial objects from Dex-Net paper and 12
+items from the APB and YCB object sets, which provide a wide enough
+range of sizes, shapes and difficulties to effectively compare results
+while not excluding use by any common robots, grippers or camera</li>
 <li>(2013) <a href="http://pr.cs.cornell.edu/deepgrasping/">Cornell
 grasping dataset</a> - 1k RGBD with grasp bbox labels</li>
 </ul>
@@ -380,7 +379,7 @@ model, but it might be even slower.</p>
 –&gt; <a
 href="https://github.com/xinghaochen/awesome-hand-pose-estimation">Awesome
 hand pose estimation</a></p></li>
-<li><p>List of papers with notes from researcher student's personal wiki
+<li><p>List of papers with notes from researcher student’s personal wiki
 –&gt; <a
 href="https://github.com/hassony2/inria-research-wiki/wiki/hand-papers">inria
 wiki</a></p></li>
@@ -399,9 +398,9 @@ in real-time but never provide benchmark any.</li>
 <li>****important**** - crop each hand images using body pose to
 estimate area</li>
 <li>train a detector to predict joint location on each images</li>
-<li>average &amp; contrain in 3D space from multiple view (but same hand
-instance)</li>
-<li>get 3D point labels (use as ground truth for next interations)</li>
+<li>average &amp; constrain in 3D space from multiple view (but same
+hand instance)</li>
+<li>get 3D point labels (use as ground truth for next iterations)</li>
 <li>continue until all the images are properly labeled</li>
 </ul></li>
 <li>Detector Architecture: based on <a
@@ -529,12 +528,12 @@ href="https://github.com/houssamzenati/Adversarially-Learned-Anomaly-Detection">
 author</li>
 <li>they added Spectral Normalization and additional Discriminators to
 get higher accuracy. (All reasonable ideas, however the improvement
-isn't that clear-cut, looking at the ablation study)</li>
+isn’t that clear-cut, looking at the ablation study)</li>
 <li>Dataset Tested: KDD, Arrhythmia, CIFAR10, SVHN</li>
 </ul></li>
-<li>(2019) [ICLR'19] <a
+<li>(2019) [ICLR’19] <a
 href="https://openreview.net/forum?id=H1xwNhCcYm">Do Deep Generative
-Models Know What They Don't Know?</a></li>
+Models Know What They Don’t Know?</a></li>
 <li>(2018) <a href="https://arxiv.org/abs/1810.01392">Generative
 Ensembles for Robust Anomaly Detection</a></li>
 <li>(2018) <a href="https://arxiv.org/abs/1801.03149">An overview of
@@ -559,7 +558,7 @@ deviation</li>
 frame distributions</li>
 <li>Generative model: VAEs, GANs, adversarial AEs (AAEs) –&gt;
 likelihood</li>
-<li>evalutaion:
+<li>evaluation:
 <ul>
 <li>there are two input options: raw images or optical flow. Flow works
 much better across the board</li>
@@ -577,10 +576,10 @@ href="https://openreview.net/forum?id=H1VGkIxRZ">open-review</a>
 = 0. (I think at training time, the target is always 1)</li>
 <li>at test time, two transformations are proposed for better detection
 <ul>
-<li>temperature scaling (T) of softmax probabilities (per Hinton's <a
+<li>temperature scaling (T) of softmax probabilities (per Hinton’s <a
 href="https://arxiv.org/abs/1503.02531">distillation paper</a>.
 <code>T</code> is within range [1,1000]</li>
-<li>small perturbations by a gradient of its own raw image's
+<li>small perturbations by a gradient of its own raw image’s
 softmax-score. the scaling factor is in [0,0.004]</li>
 </ul></li>
 <li>two key insights:
@@ -591,7 +590,7 @@ expand the outlier area (90-100% prob. part)</li>
 almost has no effect for out-distribution data</li>
 </ul></li>
 </ul></li>
-<li>(2018) [NIPS'18] <a
+<li>(2018) [NIPS’18] <a
 href="https://nips.cc/Conferences/2018/Schedule?showEvent=11927">Deep
 Anomaly Detection Using Geometric Transformations</a>
 <ul>
@@ -610,7 +609,7 @@ to detect types of geometric transformation.</li>
 of the type of transformation used.</li>
 </ul></li>
 </ul></li>
-<li>(2018) [NIPS'18] <a
+<li>(2018) [NIPS’18] <a
 href="https://papers.nips.cc/paper/7422-a-loss-framework-for-calibrated-anomaly-detection">A
 loss framework for calibrated anomaly detection</a></li>
 <li>(2018) <a href="https://arxiv.org/abs/1805.06725">GANomaly:
@@ -728,7 +727,7 @@ model-B, using completely seperate classes</li>
 <li>freeze 3 lowest layers from model A, then put the 4 higher layer
 with random weight, then train with model B dataset</li>
 <li>the resulting accuracy does not change</li>
-<li>and actually if we don't freeze (let it fine-tune), the accuracy is
+<li>and actually if we don’t freeze (let it fine-tune), the accuracy is
 higher (it generalizes better)</li>
 </ul></li>
 </ul></li>
@@ -797,7 +796,7 @@ unrecognizable images</a></p>
 <ul>
 <li>keypoints
 <ul>
-<li>use the CNN model's prediction probabilities as input</li>
+<li>use the CNN model’s prediction probabilities as input</li>
 <li>use an evolution algorithm to evolve a random image to fool the
 model</li>
 <li>some images are similar to the "real" thing, some looks just like
@@ -836,7 +835,7 @@ summary of gradient descent optimization algorithms</a></p>
 <ul>
 <li>keypoints
 <ul>
-<li><strong>TLDR; - Use Adam, then try others if it doesn't
+<li><strong>TLDR; - Use Adam, then try others if it doesn’t
 work</strong></li>
 <li>SGD - basic gradient descent</li>
 <li>mini-batch - update once every batch</li>
@@ -1124,7 +1123,7 @@ sequences with recurrent neural networks, A. Graves.</a></li>
 <h2 id="speech-other-domain">Speech / Other Domain</h2>
 <ul>
 <li><p>(2020) <a
-href="https://www.gwern.net/newsletter/2020/05#gpt-3">Gwern's May
+href="https://www.gwern.net/newsletter/2020/05#gpt-3">Gwern’s May
 newsletter about GPT-3 language model and its history</a></p></li>
 <li><p>(2016) <a href="https://arxiv.org/pdf/1508.04395">End-to-end
 attention-based large vocabulary speech recognition, D. Bahdanau et
@@ -1198,7 +1197,7 @@ painless Q-learning tutorial</a></p>
 <ul>
 <li>Q-learning is a reinforcement learning algorithm. It is suitable for
 problem which has finite number of states and we know the value of all
-state's immediate reward.</li>
+state’s immediate reward.</li>
 <li>the main idea is do semi-random exploring to eventually map out an
 expected rewards value of that state. The expected value is the sum of
 current and all future rewards value (given discount factors).</li>
@@ -1237,13 +1236,13 @@ with deep reinforcement learning</a></p>
 </ul></li>
 <li><p>(2015) <a
 href="http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html">David
-Silver's excellent reinforcement learning course with video</a></p>
+Silver’s excellent reinforcement learning course with video</a></p>
 <ul>
 <li>Agents, Environments, Actions, Rewards</li>
 <li>Full information game –&gt; Agent state = Environment state</li>
 <li>History = sequences of Observations, Agent States and Actions.</li>
 <li>Markov process means P(St) = P(St | St+1..), so previous states
-don't matter.</li>
+don’t matter.</li>
 <li>partially observable markovs (POMDP)</li>
 <li>Policy = function that maps from Agent state to Action</li>
 <li>Value function = estimates total future reward given current state
@@ -1388,7 +1387,7 @@ example, can be both sunny and foggy) so should classify accordingly
 multi-labeling comparison</li>
 <li>use CNNs as feature extractor</li>
 <li>use "channel-wise attentions" which is a set of weights to
-amplify/lower each channel' response.</li>
+amplify/lower each channel’ response.</li>
 <li>use "Convolutional" LSTM to retain spatial information (not
 flattening to 1-D vectors)</li>
 <li>flatten the output "hidden state" to predict weather class</li>
@@ -1461,7 +1460,7 @@ cloudy</li>
 reflection, contrast, haze.</li>
 <li>concat all features into 621-D vectors then use complex voting
 schemes to classify based on the existing of combinations of features.
-Tried SVM but didn't work well.</li>
+Tried SVM but didn’t work well.</li>
 <li>achieved 76% accuracy (53% normalized)</li>
 </ul></li>
 </ul></li>
@@ -1531,7 +1530,7 @@ has a good summary of past papers however)
 <li>some strategy for lightweighted architecture
 <ul>
 <li>reduce spatial size of input as quickly as possible</li>
-<li>choose suitable kernel size - in their case it's 7x7, 5x5, 3x3</li>
+<li>choose suitable kernel size - in their case it’s 7x7, 5x5, 3x3</li>
 <li>reduce number of output channel</li>
 <li>use multi-scale anchor boxes output, but know where to have "dense"
 number of predictions.</li>
@@ -1635,9 +1634,9 @@ Are Built: Principles of Computational Neuroscience</a></p>
 <li>precise simulation of the brain chemically is very difficult.
 However, we can possibly create the brain model that is
 "computationally" accurate. we can even use this model to experiment and
-fix what's wrong with our brain.</li>
+fix what’s wrong with our brain.</li>
 <li>Computationally means to understand the subject functions – enough
-to create a replica of them. For example, we don't yet understand
+to create a replica of them. For example, we don’t yet understand
 everything about kidneys about we can create artificial ones that works
 well now.</li>
 <li>What we know now: very little, but we know some "constraint" rules
@@ -1779,7 +1778,7 @@ industry.</li>
 (low-risk type) route with substantially shorter time to approval.</li>
 <li>There are two approach in using computer technology
 <ul>
-<li>measurements to aid doctors' decisions. (CADe) – doctors disliked
+<li>measurements to aid doctors’ decisions. (CADe) – doctors disliked
 them, not doing well as a result.</li>
 <li>measurements AND diagnosis (CADx) – never been approved by FDA
 before.</li>
@@ -1833,7 +1832,7 @@ the 3D geometry</li>
 actual texture if projected on the plane</li>
 <li>Therefore, we can use the "geodesic" distance instead of euclidean
 distance to measure the actual distance between important face features.
-If the distances are approximately the same, then it's the same
+If the distances are approximately the same, then it’s the same
 face.</li>
 <li>Thee kind of techniques have been use to recognize diferent faces,
 including identical twins.</li>
@@ -1852,7 +1851,7 @@ explanation of Information Theory</a></p>
 <ul>
 <li>keypoints
 <ul>
-<li>Shannon's Entropy formula - H(X)
+<li>Shannon’s Entropy formula - H(X)
 <ul>
 <li>this is a way to estimate how many bits are needed to encode given
 information with certain distributions</li>
@@ -2018,7 +2017,7 @@ School 2016, Stanford</a></li>
 <li><a href="https://www.openai.com/">OpenAI</a></li>
 <li><a href="http://distill.pub/">Distill</a></li>
 <li><a href="http://karpathy.github.io/">Andrej Karpathy Blog</a></li>
-<li><a href="http://colah.github.io/">Colah's Blog</a></li>
+<li><a href="http://colah.github.io/">Colah’s Blog</a></li>
 <li><a href="http://www.wildml.com/">WildML</a></li>
 <li><a href="http://www.fastml.com/">FastML</a></li>
 <li><a href="https://blog.acolyer.org">TheMorningPaper</a></li>
