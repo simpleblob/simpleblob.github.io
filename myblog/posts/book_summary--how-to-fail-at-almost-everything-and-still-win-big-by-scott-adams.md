@@ -27,7 +27,7 @@ importance: 1
 ## Fail-toward-success tactics
 
 1.  Goals are for losers. Use Systems.
-2.  Your mind isn\'t magic. It\'s an organic computer you can (sort of)
+2.  Your mind isn't magic. It's an organic computer you can (sort of)
     program.
 3.  The most important metric to track is your personal energy.
 4.  Every skill you acquire doubles your odds of success.
@@ -45,35 +45,35 @@ importance: 1
 2.  Experience of people you know (more bias)
 3.  Experts (They work for money, not for truth)
 4.  Scientific studies (correlation not causation)
-5.  Common sense (works until it\'s wrong)
+5.  Common sense (works until it's wrong)
 6.  Pattern recognition (Patterns, coincidence,  and personal bias look
     alike)
 
-That\'s why you should try to use different sources and hope that it
+That's why you should try to use different sources and hope that it
 rules out random noise once combined.
 
 Look for consistency in answers. *Multiple models by Charlie Munger.*
 
 ## Failure as tool to get information
 
-Failure always brings something valuable with it. Don\'t let it leave
+Failure always brings something valuable with it. Don't let it leave
 until you extract that value. Mug the shit out of it.
 
 ## Goal vs System
 
-A goal is a specific objective that you either achieve or don\'t
+A goal is a specific objective that you either achieve or don't
 sometime in the future.
 
 A system is something you do on a regular basis that increases your odds
 of happiness in the long run.
 
-This is partly semantics, but it\'s helpful to think this way. Same as
+This is partly semantics, but it's helpful to think this way. Same as
 career capital.
 
-It\'s roughly more like a single point of success vs daily practices to
+It's roughly more like a single point of success vs daily practices to
 get there.
 
-However, a daily practice can help you reach multiple goals. That\'s a
+However, a daily practice can help you reach multiple goals. That's a
 good side effect. Be flexible, do pivot if reasonable.
 
 ## Deciding vs Wanting Success
@@ -122,9 +122,9 @@ cubicle behind gave me an enormous amount of energy.
 3.  Place matching -- Bed only for sleeping, Desk for work, couch for
     games
 4.  Keep things Tidy - mentally clear
-5.  Don\'t be scared of lack of knowledge of \"how to do something\" -
+5.  Don't be scared of lack of knowledge of \"how to do something\" -
     90% Can be solved by Google and the 10% by asking other people
-6.  Don\'t be an asshole
+6.  Don't be an asshole
 7.  Set the right priorities
     1.  Your health
     2.  Your economics (money, career)

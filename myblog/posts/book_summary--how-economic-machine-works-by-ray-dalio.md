@@ -22,7 +22,7 @@ needed to understand it.
 
 Price = Total money or credit ÷ total quantity sold.
 
-All changes economic activity are due to change money/credit or
+All changes in economic activity are due to change money/credit or
 quantity. The money/credit part is much easier to change.
 
 ## Buyer segment:

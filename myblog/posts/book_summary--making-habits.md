@@ -16,7 +16,7 @@ On average 10 weeks. It depends on the task difficulty.
 
 ## 3 characteristics of habits
 
-1.  Automatic (mostly unconciously)
+1.  Automatic (mostly unconsciously)
 2.  Emotionless (numbed through repetition)
 3.  Context-based trigger (by environment or other means)
 

@@ -13,22 +13,22 @@ importance: 1
 ## Self-controls come from prefrontal cortex. Resisting instinct from brain stem.
 
 -   Instinctual self (brain stem) always act first. We need to change
-    directions after that. Therefore it\'s important to keep tabs of
+    directions after that. Therefore it's important to keep tabs of
     moment of decisions.
 -   Heart rate variability is the best proxy for willpower reserve. You
     can increase it by destressing (exercise, sleep, meditation). Quick
     boost by breathing slowly (5 times/min).
 -   Willpower is like a muscle. Keep pushing to grow stronger. Find
     strong wants power, use it at your weakest.
--   Sin/Virtue. Don\'t justify good/bad behavior as moral accounting.
+-   Sin/Virtue. Don't justify good/bad behavior as moral accounting.
     Remind self that a misstep today will be repeated in future
     behavior. (Making decisions have more weight)
 -   Desire/Reward loop. Dopamine drives us to seek reward, whether the
     actual reward is there or not. Slow down. Notice the promised vs
     actual. Use it to your advantage. This might be key to your
     happiness engineering.
--   We\'re only human. Forgive yourself when willpower failures happen.
-    It\'s the feeling of shame and guilt that will break you.
+-   We're only human. Forgive yourself when willpower failures happen.
+    It's the feeling of shame and guilt that will break you.
 -   Predicting how and when you might be tempted increases the chance
     that you will stay on track.
 -   Wait 10 minutes for any temptation - a strategy to hold back the
@@ -40,7 +40,7 @@ importance: 1
 
 -   A mind trick that makes future rewards less enticing than the
     present.
--   Reverse trick - Act as if you\'ve already obtained future rewards,
+-   Reverse trick - Act as if you've already obtained future rewards,
     and will lose it if you go for instant gratification at present.
 
 ## Precommitment
@@ -64,7 +64,7 @@ importance: 1
 
 ## Social Proof
 
--   Follow whatever is considered the group\'s \"normals\". Religion.
+-   Follow whatever is considered the group's \"normals\". Religion.
     Tradition. Politics.
 -   Use social proof (imagined) to appeal to our emotions. Easier than
     rational arguments because it directly affect the Beast (System 1),
@@ -74,8 +74,8 @@ importance: 1
 
 ## Ironic Rebounds
 
--   Suppressing thoughts has an opposite effect. Don\'t think about
-    something --\> think about it. Try to sleep --\> can\'t sleep.
+-   Suppressing thoughts has an opposite effect. Don't think about
+    something --\> think about it. Try to sleep --\> can't sleep.
 -   Solution: Let any thought flows through you, feel what you feel, but
-    don\'t believe it.
--   Dune : Bene Gesserit\'s Litany Against Fear.
+    don't believe it.
+-   Dune : Bene Gesserit's Litany Against Fear.

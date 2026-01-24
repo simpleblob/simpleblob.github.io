@@ -56,7 +56,7 @@ Anything less than 3 months is definitely on the shallow end.
     2.  x hours every day of deep work (in the morning)
     3.  x hours every day (can switch focus at will)
 2.  Ritualize it. Have triggers. Enforce a fixed x hours. Then just
-    don\'t do it at all for the rest of the day
+    don't do it at all for the rest of the day
 3.  Downtime is essential for optimal schedule. At the end of workday,
     shut down all your work action/thoughts. say "Shutdown complete\"
 4.  Embrace boredom. Train your brain **not** to act on your first

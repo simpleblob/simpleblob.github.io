@@ -81,7 +81,7 @@ here.](https://www.usuhs.edu/sites/default/files/media/mem/pdf/navysealfitnessgu
     -   Detraining: need to keep regular exercises to maintain fitness.
         FITT = Frequency, Intensity, Time & Type
     -   Active Recovery: continue exercises at moderate pace (30-50%
-        MaxHR) warm-up and warm-down. This helps drrive lactic acid out
+        MaxHR) warm-up and warm-down. This helps drive lactic acid out
         faster than inactivity.
 
 ## Chapter 2: SEAL Mission-Related Physical Activities
@@ -112,7 +112,7 @@ days of the week"
 -   Navy Seals should maintain running 20 to 40 miles (32 to 64 km) per
     week. (6 to 12 km, 5 days per week)
 -   Running Shoes Terminology and how to buy: read more in PDF
--   Building up Our Mileage. Increasing to quickly can cause injuries.
+-   Building up Our Mileage. Increasing too quickly can cause injuries.
     -   Run at least 3 to 4 times per week or every other day. (with 1-2
         rest days per week)
     -   Run at an even pace that we can talk comfortably.
@@ -192,4 +192,4 @@ This is skipped, since we have no suitable pool nearby.
 
 -   asdf
 
-## Chapter 9-end: Not relevent to me. might read later.
+## Chapter 9-end: Not relevant to me. might read later.

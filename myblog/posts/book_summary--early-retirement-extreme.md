@@ -13,7 +13,7 @@ importance: 1
 ## The lock-in
 
 -   Mass delusion of spending money = one sign of success
--   Comparison of delusion with [Plato\'s
+-   Comparison of delusion with [Plato's
     cave](https://en.wikipedia.org/wiki/Allegory_of_the_Cave)
     -   common life track: school -\> university -\> career. not so
         efficient.
@@ -127,7 +127,7 @@ constraints.
         -   know why and which kinds of food promote health and which
             kinds destroy health
         -   maintain good habits. know how to preserve food and how to
-            tesll when food is spoiled.
+            tell when food is spoiled.
         -   be able to compete in local sports competitions.
         -   be able to perform physically while exhausted, hungry, or
             tired. Test: carrying an unconscious person out of a burning
@@ -150,11 +150,11 @@ constraints.
             critical thinking in all aspects of life to reach a degree
             of rational certainty. Be open to new ideas but do not
             accept anything without examination.
-        -   synthesize interdiscilinary information and laterally
-            connect similarities which are not immediately apprent,
-            discovering new models and precedures.
-        -   evaluate different methods, models, and precedures while
-            effectively ranking them for utility, and piking the best
+        -   synthesize interdisciplinary information and laterally
+            connect similarities which are not immediately apparent,
+            discovering new models and procedures.
+        -   evaluate different methods, models, and procedures while
+            effectively ranking them for utility, and picking the best
             one while recognizing the pertinence of other methods.
             Pursue relevant and correct knowledge persistently and
             consistently. Master the fundamentals.
@@ -167,11 +167,11 @@ constraints.
             see the unseen.
         -   learn to consider more than the consequences of a choice for
             just one group of people, but for all others as well.
-        -   realize tha economic agents all represent special interests
+        -   realize that economic agents all represent special interests
             that typically interpret the situation according to their
             own interests or political views.
         -   understand the difference between assets and liabilities.
-            Understand leveragte and cash flows. In particular, learn
+            Understand leverage and cash flows. In particular, learn
             what is an investment (an income generating asset) and what
             is not an investment (items for personal use).
         -   know the law of supply and demand, the difference between
@@ -185,7 +185,7 @@ constraints.
         -   be able to appraise value in all matters to make sound
             decisions.
         -   not waste time, money, effort, or resources.
-        -   not be subject to emotional manipulation or egage in
+        -   not be subject to emotional manipulation or engage in
             wishful, magical thinking, believing things are true because
             he would like them to be true -- or worse, believing he can
             influence external events by thinking positively about them.
@@ -208,11 +208,11 @@ constraints.
             with other people.
         -   learn how to sell, barter, swap, and give things away.
         -   learn how to network and build your social capital.
-        -   get involved in politices on some level.
+        -   get involved in politics on some level.
     -   Technical
         -   have knowledge of the skills of different professions to be
             able to critically judge the services of professionals.
-        -   have a working understanding of all the techonology you use
+        -   have a working understanding of all the technology you use
             to understand its limits and benefits.
         -   learn how to select the optimal tools for your use, how to
             maintain them, and how to repair them when they break down.
@@ -223,7 +223,7 @@ constraints.
             your area, and be able to recognize them.
         -   know which food is in season and how much oil, water, and
             fertilizer it takes to grow/raise the food (out of season,
-            out of location) and how it is sensitive t o Liebig\'s Law
+            out of location) and how it is sensitive to Liebig's Law
             of the minimum.
         -   grow and sustain a garden without using pesticides, hybrid
             seeds, chemical-based fertilizer, etc. A garden and indeed
@@ -237,19 +237,19 @@ constraints.
             action is not always a good idea.
         -   always consider the system and understand both the parts and
             the whole. No parts exist without the whole and the whole
-            doesn\'t exist without the parts. Everything is related to
+            doesn't exist without the parts. Everything is related to
             everything else, mostly indirectly. Thus, changing one part
             will change the whole.
         -   recognize multiple bottom lines, flows, and balances in
             terms of primary, secondary, and tertiary consumers,
             producers, and decomposers.
         -   use the maximum power principle, which states that systems
-            srive to maximize the rate of useful work -- that is, to not
+            strive to maximize the rate of useful work -- that is, to not
             waste energy to its environment.
         -   understand the concept of characteristic scales in terms of
             change and the effect of limits on competition and
             cooperation. Understand the difference between positive
-            feedbakcs and negative feedbacks (both are needed) and how
+            feedbacks and negative feedbacks (both are needed) and how
             linking feedbacks lead to cycles, runaways, or overshoots.
         -   study the structure and principles of different systems to
             build a collection of models, in order to understand other
@@ -259,10 +259,10 @@ constraints.
         important than specific techniques, because it is always
         applicable to other fields.
     -   People remember most of what they do, some of what they say, but
-        little of what they see or hear. It\'s therefore important to do
+        little of what they see or hear. It's therefore important to do
         things. In cooking, try to leave ingredients out or substitute
         in new ones to see what happens. In sports, practice unmastered
-        techniques acticely and put them together with other techniques.
+        techniques actively and put them together with other techniques.
         In finance, try investing in different things.
 -   Gauging mastery
     -   one method is using tenure (time spent). 1k hours to Journeyman,
@@ -276,7 +276,7 @@ constraints.
         the system more predictable and easier to maintain/change. An
         even better way is to use abstractions (lossless compression) to
         maintain capability and simplify systems.
-    -   complex systems, if designed well, are more resilient thatn
+    -   complex systems, if designed well, are more resilient than
         simple systems.
     -   work switch has cost, depending on the nature of work. (Managers
         vs Hackers)
@@ -296,7 +296,7 @@ constraints.
         one job (income module), or having several paths to get what we
         want (expense module) (a hair cut -- go to hair salon, doing it
         ourselves, or know a friend with the skill)
-    -   Don\'t work to earn money. Work to learn new skills, gain new
+    -   Don't work to earn money. Work to learn new skills, gain new
         connections, and create new opportunities.
     -   Focus on hobbies/projects that are at least free or can produce
         values / earn money.
@@ -330,7 +330,7 @@ constraints.
     -   Work for the purpose of earning money for no more than five
         years of your life or five hours a week.
     -   Avoid generating waste and find ways to use the waste of others.
-    -   Learn to use the system to your advantage, but don\'t be evil!
+    -   Learn to use the system to your advantage, but don't be evil!
     -   Serve yourself rather than having others serve you. Instead,
         help them.
     -   Keep running costs down but pay for value.
@@ -372,14 +372,14 @@ constraints.
 -   Every(?) ecosystem loop: Resources -\> Producers -\> Consumers -\>
     Decomposers
     -   Modern economics only has Producers -\> Consumers
--   Economy can\'t keep growing forever without killing itself if the
-    cycle isn\'t completed.
+-   Economy can't keep growing forever without killing itself if the
+    cycle isn't completed.
 -   Key goal for an ERE kind of investors is to create an
     ecosystem/asset that can sustain itself + the investor.
 -   Since (full-salaried) pay often has more to do with negotiation
     skills, policis, or tenure rather than productivity, the workforce
     is divided into three kinds of people -- work horses (clueless),
-    show horses (political), and horses\' asses (doing minimum work
+    show horses (political), and horses' asses (doing minimum work
     since pay is the same).
 -   Full-time salaried work is still good for fund accumulating phase,
     but do optimize/trade-off for time and freedom.

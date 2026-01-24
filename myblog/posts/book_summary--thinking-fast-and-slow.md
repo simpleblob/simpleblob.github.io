@@ -27,9 +27,9 @@ of one person in a crowded room.
 
 Experts often have vast and varied experiences in specific domain such
 that they have the right \"intuition\". Example - firefighter avoiding
-death​traps or chess master\'s \"checkmate in 5 moves\".
+death​traps or chess master's \"checkmate in 5 moves\".
 
-System 1&2 are fictitious caharcters, handy mental Models. They don\'t
+System 1&2 are fictitious characters, handy mental Models. They don't
 actually exist as separate entities in the brain.
 
 The best we can do with these 2 systems is a compromise: learn to
@@ -42,7 +42,7 @@ Pupil dilation is an indicator of mental effort and engagement -- A
 window to your soul.
 
 As a person becomes skilled in tasks, the demand for effort (energy)
-diminishes -- with fewer brain regains involved. (Chunking into habits?)
+diminishes -- with fewer brain regions involved. (Chunking into habits?)
 
 Talent has similar effects. Highly intelligent (IQ?) Individuals need
 less effort to solve same problems.
@@ -107,12 +107,12 @@ Halo effect - 1st impression biases your view of the whole thing. Order
 of information consumed matter! For example: Susan is friendly.  Is she
 charitable? (System 1: probably yes!)
 
-One - sided effect - System 1 always weave a stpry and jump to
+One - sided effect - System 1 always weave a story and jump to
 conclusion with available data, no matter the quality and quantity. Be
 especially CAREFUL when being presented with one sided information.
 
 System 2 directs attention and searches memory to find answers. System 2
-does basic assessments computation continuously. Here\'s some examples.
+does basic assessments computation continuously. Here's some examples.
 
 -   safety & familiarity - good mood and cognitive ease when meeting
     friends instead of strangers on the street. Under 1 sec recognition.
@@ -120,5 +120,5 @@ does basic assessments computation continuously. Here\'s some examples.
     Politician = strong chin + slight confident smile.
 -   Sets & prototypes - system 1 do well on estimating averages but
     badly on sums. 100 vs 10k People died  = same effect.
--   Value intensity across dimensions - \"how r all is a man who is as
+-   Value intensity across dimensions - \"how tall is a man who is as
     tall as Julie was intelligent? \"
