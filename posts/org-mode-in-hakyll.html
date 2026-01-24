@@ -26,22 +26,28 @@
 
             <div class="info">
     <em>
-    creation date: 2017-11-25, 
+    creation date: 2017-11-25,
     latest update: 2017-11-26
     </em>
 </div>
 
-<p>Testing Pandoc's emacs-org file conversion to html, based on this <a href="https://github.com/turboMaCk/turboMaCk.github.io/blob/develop/posts/2016-12-21-org-mode-in-hakyll.org">page</a>.</p>
-<p>This is the end of post itself. Everything below is just to test how Pandoc handles org files.</p>
+<p>Testing Pandoc's emacs-org file conversion to html, based on this <a
+href="https://github.com/turboMaCk/turboMaCk.github.io/blob/develop/posts/2016-12-21-org-mode-in-hakyll.org">page</a>.</p>
+<p>This is the end of post itself. Everything below is just to test how
+Pandoc handles org files.</p>
 <h1 id="this-is-h1">This is H1</h1>
 <p>There is paragraph under h1</p>
 <h2 id="h2">H2</h2>
 <h3 id="h3">H3</h3>
 <h1 id="some-basic-test">Some basic test</h1>
-<p>This is <strong>bold</strong>, <em>italic</em>, <code>code</code>, <code>verbatim</code> and <del>strike</del> text.</p>
+<p>This is <strong>bold</strong>, <em>italic</em>, <code
+class="verbatim">code</code>, <code>verbatim</code> and
+<del>strike</del> text.</p>
 <ul>
-<li>However <strong><em>bold and italic</em></strong> doesn't play well when used together like in markdown.</li>
-<li>However <em><strong>bold and italic</strong></em> doesn't play well when used together like in markdown.</li>
+<li>However <strong><em>bold and italic</em></strong> doesn't play well
+when used together like in markdown.</li>
+<li>However <strong><em>bold and italic</em></strong> doesn't play well
+when used together like in markdown.</li>
 </ul>
 <h1 id="list">List</h1>
 <ul>
@@ -57,29 +63,39 @@
 <h2 id="other-style">Other style</h2>
 <ul>
 <li>Bullet</li>
-<li>Another bullet * child * deep</li>
+<li>Another bullet
+<ul>
+<li>child
+<ul>
+<li>deep</li>
+</ul></li>
+</ul></li>
 </ul>
 <h2 id="other-style-1">Other style</h2>
-<ol>
+<ol type="1">
 <li>Bullet</li>
 <li>Another bullet
-<ol>
+<ol type="1">
 <li>child
-<ol>
+<ol type="1">
 <li>deep</li>
 </ol></li>
 </ol></li>
 </ol>
-<p>Style <code>*</code> isn't supported.</p>
+<p>Style <code class="verbatim">*</code> isn't supported.</p>
 <h1 id="links">Links</h1>
-<p><em><a href="http://orgmode.org/" class="uri">http://orgmode.org/</a></em></p>
+<p><span class="spurious-link" target="link to org mode homepage"><em><a
+href="http://orgmode.org/"
+class="uri">http://orgmode.org/</a></em></span></p>
 <h1 id="check-list-13-33">Check List [1/3] [33%]</h1>
-<ul>
-<li>[ ] Item</li>
-<li>[ ] Item</li>
-<li>[X] Checked item</li>
+<ul class="task-list">
+<li><label><input type="checkbox" />Item</label></li>
+<li><label><input type="checkbox" />Item</label></li>
+<li><label><input type="checkbox" checked="" />Checked item</label></li>
 </ul>
-<p>Heading and has special class however <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> are plain.</p>
+<p>Heading and has special class however <code
+class="verbatim">&lt;ul&gt;</code> and <code
+class="verbatim">&lt;li&gt;</code> are plain.</p>
 <h1 id="task-list">Task List</h1>
 <h2 id="some-to-do"><span class="todo TODO">TODO</span> some to-do</h2>
 <h2 id="done-to-do"><span class="done DONE">DONE</span> done to-do</h2>
@@ -88,84 +104,108 @@
 <table>
 <thead>
 <tr class="header">
-<th>number</th>
-<th>description</th>
+<th style="text-align: left;">number</th>
+<th style="text-align: left;">description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>looooong long name</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">looooong long name</td>
 </tr>
 <tr class="even">
-<td>5</td>
-<td>name</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">name</td>
 </tr>
 </tbody>
 </table>
-<p><code>&lt;tr&gt;</code> has <code>even</code> and <code>odd</code> classes.</p>
+<p><code class="verbatim">&lt;tr&gt;</code> has <code
+class="verbatim">even</code> and <code class="verbatim">odd</code>
+classes.</p>
 <h1 id="source-code">Source Code</h1>
 <p><strong>Emacs Lisp:</strong></p>
-<div class="sourceCode"><pre class="sourceCode commonlisp"><code class="sourceCode commonlisp">(<span class="kw">defun</span><span class="fu"> negate </span>(x)
-    <span class="st">&quot;Negate the value of x.&quot;</span>
-    (<span class="op">-</span> x))</code></pre></div>
-<div class="sourceCode" rundoc-language="emacs-lisp" rundoc-results="output"><pre class="sourceCode commonlisp rundoc-block"><code class="sourceCode commonlisp">(<span class="kw">print</span>
-    (negate <span class="dv">10</span>))</code></pre></div>
-<pre class="example"><code>-10
-</code></pre>
-<p>There are interesting classes like <code>sourceCode</code> and <code>example</code>. Also there html5 attributes prefixed with <code>rundoc-</code>.</p>
+<div class="sourceCode" id="cb1" data-org-language="emacs-lisp"><pre
+class="sourceCode commonlisp"><code class="sourceCode commonlisp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">defun</span><span class="fu"> negate </span>(x)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Negate the value of x.&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    (<span class="op">-</span> x))</span></code></pre></div>
+<div class="sourceCode" id="cb2" data-org-language="emacs-lisp"
+data-results="output"><pre class="sourceCode commonlisp"><code class="sourceCode commonlisp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">print</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    (negate <span class="dv">10</span>))</span></code></pre></div>
+<pre class="example"><code>-10</code></pre>
+<p>There are interesting classes like <code
+class="verbatim">sourceCode</code> and <code
+class="verbatim">example</code>. Also there html5 attributes prefixed
+with <code class="verbatim">rundoc-</code>.</p>
 <p><strong>Haskell:</strong></p>
-<div class="sourceCode" rundoc-language="haskell" rundoc-results="output"><pre class="sourceCode haskell rundoc-block"><code class="sourceCode haskell"><span class="ot">factorial ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span>
-factorial <span class="dv">0</span> <span class="fu">=</span> <span class="dv">1</span>
-factorial n <span class="fu">=</span> n <span class="fu">*</span> factorial (n <span class="fu">-</span> <span class="dv">1</span>)</code></pre></div>
+<div class="sourceCode" id="cb4" data-results="output"><pre
+class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ot">factorial ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>factorial <span class="dv">0</span> <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>factorial n <span class="ot">=</span> n <span class="op">*</span> factorial (n <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
 <h1 id="latex">LaTeX</h1>
 <ul>
-<li><strong>Characters:</strong> <em>α</em> <em>β</em> → ↑ ∨ ∧ ⟹ <em>π</em> ∞</li>
-<li><strong>Inline Math:</strong> <span class="math inline"><em>f</em>(<em>x</em>)=<em>x</em><sup>2</sup></span></li>
-<li><strong>More complex:</strong> <span class="math inline">$\frac{x^2}{2}$</span></li>
+<li><strong>Characters:</strong> α β → ↑ ∨ \and ⟹ π ∞</li>
+<li><strong>Inline Math:</strong> <span
+class="math inline"><em>f</em>(<em>x</em>) = <em>x</em><sup>2</sup></span></li>
+<li><strong>More complex:</strong> <span
+class="math inline">$\frac{x^2}{2}$</span></li>
 </ul>
-<p>LaTeX characters are wrapped in <code>&lt;em&gt;</code> and Math inside <code>&lt;span class=&quot;math inline&quot;&gt;</code>.</p>
+<p>LaTeX characters are wrapped in <code>&lt;em&gt;</code> and Math
+inside <code>&lt;span class="math inline"&gt;</code>.</p>
 <h2 id="ℋℯ𝓁𝓁ℴ">ℋℯ𝓁𝓁ℴ!</h2>
-
-<p><strong>NOTE:</strong> <em>There is standard LaTeX embeded above which is skipped during compilation to HTML.</em></p>
-<p><strong>This is using</strong> <em><a href="https://www.mathjax.org/" class="uri">https://www.mathjax.org/</a></em></p>
-<p><br /><span class="math display">$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</span><br /></p>
+<p><strong>NOTE:</strong> <em>There is standard LaTeX embeded above
+which is skipped during compilation to HTML.</em></p>
+<p><strong>This is using</strong> <span class="spurious-link"
+target="MathJax"><em><a href="https://www.mathjax.org/"
+class="uri">https://www.mathjax.org/</a></em></span></p>
+<p><span class="math display">$$\sum_{i=0}^n i^2 =
+\frac{(n^2+n)(2n+1)}{6}$$</span></p>
 <h1 id="deadline">Deadline</h1>
-<p>DEADLINE: &lt;2016-12-20 Tue&gt;</p>
-<h1 id="tagged">Tagged<span class="tag" data-tag-name="tag"></span></h1>
+<h1 id="tagged">Tagged <span class="tag" data-tag-name="tag"><span
+class="smallcaps">tag</span></span></h1>
 <p>Tags are not visible in render</p>
 <h1 id="block-quote">Block Quote</h1>
 <blockquote>
 <p>Org mode is amazing. So is Hakyll &amp; Pandoc.</p>
 </blockquote>
 <h1 id="image">Image</h1>
-<p><a href="http://media.riffsy.com/images/f8534774b678ad1932b379a03460680b/raw" class="uri">http://media.riffsy.com/images/f8534774b678ad1932b379a03460680b/raw</a></p>
+<p><a
+href="http://media.riffsy.com/images/f8534774b678ad1932b379a03460680b/raw"
+class="uri">http://media.riffsy.com/images/f8534774b678ad1932b379a03460680b/raw</a></p>
 <p>Images has to have extension like:</p>
 <p><img src="../assets/lena-image.jpg" /></p>
 <p>then it can be loaded even from other origin..</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png" /></p>
+<p><img
+src="https://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png" /></p>
 <h1 id="description-list">Description List</h1>
 <dl>
 <dt>Frodo</dt>
-<dd>The hobbit ringbearer
+<dd>
+The hobbit ringbearer
 </dd>
 <dt>Aragorn</dt>
-<dd>The human ranger, true kind of Gondor
+<dd>
+The human ranger, true kind of Gondor
 </dd>
 <dt>Gandalf</dt>
-<dd>The Grey Wizard
+<dd>
+The Grey Wizard
 </dd>
 </dl>
-<p>creddits to <em><a href="https://www.reddit.com/user/nihilmancer" class="uri">https://www.reddit.com/user/nihilmancer</a></em></p>
+<p>creddits to <span class="spurious-link" target="nihilmancer"><em><a
+href="https://www.reddit.com/user/nihilmancer"
+class="uri">https://www.reddit.com/user/nihilmancer</a></em></span></p>
 <h1 id="footnotes">Footnotes</h1>
-<p>This has some<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> foot note.</p>
-<div class="footnotes">
+<p>This has some<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> foot note.</p>
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>The link is: <a href="http://orgmode.org" class="uri">http://orgmode.org</a><a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p>The link is: <a href="http://orgmode.org"
+class="uri">http://orgmode.org</a><a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</div>
-
+</aside>
 
         </div>
         <div id="footer">

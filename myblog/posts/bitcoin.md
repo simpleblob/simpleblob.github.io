@@ -1,0 +1,33 @@
+---
+
+title: Bitcoin analysis
+subtitle: info dump and thoughts
+description: None
+tags: bitcoin, economics, cryptocurrencies 
+created: 2017-12-08
+published: 2017-12-08
+status: draft
+confidence: log
+importance: 1
+---
+## Links of interest
+
+-   [original bitcoin whitepaper by nakamoto
+    satoshi](https://bitcoin.org/bitcoin.pdf)
+-   [Bitcoin is none of the things it was supposed to
+    be](https://theoutline.com/post/2592/bitcoin-is-none-of-the-things-it-was-supposed-to-be)
+
+## Thoughts
+
+-   original intention of bitcoin is to have decentralized currency,
+    peer-to-peer trading with no middle-man (no friction).
+-   right now most people just own to for speculations, not actually
+    using it in day-to-day life (except for the underground illegal
+    markets)
+-   Additionally, there are middlemen who charged a fee on your
+    transactions which defeat the whole purpose.
+-   still, Bitcoin proponents see this as just the beginning. A time
+    will come where its value is more stable and everyone is using it
+    just to trade, not holding it for investment. (needs checking)
+-   Still looking for nice fair-value analysis piece from some
+    economists.

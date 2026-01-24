@@ -26,7 +26,7 @@
 
             <div class="info">
     <em>
-    creation date: 2017-12-04, 
+    creation date: 2017-12-04,
     latest update: 2017-12-16
     </em>
 </div>
@@ -38,72 +38,99 @@
 <h2 id="introduction">Introduction</h2>
 <ul>
 <li>we are learning 3 things:
-<ol>
+<ol type="1">
 <li>how computers work,</li>
 <li>how to break complex problems into manageable modules,</li>
 <li>how to develop large-scale hardware and software systems.</li>
 </ol></li>
 <li>how codes work:
-<ol>
+<ol type="1">
 <li>write C sourcecode in file</li>
 <li>file is compiled into machine-level codes</li>
-<li>machine-level codes (binary code-map) are executed by a chipset -- register, memory, ALU.</li>
+<li>machine-level codes (binary code-map) are executed by a chipset –
+register, memory, ALU.</li>
 <li>all the hardware stuff in 3. &gt;&gt; they are all logic-gates.</li>
 </ol></li>
-<li>abstractions - we use it to &quot;split off&quot; complex projects into simple parts, as we did here.</li>
+<li>abstractions - we use it to "split off" complex projects into simple
+parts, as we did here.</li>
 </ul>
-<h2 id="lesson-01-boolean-and-logic-gates">Lesson 01: Boolean and Logic Gates</h2>
+<h2 id="lesson-01-boolean-and-logic-gates">Lesson 01: Boolean and Logic
+Gates</h2>
 <ul>
 <li>Basic boolean building blocks are NOT &amp; AND
 <ul>
 <li>OR(X,Y) can be construct with NOT(AND(X,Y))</li>
 </ul></li>
-<li>we can further discard NOT &amp; AND by just using <a href="https://docs.google.com/spreadsheets/d/1vtnEP28OuOuxE_SNyYei37tIicGpcogD1NU_nhP-hw4/edit#gid=0">NAND Logic</a>:
+<li>we can further discard NOT &amp; AND by just using <a
+href="https://docs.google.com/spreadsheets/d/1vtnEP28OuOuxE_SNyYei37tIicGpcogD1NU_nhP-hw4/edit#gid=0">NAND
+Logic</a>:
 <ul>
 <li>NOT X = NAND(X,X)</li>
 <li>X OR Y = NAND(NAND(X,X),NAND(Y,Y))</li>
 <li>X AND Y = NAND(NAND(X,Y),NAND(X,Y))</li>
-<li>Trivia: NOR can do these too. we call them &quot;universal gates&quot;</li>
+<li>Trivia: NOR can do these too. we call them "universal gates"</li>
 </ul></li>
 <li>With these we can build up complex functions</li>
-<li>For logic gates, we start with truth table work backwards to construct functions that can implement addition and multiplication etc.</li>
-<li>We start with having an input of 1-bit. However, later on we will have more bit (16-bits etc.) to manipulate. It is better to thing of them as one group -- &quot;bus&quot; (latin for &quot;many&quot;)</li>
-<li>Building up from NANDs, the basic blocks are NOT,AND,OR,XOR,MUX,DMUX. (can be many-bits version).</li>
-<li>Mux and Demux is useful when shared communication over a single line. (selecting by feeding certain frequencies to the &quot;select&quot; channel of Mux/Demux)</li>
-<li>We can do 3-way or more combining inputs by cumulatively applying the basic blocks. for DMUX, it's similar to branching out and vice versa for MUX.</li>
+<li>For logic gates, we start with truth table work backwards to
+construct functions that can implement addition and multiplication
+etc.</li>
+<li>We start with having an input of 1-bit. However, later on we will
+have more bit (16-bits etc.) to manipulate. It is better to thing of
+them as one group – "bus" (latin for "many")</li>
+<li>Building up from NANDs, the basic blocks are
+NOT,AND,OR,XOR,MUX,DMUX. (can be many-bits version).</li>
+<li>Mux and Demux is useful when shared communication over a single
+line. (selecting by feeding certain frequencies to the "select" channel
+of Mux/Demux)</li>
+<li>We can do 3-way or more combining inputs by cumulatively applying
+the basic blocks. for DMUX, it's similar to branching out and vice versa
+for MUX.</li>
 </ul>
-<h2 id="lesson-02-boolean-arithmetic-and-alu">Lesson 02: Boolean Arithmetic and ALU</h2>
+<h2 id="lesson-02-boolean-arithmetic-and-alu">Lesson 02: Boolean
+Arithmetic and ALU</h2>
 <ul>
 <li>How to convert from decimal to binary
 <ul>
-<li>find the biggest &quot;buckets&quot; that decimal number can fit then down to the next biggest one.</li>
+<li>find the biggest "buckets" that decimal number can fit then down to
+the next biggest one.</li>
 <li>Example, 99 is 64 + 32 + 0 + 0 + 0 + 2 + 1</li>
 <li>Therefore, in binary form, it is 1100011</li>
 </ul></li>
-<li>The following are the basic arithmetics we want to have: Add, Subtract, which is greater, Multiply, Divide</li>
-<li>First we will get &quot;Add&quot;, then we get &quot;Subtract&quot; and &quot;which is greater&quot; for free
+<li>The following are the basic arithmetics we want to have: Add,
+Subtract, which is greater, Multiply, Divide</li>
+<li>First we will get "Add", then we get "Subtract" and "which is
+greater" for free
 <ul>
-<li>&quot;Subtract&quot; is adding another negative number together (this depends on how to represent negative numbers in a clever way)</li>
-<li>&quot;Greater&quot; means we can subtract the two numbers and see whether result is positive.</li>
+<li>"Subtract" is adding another negative number together (this depends
+on how to represent negative numbers in a clever way)</li>
+<li>"Greater" means we can subtract the two numbers and see whether
+result is positive.</li>
 </ul></li>
 <li>How to build Multi-bits Adder
-<ol>
-<li>Build Half-Adder --&gt; input a,b and output a sum and carry (called H-carry)</li>
-<li>Build Full-Adder --&gt; input a,b,H-carry then output &quot;true sum&quot; and &quot;true carry&quot;</li>
-<li>Build multi-bits Adder by stacking the Full-Adder cumulatively -- digits by digits</li>
+<ol type="1">
+<li>Build Half-Adder –&gt; input a,b and output a sum and carry (called
+H-carry)</li>
+<li>Build Full-Adder –&gt; input a,b,H-carry then output "true sum" and
+"true carry"</li>
+<li>Build multi-bits Adder by stacking the Full-Adder cumulatively –
+digits by digits</li>
 </ol></li>
-<li>About &quot;ALU&quot; inside a cpu
+<li>About "ALU" inside a cpu
 <ul>
-<li>generally used to compute integer and logic stuff. other computation can be implemented later in software.</li>
-<li>in &quot;Hack ALU&quot; design, there are 2 16-bit inputs, 1 function select, and 1 16-bit output</li>
+<li>generally used to compute integer and logic stuff. other computation
+can be implemented later in software.</li>
+<li>in "Hack ALU" design, there are 2 16-bit inputs, 1 function select,
+and 1 16-bit output</li>
 </ul></li>
 </ul>
 <h2 id="lesson-03-memory">Lesson 03: Memory</h2>
 <ul>
 <li>Why do we need memory?
 <ul>
-<li>for loop, memory &quot;states&quot;, counters</li>
-<li>deal with physical speed - the gap in one discrete &quot;clock&quot; cycle to make sure all electrical/transistor input/output changes are done before one ticks.</li>
+<li>for loop, memory "states", counters</li>
+<li>deal with physical speed - the gap in one discrete "clock" cycle to
+make sure all electrical/transistor input/output changes are done before
+one ticks.</li>
 </ul></li>
 <li>Types of logic
 <ul>
@@ -120,17 +147,18 @@
 </ul></li>
 <li>RAM (our actual memory unit)
 <ul>
-<li>stores both data and code to run. remember von neumann...</li>
+<li>stores both data and code to run. remember von neumann…</li>
 <li>this is just a bunch of registers stacked together</li>
-<li>select register to manipulate by setting &quot;address&quot; and turn on &quot;load&quot; flag</li>
+<li>select register to manipulate by setting "address" and turn on
+"load" flag</li>
 </ul></li>
 <li>Counter
 <ul>
-<li>need this so that we could fetch the code and execute them one by one</li>
+<li>need this so that we could fetch the code and execute them one by
+one</li>
 <li>counter interface: RESET, NEXT, GOTO</li>
 </ul></li>
 </ul>
-
 
         </div>
         <div id="footer">

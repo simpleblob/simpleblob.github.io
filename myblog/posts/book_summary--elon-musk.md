@@ -1,0 +1,32 @@
+---
+
+title: Book Summary - Elon Musk
+subtitle: Tesla, SpaceX, and the Quest for a Fantastic Future
+description: None
+tags: biography
+created: 2016-12-03
+published: 2017-11-26
+status: draft
+confidence: log
+importance: 1
+---
+## Chapter 1 - Introduction
+
+-   "Do you think I\'m insane?\"
+-   One goal. Make mankind an interplanetary species by colonizing mars
+-   Very risk taking - pump almost all the money into new ventures
+-   Extremely busy, hardworking. Expect employee to be the same..
+    including working discipline.
+-   Split time only between work and children. Not enough time to
+    maintain girlfriend\|wife (divorced twice now)
+
+## Chapter 2 - Africa
+
+-   Really adventurous and enterprising grandparents an parents.
+    Engineering and business (chiropractic clinic)
+-   Father is an engineer but splitted with mother. Elon had an unhappy
+    stay with him during teenage years.
+-   High school - extremely nerd, got bullied. But still has
+    \"intensity\" since he was a kid.
+-   Went to canada through mother citizenship, then US. Life got much
+    better in college, again having many mini-businesses.

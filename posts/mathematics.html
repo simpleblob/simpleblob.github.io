@@ -26,63 +26,88 @@
 
             <div class="info">
     <em>
-    creation date: 2018-01-02, 
+    creation date: 2018-01-02,
     latest update: 2018-12-02
     </em>
 </div>
 
 <h2 id="linear-algebra-matrixvector">Linear Algebra (Matrix/Vector)</h2>
-<p><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">3brown1blue videos playlist</a></p>
+<p><a
+href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">3brown1blue
+videos playlist</a></p>
 <ul>
 <li>basis vectors
 <ul>
-<li>think of vector as an arrow point on the map, with origin at [0,0]</li>
-<li>think of basis vector i and j and each x and y coordinate on the map</li>
+<li>think of vector as an arrow point on the map, with origin at
+[0,0]</li>
+<li>think of basis vector i and j and each x and y coordinate on the
+map</li>
 </ul></li>
 <li>linear transformation
 <ul>
-<li>the linear transformation can be thought of the squishing or enlarging the nD dimensional space
+<li>the linear transformation can be thought of the squishing or
+enlarging the nD dimensional space
 <ul>
-<li>it won't be linear if the origin moves or the spacing becomes unequal</li>
+<li>it won't be linear if the origin moves or the spacing becomes
+unequal</li>
 </ul></li>
-<li>we can put the &quot;new&quot; basis vector as column 1, 2,... of the transformation matrix. we use the dot product to apply the transformation</li>
-<li>2x3 transformation matrix means we are squishing from 3D to 2D coordinates.</li>
-<li>the order of transformation is important -- &quot;rotate then shear&quot; is not the same as &quot;shear then rotate&quot;</li>
-<li>but it is associative -- you can compute the product of transformations (called compositions) as long as they are in the right order</li>
+<li>we can put the "new" basis vector as column 1, 2,… of the
+transformation matrix. we use the dot product to apply the
+transformation</li>
+<li>2x3 transformation matrix means we are squishing from 3D to 2D
+coordinates.</li>
+<li>the order of transformation is important – "rotate then shear" is
+not the same as "shear then rotate"</li>
+<li>but it is associative – you can compute the product of
+transformations (called compositions) as long as they are in the right
+order</li>
 </ul></li>
 <li>determinant
 <ul>
-<li>the det is actually the area/volume changed by the basis vector of that matrix -- either expanding or squishing</li>
-<li>this is why (later) when det is zero, we might not have an inverse matrix</li>
+<li>the det is actually the area/volume changed by the basis vector of
+that matrix – either expanding or squishing</li>
+<li>this is why (later) when det is zero, we might not have an inverse
+matrix</li>
 </ul></li>
 <li>inverse matrix
 <ul>
-<li>think of doing the transformation in reverse, that is how we find the inverse matrix</li>
-<li>when the det is zero, we effective lose some dimension, which means many possible inverses (I think)</li>
+<li>think of doing the transformation in reverse, that is how we find
+the inverse matrix</li>
+<li>when the det is zero, we effective lose some dimension, which means
+many possible inverses (I think)</li>
 </ul></li>
 <li>cross product
 <ul>
 <li>(example: 2 dimension). the cross product between 2 vectors is
 <ul>
-<li>a unit vector orthogonalto both input vectors (which direction depends on the right-hand order)</li>
-<li>then we scale this unit vector by the determinant (area) of the 2 input vectors</li>
+<li>a unit vector orthogonalto both input vectors (which direction
+depends on the right-hand order)</li>
+<li>then we scale this unit vector by the determinant (area) of the 2
+input vectors</li>
 </ul></li>
 </ul></li>
 <li>change of basis
 <ul>
-<li>let A is a vector in basis<sub>1</sub>, and B is transformation matrix in basis<sub>2</sub>.</li>
-<li>we can construct a change of basis vector Q for basis<sub>1</sub> --&gt; basis<sub>2</sub></li>
-<li>then we can make the transformation matrix C = inv<sub>Q</sub> * B * Q</li>
-<li>then we can apply to A, getting A<sub>hat</sub> = C * A in basis<sub>1</sub></li>
+<li>let A is a vector in basis<sub>1</sub>, and B is transformation
+matrix in basis<sub>2</sub>.</li>
+<li>we can construct a change of basis vector Q for basis<sub>1</sub>
+–&gt; basis<sub>2</sub></li>
+<li>then we can make the transformation matrix C = inv<sub>Q</sub> * B *
+Q</li>
+<li>then we can apply to A, getting A<sub>hat</sub> = C * A in
+basis<sub>1</sub></li>
 </ul></li>
 <li>eigen vectors and eigen values
 <ul>
-<li>eigen vectors are the &quot;orthogonal&quot; vectors that don't not change direction after some transformation Q</li>
-<li>eigen values is the scaling value (lengthen/shorten) associated with certain eigen vectors</li>
-<li>why do we need this? because we can use eigen vector to make &quot;change of basis&quot;, then make transformation product much easier to calculate ( namely, scaling transformation only -- diagonal matrix)</li>
+<li>eigen vectors are the "orthogonal" vectors that don't not change
+direction after some transformation Q</li>
+<li>eigen values is the scaling value (lengthen/shorten) associated with
+certain eigen vectors</li>
+<li>why do we need this? because we can use eigen vector to make "change
+of basis", then make transformation product much easier to calculate (
+namely, scaling transformation only – diagonal matrix)</li>
 </ul></li>
 </ul>
-
 
         </div>
         <div id="footer">

@@ -1,8 +1,8 @@
 <div class="info">
     <em>
-    creation date: $created$, 
-    latest update: $published$
+    creation date: {{ created }},
+    latest update: {{ published }}
     </em>
 </div>
 
-$body$
+{{ body|safe }}
