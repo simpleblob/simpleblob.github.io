@@ -52,7 +52,7 @@ importance: 1
     line. (selecting by feeding certain frequencies to the \"select\"
     channel of Mux/Demux)
 -   We can do 3-way or more combining inputs by cumulatively applying
-    the basic blocks. for DMUX, it\'s similar to branching out and vice
+    the basic blocks. for DMUX, it's similar to branching out and vice
     versa for MUX.
 
 ## Lesson 02: Boolean Arithmetic and ALU
