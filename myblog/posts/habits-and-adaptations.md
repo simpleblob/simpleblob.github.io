@@ -10,10 +10,10 @@ status: draft
 confidence: log
 importance: 1
 ---
-Body and Mind adapts to anything/any situation. It just takes time. As
+Body and Mind adapt to anything/any situation. It just takes time. As
 long as the \"stress\" does not break the body and/or mind. The
 adaptation slowly happens.
 
-Key is to sustain that period until adaptation happens. Which means
+The key is to sustain that period until adaptation happens. Which means
 making habits. Need to have a trigger and positive reward after the
 event.
