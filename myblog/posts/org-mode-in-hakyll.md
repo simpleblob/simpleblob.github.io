@@ -10,7 +10,7 @@ status: finished
 confidence: log
 importance: 1
 ---
-Testing Pandoc\'s emacs-org file conversion to html, based on this
+Testing Pandoc's emacs-org file conversion to html, based on this
 [page](https://github.com/turboMaCk/turboMaCk.github.io/blob/develop/posts/2016-12-21-org-mode-in-hakyll.org).
 
 This is the end of post itself. Everything below is just to test how
@@ -29,9 +29,9 @@ There is paragraph under h1
 This is **bold**, *italic*, `code`{.verbatim}, `verbatim` and ~~strike~~
 text.
 
--   However ***bold and italic*** doesn\'t play well when used together
+-   However ***bold and italic*** doesn't play well when used together
     like in markdown.
--   However ***bold and italic*** doesn\'t play well when used together
+-   However ***bold and italic*** doesn't play well when used together
     like in markdown.
 
 # List
@@ -55,7 +55,7 @@ text.
     1.  child
         1.  deep
 
-Style `*`{.verbatim} isn\'t supported.
+Style `*`{.verbatim} isn't supported.
 
 # Links
 
@@ -181,7 +181,7 @@ Frodo
 :   The hobbit ringbearer
 
 Aragorn
-:   The human ranger, true kind of Gondor
+:   The human ranger, true king of Gondor
 
 Gandalf
 :   The Grey Wizard

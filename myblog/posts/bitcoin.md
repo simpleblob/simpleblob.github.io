@@ -21,11 +21,11 @@ importance: 1
 
 -   original intention of bitcoin is to have decentralized currency,
     peer-to-peer trading with no middle-man (no friction).
--   right now most people just own to for speculations, not actually
+-   right now most people just own it for speculations, not actually
     using it in day-to-day life (except for the underground illegal
     markets)
--   Additionally, there are middlemen who charged a fee on your
-    transactions which defeat the whole purpose.
+-   Additionally, there are middlemen who charge a fee on your
+    transactions which defeats the whole purpose.
 -   still, Bitcoin proponents see this as just the beginning. A time
     will come where its value is more stable and everyone is using it
     just to trade, not holding it for investment. (needs checking)
