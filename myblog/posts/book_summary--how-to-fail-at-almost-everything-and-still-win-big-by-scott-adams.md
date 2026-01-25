@@ -10,49 +10,55 @@ status: draft
 confidence: log
 importance: 1
 ---
-## Gist Summary
+## Core Ideas
 
-1.  Optimize Personal Energy by
-    -   Diet
-    -   Exercise
-    -   Sleep
-2.  Optimize Personal luck (success) by
-    -   Move from strategies with bad odds to ones with good odds
-    -   Stay in a game long enough for luck to find you
-3.  Optimize your happiness chance by
-    -   Being Healthy
-    -   Have resources
-    -   Have flexible schedule
+### Optimize Personal Energy
 
-## Fail-toward-success tactics
+Your energy level determines everything else. Maximize it through:
 
-1.  Goals are for losers. Use Systems.
-2.  Your mind isn't magic. It's an organic computer you can (sort of)
-    program.
-3.  The most important metric to track is your personal energy.
-4.  Every skill you acquire doubles your odds of success.
-5.  Happiness is health plus freedom.
-6.  Luck can be managed, sort of.
-7.  Conquer shyness by being a huge phony (in a good way).
-8.  Fitness is the lever that moves the world.
-9.  Simplicity transform ordinary into amazing.
+- Proper diet
+- Regular exercise
+- Adequate sleep
 
-## The 6 Filters for Truth
+### Optimize Personal Luck
 
-(Commonly what we do given constraint)
+Success is not random, but you can improve your odds:
 
-1.  Personal experience (biased)
-2.  Experience of people you know (more bias)
-3.  Experts (They work for money, not for truth)
-4.  Scientific studies (correlation not causation)
-5.  Common sense (works until it's wrong)
-6.  Pattern recognition (Patterns, coincidence,  and personal bias look
-    alike)
+- Move from strategies with bad odds to ones with good odds
+- Stay in the game long enough for luck to find you
 
-That's why you should try to use different sources and hope that it
-rules out random noise once combined.
+### Optimize Happiness
 
-Look for consistency in answers. *Multiple models by Charlie Munger.*
+Three factors drive happiness:
+
+- Good health
+- Sufficient resources
+- Flexible schedule
+
+## Key Principles
+
+- **Goals are for losers. Use systems instead.** Focus on daily practices rather than distant targets.
+- **Your mind is not magic.** It's an organic computer you can program through repetition and habits.
+- **Track your personal energy above all else.** This is the most important metric.
+- **Every skill you acquire doubles your odds of success.** Build a diverse skill stack.
+- **Happiness is health plus freedom.** These two factors matter more than anything else.
+- **Luck can be managed, sort of.** Put yourself in positions where good things can happen.
+- **Conquer shyness by being a phony in a good way.** Act confident until it becomes real.
+- **Fitness is the lever that moves the world.** Physical health enables everything else.
+- **Simplicity transforms ordinary into amazing.** Simple solutions beat complex ones.
+
+## The Six Filters for Truth
+
+Most people use these filters to evaluate what's true, given real-world constraints:
+
+- **Personal experience** - Highly biased by your unique circumstances
+- **Experience of people you know** - Even more biased, limited sample size
+- **Experts** - They work for money, not for truth
+- **Scientific studies** - Often confuse correlation with causation
+- **Common sense** - Works until it suddenly doesn't
+- **Pattern recognition** - Patterns, coincidence, and personal bias look identical
+
+Use multiple sources and look for consistency across different filters. This helps rule out random noise. Charlie Munger calls this approach "multiple models."
 
 ## Failure as tool to get information
 
@@ -83,12 +89,12 @@ success, figure out the price, then pay it.
 
 ## You have permission to put your self-interest first, charity second
 
-The most important form of self-interest involves
+The most important form of self-interest involves:
 
--   spending time on your fitness,
--   eating right,
--   pursuing your career, and still
--   spending quality time with your family and friends.
+- Spending time on your fitness
+- Eating right
+- Pursuing your career
+- Spending quality time with your family and friends
 
 ## CH11: Maximized your Energy
 
@@ -114,22 +120,19 @@ projects going on that had the potential to set me free.
 For years, the prospect of starting "my own thing" and leaving my
 cubicle behind gave me an enormous amount of energy.
 
-### Tricks for getting most energy
+### Maximizing Energy
 
-1.  Match creative work to time of day
-2.  Be simplifying instead of optimising -- allow some time buffer for
-    less stress
-3.  Place matching -- Bed only for sleeping, Desk for work, couch for
-    games
-4.  Keep things Tidy - mentally clear
-5.  Don't be scared of lack of knowledge of \"how to do something\" -
-    90% Can be solved by Google and the 10% by asking other people
-6.  Don't be an asshole
-7.  Set the right priorities
-    1.  Your health
-    2.  Your economics (money, career)
-    3.  Family and friends
-    4.  Local community, country, the world
+- **Match work to your energy.** Do creative work when your energy peaks during the day.
+- **Simplify instead of optimize.** Build time buffers to reduce stress.
+- **Match places to activities.** Bed for sleeping. Desk for work. Couch for relaxing.
+- **Keep things tidy.** Physical order creates mental clarity.
+- **Don't fear ignorance.** Google solves 90% of problems. Other people solve the rest.
+- **Don't be an asshole.** It drains everyone's energy, including yours.
+- **Set the right priorities:**
+    1. Your health
+    2. Your economics (money and career)
+    3. Family and friends
+    4. Local community, country, the world
 
 **CH12: The Right Attitudes**
 

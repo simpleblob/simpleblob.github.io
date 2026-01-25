@@ -10,57 +10,53 @@ status: finished
 confidence: log
 importance: 1
 ---
-## In the new economy with rapid growth in technology, there are 3 groups with massive advantages
+## The New Economy's Winners
 
-1.  Those who can work well and creatively with intelligent machines
-    (high-skilled workers)
-2.  Those who are the best at what they do (superstars)
-3.  Those with access to capital (owners)
+In today's rapidly changing technological landscape, three groups have massive advantages:
 
-## 2 abilities for thriving in the new info-winners-take-all economy
+- High-skilled workers who can work creatively with intelligent machines
+- Superstars who are the best at what they do
+- Owners who have access to capital
 
-1.  The ability to quickly master hard things
-2.  The ability to produce at an elite level, in terms of both quality
-    and speed
+### Two Abilities for Thriving
 
-These two are enhanced greatly by maximizing deep work time and its
-intensity.
+To succeed in this winner-takes-all economy, you need:
 
-## **Definition**
+- The ability to quickly master hard things
+- The ability to produce at an elite level in both quality and speed
 
-### Deep work:
+These two abilities are greatly enhanced by maximizing deep work time and its intensity.
 
-Professional activities performed in a state of distraction-free
-concentration that push your cognitive capabilities to their limit.
-These efforts create new value, improve your skill, and are hard to
-replicate.
+## Definitions
 
-### Shallow work:
+### Deep Work
 
-Non-cognitively demanding, logistical-style tasks, often performed while
-distracted. These efforts tend not to create much new value in the world
-and are easy to replicate.
+Professional activities performed in a state of distraction-free concentration that push your cognitive capabilities to their limit. These efforts create new value, improve your skill, and are hard to replicate.
 
-### How to recognize deep work vs shallow work?
+### Shallow Work
 
-Ask yourself this: How long would it take (in months) to train a smart
-recent college graduate with no specialized training in my field to
-complete this task?
+Non-cognitively demanding logistical tasks, often performed while distracted. These efforts create little new value in the world and are easy to replicate.
 
-Anything less than 3 months is definitely on the shallow end.
+### Recognizing Deep vs Shallow Work
 
-## The Rules:
+Ask yourself: How long would it take in months to train a smart recent college graduate with no specialized training to complete this task?
 
-1.  Decide on your deep work schedule type
-    1.  x consecutive days in a week or month of all-days deep work
-    2.  x hours every day of deep work (in the morning)
-    3.  x hours every day (can switch focus at will)
-2.  Ritualize it. Have triggers. Enforce a fixed x hours. Then just
-    don't do it at all for the rest of the day
-3.  Downtime is essential for optimal schedule. At the end of workday,
-    shut down all your work action/thoughts. say "Shutdown complete\"
-4.  Embrace boredom. Train your brain **not** to act on your first
-    desire for novelty.
-5.  Quit Social Media. Or check it just once per day.
-6.  Work at a fixed 8 hours per day to "Drain the shallow" out of life.
-    we will have time only for deep work.
+Anything less than 3 months is definitely shallow work.
+
+## The Rules
+
+### Choose Your Deep Work Schedule
+
+Pick one schedule type and stick with it:
+
+- Consecutive days in a week or month dedicated fully to deep work
+- Fixed hours every day for deep work, typically in the morning
+- Flexible hours every day where you can switch focus at will
+
+### Build the Habit
+
+- **Ritualize it.** Use triggers. Enforce a fixed number of hours. Then completely stop work for the rest of the day.
+- **Protect downtime.** At the end of each workday, shut down all work thoughts and actions. Say "Shutdown complete" as a trigger.
+- **Embrace boredom.** Train your brain not to act on your first desire for novelty.
+- **Quit social media.** Or limit it to once per day.
+- **Drain the shallow.** Work a fixed eight hours per day. This forces you to prioritize deep work.
