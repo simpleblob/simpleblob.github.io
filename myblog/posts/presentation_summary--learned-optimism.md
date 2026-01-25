@@ -20,45 +20,39 @@ the same information/situation.
 The difference between being optimistic and pessimistic is that, in the
 former you will give yourself ****more chance to become better.****
 
-## 3-Axis of explanations
+## Three Axes of Explanations
+
+How we explain events shapes our mindset. Each explanation falls on three spectrums:
 
 ### Impersonal vs Personal
 
-They don't like my work because of me.
+**Pessimistic:** They don't like my work because of me.
 
-vs
-
-They don't like my work because it lacks some features they want.
+**Optimistic:** They don't like my work because it lacks some features they want.
 
 ### General vs Specific
 
-They don't like my work because it probably sucks at everything.
+**Pessimistic:** They don't like my work because it probably sucks at everything.
 
-vs
-
-They don't like my work because it probably lacks feature A.
+**Optimistic:** They don't like my work because it probably lacks feature A.
 
 ### Permanent vs Temporary
 
-They don't like my work, a guy told me on that day.
+**Pessimistic:** People always hate my work my whole life, and it's not going to change.
 
-vs
+**Optimistic:** They don't like my work. A guy told me on that day.
 
-People always hate my work my whole life, and its not going to change.
+## Learned Optimism in Practice
 
-### How to give the best chance for yourself? Do this, learned optimism:
+Frame good and bad events differently to maximize your chances:
 
-*Optimistic praise* (good things that happened) should be **personal**,
-**general**, and **permanent**.
+**Optimistic praise** for good things should be personal, general, and permanent:
 
-> \"This issue you filed shows why **you** have been and will
-> **continue** to be an **asset** to the community.\"
+> "This issue you filed shows why **you** have been and will **continue** to be an **asset** to the community."
 
-*Optimistic criticism* (bad things that happened) should be
-**impersonal**, **specific**, and **temporary**.
+**Optimistic criticism** for bad things should be impersonal, specific, and temporary:
 
-> \"**This** pull request does not currently meet **our** **current**
-> standards, because these **specific** A, B and C reasons.\"
+> "**This** pull request does not currently meet **our** **current** standards, because these **specific** A, B and C reasons."
 
 \
 \

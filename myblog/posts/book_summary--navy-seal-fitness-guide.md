@@ -13,76 +13,68 @@ importance: 1
 [Original link to guide in PDF
 here.](https://www.usuhs.edu/sites/default/files/media/mem/pdf/navysealfitnessguide.pdf)
 
-## Note0 : My own minimal exercise program
+## My Minimal Exercise Program
 
--   Switch between Strength and Cardio. Do everyday. If really tired,
-    then do long flexibility routine.
--   Strength / Calisthenics
-    -   \[07 min\]
-        [Warm-ups](https://www.youtube.com/watch?v=Q61E0w3SATw)
-    -   \[15 min\] [MARSOC short
-        card](https://www.youtube.com/watch?v=FCnRqy1oYjE)
-        \[[PDF](https://www.marsoc.marines.mil/Portals/31/Documents/AssessmentandSelection-Prep-Guide.pdf)\]
-        (decrease reps to 10 first, then add 5 each time after adapting)
-    -   \[09 min\]
-        [Warm-downs](https://www.youtube.com/watch?v=1Rw_LupMPzY)
--   Cardio (choose one)
-    -   \[40+10 min\] Running (see program below on Chapter 4)
-    -   \[37 min\] [Fitness Blender
-        Cardio](https://www.youtube.com/watch?v=fcN37TxBE_s)
--   Flexibility
-    -   \[20 min\] [Full body flexibility
-        routine](https://www.youtube.com/watch?v=2wYQhJdv2oI)
+Switch between strength and cardio daily. If really tired, do a long flexibility routine instead.
 
-## Note1 : Navy Seal physical screening test
+### Strength and Calisthenics
 
--   Swim 500 yards (457 m.) in 12.5 minutes or less
--   Rest 10 minutes
--   Do 42 push-ups in under 2 minutes
--   Rest 2 minutes
--   Do 50 sit-ups in under 2 minutes
--   Rest 2 minutes
--   Do 6 pull-ups in under 2 minutes
--   Rest 10 minutes
--   Run 1.5 miles (2.4 km) in boots and long pants in less than 11.5
-    minutes
+- **[07 min] [Warm-ups](https://www.youtube.com/watch?v=Q61E0w3SATw)**
+- **[15 min] [MARSOC short card](https://www.youtube.com/watch?v=FCnRqy1oYjE)** [[PDF](https://www.marsoc.marines.mil/Portals/31/Documents/AssessmentandSelection-Prep-Guide.pdf)] - Start with 10 reps, then add 5 each time after adapting
+- **[09 min] [Warm-downs](https://www.youtube.com/watch?v=1Rw_LupMPzY)**
+
+### Cardio (Choose One)
+
+- **[40+10 min] Running** - See program below in Chapter 4
+- **[37 min] [Fitness Blender Cardio](https://www.youtube.com/watch?v=fcN37TxBE_s)**
+
+### Flexibility
+
+- **[20 min] [Full body flexibility routine](https://www.youtube.com/watch?v=2wYQhJdv2oI)**
+
+## Navy SEAL Physical Screening Test
+
+- Swim 500 yards (457 m) in 12.5 minutes or less
+- Rest 10 minutes
+- Do 42 push-ups in under 2 minutes
+- Rest 2 minutes
+- Do 50 sit-ups in under 2 minutes
+- Rest 2 minutes
+- Do 6 pull-ups in under 2 minutes
+- Rest 10 minutes
+- Run 1.5 miles (2.4 km) in boots and long pants in less than 11.5 minutes
 
 ## Chapter 1: Overview of Physical Fitness
 
--   Navy-seal fitness components (look up definition in PDF)
+### Fitness Components
 
-    -   Skill-related: Agility, Balance, Coordination, Speed, Power,
-        Reaction time
-    -   Health-related: Cardiorespiratory endurance, Muscular endurance,
-        Muscular strength, Body composition, Flexibility
+**Skill-related:** Agility, Balance, Coordination, Speed, Power, Reaction time
 
--   Of the three muscle types (Cardiac, Skeletal, Smooth), we will only
-    focus on skeletal muscle:
+**Health-related:** Cardiorespiratory endurance, Muscular endurance, Muscular strength, Body composition, Flexibility
 
-    The proportion of muscle types depends on genetics at birth.
-    However, all can be improved by endurance and power training.
+### Muscle Types
 
-    -   Slow Twitch Oxidative (Type I) -- aerobic, slow but long, for
-        endurance
-    -   Fast Twitch Oxidative-Glycolytic (Type IIa) -- semi-aerobic,
-        middle place
-    -   Fast Twitch Glycolytic (Type IIb) -- anaerobic, fast but
-        short-lived. glycogen as fuel = fatigue easily.
+Of the three muscle types (cardiac, skeletal, smooth), we focus on skeletal muscle.
 
--   Principles of Physical training
+The proportion of muscle types depends on genetics at birth. However, all can be improved by endurance and power training.
 
-    -   Overload: training at higher level than usual until body adapts
-        to new level. aerobic training = 70%-90% of Max Heart Rate (HR)
-        or at 130-170 HR (age 35)
-    -   Specificity: training that focuses on achieving certain task.
-        swimming vs running etc.
-    -   Individual Differences: same program, difference responses per
-        person
-    -   Detraining: need to keep regular exercises to maintain fitness.
-        FITT = Frequency, Intensity, Time & Type
-    -   Active Recovery: continue exercises at moderate pace (30-50%
-        MaxHR) warm-up and warm-down. This helps drive lactic acid out
-        faster than inactivity.
+**Slow Twitch Oxidative (Type I):** Aerobic. Slow but long. For endurance.
+
+**Fast Twitch Oxidative-Glycolytic (Type IIa):** Semi-aerobic. Middle ground.
+
+**Fast Twitch Glycolytic (Type IIb):** Anaerobic. Fast but short-lived. Uses glycogen as fuel, so fatigues easily.
+
+### Principles of Physical Training
+
+**Overload:** Train at a higher level than usual until your body adapts to the new level. Aerobic training: 70%-90% of Max Heart Rate or 130-170 HR for age 35.
+
+**Specificity:** Training that focuses on achieving a certain task. Swimming versus running, etc.
+
+**Individual differences:** Same program produces different responses per person.
+
+**Detraining:** You need regular exercise to maintain fitness. FITT: Frequency, Intensity, Time, and Type.
+
+**Active recovery:** Continue exercises at moderate pace (30-50% Max HR) during warm-up and warm-down. This drives lactic acid out faster than inactivity.
 
 ## Chapter 2: SEAL Mission-Related Physical Activities
 
@@ -107,19 +99,20 @@ days of the week"
     example, In cycling the unit is miles per hour. Other exercise can
     be kcal or watts per hour.
 
-## Chapter 4: Running for fitness
+## Chapter 4: Running for Fitness
 
--   Navy Seals should maintain running 20 to 40 miles (32 to 64 km) per
-    week. (6 to 12 km, 5 days per week)
--   Running Shoes Terminology and how to buy: read more in PDF
--   Building up Our Mileage. Increasing too quickly can cause injuries.
-    -   Run at least 3 to 4 times per week or every other day. (with 1-2
-        rest days per week)
-    -   Run at an even pace that we can talk comfortably.
-    -   when we can run continuously for 40 minutes, then start thinking
-        about increasing distance.
-    -   increase mileage by no more than 20% a week. Do not increase
-        speed and distance simultaneously.
+Navy SEALs should run 20 to 40 miles (32 to 64 km) per week. That's 6 to 12 km, 5 days per week.
+
+**Running shoes:** See terminology and buying guide in the PDF.
+
+### Building Up Mileage
+
+Increasing too quickly causes injuries. Follow these guidelines:
+
+- Run at least 3 to 4 times per week or every other day, with 1-2 rest days per week
+- Run at an even pace where you can talk comfortably
+- When you can run continuously for 40 minutes, start thinking about increasing distance
+- Increase mileage by no more than 20% per week. Do not increase speed and distance simultaneously
 
 Table: **Example of Program to run 40 km per week**
 
@@ -131,15 +124,17 @@ Table: **Example of Program to run 40 km per week**
   Seven   7     CT     7     8      CT    5     8     35
   Nine    6     CT     8     8      CT    8     10    40
 
--   For Interval training:
-    -   Restperiods between reps to train anaerobic systems should be
-        equal or slightly less than time to cover distance
-    -   Restperiods between reps to train aerobic systems should be
-        equal or slightly less than one-half time to cover distance
--   3 principles to prevent injuries while running
-    -   Run Tall
-    -   Run Relaxed
-    -   Run Naturally
+### Interval Training
+
+**For anaerobic systems:** Rest periods between reps should be equal or slightly less than time to cover distance.
+
+**For aerobic systems:** Rest periods between reps should be equal or slightly less than one-half time to cover distance.
+
+### Three Principles to Prevent Running Injuries
+
+- Run tall
+- Run relaxed
+- Run naturally
 
 ## Chapter 5: Swimming for Fitness
 
@@ -147,46 +142,59 @@ This is skipped, since we have no suitable pool nearby.
 
 ## Chapter 6: Strength Training
 
--   Routines should be well balanced and work all muscle groups
--   Free weights, although take more skills, is probably better than gym
-    equipment.
--   Exhale when moving a weight against gravity
--   FITT principles
-    -   Frequency: more is better, but should not overtrain. 2-3 times
-        per week.
-    -   Intensity: most critical for strength training. as close to
-        60-90% of Repetition Maximum (RM) to build muscles. (no more
-        than 12 reps per set). for endurance is 30-50% of RM or 20-60
-        reps per set.
-    -   Time: 30-60 min is OK
-    -   Type: should vary routines
--   warming up and down is necessary to prevent injuries.
-    -   warm ups: jumping jacks / light weights
-    -   warm downs: walking / stretching
--   Common problems
-    -   Injuries: lack of warm-up and using improper form
-    -   Overuse: too repetitive exercise, especially on knee, elbow,
-        shoulder.
-    -   Delayed Muscle Soreness: 24-48 hr after activity
+### Core Principles
+
+- Routines should be well balanced and work all muscle groups
+- Free weights, although they take more skill, are probably better than gym equipment
+- Exhale when moving weight against gravity
+
+### FITT Principles
+
+**Frequency:** More is better, but don't overtrain. Aim for 2-3 times per week.
+
+**Intensity:** Most critical for strength training. Use 60-90% of Repetition Maximum (RM) to build muscle, no more than 12 reps per set. For endurance, use 30-50% of RM or 20-60 reps per set.
+
+**Time:** 30-60 minutes is good.
+
+**Type:** Vary your routines.
+
+### Warm-Up and Warm-Down
+
+Necessary to prevent injuries.
+
+**Warm-ups:** Jumping jacks or light weights
+
+**Warm-downs:** Walking or stretching
+
+### Common Problems
+
+**Injuries:** Lack of warm-up and using improper form
+
+**Overuse:** Too much repetitive exercise, especially on knee, elbow, and shoulder
+
+**Delayed muscle soreness:** Occurs 24-48 hours after activity
 
 ## Chapter 7: Flexibility
 
--   two types of flexibility
-    -   Dynamic (or active): speed attained within a range of motion at
-        the joint during physical performance. (ex. throwing a ball,
-        neck roll, leg swings)
-    -   Static: maximal range of motion of a joint during passive
-        movement induced by an external source. (normal stretching)
--   The most effective stretches are performed slowly, and held for
-    15-30 seconds. (activate GTO, avoid excessive activation of muscle
-    spindles.)
--   Stretching is not the same as a warm-up. We should do stretching (or
-    other activities) after a warm-up.
--   Warm-up = light running, jumping jacks, other calisthenics to warm
-    up body temperature and prepare muscles for heavier usage. slight
-    sweating is a good indicator of sufficient warm-up.
--   Recommended Sequence: Warm-up, Stretch (Dynamic), Workout session,
-    Warm-down, Stretch (Static)
+### Two Types of Flexibility
+
+**Dynamic (or active):** Speed attained within a range of motion at the joint during physical performance. Examples: throwing a ball, neck rolls, leg swings.
+
+**Static:** Maximal range of motion of a joint during passive movement induced by an external source. This is normal stretching.
+
+### Effective Stretching
+
+The most effective stretches are performed slowly and held for 15-30 seconds. This activates GTO and avoids excessive activation of muscle spindles.
+
+### Stretching vs Warm-Up
+
+Stretching is not the same as a warm-up. Do stretching after a warm-up, not before.
+
+**Warm-up:** Light running, jumping jacks, other calisthenics to raise body temperature and prepare muscles for heavier usage. Slight sweating is a good indicator of sufficient warm-up.
+
+### Recommended Sequence
+
+Warm-up → Stretch (Dynamic) → Workout session → Warm-down → Stretch (Static)
 
 ## Chapter 8: Calisthenics
 

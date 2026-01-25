@@ -12,58 +12,51 @@ importance: 1
 ---
 ## Linear Algebra (Matrix/Vector)
 
-[3brown1blue videos
-playlist](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+[3brown1blue videos playlist](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
 
--   basis vectors
-    -   think of vector as an arrow point on the map, with origin at
-        \[0,0\]
-    -   think of basis vector i and j and each x and y coordinate on the
-        map
--   linear transformation
-    -   the linear transformation can be thought of the squishing or
-        enlarging the nD dimensional space
-        -   it won't be linear if the origin moves or the spacing
-            becomes unequal
-    -   we can put the \"new\" basis vector as column 1, 2,... of the
-        transformation matrix. we use the dot product to apply the
-        transformation
-    -   2x3 transformation matrix means we are squishing from 3D to 2D
-        coordinates.
-    -   the order of transformation is important -- \"rotate then
-        shear\" is not the same as \"shear then rotate\"
-    -   but it is associative -- you can compute the product of
-        transformations (called compositions) as long as they are in the
-        right order
--   determinant
-    -   the det is actually the area/volume changed by the basis vector
-        of that matrix -- either expanding or squishing
-    -   this is why (later) when det is zero, we might not have an
-        inverse matrix
--   inverse matrix
-    -   think of doing the transformation in reverse, that is how we
-        find the inverse matrix
-    -   when the det is zero, we effective lose some dimension, which
-        means many possible inverses (I think)
--   cross product
-    -   (example: 2 dimension). the cross product between 2 vectors is
-        -   a unit vector orthogonal to both input vectors (which
-            direction depends on the right-hand order)
-        -   then we scale this unit vector by the determinant (area) of
-            the 2 input vectors
--   change of basis
-    -   let A is a vector in basis~1~, and B is transformation matrix in
-        basis~2~.
-    -   we can construct a change of basis vector Q for basis~1~ --\>
-        basis~2~
-    -   then we can make the transformation matrix C = inv~Q~ \* B \* Q
-    -   then we can apply to A, getting A~hat~ = C \* A in basis~1~
--   eigen vectors and eigen values
-    -   eigen vectors are the \"orthogonal\" vectors that don't
-        change direction after some transformation Q
-    -   eigen values is the scaling value (lengthen/shorten) associated
-        with certain eigen vectors
-    -   why do we need this? because we can use eigen vector to make
-        \"change of basis\", then make transformation product much
-        easier to calculate ( namely, scaling transformation only --
-        diagonal matrix)
+### Basis Vectors
+
+Think of a vector as an arrow pointing on a map, with origin at [0,0]. Basis vectors i and j represent each x and y coordinate on the map.
+
+### Linear Transformation
+
+Linear transformation is like squishing or enlarging nD dimensional space. The transformation is only linear if the origin stays fixed and spacing remains equal.
+
+**Key properties:**
+
+- We put the new basis vector as column 1, 2, etc. of the transformation matrix. We use the dot product to apply the transformation.
+- A 2x3 transformation matrix means we are squishing from 3D to 2D coordinates.
+- Order matters. "Rotate then shear" is not the same as "shear then rotate."
+- Transformations are associative. You can compute the product of transformations (called compositions) as long as they are in the right order.
+### Determinant
+
+The determinant is the area or volume change caused by the basis vectors of a matrix. It shows whether the transformation expands or squishes space.
+
+When the determinant is zero, we lose a dimension. This is why we might not have an inverse matrix.
+
+### Inverse Matrix
+
+Think of doing the transformation in reverse. That's how we find the inverse matrix.
+
+When the determinant is zero, we effectively lose a dimension, which means many possible inverses exist.
+
+### Cross Product
+
+In two dimensions, the cross product between two vectors produces:
+
+- A unit vector orthogonal to both input vectors (direction depends on right-hand order)
+- Scaled by the determinant (area) of the two input vectors
+
+### Change of Basis
+
+Let A be a vector in basis₁, and B be a transformation matrix in basis₂.
+
+We can construct a change of basis vector Q for basis₁ → basis₂. Then we make the transformation matrix C = inv_Q * B * Q. Finally, we apply to A, getting Â = C * A in basis₁.
+
+### Eigenvectors and Eigenvalues
+
+**Eigenvectors** are the orthogonal vectors that don't change direction after some transformation Q.
+
+**Eigenvalues** are the scaling values (lengthen or shorten) associated with certain eigenvectors.
+
+**Why this matters:** We can use eigenvectors to change basis, then make transformation products much easier to calculate. We only need scaling transformations, which means diagonal matrices.
