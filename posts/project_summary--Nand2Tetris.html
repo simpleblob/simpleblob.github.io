@@ -36,129 +36,112 @@
 <li><a href="http://www.nand2tetris.org">nand2tetris.org</a></li>
 </ul>
 <h2 id="introduction">Introduction</h2>
-<ul>
-<li>we are learning 3 things:
+<p>This course teaches three things:</p>
 <ol type="1">
-<li>how computers work,</li>
-<li>how to break complex problems into manageable modules,</li>
-<li>how to develop large-scale hardware and software systems.</li>
-</ol></li>
-<li>how codes work:
+<li>How computers work</li>
+<li>How to break complex problems into manageable modules</li>
+<li>How to develop large-scale hardware and software systems</li>
+</ol>
+<h3 id="how-code-works">How Code Works</h3>
 <ol type="1">
-<li>write C sourcecode in file</li>
-<li>file is compiled into machine-level codes</li>
-<li>machine-level codes (binary code-map) are executed by a chipset –
-register, memory, ALU.</li>
-<li>all the hardware stuff in 3. &gt;&gt; they are all logic-gates.</li>
-</ol></li>
-<li>abstractions - we use it to "split off" complex projects into simple
-parts, as we did here.</li>
-</ul>
+<li>Write C source code in a file</li>
+<li>File is compiled into machine-level code</li>
+<li>Machine-level code (binary) is executed by a chipset: register,
+memory, ALU</li>
+<li>All the hardware in step 3 is built from logic gates</li>
+</ol>
+<p><strong>Abstractions</strong> let us split complex projects into
+simple parts.</p>
 <h2 id="lesson-01-boolean-and-logic-gates">Lesson 01: Boolean and Logic
 Gates</h2>
-<ul>
-<li>Basic boolean building blocks are NOT &amp; AND
-<ul>
-<li>OR(X,Y) can be construct with NOT(AND(X,Y))</li>
-</ul></li>
-<li>we can further discard NOT &amp; AND by just using <a
+<h3 id="basic-building-blocks">Basic Building Blocks</h3>
+<p>The basic boolean building blocks are NOT and AND. We can construct
+OR(X,Y) using NOT(AND(X,Y)).</p>
+<h3 id="nand-logic-the-universal-gate">NAND Logic: The Universal
+Gate</h3>
+<p>We can build everything using just <a
 href="https://docs.google.com/spreadsheets/d/1vtnEP28OuOuxE_SNyYei37tIicGpcogD1NU_nhP-hw4/edit#gid=0">NAND
-Logic</a>:
+gates</a>:</p>
 <ul>
 <li>NOT X = NAND(X,X)</li>
 <li>X OR Y = NAND(NAND(X,X),NAND(Y,Y))</li>
 <li>X AND Y = NAND(NAND(X,Y),NAND(X,Y))</li>
-<li>Trivia: NOR can do these too. we call them "universal gates"</li>
-</ul></li>
-<li>With these we can build up complex functions</li>
-<li>For logic gates, we start with truth table work backwards to
-construct functions that can implement addition and multiplication
-etc.</li>
-<li>We start with having an input of 1-bit. However, later on we will
-have more bit (16-bits etc.) to manipulate. It is better to thing of
-them as one group – "bus" (latin for "many")</li>
-<li>Building up from NANDs, the basic blocks are
-NOT,AND,OR,XOR,MUX,DMUX. (can be many-bits version).</li>
-<li>Mux and Demux is useful when shared communication over a single
-line. (selecting by feeding certain frequencies to the "select" channel
-of Mux/Demux)</li>
-<li>We can do 3-way or more combining inputs by cumulatively applying
-the basic blocks. for DMUX, it’s similar to branching out and vice versa
-for MUX.</li>
 </ul>
+<p>NOR gates can also do this. We call them “universal gates.”</p>
+<h3 id="building-complex-functions">Building Complex Functions</h3>
+<p>With these gates we can build complex functions. For logic gates, we
+start with a truth table and work backwards to construct functions that
+implement addition, multiplication, etc.</p>
+<h3 id="buses-groups-of-bits">Buses: Groups of Bits</h3>
+<p>We start with 1-bit inputs. Later we manipulate 16-bits or more.
+Think of them as one group called a “bus” (Latin for “many”).</p>
+<h3 id="core-components">Core Components</h3>
+<p>Building up from NANDs, the basic blocks are NOT, AND, OR, XOR, MUX,
+DMUX. These can all have multi-bit versions.</p>
+<p><strong>MUX and DMUX</strong> are useful for shared communication
+over a single line. Select signals control which input or output is
+active.</p>
+<p>We can create 3-way or more inputs by cumulatively applying the basic
+blocks. DMUX branches out. MUX combines back together.</p>
 <h2 id="lesson-02-boolean-arithmetic-and-alu">Lesson 02: Boolean
 Arithmetic and ALU</h2>
+<h3 id="decimal-to-binary-conversion">Decimal to Binary Conversion</h3>
+<p>Find the biggest “buckets” that a decimal number can fit, then work
+down to the next biggest.</p>
+<p><strong>Example:</strong> 99 = 64 + 32 + 0 + 0 + 0 + 2 + 1</p>
+<p>In binary form: 1100011</p>
+<h3 id="basic-arithmetic-operations">Basic Arithmetic Operations</h3>
+<p>We want these operations: Add, Subtract, Greater Than, Multiply,
+Divide.</p>
+<p>First we build Add. Then we get Subtract and Greater Than for
+free:</p>
 <ul>
-<li>How to convert from decimal to binary
-<ul>
-<li>find the biggest "buckets" that decimal number can fit then down to
-the next biggest one.</li>
-<li>Example, 99 is 64 + 32 + 0 + 0 + 0 + 2 + 1</li>
-<li>Therefore, in binary form, it is 1100011</li>
-</ul></li>
-<li>The following are the basic arithmetics we want to have: Add,
-Subtract, which is greater, Multiply, Divide</li>
-<li>First we will get "Add", then we get "Subtract" and "which is
-greater" for free
-<ul>
-<li>"Subtract" is adding another negative number together (this depends
-on how to represent negative numbers in a clever way)</li>
-<li>"Greater" means we can subtract the two numbers and see whether
-result is positive.</li>
-</ul></li>
-<li>How to build Multi-bits Adder
+<li><strong>Subtract</strong> is adding a negative number (depends on
+clever representation of negative numbers)</li>
+<li><strong>Greater Than</strong> means we subtract two numbers and
+check if the result is positive</li>
+</ul>
+<h3 id="building-a-multi-bit-adder">Building a Multi-Bit Adder</h3>
 <ol type="1">
-<li>Build Half-Adder –&gt; input a,b and output a sum and carry (called
-H-carry)</li>
-<li>Build Full-Adder –&gt; input a,b,H-carry then output "true sum" and
-"true carry"</li>
-<li>Build multi-bits Adder by stacking the Full-Adder cumulatively –
-digits by digits</li>
-</ol></li>
-<li>About "ALU" inside a cpu
-<ul>
-<li>generally used to compute integer and logic stuff. other computation
-can be implemented later in software.</li>
-<li>in "Hack ALU" design, there are 2 16-bit inputs, 1 function select,
-and 1 16-bit output</li>
-</ul></li>
-</ul>
+<li>Build Half-Adder: input a, b and output sum and carry (H-carry)</li>
+<li>Build Full-Adder: input a, b, H-carry and output true sum and true
+carry</li>
+<li>Build multi-bit Adder by stacking Full-Adders cumulatively, digit by
+digit</li>
+</ol>
+<h3 id="the-alu-arithmetic-logic-unit">The ALU (Arithmetic Logic
+Unit)</h3>
+<p>The ALU computes integer and logic operations. Other computation can
+be implemented later in software.</p>
+<p>In the Hack ALU design: 2 16-bit inputs, 1 function select, and 1
+16-bit output.</p>
 <h2 id="lesson-03-memory">Lesson 03: Memory</h2>
+<h3 id="why-we-need-memory">Why We Need Memory</h3>
 <ul>
-<li>Why do we need memory?
-<ul>
-<li>for loop, memory "states", counters</li>
-<li>deal with physical speed - the gap in one discrete "clock" cycle to
-make sure all electrical/transistor input/output changes are done before
-one ticks.</li>
-</ul></li>
-<li>Types of logic
-<ul>
-<li>combinatorial: out[t] = func(in[t])</li>
-<li>sequential: out[t+1] = func(in[t])</li>
-</ul></li>
-<li>How to implement states?
-<ul>
-<li>in[t+1] = func(in[t]) .. AKA Flip-Flop unit (func = identity).</li>
-</ul></li>
-<li>Register is a multi-bit register chained together
-<ul>
-<li>WORD = width of the register</li>
-</ul></li>
-<li>RAM (our actual memory unit)
-<ul>
-<li>stores both data and code to run. remember von neumann…</li>
-<li>this is just a bunch of registers stacked together</li>
-<li>select register to manipulate by setting "address" and turn on
-"load" flag</li>
-</ul></li>
-<li>Counter
-<ul>
-<li>need this so that we could fetch the code and execute them one by
-one</li>
-<li>counter interface: RESET, NEXT, GOTO</li>
-</ul></li>
+<li>For loops, memory states, and counters</li>
+<li>To handle physical speed: the gap in one discrete clock cycle
+ensures all electrical and transistor changes complete before the next
+tick</li>
 </ul>
+<h3 id="types-of-logic">Types of Logic</h3>
+<p><strong>Combinatorial:</strong> out[t] = func(in[t])</p>
+<p><strong>Sequential:</strong> out[t+1] = func(in[t])</p>
+<h3 id="implementing-state">Implementing State</h3>
+<p>State is implemented as in[t+1] = func(in[t]). This is the Flip-Flop
+unit (where func = identity).</p>
+<h3 id="register">Register</h3>
+<p>A register is multiple bits chained together. The WORD is the width
+of the register.</p>
+<h3 id="ram-random-access-memory">RAM (Random Access Memory)</h3>
+<p>RAM stores both data and code to run. Remember von Neumann
+architecture.</p>
+<p>RAM is just a bunch of registers stacked together. Select which
+register to manipulate by setting the address and turning on the load
+flag.</p>
+<h3 id="counter">Counter</h3>
+<p>We need a counter to fetch code and execute instructions one by
+one.</p>
+<p>Counter interface: RESET, NEXT, GOTO.</p>
 
         </div>
         <div id="footer">
