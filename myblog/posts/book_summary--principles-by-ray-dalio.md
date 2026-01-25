@@ -10,24 +10,19 @@ status: draft
 confidence: log
 importance: 1
 ---
-## His Beliefs and Concepts
+## Core Beliefs and Concepts
 
--   \"Principles\" - existing law of nature or mechanism behind it.
-    Align and prosper, go against and be ruined.
--   Evolution - one of the greatest force in the universe, a natural
-    movement towards adaptation. It applies to many human stuff,
-    including morality \"good vs bad\".
--   Evolution as a goal - desire to evolve is humanity's most pervasive
-    driving force. \"personal evolutionary process\"
--   Hyper-realism - Map vs Territory. We should strive for the truth,
-    accept it, or do something. Don't \"hope\" for better reality. An
-    accurate understanding of reality is the essential foundation of
-    good outcomes. therefore \"Brutal honesty.\"
--   Independent thinking - consensus is often wrong (really? wisdom of
-    crowds?) and bad opinions can be costly. So think for yourself and
-    stress-test your idea with people smarter than you.
--   Failure is a feedback loop for learning, and a guiding light to good
-    outcomes. The faster you learn the faster you get to the goals.
+**Principles:** Laws of nature and mechanisms that govern reality. Align with them and prosper. Go against them and be ruined.
+
+**Evolution:** One of the greatest forces in the universe. A natural movement towards adaptation. This applies to human systems, including morality.
+
+**Evolution as a goal:** The desire to evolve is humanity's most pervasive driving force. Focus on your personal evolutionary process.
+
+**Hyper-realism:** Map versus territory. Strive for truth, accept it, then act. Don't hope for a better reality. Accurate understanding of reality is the essential foundation for good outcomes. This demands brutal honesty.
+
+**Independent thinking:** Consensus is often wrong. Bad opinions can be costly. Think for yourself and stress-test your ideas with people smarter than you.
+
+**Failure as feedback:** Failure is a feedback loop for learning and a guiding light to good outcomes. The faster you learn, the faster you reach your goals.
 
 ## His Model for Decision Making
 
@@ -44,22 +39,20 @@ importance: 1
 
 **People** - human elements in your machine.
 
-## \"Two\" You (System I and II)
+## The Two Yous
 
--   One is the master planner - monitor and tweak your machine. ideal
-    rationalist. free of emotion.
--   Another is an executor - treat yourself other \"people\" in your
-    machine, looking top-down.
+Think of yourself as two people:
 
-## 5-Step Process to getting what you want out of life
+**The master planner:** Monitors and tweaks your machine. An ideal rationalist. Free of emotion.
 
-1.  Choose your goals - have clear goals
-2.  Design a plan
-3.  Encounter problems (by executing your plan)
-4.  Diagnose the problems
-5.  Redesign or tweak a plan that will get will get you around your
-    problems
+**The executor:** Treat yourself as another person in your machine. Look at yourself from the top down.
 
-You must approach this as distinct steps (not blur them together).
-Because else you will not allocate appropriate time/effort for each
-step. And the process is iterative so good to do them in order.
+## Five-Step Process to Get What You Want
+
+1. **Choose your goals** - Have clear goals
+2. **Design a plan** - Create a system to reach those goals
+3. **Encounter problems** - Execute your plan and hit obstacles
+4. **Diagnose the problems** - Understand what went wrong
+5. **Redesign the plan** - Tweak your approach to get around the problems
+
+Treat these as distinct steps. Don't blur them together. Each step needs appropriate time and effort. The process is iterative, so follow them in order.

@@ -30,7 +30,7 @@
   --space-xl: calc(var(--baseline) * 2);     /* ~3.4rem */
 
   /* Layout */
-  --content-max-width: 32rem;
+  --content-max-width: 26rem;
   --content-padding: 5%;
 }
 

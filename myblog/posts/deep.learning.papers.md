@@ -18,21 +18,19 @@ own addition of literature summary
 
 ## Famous Machine Learning Conferences
 
--   [NIPS](https://nips.cc/) - general machine learning (US)
--   [ICML](https://icml.cc/) - general machine learning (international)
--   [CVPR](http://cvpr2019.thecvf.com/) - computer vision (US)
--   [ECCV](https://eccv2018.org/) - computer vision (european)
--   [ICCV](http://iccv2019.thecvf.com/submission/timeline) - computer
-    vision (international)
--   [SIGGRAPH](https://www.siggraph.org/) - animation, computer graphic
+- **[NIPS](https://nips.cc/)** - General machine learning (US)
+- **[ICML](https://icml.cc/)** - General machine learning (international)
+- **[CVPR](http://cvpr2019.thecvf.com/)** - Computer vision (US)
+- **[ECCV](https://eccv2018.org/)** - Computer vision (European)
+- **[ICCV](http://iccv2019.thecvf.com/submission/timeline)** - Computer vision (international)
+- **[SIGGRAPH](https://www.siggraph.org/)** - Animation and computer graphics
 
-## Famous Challenges / Dataset
+## Famous Challenges and Datasets
 
-list: <https://competitions.codalab.org/>
+Full list: <https://competitions.codalab.org/>
 
--   \[2010-2017\] [ImageNet](http://image-net.org/about-stats)
-
--   \[2005-2012\] [Pascal VOC](http://image-net.org/about-stats)
+- **[2010-2017] [ImageNet](http://image-net.org/about-stats)**
+- **[2005-2012] [Pascal VOC](http://image-net.org/about-stats)**
 
 ## Activity Monitoring / Recognition
 
@@ -50,25 +48,16 @@ Baby Related
 
 ## Depth Estimation
 
--   \(2018\) [Evaluation of CNN-based Single-Image Depth Estimation
-    Methods](https://arxiv.org/pdf/1805.01328.pdf)
-    -   common criteria: (y - gt) / gt in various forms (abs, sq, sqrt,
-        log, etc.)
-    -   novel quality criterion, allowing for a more detailed analysis.
-        -   planar consistency -- given that we have gt of wall
-            orientation, we can do comparison of the diffs (dist and
-            angle)
-        -   edge consistency -- given we have some edge gt, can do dist
-            error
-        -   absolute distance accuracy -- the predicted depth in the
-            plan shouldnt stray too far.
-    -   [new dataset](http://www.lmf.bgu.tum.de/ibims1/) attached and
-        SOTA methods evaluated.
--   \(2018\) [Revisiting Single Image Depth Estimation:Toward Higher
-    Resolution Maps with Accurate Object
-    Boundaries](https://arxiv.org/pdf/1803.08673.pdf)
-    -   custom loss to lessen blurry-ness and more detail preservation.
-        results look good.
+- **(2018)** [Evaluation of CNN-based Single-Image Depth Estimation Methods](https://arxiv.org/pdf/1805.01328.pdf)
+    - **Common criteria:** (y - gt) / gt in various forms (abs, sq, sqrt, log, etc.)
+    - **Novel quality criteria** for more detailed analysis:
+        - Planar consistency: Given ground truth wall orientation, compare differences in distance and angle
+        - Edge consistency: Given edge ground truth, measure distance error
+        - Absolute distance accuracy: Predicted depth shouldn't stray too far
+    - Includes [new dataset](http://www.lmf.bgu.tum.de/ibims1/) and evaluates SOTA methods
+
+- **(2018)** [Revisiting Single Image Depth Estimation: Toward Higher Resolution Maps with Accurate Object Boundaries](https://arxiv.org/pdf/1803.08673.pdf)
+    - Custom loss reduces blurriness and preserves more detail. Results look good.
 -   \(2019\) [Monocular Depth Estimation: A
     Survey](https://arxiv.org/abs/1901.09402)
 -   \(2019\) [FastDepth: Fast Monocular Depth Estimation on Embedded

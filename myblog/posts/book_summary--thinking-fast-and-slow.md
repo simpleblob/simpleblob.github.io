@@ -38,22 +38,17 @@ is engaged to avoid them.
 
 ### Attention and Effort
 
-Pupil dilation is an indicator of mental effort and engagement -- A
-window to your soul.
+Pupil dilation indicates mental effort and engagement. A window to your soul.
 
-As a person becomes skilled in tasks, the demand for effort (energy)
-diminishes -- with fewer brain regions involved. (Chunking into habits?)
+As a person becomes skilled, the demand for effort diminishes. Fewer brain regions are involved. This is chunking into habits.
 
-Talent has similar effects. Highly intelligent (IQ?) Individuals need
-less effort to solve same problems.
+Talent has similar effects. Highly intelligent individuals need less effort to solve the same problems.
 
-What is effortful?
+**What is effortful:**
 
--   Adoption and termination of new task sets. (Never seen nor tried
-    before)
--   Switching from one task to another. Note: both 1. And 2. are mindful
-    tasks.
--   Constantly using Working memory to the fullest.
+- Adopting and terminating new task sets (never seen or tried before)
+- Switching from one task to another (both of these are mindful tasks)
+- Constantly using working memory to the fullest
 
 ### The Lazy Controller
 
@@ -78,22 +73,20 @@ thoughts unconsciously (old age)
 
 ### Cognitive Ease
 
-Familiarity/ease -\> system 1 engages = more accepting/gullible
+Familiarity and ease engage System 1, making you more accepting and gullible.
 
-Unfamiliar -\> system 2 engages = doubtful/critical
+Unfamiliarity engages System 2, making you doubtful and critical.
 
-Mere exposure effect - Repetition induces cognitive ease and feeling of
-familiarity. This works even on subconscious level as it impacts System
-1 directly.
+**Mere exposure effect:** Repetition induces cognitive ease and familiarity. This works at the subconscious level because it impacts System 1 directly.
 
-How to communicate persuasively - do it in a way that REDUCES cognitive
-strain and put System 1 at ease.
+### Communicating Persuasively
 
-1.  Use clear, legible font. Color: black, red, blue.
-2.  Use simple, concise words. Put the work on the encoder not the
-    decoder.
-3.  Make it memorable, put it in verses if you can.
-4.  If you quote a source, choose easy to pronounce names.
+Reduce cognitive strain and put System 1 at ease:
+
+- Use clear, legible font. Colors: black, red, blue.
+- Use simple, concise words. Put the work on the encoder, not the decoder.
+- Make it memorable. Put it in verses if you can.
+- If you quote a source, choose easy-to-pronounce names.
 
 System 1 is doing greedy search, therefore good at positive and
 one-sided affirmation. something like an excuse machine too. if we ask

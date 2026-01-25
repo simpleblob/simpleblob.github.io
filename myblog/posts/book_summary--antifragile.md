@@ -12,38 +12,40 @@ importance: 1
 ---
 ## Book I - Introduction
 
--   Opposite of fragile is not robust (unharmed), it is antifragile
-    (improved).
--   Complex societies \>\> more specialization \>\> more vulnerable to
-    collapse (easier to topple balance)
--   Some histories
-    -   Mithridatization = small dose of substance until immune to it
-    -   Hormesis = small dose of harmful substance actually beneficial,
-        act as medicine --\> a form of creating redundancy in systems
-    -   a fast (caloric restriction)
--   Domain dependence = rich person has someone carry bag for him, to go
-    to the gym to exercise
--   Under-compensation (no stressors, too bored) and over-compensation
-    (good level of stressors)
--   Stressors are information that system can use to improve (after it
-    survives that stressor, or if not, the group can still benefit from
-    the info)
--   humans tend to do better with low freq/high severity stressors, with
-    ample rest time
--   Evolution is group benefiting from sacrifice of the few. Individuals
-    might not become stronger, but the group is, after surviving
-    stressors (with valuable information)
--   Be careful of mistaking some cases as individual improvement rather
-    than culling out the weak
+The opposite of fragile is not robust. Robust means staying the same under stress. Antifragile means getting better under stress.
+
+### Complexity and Vulnerability
+
+Complex societies create more specialization, which makes them more vulnerable to collapse. When everything is interconnected and specialized, the whole system becomes easier to topple.
+
+### Historical Examples of Antifragility
+
+- **Mithridatization** - Taking small doses of a substance until you become immune to it
+- **Hormesis** - Small doses of harmful substances can be beneficial, acting as medicine. This creates redundancy in biological systems.
+- **Fasting** - Caloric restriction as a form of hormesis
+
+### Key Concepts
+
+**Domain dependence:** The rich person who has someone carry his bag, then goes to the gym to exercise. We fail to see connections across different domains.
+
+**Compensation levels:** Systems need the right amount of stress. Too little stress leads to boredom and weakness. The right amount of stress leads to growth.
+
+**Stressors as information:** When a system survives a stressor, it gains valuable information to improve. Even if it doesn't survive, the group benefits from that information.
+
+**Human stress patterns:** Humans handle low frequency, high severity stressors better than constant low-level stress, as long as there's ample rest time between stressors.
+
+**Evolution through sacrifice:** Evolution benefits the group through sacrifice of individuals. The group becomes stronger after surviving stressors, even when individuals don't. Don't mistake population-level improvement for individual improvement.
 
 ## Book II - Modernity and the Denial of Antifragility
 
--   Artisans (taxi drivers etc.) has seen explicit volatility of
-    day-by-day income, hence can adjust strategy accordingly. Permanent
-    employees however, are generally unprepared for the (hidden) coming
-    layoff or job changes. The problem is exacerbated by the low-freq /
-    high-sev of these events.
--   Usually the more variability is observed in a system, the less Black
-    Swan-prone it is.
--   Centralized state (Russia) is fragile, while City state
-    (Switzerland) is antifragile.
+### Visible vs Hidden Volatility
+
+Artisans like taxi drivers see income volatility every day. This lets them adjust their strategy. Permanent employees face hidden volatility. They're unprepared when layoffs or job changes hit. The problem gets worse because these events are rare but severe.
+
+### Variability as Early Warning
+
+The more variability you observe in a system, the less vulnerable it is to Black Swan events. Visible volatility is better than hidden stability.
+
+### Centralization Creates Fragility
+
+Centralized states like Russia are fragile. Decentralized city states like Switzerland are antifragile.
