@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This is a static personal website/blog hosted on GitHub Pages. Posts are written in Emacs Org format (`.org` files) and converted to HTML using a custom Python script that uses Pandoc for conversion.
+This is a static personal website/blog hosted on GitHub Pages. Posts are written in Markdown format (`.md` files) and converted to HTML using a custom Python script that uses Pandoc for conversion.
 
 ## Architecture
 
