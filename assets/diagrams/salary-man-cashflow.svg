@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600" height="350">
+  <defs>
+    <!-- Arrow marker for income (green) -->
+    <marker id="arrowIncome" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2d8659" />
+    </marker>
+
+    <!-- Arrow marker for expenses (red-orange) -->
+    <marker id="arrowExpense" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#c85a54" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="25" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">
+    Salary Man Cash Flow Pattern
+  </text>
+
+  <!-- Employer Box (Income Source) -->
+  <rect x="30" y="150" width="100" height="60" rx="5" fill="#2d8659" stroke="#1e5a3d" stroke-width="2"/>
+  <text x="80" y="185" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+    Employer
+  </text>
+
+  <!-- Income Arrow -->
+  <line x1="130" y1="180" x2="210" y2="180" stroke="#2d8659" stroke-width="3" marker-end="url(#arrowIncome)"/>
+  <text x="170" y="170" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#2d8659" font-weight="600">
+    Income
+  </text>
+
+  <!-- Salary Man Box (Central Figure) -->
+  <rect x="210" y="150" width="110" height="60" rx="5" fill="#4a5568" stroke="#2d3748" stroke-width="2"/>
+  <text x="265" y="175" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+    Salary Man
+  </text>
+  <text x="265" y="195" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#e2e8f0">
+    (No Buffer)
+  </text>
+
+  <!-- Expense Boxes and Arrows -->
+
+  <!-- Mortgage/Rent -->
+  <line x1="320" y1="165" x2="400" y2="75" stroke="#c85a54" stroke-width="2.5" marker-end="url(#arrowExpense)"/>
+  <rect x="400" y="50" width="170" height="50" rx="4" fill="#e8a598" stroke="#c85a54" stroke-width="1.5"/>
+  <text x="485" y="80" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#5a1f1a">
+    Mortgage/Rent
+  </text>
+
+  <!-- Car Payment -->
+  <line x1="320" y1="170" x2="400" y2="135" stroke="#c85a54" stroke-width="2.5" marker-end="url(#arrowExpense)"/>
+  <rect x="400" y="115" width="170" height="40" rx="4" fill="#e8a598" stroke="#c85a54" stroke-width="1.5"/>
+  <text x="485" y="140" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#5a1f1a">
+    Car Payment
+  </text>
+
+  <!-- Credit Cards -->
+  <line x1="320" y1="180" x2="400" y2="180" stroke="#c85a54" stroke-width="2.5" marker-end="url(#arrowExpense)"/>
+  <rect x="400" y="165" width="170" height="40" rx="4" fill="#e8a598" stroke="#c85a54" stroke-width="1.5"/>
+  <text x="485" y="190" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#5a1f1a">
+    Credit Cards
+  </text>
+
+  <!-- Utilities -->
+  <line x1="320" y1="190" x2="400" y2="225" stroke="#c85a54" stroke-width="2.5" marker-end="url(#arrowExpense)"/>
+  <rect x="400" y="215" width="170" height="40" rx="4" fill="#e8a598" stroke="#c85a54" stroke-width="1.5"/>
+  <text x="485" y="240" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#5a1f1a">
+    Utilities
+  </text>
+
+  <!-- Consumer Goods -->
+  <line x1="320" y1="195" x2="400" y2="280" stroke="#c85a54" stroke-width="2.5" marker-end="url(#arrowExpense)"/>
+  <rect x="400" y="265" width="170" height="40" rx="4" fill="#e8a598" stroke="#c85a54" stroke-width="1.5"/>
+  <text x="485" y="290" font-family="sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#5a1f1a">
+    Consumer Goods
+  </text>
+
+  <!-- Savings Indicator (emphasized as nearly zero) -->
+  <rect x="30" y="280" width="160" height="50" rx="5" fill="#fff4e6" stroke="#d97706" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="110" y="300" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#92400e">
+    Savings Rate
+  </text>
+  <text x="110" y="320" font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#dc2626">
+    ~0%
+  </text>
+
+  <!-- Warning Icon/Indicator -->
+  <circle cx="265" cy="240" r="3" fill="#fbbf24"/>
+  <text x="265" y="260" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#78716c" font-style="italic">
+    High fragility
+  </text>
+</svg>
