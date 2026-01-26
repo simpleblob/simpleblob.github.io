@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <defs>
+    <style>
+      .axis-line { stroke: #4a5568; stroke-width: 2; }
+      .axis-label { font-family: sans-serif; font-size: 14px; fill: #2d3748; font-weight: 600; }
+      .axis-value { font-family: sans-serif; font-size: 12px; fill: #4a5568; }
+      .quadrant { opacity: 0.15; }
+      .worker-type { font-family: sans-serif; font-size: 18px; fill: #1a202c; font-weight: 700; }
+      .characteristic { font-family: sans-serif; font-size: 11px; fill: #4a5568; }
+    </style>
+  </defs>
+
+  <!-- Quadrant backgrounds -->
+  <rect x="40" y="40" width="210" height="160" fill="#60a5fa" class="quadrant"/>
+  <rect x="250" y="40" width="210" height="160" fill="#3b82f6" class="quadrant"/>
+  <rect x="40" y="200" width="210" height="160" fill="#93c5fd" class="quadrant"/>
+  <rect x="250" y="200" width="210" height="160" fill="#2563eb" class="quadrant"/>
+
+  <!-- Axis lines -->
+  <line x1="250" y1="40" x2="250" y2="360" class="axis-line"/>
+  <line x1="40" y1="200" x2="460" y2="200" class="axis-line"/>
+
+  <!-- Y-axis label and values -->
+  <text x="20" y="120" class="axis-label" transform="rotate(-90 20 120)" text-anchor="middle">Organization</text>
+  <text x="25" y="80" class="axis-value">Non-linear</text>
+  <text x="25" y="330" class="axis-value">Linear</text>
+
+  <!-- X-axis label and values -->
+  <text x="250" y="390" class="axis-label" text-anchor="middle">Coupling</text>
+  <text x="145" y="380" class="axis-value" text-anchor="middle">Loose</text>
+  <text x="355" y="380" class="axis-value" text-anchor="middle">Tight</text>
+
+  <!-- Top-left quadrant: Renaissance Man -->
+  <text x="145" y="100" class="worker-type" text-anchor="middle">Renaissance Man</text>
+  <text x="145" y="135" class="characteristic" text-anchor="middle">Diversified,</text>
+  <text x="145" y="150" class="characteristic" text-anchor="middle">antifragile</text>
+
+  <!-- Top-right quadrant: Business Man -->
+  <text x="355" y="100" class="worker-type" text-anchor="middle">Business Man</text>
+  <text x="355" y="135" class="characteristic" text-anchor="middle">Owns business,</text>
+  <text x="355" y="150" class="characteristic" text-anchor="middle">convex payoff</text>
+
+  <!-- Bottom-left quadrant: Working Man -->
+  <text x="145" y="260" class="worker-type" text-anchor="middle">Working Man</text>
+  <text x="145" y="295" class="characteristic" text-anchor="middle">Multiple clients,</text>
+  <text x="145" y="310" class="characteristic" text-anchor="middle">variable income</text>
+
+  <!-- Bottom-right quadrant: Salary Man -->
+  <text x="355" y="260" class="worker-type" text-anchor="middle">Salary Man</text>
+  <text x="355" y="295" class="characteristic" text-anchor="middle">Single employer,</text>
+  <text x="355" y="310" class="characteristic" text-anchor="middle">linear rewards</text>
+</svg>

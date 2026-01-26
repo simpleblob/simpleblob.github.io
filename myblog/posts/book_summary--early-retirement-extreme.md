@@ -52,6 +52,8 @@ We analyze economics using two axes:
 
 **Vertical axis (Organization):** From linear to non-linear. Non-linear feedback creates convex payoffs.
 
+![Four Types of Workers Matrix](/assets/diagrams/four-types-matrix.svg)
+
 ### Four Types of Workers
 
 Each type has different risks, rewards, and culture:
@@ -63,6 +65,8 @@ Tied to one employer. Fragile when things change. Rewards scale linearly with ef
 - Use options others create, but don't create new ones
 - Work and consumption are well controlled. A cog in the machine.
 - All income goes to spending. No savings buffer.
+
+![Salary Man Cash Flow](/assets/diagrams/salary-man-cashflow.svg)
 
 #### Working Man (Loose/Linear)
 
@@ -90,6 +94,9 @@ A combination of all three types.
 - Does many things in-house: taxes, repairs, painting, cooking. This cuts cash outflows considerably.
 - Owns assets and investments in various businesses.
 - Can make or do anything. A local leader and inspiration to others.
+
+![Renaissance Man Cash Flow](/assets/diagrams/renaissance-man-cashflow.svg)
+
 ### Succession and Cycles of Change
 
 Different types dominate at different stages. Like species in nature:
@@ -287,6 +294,8 @@ The strategy for living like a Renaissance man:
 **Modern economics:** Only Producers → Consumers
 
 The economy can't keep growing forever without killing itself if the cycle isn't completed.
+
+![Ecosystem Loop Comparison](/assets/diagrams/ecosystem-loop.svg)
 
 ### The ERE Goal
 
