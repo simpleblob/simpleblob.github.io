@@ -134,6 +134,7 @@ The Renaissance man builds capabilities across four domains:
 - Be able to compete in local sports competitions
 - Be able to perform physically while exhausted, hungry, or tired. Test: carrying an unconscious person from a burning house, or pulling yourself up and hanging from a gutter.
 - Know at least basic first aid
+
 #### Intellectual
 
 - Prioritize information relevance. Quickly research and find relevant information across many areas. Learn independently with genuine interest.
@@ -142,6 +143,7 @@ The Renaissance man builds capabilities across four domains:
 - Critically analyze models, refine them, and combine different models to achieve objectives. Practice critical thinking in all aspects of life to reach rational certainty. Be open to new ideas but accept nothing without examination.
 - Synthesize interdisciplinary information and connect similarities that aren't immediately apparent. Discover new models and procedures.
 - Evaluate different methods, models, and procedures. Rank them by utility. Pick the best one while recognizing the value of other methods. Pursue relevant and correct knowledge persistently. Master the fundamentals.
+
 #### Economic
 
 - Understand the difference between price and value. Value is psychological. Price is determined by the market.
@@ -152,6 +154,7 @@ The Renaissance man builds capabilities across four domains:
 - Know the law of supply and demand. Know the difference between savings and investments, and between present and future value.
 - Understand how stock, bond, and real estate markets work, both in theory and practice.
 - Be able to do your own tax return, make a budget, and balance a checkbook.
+
 #### Emotional
 
 - Appraise value in all matters to make sound decisions
@@ -162,6 +165,7 @@ The Renaissance man builds capabilities across four domains:
 - Be empathetic. Understand that people and situations are complex.
 - Make social connections and increase the value of interpersonal relationships
 - Patiently await a better solution. Be willing to compromise and accept something close, but not exactly your ideal.
+
 #### Social
 
 - Get to know people outside your profession, hobby, religion, political party, socioeconomic stratum, and country
@@ -176,6 +180,7 @@ The Renaissance man builds capabilities across four domains:
 - Have a working understanding of all the technology you use to understand its limits and benefits
 - Learn how to select optimal tools for your use, maintain them, and repair them when they break down
 - Learn a common trade to barter your skills for other things
+
 #### Ecological
 
 - Know the names of 5 grasses, 5 birds, 5 trees, etc. local to your area. Be able to recognize them.
