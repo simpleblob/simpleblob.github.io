@@ -384,7 +384,7 @@ class SiteGenerator:
         try:
             archive_body = template_archive.render(post_list=post_list_html)
             full_html = template_default.render(
-                title="Archives",
+                title="Writing",
                 body=archive_body
             )
 
