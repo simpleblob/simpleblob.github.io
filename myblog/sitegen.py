@@ -164,11 +164,10 @@ class SiteGenerator:
     """Main site generator class."""
 
     def __init__(self):
-        # Verify we're in the myblog directory
-        if os.getcwd().split("/")[-1] != "myblog":
-            logger.error("Please run this script from the 'myblog' directory!")
-            logger.error(f"Current directory: {os.getcwd()}")
-            sys.exit(1)
+        # Change to script directory so relative paths in config work
+        script_dir = Path(__file__).parent.resolve()
+        os.chdir(script_dir)
+        logger.info(f"Working directory: {os.getcwd()}")
 
         # Load configuration
         self.config = Config()
