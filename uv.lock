@@ -725,7 +725,7 @@ wheels = [
 [[package]]
 name = "simpleblob-sitegen"
 version = "0.2.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "jinja2" },
     { name = "pyyaml" },

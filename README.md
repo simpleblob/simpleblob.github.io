@@ -18,13 +18,6 @@ Static site generator for personal blog. Posts are written in Markdown with YAML
 - [Pandoc](https://pandoc.org/installing.html) (for Markdown conversion)
 - [uv](https://github.com/astral-sh/uv) (Python package manager)
 
-### Installation
-
-```bash
-# Install dependencies
-uv pip install -e .
-```
-
 ### Writing Posts
 
 1. Create a new `.md` file in `myblog/posts/`
@@ -53,8 +46,10 @@ Your content here...
 Generate HTML from Markdown posts:
 
 ```bash
-uv run sitegen
+uv run python myblog/sitegen.py
 ```
+
+No installation needed! The `uv run` command automatically manages dependencies from `pyproject.toml`.
 
 The command can be run from any directory in the repository. It will:
 - Convert changed `.md` files to HTML (incremental builds)
@@ -92,6 +87,7 @@ Then visit `http://localhost:8000` in your browser.
 - Incremental builds only regenerate changed posts (cache stored in `myblog/.build_cache`)
 - Delete `.build_cache` to force a full rebuild
 - Generated HTML files are git-tracked (deployed directly to GitHub Pages)
+- Dependencies are automatically managed by `uv` - no separate install step needed
 
 ## Configuration
 

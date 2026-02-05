@@ -17,10 +17,6 @@ dev = [
     "pytest>=7.0",
 ]
 
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
 [tool.black]
 line-length = 88
 target-version = ['py38']
@@ -28,8 +24,3 @@ target-version = ['py38']
 [tool.ruff]
 line-length = 88
 target-version = "py38"
-[project.scripts]
-sitegen = "myblog.sitegen:main"
-
-[tool.setuptools.packages.find]
-include = ["myblog*"]

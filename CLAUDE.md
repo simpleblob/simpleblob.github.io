@@ -51,27 +51,18 @@ This is a static personal website/blog hosted on GitHub Pages. Posts are written
 ### Generate Site from Markdown Files
 
 ```bash
-uv run sitegen
+uv run python myblog/sitegen.py
 ```
 
-Can be run from any directory in the repository.
+Can be run from any directory in the repository. No installation required - `uv` automatically manages dependencies from `pyproject.toml`.
 
 **Requirements**:
 - Python 3.8+
-- Dependencies: `jinja2`, `pyyaml`, `watchdog`, `tomli` (for Python < 3.11)
+- [uv](https://github.com/astral-sh/uv) (Python package manager)
 - Pandoc (must be in PATH)
 
-### Install Dependencies
-
-Using uv (recommended):
-```bash
-uv pip install -e .
-```
-
-Or using pip:
-```bash
-pip install -e .
-```
+**Dependencies** (automatically handled by uv):
+- `jinja2`, `pyyaml`, `watchdog`, `tomli` (for Python < 3.11)
 
 ### Local Development Server
 
