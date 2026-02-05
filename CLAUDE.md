@@ -68,7 +68,7 @@ Can be run from any directory in the repository. No installation required - `uv`
 
 From repository root:
 ```bash
-python3 -m http.server 8000
+uv run python -m http.server 8000
 ```
 
 Then visit `http://localhost:8000` in a browser.
