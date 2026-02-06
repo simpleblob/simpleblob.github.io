@@ -61,7 +61,7 @@ The command can be run from any directory in the repository. It will:
 Preview the site locally:
 
 ```bash
-uv run python -m http.server 8000
+uv run python -m http.server 8000 --bind localhost
 ```
 
 Then visit `http://localhost:8000` in your browser.
