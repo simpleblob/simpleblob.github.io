@@ -35,6 +35,6 @@ early and continuous speed-up will create momentum and make things easier long-t
 * acknowledging problems is the frist step toward solving them and regaining mental peace.
 * simply thinking about it is not enough -- do write about it. the mind needs material proof of acknowledgment.
 
-** ACTION: Write about your current problems. Do it right now. **
+**ACTION: Write about your current problems. Do it right now.**
 
 ### Rule 4 - PROBLEMS ARE NOT SOLVED BY ADDRESSING THEIR SYMPTOMS, BUT BY ADDRESSING THEIR ROOT CAUSE
