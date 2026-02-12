@@ -38,3 +38,8 @@ early and continuous speed-up will create momentum and make things easier long-t
 **ACTION: Write about your current problems. Do it right now.**
 
 ### Rule 4 - PROBLEMS ARE NOT SOLVED BY ADDRESSING THEIR SYMPTOMS, BUT BY ADDRESSING THEIR ROOT CAUSE
+
+* a main in a sinking ship. unless he fixes the hole, the water he throws away will be replaced by more water coming in.
+* Solving a problem without solving its root cause is just like dancing in place.
+
+**ACTION: Write down, NOW, what you will do to ensure that your current problems will never show up again.**
