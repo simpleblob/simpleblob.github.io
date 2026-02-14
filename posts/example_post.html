@@ -4,27 +4,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>website - example post</title>
+        
+        <!-- Theme color meta tags -->
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCF9" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#100E12" />
+        
+        <!-- Preload Inter font for better performance -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
+        
+        <!-- Theme toggle script - runs immediately to prevent flash -->
+        <script src="/js/theme-toggle.js"></script>
     </head>
     <main>
     <body>
         <div id="header">
             <div id="logo">
-                <a href="../">My Website</a>
+                <a href="../">SIMPLEBLOB</a>
             </div>
             <div id="navigation">
                 <a href="../">Home</a>
                 <a href="../archive.html">Writing</a>
-                <a href="../experiments.html">Experiments</a>
+                <a href="../experiments.html">Labs</a>
                 <a href="../contact.html">Contact</a>
+                <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
             </div>
         </div>
 
         <div id="content">
             <h1>example post</h1>
 
-            <div class="info">
+            <div class="post-meta">
     <em>
     creation date: 2017-11-06,
     latest update: 2017-11-07

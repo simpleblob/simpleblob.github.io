@@ -3,20 +3,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>website - Home</title>
+        
+        <!-- Theme color meta tags -->
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCF9" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#100E12" />
+        
+        <!-- Preload Inter font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        
         <link rel="stylesheet" type="text/css" href="./css/default.css" />
+        <script src="./js/theme-toggle.js"></script>
     </head>
     <main>
     <body>
         <div id="header">
             <div id="logo">
-                <a href="./">My Website</a>
+                <a href="./">SIMPLEBLOB</a>
             </div>
             <div id="navigation">
                 <a href="./">Home</a>
                 <a href="./archive.html">Writing</a>
-                <a href="./experiments.html">Experiments</a>
+                <a href="./experiments.html">Labs</a>
                 <a href="./contact.html">Contact</a>
+                <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
             </div>
         </div>
         <div id="content">
@@ -35,7 +47,6 @@
     <div id="footer">
         <a href="#header">↑ Back to top</a>
     </div>
-    <!-- MathJax is library for displaying math nicely -->
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </main>
