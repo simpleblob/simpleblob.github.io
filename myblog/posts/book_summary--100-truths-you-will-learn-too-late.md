@@ -43,3 +43,18 @@ early and continuous speed-up will create momentum and make things easier long-t
 * Solving a problem without solving its root cause is just like dancing in place.
 
 **ACTION: Write down, NOW, what you will do to ensure that your current problems will never show up again.**
+
+### Rule 5 - MAKE A NOT-TO-DO LIST
+
+The enemy of productivity isn't laziness but busywork. Not-to-do lists are your solution to it. 
+
+You are not allowed to work on your not-t-do list until the to-do list is completed.
+
+**ACTION: Implement a not-to-do list for yourself:
+
+1. Make  a list of top 25 actions you should take during the next months
+2. Order the list items from the most impactful to the least impactful.
+3. Select the top 5 items --> these are your to-do list.
+4. Select the bottom 20 items --> these are your not-to-do list.
+
+Pin both lists to somewhere you can regularly check them. 
