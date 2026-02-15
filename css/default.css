@@ -300,6 +300,12 @@ li {
   margin: 0.275rem 0;
 }
 
+/* List markers with subtle gray color */
+ul li::marker,
+ol li::marker {
+  color: var(--color-text-muted);
+}
+
 /* ============================================================================
    Code Blocks
    ============================================================================ */
