@@ -50,11 +50,11 @@ The enemy of productivity isn't laziness but busywork. Not-to-do lists are your 
 
 You are not allowed to work on your not-t-do list until the to-do list is completed.
 
-**ACTION: Implement a not-to-do list for yourself:
+**ACTION: Implement a not-to-do list for yourself:**
 
-1. Make  a list of top 25 actions you should take during the next months
+1. Make a list of top 25 actions you should take during the next months
 2. Order the list items from the most impactful to the least impactful.
 3. Select the top 5 items --> these are your to-do list.
 4. Select the bottom 20 items --> these are your not-to-do list.
 
-Pin both lists to somewhere you can regularly check them. 
+Pin both lists to somewhere you can regularly check them.
