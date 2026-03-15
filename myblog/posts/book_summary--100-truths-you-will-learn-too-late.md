@@ -17,11 +17,11 @@ importance: 1
 * failures are feedback from life to help "teach" you the rules
 * below you will find 100 rules for life in general, learned through author's experience.
 
-## Rule 2 to 8 - PRIORITIZE YOUR GROWTH
+# Rule 2 to 8 - PRIORITIZE YOUR GROWTH
 
 early and continuous speed-up will create momentum and make things easier long-term.
 
-### Rule 2 - THE VERY IMPORTANT NEVER FEELS URGENT
+## Rule 2 - THE VERY IMPORTANT NEVER FEELS URGENT
 
 * most common regret on deathbed is life spent chasing urgents, neglecting the importants.
 * important activities examples: family meals, learning, taking care of health. we neglect them because these don't have deadlines.
@@ -29,7 +29,7 @@ early and continuous speed-up will create momentum and make things easier long-t
 
 **ACTION: Make the very important urgent, now. put them within your schedule, and be inflexible about them.**
 
-### Rule 3 - PROBLEMS GROW TO THE SIZE THEY NEED FOR YOU TO ACKNOWLEDGE THEM
+## Rule 3 - PROBLEMS GROW TO THE SIZE THEY NEED FOR YOU TO ACKNOWLEDGE THEM
 
 * it's feedback loop / inertia. things will move in the same direction until the condition changes. whether by environment or our own action.
 * acknowledging problems is the frist step toward solving them and regaining mental peace.
@@ -37,14 +37,14 @@ early and continuous speed-up will create momentum and make things easier long-t
 
 **ACTION: Write about your current problems. Do it right now.**
 
-### Rule 4 - PROBLEMS ARE NOT SOLVED BY ADDRESSING THEIR SYMPTOMS, BUT BY ADDRESSING THEIR ROOT CAUSE
+## Rule 4 - PROBLEMS ARE NOT SOLVED BY ADDRESSING THEIR SYMPTOMS, BUT BY ADDRESSING THEIR ROOT CAUSE
 
 * a man in a sinking ship. unless he fixes the hole, the water he throws away will be replaced by more water coming in.
 * Solving a problem without solving its root cause is just like dancing in place.
 
 **ACTION: Write down, NOW, what you will do to ensure that your current problems will never show up again.**
 
-### Rule 5 - MAKE A NOT-TO-DO LIST
+## Rule 5 - MAKE A NOT-TO-DO LIST
 
 The enemy of productivity isn't laziness but busywork. Not-to-do lists are your solution to it. 
 
@@ -59,13 +59,13 @@ You are not allowed to work on your not-t-do list until the to-do list is comple
 
 Pin both lists to somewhere you can regularly check them.
 
-### Rule 6 - DO YOUR ACTIVITIES MAKE YOUR LIFE BETTER?
+## Rule 6 - DO YOUR ACTIVITIES MAKE YOUR LIFE BETTER?
 
 Ask yourself, whatever you do right now -- does it make your life better short/long term?
 
 If not, replace it with something that does.
 
-### Rule 6 - MOST MISTAKES ARE FORMS OF CLINGING TO THE PAST
+## Rule 7 - MOST MISTAKES ARE FORMS OF CLINGING TO THE PAST
 
 Cling to who I was, what I know, what made me feel good and safe.
 
