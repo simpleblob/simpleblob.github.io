@@ -65,4 +65,10 @@ Ask yourself, whatever you do right now -- does it make your life better short/l
 
 If not, replace it with something that does.
 
+### Rule 6 - MOST MISTAKES ARE FORMS OF CLINGING TO THE PAST
 
+Cling to who I was, what I know, what made me feel good and safe.
+
+You do not have to be your past. You can become someone else right now, without waiting for permission.
+
+**ACTION: What would you do if you didn’t feel obligated to act like the person you’ve been?**
