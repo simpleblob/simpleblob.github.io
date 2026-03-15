@@ -58,3 +58,11 @@ You are not allowed to work on your not-t-do list until the to-do list is comple
 4. Select the bottom 20 items --> these are your not-to-do list.
 
 Pin both lists to somewhere you can regularly check them.
+
+### Rule 6 - DO YOUR ACTIVITIES MAKE YOUR LIFE BETTER?
+
+Ask yourself, whatever you do right now -- does it make your life better short/long term?
+
+If not, replace it with something that does.
+
+
