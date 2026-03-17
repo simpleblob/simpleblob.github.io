@@ -72,3 +72,13 @@ Cling to who I was, what I know, what made me feel good and safe.
 You do not have to be your past. You can become someone else right now, without waiting for permission.
 
 **ACTION: What would you do if you didn’t feel obligated to act like the person you’ve been?**
+
+## Rule 8 - THE MOST IMPORTANT QUESTION
+
+If you keep doing what your are currently doing, how will your life be in 10 years?
+
+**ACTION: Answer the above question and make Adjustments.
+
+## Chapter Conclusion
+
+Prioritize your personal growth will make yourself more valuable, in the world's rules and systems. It will bring you happiness and long-lasting positive changes. 
