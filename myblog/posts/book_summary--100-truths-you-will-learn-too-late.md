@@ -82,3 +82,13 @@ If you keep doing what your are currently doing, how will your life be in 10 yea
 ## Chapter Conclusion
 
 Prioritize your personal growth will make yourself more valuable, in the world's rules and systems. It will bring you happiness and long-lasting positive changes. 
+
+# Rule 9 to 13 - MOVE FORWARD
+
+## Rule 9 - WHAT GOT YOU HERE WON'T GET YOU THERE
+
+individual contributor --> work long hours --> got promoted to senior --> work long hours --> stuck, cannot get to management or Founding engineer level.
+
+Life is made of stages. What works in one stage often doesn't work in the next one.
+
+Like an electron circling atomic nucleus, it needs a energy bump to go to the next level.
