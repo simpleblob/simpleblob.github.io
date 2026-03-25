@@ -92,3 +92,8 @@ individual contributor --> work long hours --> got promoted to senior --> work l
 Life is made of stages. What works in one stage often doesn't work in the next one.
 
 Like an electron circling atomic nucleus, it needs a energy bump to go to the next level.
+
+
+## Rule 10 - GET BETTER AT SPOTTING BUSYWORK
+
+Busywork = work that don't add values. can be subtle, like repeating exercises that don't add muscles, it is just not effective.
