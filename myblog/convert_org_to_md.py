@@ -12,7 +12,6 @@ This script:
 import os
 import subprocess
 from glob import glob
-from pathlib import Path
 
 
 def convert_org_to_md():
@@ -39,12 +38,12 @@ def convert_org_to_md():
     for org_file in org_files:
         try:
             # Read original file
-            with open(org_file, 'r', encoding='utf-8') as f:
+            with open(org_file, "r", encoding="utf-8") as f:
                 content = f.read()
 
             # Split frontmatter and body
             # Format: ---\nfrontmatter\n---\nbody
-            parts = content.split('---', 2)
+            parts = content.split("---", 2)
 
             if len(parts) != 3:
                 print(f"⚠️  Warning: {org_file} - Invalid frontmatter format, skipping")
@@ -56,23 +55,23 @@ def convert_org_to_md():
 
             # Convert body with Pandoc (org -> markdown)
             result = subprocess.run(
-                ['pandoc', '-f', 'org', '-t', 'markdown'],
+                ["pandoc", "-f", "org", "-t", "markdown"],
                 input=org_body,
                 capture_output=True,
                 text=True,
-                check=True
+                check=True,
             )
 
             md_body = result.stdout
 
             # Construct new .md file path
-            md_file = org_file.replace('.org', '.md')
+            md_file = org_file.replace(".org", ".md")
 
             # Write new .md file
-            with open(md_file, 'w', encoding='utf-8') as f:
-                f.write('---\n')
+            with open(md_file, "w", encoding="utf-8") as f:
+                f.write("---\n")
                 f.write(frontmatter)
-                f.write('---\n')
+                f.write("---\n")
                 f.write(md_body)
 
             # Get just the filename for cleaner output
@@ -89,12 +88,12 @@ def convert_org_to_md():
             failed += 1
 
     # Summary
-    print(f"\n{'='*50}")
-    print(f"Conversion complete!")
+    print(f"\n{'=' * 50}")
+    print("Conversion complete!")
     print(f"  ✓ Converted: {converted}")
     if failed:
         print(f"  ❌ Failed: {failed}")
-    print(f"{'='*50}")
+    print(f"{'=' * 50}")
 
     if converted > 0:
         print("\n📝 Next steps:")
@@ -103,5 +102,5 @@ def convert_org_to_md():
         print("  3. Once verified, you can delete .org files or keep as backup")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     convert_org_to_md()

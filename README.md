@@ -14,7 +14,7 @@ Static site generator for personal blog. Posts are written in Markdown with YAML
 ## Quick Start
 
 ### Requirements
-- Python 3.8+
+- Python 3.12+
 - [Pandoc](https://pandoc.org/installing.html) (for Markdown conversion)
 - [uv](https://github.com/astral-sh/uv) (Python package manager)
 

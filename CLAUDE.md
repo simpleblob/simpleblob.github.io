@@ -57,12 +57,12 @@ uv run python myblog/sitegen.py
 Can be run from any directory in the repository. No installation required - `uv` automatically manages dependencies from `pyproject.toml`.
 
 **Requirements**:
-- Python 3.8+
+- Python 3.12+
 - [uv](https://github.com/astral-sh/uv) (Python package manager)
 - Pandoc (must be in PATH)
 
 **Dependencies** (automatically handled by uv):
-- `jinja2`, `pyyaml`, `watchdog`, `tomli` (for Python < 3.11)
+- `jinja2`, `pyyaml`, `watchdog`
 
 ### Local Development Server
 
