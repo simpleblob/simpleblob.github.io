@@ -1,26 +1,22 @@
-# Hakyll
-.stack-work
-_cache
-dist
-site
-site.hi
-site.o
-_site
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
 
-# generated
-generated
+# Tooling caches
+.ruff_cache/
+.pytest_cache/
 
-# publish
-publish
-publish.hi
-publish.o
+# sitegen build artifacts
+myblog/.build_cache
+myblog/tmp.md
+myblog/tmp.html
 
-# cabal
-cabal.sandbox.config
-.cabal-sandbox/
+# Scratch
+from_perplexity/
 
-# Elm
-elm-stuff
-
-# Other
+# OS / WSL
 .DS_Store
+*:Zone.Identifier
