@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Contact · {{ site.title }}{% endblock %}
+
+{% block main %}
+  <div class="contact full">
+    <figure class="plate">
+      <div class="plate-frame">
+        <img src="{{ root }}assets/small_hut.jpg" width="1024" height="559"
+             alt="A small red-brick cottage with a mossy tiled roof, squeezed between grey Tokyo office towers and bright shop signs at dusk; office workers walk past on the pavement.">
+      </div>
+      <figcaption><span class="plate-no">Plate I.</span>The hut.</figcaption>
+    </figure>
+    <div class="contact-text">
+      <p class="section-label">Correspondence</p>
+      <h1 class="section-title">Contact</h1>
+      <p class="opening">I live in a small hut in the middle of Tokyo, Japan.</p>
+      <p>You can contact me via my email: <span class="email">{{ site.email }}</span> Just remove all the duplicated letters.</p>
+    </div>
+  </div>
+{% endblock %}

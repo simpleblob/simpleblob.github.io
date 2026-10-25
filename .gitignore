@@ -10,9 +10,7 @@ venv/
 .pytest_cache/
 
 # sitegen build artifacts
-myblog/.build_cache
-myblog/tmp.md
-myblog/tmp.html
+myblog/.pandoc_cache/
 
 # Scratch
 from_perplexity/

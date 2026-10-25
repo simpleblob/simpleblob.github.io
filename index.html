@@ -1,53 +1,394 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>website - Home</title>
-        
-        <!-- Theme color meta tags -->
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCF9" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#100E12" />
-        
-        <!-- Preload Inter font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-        
-        <link rel="stylesheet" type="text/css" href="./css/default.css" />
-        <script src="./js/theme-toggle.js"></script>
-    </head>
-    <main>
-    <body>
-        <div id="header">
-            <div id="logo">
-                <a href="./">SIMPLEBLOB</a>
-            </div>
-            <div id="navigation">
-                <a href="./">Home</a>
-                <a href="./archive.html">Writing</a>
-                <a href="https://simpleblob.com/lab/">Labs</a>
-                <a href="./contact.html">Contact</a>
-                <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-            </div>
-        </div>
-        <div id="content">
-            <h1>Home</h1>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIMPLEBLOB · My Notebook</title>
+<meta name="description" content="A personal notebook used as an extension of memory: book summaries, machine-learning reading lists and working notes.">
+<meta name="theme-color" content="#f7f2e7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&amp;display=swap">
+<link rel="stylesheet" href="./css/site.css">
+<script src="./js/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-            <p>Welcome to my personal website.</p>
+<header class="masthead wrap">
+  <div class="full">
+<h1 class="wordmark"><a href="./index.html" aria-label="Simpleblob, home">SIMPLEBLOB</a></h1>
+<p class="tagline">My Notebook — kept since 2013</p>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="./index.html" aria-current="page">Home</a></li>
+        <li><a href="./index.html#catalogue">Notes</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li class="theme-item"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-            <p>I use this site as an extension of my memory. Being online makes it handy when I need to reference something.</p>
-
-            <p>I'm the main user, but I hope the information here can be useful to other people. That's why it's on GitHub. Also, hosting is free.</p>
-
-            <p>The site uses Python, Pandoc, and Markdown for content. We'll see how it goes.</p>
-
-            <p>You can find all posts in the <a href="./archive.html">writing</a>.</p>
-        </div>
-    <div id="footer">
-        <a href="#header">↑ Back to top</a>
+<main id="main" class="wrap">
+  <section class="spread full" aria-labelledby="preface-h">
+    <div class="preface">
+      <h2 id="preface-h" class="section-label">Preface</h2>
+      <p class="opening"><span class="lead-in">Welcome to my personal website.</span> I use this site as an extension of my memory. Being online makes it handy when I need to reference something.</p>
+      <p>I’m the main user, but I hope the information here can be useful to other people. That’s why it’s on GitHub. Also, hosting is free.</p>
+      <p>The site uses Python, Pandoc, and Markdown for content. We’ll see how it goes.</p>
+      <p class="signature">— simpleblob, Tokyo</p>
     </div>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-</body>
+
+    <figure class="plate">
+      <div class="plate-frame">
+        <img src="./assets/small_hut.jpg" width="1024" height="559"
+             alt="A small red-brick cottage with a mossy tiled roof, squeezed between grey Tokyo office towers and bright shop signs at dusk; office workers walk past on the pavement.">
+      </div>
+      <figcaption><span class="plate-no">Plate I.</span>“I live in a small hut in the middle of Tokyo, Japan.”</figcaption>
+    </figure>
+  </section>
+
+  <section class="desk full" aria-labelledby="desk-h">
+    <div class="desk-head">
+      <h2 id="desk-h" class="section-title">On the reading desk</h2>
+      <p>Two cards pulled from the drawers</p>
+    </div>
+
+    <div class="slips">
+      <article class="slip" aria-labelledby="slip-1">
+        <div class="slip-top">
+          <span class="slip-kind"><span class="mark ongoing" aria-hidden="true"></span> Ongoing</span>
+          <span class="callno">MM·02 · no. 1</span>
+        </div>
+        <h3 id="slip-1"><a href="./posts/deep.learning.papers.html">Deep Learning Paper Reading Notes</a></h3>
+        <dl class="fields">
+          <dt>Begun</dt><dd><time datetime="2018-01-11">11 January 2018</time></dd>
+          <dt>Revised</dt><dd><time datetime="2020-06-17">17 June 2020</time></dd>
+          <dt>Extent</dt><dd>8,543 words in 37 sections</dd>
+        </dl>
+<blockquote><p>Based on Awesome
+Deep Learning Papers plus my own addition of literature summary</p></blockquote><p class="topics">Sections include Background, Famous Machine Learning
+Conferences, Famous Challenges and
+Datasets and 34 more.</p>      </article>
+      <article class="slip" aria-labelledby="slip-2">
+        <div class="slip-top">
+          <span class="slip-kind"><span class="manicule" aria-hidden="true">☞&#xFE0E;</span> Newest card</span>
+          <span class="callno">BK·01 · no. 1</span>
+        </div>
+        <h3 id="slip-2"><a href="./posts/book_summary--100-truths-you-will-learn-too-late.html"><span class="form">Book Summary</span>100 Truths You Will Learn Too Late</a></h3>
+        <dl class="fields">
+          <dt>Filed</dt><dd><time datetime="2026-02-05">5 February 2026</time></dd>
+          <dt>Status</dt><dd><span class="mark draft" aria-hidden="true"></span> <span class="status-word">draft</span></dd>
+          <dt>Extent</dt><dd>661 words</dd>
+        </dl>
+<blockquote><p>early and continuous speed-up will create momentum and make things
+easier long-term.</p></blockquote><p class="topics">The first new card in more than five years: the catalogue is open again.</p>      </article>
+    </div>
+  </section>
+
+  <section id="catalogue" class="catalogue full" aria-labelledby="cat-h">
+    <p class="section-label">The Catalogue</p>
+    <h2 id="cat-h" class="section-title">Thirty cards in six drawers</h2>
+    <p class="catalogue-intro">Filed by topic, newest first, each card dated by its last revision. Most are working drafts; a note can be reopened years after it was begun. Or browse <a href="./archive.html">every card by date</a>.</p>
+    <ul class="legend" aria-label="Status key">
+  <li><span class="mark draft" aria-hidden="true"></span> draft · 26</li>
+  <li><span class="mark ongoing" aria-hidden="true"></span> ongoing · 1</li>
+  <li><span class="mark finished" aria-hidden="true"></span> finished · 3</li>
+</ul>
+
+    <nav class="cabinet" aria-label="Catalogue drawers">
+      <ul>
+        <li><a class="drawer-front" href="#bk"><span class="holder"><span class="callno">BK·01</span><span class="topic">Books &amp; Ideas</span></span><span class="count">15 cards</span></a></li>
+        <li><a class="drawer-front" href="#mm"><span class="holder"><span class="callno">MM·02</span><span class="topic">Machines &amp; Math</span></span><span class="count">6 cards</span></a></li>
+        <li><a class="drawer-front" href="#mf"><span class="holder"><span class="callno">MF·03</span><span class="topic">Money &amp; Freedom</span></span><span class="count">2 cards</span></a></li>
+        <li><a class="drawer-front" href="#mh"><span class="holder"><span class="callno">MH·04</span><span class="topic">Mind &amp; Habits</span></span><span class="count">3 cards</span></a></li>
+        <li><a class="drawer-front" href="#bd"><span class="holder"><span class="callno">BD·05</span><span class="topic">Body &amp; Kitchen</span></span><span class="count">3 cards</span></a></li>
+        <li><a class="drawer-front" href="#ta"><span class="holder"><span class="callno">TA·06</span><span class="topic">Tools &amp; Archiving</span></span><span class="count">1 card</span></a></li>
+      </ul>
+    </nav>
+
+    <section id="bk" class="drawer folio" aria-labelledby="bk-h">
+      <header class="drawer-head">
+        <span class="callno">BK·01</span>
+        <h3 id="bk-h">Books &amp; Ideas</h3>
+      </header>
+      <aside class="margin drawer-note" aria-label="About drawer BK·01">
+        <p><strong>15 cards</strong>, 2013–2026. Book and talk summaries.</p>
+        <p>Longest: <a href="./posts/book_summary--early-retirement-extreme.html"><em>Early Retirement Extreme</em></a>, 2,487 words.</p>
+      </aside>
+      <ol class="cards">
+        <li class="card hl">
+  <time datetime="2026-02-05">2026-02-05</time>
+  <span class="title"><span class="manicule" aria-hidden="true">☞&#xFE0E;</span><a href="./posts/book_summary--100-truths-you-will-learn-too-late.html">100 Truths You Will Learn Too Late</a><span class="flag">new</span><span class="sub"><span class="w">661 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2020-08-30">2020-08-30</time>
+  <span class="title"><a href="./posts/book_summary--early-retirement-extreme.html">Early Retirement Extreme by Jacob Fisker</a><span class="sub">Financial Independence · <span class="w">2,487 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2020-08-15">2020-08-15</time>
+  <span class="title"><a href="./posts/book_summary--navy-seal-fitness-guide.html">Navy Seal Fitness Guide</a><span class="sub"><span class="w">1,006 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2019-11-09">2019-11-09</time>
+  <span class="title"><a href="./posts/book_summary--antifragile.html">Antifragile</a><span class="sub"><span class="w">321 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2017-11-26">2017-11-26</time>
+  <span class="title"><a href="./posts/book_summary--how-to-fail-at-almost-everything-and-still-win-big-by-scott-adams.html">How to Fail at Almost Everything and Still Win Big by Scott Adams</a><span class="sub"><span class="w">706 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2017-11-26">2017-11-26</time>
+  <span class="title"><a href="./posts/book_summary--how-economic-machine-works-by-ray-dalio.html">How Economic Machine Works by Ray Dalio</a><span class="sub"><span class="w">157 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2017-11-26">2017-11-26</time>
+  <span class="title"><a href="./posts/book_summary--elon-musk.html">Elon Musk</a><span class="sub">Tesla, SpaceX, and the Quest for a Fantastic Future · <span class="w">125 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2016-12-15">2016-12-15</time>
+  <span class="title"><a href="./posts/book_summary--positive-workplace-politics.html">Positive Workplace Politics</a><span class="sub"><span class="w">54 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2016-08-17">2016-08-17</time>
+  <span class="title"><a href="./posts/presentation_summary--learned-optimism.html">Presentation Summary – Learned Optimism</a><span class="sub"><span class="w">225 words</span></span>
+  </span>
+  <span class="st"><span class="mark finished" aria-hidden="true"></span><span class="vh">Status: finished</span></span>
+</li>
+        <li class="card">
+  <time datetime="2016-07-14">2016-07-14</time>
+  <span class="title"><a href="./posts/book_summary--deep-work.html">Deep Work by Cal Newport</a><span class="sub">The Ultimate Toolkit for Publishing? · <span class="w">314 words</span></span>
+  </span>
+  <span class="st"><span class="mark finished" aria-hidden="true"></span><span class="vh">Status: finished</span></span>
+</li>
+        <li class="card">
+  <time datetime="2015-01-09">2015-01-09</time>
+  <span class="title"><a href="./posts/book_summary--making-habits.html">Making Habits, Breaking Habits</a><span class="sub">habits · <span class="w">148 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2014-12-15">2014-12-15</time>
+  <span class="title"><a href="./posts/book_summary--thinking-fast-and-slow.html">Thinking - fast and slow</a><span class="sub"><span class="w">627 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2014-07-24">2014-07-24</time>
+  <span class="title"><a href="./posts/book_summary--thinking_-the-new-science-of-decision-making.html">Thinking - the new science of decision making</a><span class="sub"><span class="w">141 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2014-07-14">2014-07-14</time>
+  <span class="title"><a href="./posts/book_summary--willpower-instinct.html">Willpower Instinct</a><span class="sub"><span class="w">469 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2013-10-16">2013-10-16</time>
+  <span class="title"><a href="./posts/book_summary--principles-by-ray-dalio.html">Principles by Ray Dalio</a><span class="sub"><span class="w">307 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+      </ol>
+    </section>
+    <section id="mm" class="drawer folio" aria-labelledby="mm-h">
+      <header class="drawer-head">
+        <span class="callno">MM·02</span>
+        <h3 id="mm-h">Machines &amp; Math</h3>
+      </header>
+      <aside class="margin drawer-note" aria-label="About drawer MM·02">
+        <p><strong>6 cards</strong>, 2017–2020.</p>
+        <p>Longest: <a href="./posts/deep.learning.papers.html"><em>Deep Learning Paper Reading Notes</em></a>, 8,543 words.</p>
+      </aside>
+      <ol class="cards">
+        <li class="card hl">
+  <time datetime="2020-06-17">2020-06-17</time>
+  <span class="title"><span class="manicule" aria-hidden="true">☞&#xFE0E;</span><a href="./posts/deep.learning.papers.html">Deep Learning Paper Reading Notes</a><span class="flag">ongoing</span><span class="sub"><span class="w">8,543 words</span></span>
+  </span>
+  <span class="st"><span class="mark ongoing" aria-hidden="true"></span><span class="vh">Status: ongoing</span></span>
+</li>
+        <li class="card">
+  <time datetime="2019-01-03">2019-01-03</time>
+  <span class="title"><a href="./posts/linux-from-scratch.html">Building linux system from scratch -- a note</a><span class="sub">info dump and thoughts · <span class="w">23 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2018-12-02">2018-12-02</time>
+  <span class="title"><a href="./posts/mathematics.html">Mathematics</a><span class="sub"><span class="w">355 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2017-12-16">2017-12-16</time>
+  <span class="title"><a href="./posts/project_summary--Nand2Tetris.html">Project Summary – Nand2Tetris</a><span class="sub">projected-base building a computing system from scratch · <span class="w">598 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2017-12-02">2017-12-02</time>
+  <span class="title"><a href="./posts/computing-architecture.html">Computing Architecture</a><span class="sub">the basis for past, present, and future computers · <span class="w">24 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2017-11-26">2017-11-26</time>
+  <span class="title"><a href="./posts/org-mode-in-hakyll.html">Org Mode in Hakyll</a><span class="sub">The Ultimate Toolkit for Publishing? · <span class="w">391 words</span></span>
+  </span>
+  <span class="st"><span class="mark finished" aria-hidden="true"></span><span class="vh">Status: finished</span></span>
+</li>
+      </ol>
+    </section>
+    <section id="mf" class="drawer folio" aria-labelledby="mf-h">
+      <header class="drawer-head">
+        <span class="callno">MF·03</span>
+        <h3 id="mf-h">Money &amp; Freedom</h3>
+      </header>
+      <aside class="margin drawer-note" aria-label="About drawer MF·03">
+        <p><strong>2 cards</strong>, 2017–2018.</p>
+        <p><em>See also</em> <a href="./posts/book_summary--early-retirement-extreme.html">Early Retirement Extreme</a> and <a href="./posts/book_summary--antifragile.html">Antifragile</a>.</p>
+      </aside>
+      <ol class="cards">
+        <li class="card">
+  <time datetime="2018-12-24">2018-12-24</time>
+  <span class="title"><a href="./posts/home.html">Home analysis</a><span class="sub">info dump and thoughts · <span class="w">60 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2017-12-08">2017-12-08</time>
+  <span class="title"><a href="./posts/bitcoin.html">Bitcoin analysis</a><span class="sub">info dump and thoughts · <span class="w">119 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+      </ol>
+    </section>
+    <section id="mh" class="drawer folio" aria-labelledby="mh-h">
+      <header class="drawer-head">
+        <span class="callno">MH·04</span>
+        <h3 id="mh-h">Mind &amp; Habits</h3>
+      </header>
+      <aside class="margin drawer-note" aria-label="About drawer MH·04">
+        <p><strong>3 cards</strong>, 2017–2020.</p>
+        <p><em>See also</em> <a href="./posts/book_summary--making-habits.html">Making Habits, Breaking Habits</a> and <a href="./posts/book_summary--willpower-instinct.html">Willpower Instinct</a>.</p>
+      </aside>
+      <ol class="cards">
+        <li class="card">
+  <time datetime="2020-08-21">2020-08-21</time>
+  <span class="title"><a href="./posts/habits-and-adaptations.html">Habits and Adaptations</a><span class="sub"><span class="w">54 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2020-07-17">2020-07-17</time>
+  <span class="title"><a href="./posts/reality_and_beliefs.html">Reality and group beliefs</a><span class="sub">group beliefs, game theory, and reality anchor · <span class="w">287 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2017-12-04">2017-12-04</time>
+  <span class="title"><a href="./posts/personal-knowledge-management.html">Personal Knowledge Management - Memex, remembrance agent</a><span class="sub">an extension of your brain · <span class="w">92 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+      </ol>
+    </section>
+    <section id="bd" class="drawer folio" aria-labelledby="bd-h">
+      <header class="drawer-head">
+        <span class="callno">BD·05</span>
+        <h3 id="bd-h">Body &amp; Kitchen</h3>
+      </header>
+      <aside class="margin drawer-note" aria-label="About drawer BD·05">
+        <p><strong>3 cards</strong>, 2017–2018.</p>
+        <p><em>See also</em> <a href="./posts/book_summary--navy-seal-fitness-guide.html">Navy Seal Fitness Guide</a>.</p>
+      </aside>
+      <ol class="cards">
+        <li class="card">
+  <time datetime="2018-12-19">2018-12-19</time>
+  <span class="title"><a href="./posts/chemistry.html">Chemistry basics</a><span class="sub">a refresher course, so that I can study next about nutrition and human biology · <span class="w">64 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2018-12-18">2018-12-18</time>
+  <span class="title"><a href="./posts/food_and_diet.html">Food and diet</a><span class="sub">researching optimal diet for health and longevity · <span class="w">36 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+        <li class="card">
+  <time datetime="2017-12-10">2017-12-10</time>
+  <span class="title"><a href="./posts/cooking.html">The basics of cooking</a><span class="sub">Cooking analysis from the first principles · <span class="w">38 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+      </ol>
+    </section>
+    <section id="ta" class="drawer folio" aria-labelledby="ta-h">
+      <header class="drawer-head">
+        <span class="callno">TA·06</span>
+        <h3 id="ta-h">Tools &amp; Archiving</h3>
+      </header>
+      <aside class="margin drawer-note" aria-label="About drawer TA·06">
+        <p><strong>1 card</strong>, 2017.</p>
+        <p><em>See also</em> <a href="./posts/personal-knowledge-management.html">Personal Knowledge Management - Memex, remembrance agent</a>.</p>
+      </aside>
+      <ol class="cards">
+        <li class="card">
+  <time datetime="2017-12-10">2017-12-10</time>
+  <span class="title"><a href="./posts/archiving.html">How to archive stuff (archive.org etc.)</a><span class="sub"><span class="w">21 words</span></span>
+  </span>
+  <span class="st"><span class="mark draft" aria-hidden="true"></span><span class="vh">Status: draft</span></span>
+</li>
+      </ol>
+    </section>
+  </section>
 </main>
+
+<footer class="site-foot wrap">
+  <div class="full">
+    <hr class="fleuron">
+    <div class="foot-grid">
+      <section aria-labelledby="f-contact">
+        <h2 id="f-contact">Contact</h2>
+        <p>I live in a small hut in the middle of Tokyo, Japan.</p>
+        <p><span class="email">siimmmpleebblloobb at gmail dot com.</span> Just remove all the duplicated letters.</p>
+      </section>
+      <section aria-labelledby="f-nav">
+        <h2 id="f-nav">The notebook</h2>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#catalogue">Notes: the catalogue</a></li>
+          <li><a href="./archive.html">Notes: by date</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="f-colophon">
+        <h2 id="f-colophon">Colophon</h2>
+        <p>Written in Markdown, built with Python and Pandoc, hosted on <a href="https://github.com/simpleblob/simpleblob.github.io">GitHub</a>. Set in Source Serif&nbsp;4 and EB&nbsp;Garamond.</p>
+      </section>
+    </div>
+    <p class="copyright">SIMPLEBLOB · 2013–2026</p>
+  </div>
+</footer>
+</body>
 </html>

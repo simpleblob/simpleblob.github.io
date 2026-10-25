@@ -7,6 +7,7 @@ tags: emacs, haskell
 created: 2016-07-13
 published: 2016-07-14
 status: finished
+topic: bk
 confidence: log
 importance: 1
 ---

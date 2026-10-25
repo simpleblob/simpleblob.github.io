@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ site.title }}{% endblock %}</title>
+<meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+<meta name="theme-color" content="#f7f2e7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&amp;display=swap">
+<link rel="stylesheet" href="{{ root }}css/site.css">
+<script src="{{ root }}js/theme.js"></script>
+{% block head %}{% endblock %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead wrap">
+  <div class="full">
+    {% block wordmark %}<p class="wordmark"><a href="{{ root }}index.html" aria-label="Simpleblob, home">{{ site.title }}</a></p>{% endblock %}
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="{{ root }}index.html"{% if nav == "home" %} aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="{{ root }}index.html#catalogue"{% if nav == "notes" %} aria-current="true"{% endif %}>Notes</a></li>
+        <li><a href="{{ root }}contact.html"{% if nav == "contact" %} aria-current="page"{% endif %}>Contact</a></li>
+        <li class="theme-item"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+{% block main %}{% endblock %}
+</main>
+
+<footer class="site-foot wrap">
+  <div class="full">
+    <hr class="fleuron">
+    <div class="foot-grid">
+      <section aria-labelledby="f-contact">
+        <h2 id="f-contact">Contact</h2>
+        <p>I live in a small hut in the middle of Tokyo, Japan.</p>
+        <p><span class="email">{{ site.email }}</span> Just remove all the duplicated letters.</p>
+      </section>
+      <section aria-labelledby="f-nav">
+        <h2 id="f-nav">The notebook</h2>
+        <ul>
+          <li><a href="{{ root }}index.html">Home</a></li>
+          <li><a href="{{ root }}index.html#catalogue">Notes: the catalogue</a></li>
+          <li><a href="{{ root }}archive.html">Notes: by date</a></li>
+          <li><a href="{{ root }}contact.html">Contact</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="f-colophon">
+        <h2 id="f-colophon">Colophon</h2>
+        <p>Written in Markdown, built with Python and Pandoc, hosted on <a href="https://github.com/simpleblob/simpleblob.github.io">GitHub</a>. Set in Source Serif&nbsp;4 and EB&nbsp;Garamond.</p>
+      </section>
+    </div>
+    <p class="copyright">{{ site.title }} · {{ years }}</p>
+  </div>
+</footer>
+{% block scripts %}{% endblock %}
+</body>
+</html>

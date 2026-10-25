@@ -7,6 +7,7 @@ tags: bitcoin, economics, cryptocurrencies
 created: 2017-12-08
 published: 2017-12-08
 status: draft
+topic: mf
 confidence: log
 importance: 1
 ---

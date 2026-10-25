@@ -1,49 +1,77 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>website - Contact</title>
-        
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCF9" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#100E12" />
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-        
-        <link rel="stylesheet" type="text/css" href="./css/default.css" />
-        <script src="./js/theme-toggle.js"></script>
-    </head>
-    <main>
-    <body>
-        <div id="header">
-            <div id="logo">
-                <a href="./">SIMPLEBLOB</a>
-            </div>
-            <div id="navigation">
-                <a href="./">Home</a>
-                <a href="./archive.html">Writing</a>
-                <a href="https://simpleblob.com/lab/">Labs</a>
-                <a href="./contact.html">Contact</a>
-                <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-            </div>
-        </div>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact · SIMPLEBLOB</title>
+<meta name="description" content="A personal notebook used as an extension of memory: book summaries, machine-learning reading lists and working notes.">
+<meta name="theme-color" content="#f7f2e7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&amp;display=swap">
+<link rel="stylesheet" href="./css/site.css">
+<script src="./js/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-        <div id="content">
-            <h1>Contact</h1>
+<header class="masthead wrap">
+  <div class="full">
+<p class="wordmark"><a href="./index.html" aria-label="Simpleblob, home">SIMPLEBLOB</a></p>    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.html#catalogue">Notes</a></li>
+        <li><a href="./contact.html" aria-current="page">Contact</a></li>
+        <li class="theme-item"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-            <img src="./assets/small_hut.jpg" alt="Small hut in Tokyo" style="max-width: 100%; height: auto; margin: 1.5rem 0;" />
+<main id="main" class="wrap">
+  <div class="contact full">
+    <figure class="plate">
+      <div class="plate-frame">
+        <img src="./assets/small_hut.jpg" width="1024" height="559"
+             alt="A small red-brick cottage with a mossy tiled roof, squeezed between grey Tokyo office towers and bright shop signs at dusk; office workers walk past on the pavement.">
+      </div>
+      <figcaption><span class="plate-no">Plate I.</span>The hut.</figcaption>
+    </figure>
+    <div class="contact-text">
+      <p class="section-label">Correspondence</p>
+      <h1 class="section-title">Contact</h1>
+      <p class="opening">I live in a small hut in the middle of Tokyo, Japan.</p>
+      <p>You can contact me via my email: <span class="email">siimmmpleebblloobb at gmail dot com.</span> Just remove all the duplicated letters.</p>
+    </div>
+  </div>
+</main>
 
-            <p>I live in a small hut in the middle of Tokyo, Japan.</p>
-<p>you can contact me via my email -&gt; siimmmpleebblloobb at gmail dot com. Just remove all the duplicated letters.</p>
-        </div>
-        <div id="footer">
-            <a href="#header">↑ Back to top</a>
-        </div>
-
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-    </body>
-    </main>
+<footer class="site-foot wrap">
+  <div class="full">
+    <hr class="fleuron">
+    <div class="foot-grid">
+      <section aria-labelledby="f-contact">
+        <h2 id="f-contact">Contact</h2>
+        <p>I live in a small hut in the middle of Tokyo, Japan.</p>
+        <p><span class="email">siimmmpleebblloobb at gmail dot com.</span> Just remove all the duplicated letters.</p>
+      </section>
+      <section aria-labelledby="f-nav">
+        <h2 id="f-nav">The notebook</h2>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#catalogue">Notes: the catalogue</a></li>
+          <li><a href="./archive.html">Notes: by date</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="f-colophon">
+        <h2 id="f-colophon">Colophon</h2>
+        <p>Written in Markdown, built with Python and Pandoc, hosted on <a href="https://github.com/simpleblob/simpleblob.github.io">GitHub</a>. Set in Source Serif&nbsp;4 and EB&nbsp;Garamond.</p>
+      </section>
+    </div>
+    <p class="copyright">SIMPLEBLOB · 2013–2026</p>
+  </div>
+</footer>
+</body>
 </html>

@@ -1,50 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>website - building linux system from scratch -- a note</title>
-        
-        <!-- Theme color meta tags -->
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCF9" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#100E12" />
-        
-        <!-- Preload Inter font for better performance -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-        
-        <link rel="stylesheet" type="text/css" href="../css/default.css" />
-        
-        <!-- Theme toggle script - runs immediately to prevent flash -->
-        <script src="/js/theme-toggle.js"></script>
-    </head>
-    <main>
-    <body>
-        <div id="header">
-            <div id="logo">
-                <a href="../">SIMPLEBLOB</a>
-            </div>
-            <div id="navigation">
-                <a href="../">Home</a>
-                <a href="../archive.html">Writing</a>
-                <a href="https://simpleblob.com/lab/">Labs</a>
-                <a href="../contact.html">Contact</a>
-                <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-            </div>
-        </div>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building linux system from scratch -- a note · SIMPLEBLOB</title>
+<meta name="description" content="Building linux system from scratch -- a note. info dump and thoughts">
+<meta name="theme-color" content="#f7f2e7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&amp;display=swap">
+<link rel="stylesheet" href="../css/site.css">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-        <div id="content">
-            <h1>building linux system from scratch -- a note</h1>
+<header class="masthead wrap">
+  <div class="full">
+<p class="wordmark"><a href="../index.html" aria-label="Simpleblob, home">SIMPLEBLOB</a></p>    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#catalogue" aria-current="true">Notes</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li class="theme-item"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-            <div class="post-meta">
-    <em>
-    creation date: 2019-01-03,
-    latest update: 2019-01-03
-    </em>
-</div>
+<main id="main" class="wrap">
+  <nav class="crumbs full" aria-label="Breadcrumb">
+    <a href="../index.html#catalogue">← The Catalogue</a>
+<span aria-hidden="true">/</span> <a href="../index.html#mm"><span class="callno">MM·02</span> Machines &amp; Math</a>  </nav>
 
+  <article class="note folio" aria-labelledby="title">
+    <header class="title-block">
+      <h1 id="title">Building linux system from scratch -- a note</h1>
+<p class="subtitle">info dump and thoughts</p>    </header>
+
+    <aside class="margin meta" aria-label="About this note">
+      <dl>
+        <dt>Created</dt><dd><time datetime="2019-01-03">3 Jan 2019</time></dd>
+        <dt>Status</dt><dd><span class="mark draft" aria-hidden="true"></span> <span class="status-word draft">draft</span></dd>
+        <dt>Tags</dt><dd><span class="tag">linux</span> · <span class="tag">programming</span></dd>
+        <dt>Length</dt><dd>23 words</dd>
+        <dt>Reading</dt><dd>~1 min</dd>
+      </dl>
+      <p class="note-on-status">A draft is a working note: it may be reopened and revised.</p>
+    </aside>
+
+
+    <div class="prose">
 <h2 id="links-of-interest">Links of interest</h2>
 <ul>
 <li><a
@@ -58,14 +65,55 @@ href="https://nilisnotnull.blogspot.com/2015/02/installing-lfs-with-qemu.html">H
 to make QEMU run on headless mode and login through ssh</a></li>
 </ul>
 
-        </div>
-        <div id="footer">
-            <a href="#header">↑ Back to top</a>
-        </div>
+    </div>
 
-    <!-- MathJax is library for displaying math nicely -->
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <footer class="pager">
+      <a class="back" href="../index.html#mm">← Back to drawer MM·02</a>
+      <ul>
+        <li class="prev">
+          <a href="../posts/mathematics.html" rel="prev">
+            <span class="dir">← Older card</span>
+            <span class="t">Mathematics</span>
+            <span class="d"><time datetime="2018-12-02">2018-12-02</time> · draft</span>
+          </a>
+        </li>
+        <li class="next">
+          <a href="../posts/deep.learning.papers.html" rel="next">
+            <span class="dir">Newer card →</span>
+            <span class="t">Deep Learning Paper Reading Notes</span>
+            <span class="d"><time datetime="2020-06-17">2020-06-17</time> · ongoing</span>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</main>
 
-    </body>
-    </main>
+<footer class="site-foot wrap">
+  <div class="full">
+    <hr class="fleuron">
+    <div class="foot-grid">
+      <section aria-labelledby="f-contact">
+        <h2 id="f-contact">Contact</h2>
+        <p>I live in a small hut in the middle of Tokyo, Japan.</p>
+        <p><span class="email">siimmmpleebblloobb at gmail dot com.</span> Just remove all the duplicated letters.</p>
+      </section>
+      <section aria-labelledby="f-nav">
+        <h2 id="f-nav">The notebook</h2>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#catalogue">Notes: the catalogue</a></li>
+          <li><a href="../archive.html">Notes: by date</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="f-colophon">
+        <h2 id="f-colophon">Colophon</h2>
+        <p>Written in Markdown, built with Python and Pandoc, hosted on <a href="https://github.com/simpleblob/simpleblob.github.io">GitHub</a>. Set in Source Serif&nbsp;4 and EB&nbsp;Garamond.</p>
+      </section>
+    </div>
+    <p class="copyright">SIMPLEBLOB · 2013–2026</p>
+  </div>
+</footer>
+</body>
 </html>

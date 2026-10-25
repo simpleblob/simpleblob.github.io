@@ -7,6 +7,7 @@ tags: fitness
 created: 2020-08-13
 published: 2020-08-15
 status: draft
+topic: bk
 confidence: log
 importance: 1
 ---

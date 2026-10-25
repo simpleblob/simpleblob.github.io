@@ -7,6 +7,7 @@ tags: politics
 created: 2016-12-15
 published: 2016-12-15
 status: draft
+topic: bk
 confidence: log
 importance: 1
 ---

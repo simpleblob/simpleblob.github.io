@@ -1,3 +1,26 @@
-Here you can find all my writing:
+{% extends "base.html" %}
+{% from "_macros.html" import card, legend %}
+{% block title %}All notes by date · {{ site.title }}{% endblock %}
 
-{{ post_list|safe }}
+{% block main %}
+  <section class="catalogue archive full" aria-labelledby="arch-h">
+    <p class="section-label">The Day Book</p>
+    <h1 id="arch-h" class="section-title">Every card, by date</h1>
+    <p class="catalogue-intro">All {{ listed | length | words }} notes, newest revision first. To browse by topic, open <a href="{{ root }}index.html#catalogue">the catalogue</a>.</p>
+    {{ legend(counts) }}
+
+    {% for year, posts in listed | groupby("published.year") | reverse %}
+    <section class="drawer" aria-labelledby="y{{ year }}">
+      <header class="drawer-head">
+        <h2 id="y{{ year }}">{{ year }}</h2>
+        <span class="callno">{{ posts | length }} card{{ "s" if posts | length != 1 }}</span>
+      </header>
+      <ol class="cards">
+        {% for post in posts | sort(attribute="published", reverse=true) %}
+        {{ card(post, root, listed[0], show_code=true) }}
+        {% endfor %}
+      </ol>
+    </section>
+    {% endfor %}
+  </section>
+{% endblock %}

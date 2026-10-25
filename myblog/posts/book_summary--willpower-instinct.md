@@ -7,6 +7,7 @@ tags: book_summary, willpower
 created: 2013-11-07
 published: 2014-07-14
 status: draft
+topic: bk
 confidence: log
 importance: 1
 ---

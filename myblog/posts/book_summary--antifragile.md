@@ -7,6 +7,7 @@ tags: antifragile
 created: 2019-11-09
 published: 2019-11-09
 status: draft
+topic: bk
 confidence: log
 importance: 1
 ---

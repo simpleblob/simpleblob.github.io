@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% from "_macros.html" import mark, card, legend %}
+{% block title %}{{ site.title }} · My Notebook{% endblock %}
+{% block wordmark %}
+<h1 class="wordmark"><a href="{{ root }}index.html" aria-label="Simpleblob, home">{{ site.title }}</a></h1>
+<p class="tagline">{{ site.tagline }}</p>
+{% endblock %}
+
+{% block main %}
+  <section class="spread full" aria-labelledby="preface-h">
+    <div class="preface">
+      <h2 id="preface-h" class="section-label">Preface</h2>
+      <p class="opening"><span class="lead-in">Welcome to my personal website.</span> I use this site as an extension of my memory. Being online makes it handy when I need to reference something.</p>
+      <p>I’m the main user, but I hope the information here can be useful to other people. That’s why it’s on GitHub. Also, hosting is free.</p>
+      <p>The site uses Python, Pandoc, and Markdown for content. We’ll see how it goes.</p>
+      <p class="signature">— {{ site.author }}, Tokyo</p>
+    </div>
+
+    <figure class="plate">
+      <div class="plate-frame">
+        <img src="{{ root }}assets/small_hut.jpg" width="1024" height="559"
+             alt="A small red-brick cottage with a mossy tiled roof, squeezed between grey Tokyo office towers and bright shop signs at dusk; office workers walk past on the pavement.">
+      </div>
+      <figcaption><span class="plate-no">Plate I.</span>“I live in a small hut in the middle of Tokyo, Japan.”</figcaption>
+    </figure>
+  </section>
+
+  <section class="desk full" aria-labelledby="desk-h">
+    <div class="desk-head">
+      <h2 id="desk-h" class="section-title">On the reading desk</h2>
+      <p>{{ slips | length | words | capitalize }} card{{ "s" if slips | length != 1 }} pulled from the drawers</p>
+    </div>
+
+    <div class="slips">
+      {% for slip in slips %}
+      {% set post = slip.post %}
+      <article class="slip" aria-labelledby="slip-{{ loop.index }}">
+        <div class="slip-top">
+          <span class="slip-kind">
+            {%- if slip.kind == "Newest card" %}<span class="manicule" aria-hidden="true">☞&#xFE0E;</span>{% else %}{{ mark(post.status) }}{% endif %} {{ slip.kind }}</span>
+          <span class="callno">{{ post.drawer.code }} · no. {{ post.drawer.posts.index(post) + 1 }}</span>
+        </div>
+        <h3 id="slip-{{ loop.index }}"><a href="{{ root }}{{ post.url }}">{% if post.form %}<span class="form">{{ post.form }}</span>{% endif %}{{ post.title }}</a></h3>
+        <dl class="fields">
+          {% if post.created != post.published %}
+          <dt>Begun</dt><dd><time datetime="{{ post.created.isoformat() }}">{{ post.created | longdate }}</time></dd>
+          <dt>Revised</dt><dd><time datetime="{{ post.published.isoformat() }}">{{ post.published | longdate }}</time></dd>
+          {% else %}
+          <dt>Filed</dt><dd><time datetime="{{ post.published.isoformat() }}">{{ post.published | longdate }}</time></dd>
+          {% endif %}
+          {% if slip.kind == "Newest card" %}
+          <dt>Status</dt><dd>{{ mark(post.status) }} <span class="status-word">{{ post.status }}</span></dd>
+          {% endif %}
+          <dt>Extent</dt><dd>{{ post.words | thousands }} words{% if post.sections | length > 3 %} in {{ post.sections | length }} sections{% endif %}</dd>
+        </dl>
+        {% if post.lede %}<blockquote><p>{{ post.lede }}</p></blockquote>{% endif %}
+        {% if slip.note %}<p class="topics">{{ slip.note }}</p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="catalogue" class="catalogue full" aria-labelledby="cat-h">
+    <p class="section-label">The Catalogue</p>
+    <h2 id="cat-h" class="section-title">{{ listed | length | words | capitalize }} cards in {{ drawers | length | words }} drawers</h2>
+    <p class="catalogue-intro">Filed by topic, newest first, each card dated by its last revision. Most are working drafts; a note can be reopened years after it was begun. Or browse <a href="{{ root }}archive.html">every card by date</a>.</p>
+    {{ legend(counts) }}
+
+    <nav class="cabinet" aria-label="Catalogue drawers">
+      <ul>
+        {% for d in drawers %}
+        <li><a class="drawer-front" href="#{{ d.slug }}"><span class="holder"><span class="callno">{{ d.code }}</span><span class="topic">{{ d.name }}</span></span><span class="count">{{ d.posts | length }} card{{ "s" if d.posts | length != 1 }}</span></a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    {% for d in drawers %}
+    <section id="{{ d.slug }}" class="drawer folio" aria-labelledby="{{ d.slug }}-h">
+      <header class="drawer-head">
+        <span class="callno">{{ d.code }}</span>
+        <h3 id="{{ d.slug }}-h">{{ d.name }}</h3>
+      </header>
+      <aside class="margin drawer-note" aria-label="About drawer {{ d.code }}">
+        <p><strong>{{ d.posts | length }} card{{ "s" if d.posts | length != 1 }}</strong>, {{ d.years }}.{% if d.blurb %} {{ d.blurb }}{% endif %}</p>
+        {% if d.posts | length > 3 %}
+        <p>Longest: <a href="{{ root }}{{ d.longest.url }}"><em>{{ d.longest.heading }}</em></a>, {{ d.longest.words | thousands }} words.</p>
+        {% endif %}
+        {% if d.see_also %}
+        <p><em>See also</em>
+          {%- for p in d.see_also %} <a href="{{ root }}{{ p.url }}">{{ p.heading }}</a>{{ "," if not loop.last and loop.length > 2 }}{{ " and" if loop.revindex == 2 }}{% endfor %}.</p>
+        {% endif %}
+      </aside>
+      <ol class="cards">
+        {% for post in d.posts %}
+        {{ card(post, root, newest) }}
+        {% endfor %}
+      </ol>
+    </section>
+    {% endfor %}
+  </section>
+{% endblock %}

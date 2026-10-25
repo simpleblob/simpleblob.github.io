@@ -7,6 +7,7 @@ tags: antifragile
 created: 2026-02-05
 published: 2026-02-05
 status: draft
+topic: bk
 confidence: log
 importance: 1
 ---

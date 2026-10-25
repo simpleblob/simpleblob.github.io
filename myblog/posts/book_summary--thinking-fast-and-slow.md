@@ -7,6 +7,7 @@ tags: summary, thinking
 created: 2014-02-04
 published: 2014-12-15
 status: draft
+topic: bk
 confidence: log
 importance: 1
 ---

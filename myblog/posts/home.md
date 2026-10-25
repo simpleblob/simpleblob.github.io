@@ -7,6 +7,7 @@ tags: home, living space, house, apartment
 created: 2018-12-24
 published: 2018-12-24
 status: draft
+topic: mf
 confidence: log
 importance: 1
 ---

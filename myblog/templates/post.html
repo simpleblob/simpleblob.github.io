@@ -1,8 +1,95 @@
-<div class="post-meta">
-    <em>
-    creation date: {{ created }},
-    latest update: {{ published }}
-    </em>
-</div>
+{% extends "base.html" %}
+{% from "_macros.html" import mark %}
+{% block title %}{{ post.heading }} · {{ site.title }}{% endblock %}
+{% block description %}{% if post.form %}{{ post.form }}: {% endif %}{{ post.title }}{% if post.subtitle %}. {{ post.subtitle }}{% endif %}{% endblock %}
 
-{{ body|safe }}
+{% block main %}
+  <nav class="crumbs full" aria-label="Breadcrumb">
+    <a href="{{ root }}index.html#catalogue">← The Catalogue</a>
+    {% if post.drawer %}<span aria-hidden="true">/</span> <a href="{{ root }}index.html#{{ post.drawer.slug }}"><span class="callno">{{ post.drawer.code }}</span> {{ post.drawer.name }}</a>{% endif %}
+  </nav>
+
+  <article class="note folio" aria-labelledby="title">
+    <header class="title-block">
+      <h1 id="title">{% if post.form %}<span class="form">{{ post.form }}</span>{% endif %}{{ post.heading }}{% if post.author %} <span class="by">by {{ post.author }}</span>{% endif %}</h1>
+      {% if post.subtitle %}<p class="subtitle">{{ post.subtitle }}</p>{% endif %}
+    </header>
+
+    <aside class="margin meta" aria-label="About this note">
+      <dl>
+        <dt>Created</dt><dd><time datetime="{{ post.created.isoformat() }}">{{ post.created | shortdate }}</time></dd>
+        {% if post.published != post.created %}
+        <dt>Updated</dt><dd><time datetime="{{ post.published.isoformat() }}">{{ post.published | shortdate }}</time></dd>
+        {% endif %}
+        <dt>Status</dt><dd>{{ mark(post.status) }} <span class="status-word {{ post.status }}">{{ post.status }}</span></dd>
+        {% if post.tags %}
+        <dt>Tags</dt><dd>{% for t in post.tags %}<span class="tag">{{ t }}</span>{{ " · " if not loop.last }}{% endfor %}</dd>
+        {% endif %}
+        <dt>Length</dt><dd>{{ post.words | thousands }} words</dd>
+        <dt>Reading</dt><dd>~{{ post.reading_minutes }} min</dd>
+      </dl>
+      <p class="note-on-status">{{ post.status_note }}</p>
+    </aside>
+
+    {% if post.toc | length >= 3 %}
+    <nav class="toc" aria-label="Table of contents">
+      <details{% if post.toc | length <= 12 %} open{% endif %}>
+        <summary>Contents</summary>
+        <ol>
+          {% for h in post.toc %}
+          <li><a href="#{{ h.id }}">{{ h.label }}</a>
+            {% if h.children %}
+            <ol>
+              {% for c in h.children %}
+              <li><a href="#{{ c.id }}">{{ c.label }}</a></li>
+              {% endfor %}
+            </ol>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+      </details>
+    </nav>
+    {% endif %}
+
+    <div class="prose">
+{{ body | safe }}
+    </div>
+
+    <footer class="pager">
+      {% if post.drawer %}
+      <a class="back" href="{{ root }}index.html#{{ post.drawer.slug }}">← Back to drawer {{ post.drawer.code }}</a>
+      {% if older or newer %}
+      <ul>
+        {% if older %}
+        <li class="prev">
+          <a href="{{ root }}{{ older.url }}" rel="prev">
+            <span class="dir">← Older card</span>
+            <span class="t">{{ older.title }}</span>
+            <span class="d"><time datetime="{{ older.published.isoformat() }}">{{ older.published.isoformat() }}</time> · {{ older.status }}</span>
+          </a>
+        </li>
+        {% endif %}
+        {% if newer %}
+        <li class="next">
+          <a href="{{ root }}{{ newer.url }}" rel="next">
+            <span class="dir">Newer card →</span>
+            <span class="t">{{ newer.title }}</span>
+            <span class="d"><time datetime="{{ newer.published.isoformat() }}">{{ newer.published.isoformat() }}</time> · {{ newer.status }}</span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+      {% endif %}
+      {% else %}
+      <a class="back" href="{{ root }}index.html#catalogue">← Back to the catalogue</a>
+      {% endif %}
+    </footer>
+  </article>
+{% endblock %}
+
+{% block scripts %}
+{% if post.has_math %}
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+{% endif %}
+{% endblock %}

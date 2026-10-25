@@ -7,6 +7,7 @@ tags: habits
 created: 2015-01-03
 published: 2015-01-09
 status: draft
+topic: bk
 confidence: log
 importance: 1
 ---

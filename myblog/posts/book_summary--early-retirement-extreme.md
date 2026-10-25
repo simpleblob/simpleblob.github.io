@@ -7,6 +7,7 @@ tags: FI, antifragile
 created: 2016-12-03
 published: 2020-08-30
 status: draft
+topic: bk
 confidence: log
 importance: 1
 ---

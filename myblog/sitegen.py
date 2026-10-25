@@ -1,440 +1,430 @@
 #!/usr/bin/env python3
 """
-Modern static site generator for personal blog.
+Static site generator for simpleblob.com ("Marginalia" design).
 
-Reads Markdown posts with YAML frontmatter, converts to HTML using Pandoc,
-and applies Jinja2 templates. Supports incremental builds.
+Reads Markdown notes with YAML frontmatter from myblog/posts/, converts them
+with Pandoc, files them into catalogue drawers (frontmatter `topic:`), and
+renders every page with Jinja2:
+
+    index.html     preface, reading desk and the card catalogue
+    archive.html   every note by date
+    contact.html
+    posts/*.html   one page per note
+
+Pandoc output is cached by content hash, so unchanged notes skip Pandoc;
+the pages themselves are always re-rendered (they link to each other).
 """
 
-import os
-import sys
-import logging
-import subprocess
-import tomllib
-from glob import glob
-from pathlib import Path
-from os.path import basename, splitext, join
-from typing import Dict, List, Tuple, Any
+from __future__ import annotations
+
 import hashlib
+import html
+import logging
+import re
+import subprocess
+import sys
+import tomllib
+from dataclasses import dataclass, field
+from datetime import date
+from pathlib import Path
 
-try:
-    import yaml
-except ImportError:
-    print("Error: PyYAML not installed. Install with: pip install pyyaml")
-    sys.exit(1)
+import yaml
+from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 
-try:
-    from jinja2 import Environment, FileSystemLoader
-except ImportError:
-    print("Error: Jinja2 not installed. Install with: pip install jinja2")
-    sys.exit(1)
-
-
-# Configure logging
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
+HERE = Path(__file__).parent.resolve()
+FILTER = HERE / "sidenotes.lua"
+PANDOC_ARGS = ["pandoc", "-f", "markdown", "-t", "html", "--mathjax", "--no-highlight"]
+STATUSES = ("draft", "ongoing", "finished")
+STATUS_NOTES = {
+    "draft": "A draft is a working note: it may be reopened and revised.",
+    "ongoing": "An ongoing note is a living document, still being added to.",
+    "finished": "A finished note is complete as it stands.",
+}
 
-class Config:
-    """Load and store configuration from config.toml."""
-
-    def __init__(self, config_path: str = "config.toml"):
-        try:
-            with open(config_path, "rb") as f:
-                self.data = tomllib.load(f)
-        except FileNotFoundError:
-            logger.error(f"Configuration file '{config_path}' not found")
-            sys.exit(1)
-        except Exception as e:
-            logger.error(f"Error loading config: {e}")
-            sys.exit(1)
-
-    def get(self, *keys, default=None):
-        """Get nested config value, e.g., config.get('site', 'title')"""
-        value = self.data
-        for key in keys:
-            if isinstance(value, dict):
-                value = value.get(key)
-            else:
-                return default
-            if value is None:
-                return default
-        return value
+# "Book Summary - Deep Work by Cal Newport" -> form, title, author
+FORM_RE = re.compile(r"^((?:Book|Presentation|Project) Summary)\s*[-–]\s*(.+)$")
+BY_RE = re.compile(r"^(.+?) by ((?:[A-Z][\w.'’]*\s?){2,4})$")
+HEADING_RE = re.compile(r'<h([23]) id="([^"]+)"[^>]*>(.*?)</h\1>', re.S)
+TAG_RE = re.compile(r"<[^>]+>")
+NUMBER_WORDS = (
+    "zero one two three four five six seven eight nine ten eleven twelve "
+    "thirteen fourteen fifteen sixteen seventeen eighteen nineteen"
+).split()
+TENS = "_ _ twenty thirty forty fifty sixty seventy eighty ninety".split()
 
 
+class BuildError(Exception):
+    pass
+
+
+# ---------- small helpers ----------
+
+
+def clean(value) -> str:
+    """Frontmatter text, with the placeholder values "None"/"none" treated as empty."""
+    text = "" if value is None else str(value).strip()
+    return "" if text.lower() in ("none", "null") else text
+
+
+def to_date(value) -> date:
+    return value if isinstance(value, date) else date.fromisoformat(str(value).strip())
+
+
+def count_words(markdown: str) -> int:
+    text = re.sub(r"\]\([^)]*\)", "]", markdown)  # link targets are not words
+    text = re.sub(r"<[^>]+>|https?://\S+", " ", text)
+    return len(re.findall(r"[A-Za-z0-9][\w'’-]*", text))
+
+
+def number_words(n: int) -> str:
+    if n < 20:
+        return NUMBER_WORDS[n]
+    if n < 100:
+        tens, ones = divmod(n, 10)
+        return TENS[tens] + ("-" + NUMBER_WORDS[ones] if ones else "")
+    return f"{n:,}"
+
+
+def plain_text(fragment: str) -> str:
+    return html.unescape(TAG_RE.sub("", fragment)).strip()
+
+
+def shorten(text: str, limit: int = 180) -> str:
+    if len(text) <= limit:
+        return text
+    return text[:limit].rsplit(" ", 1)[0].rstrip(",;:—-") + "…"
+
+
+def year_span(first: int, last: int) -> str:
+    return str(first) if first == last else f"{first}–{last}"
+
+
+# ---------- model ----------
+
+
+@dataclass
 class Post:
-    """Represents a blog post with metadata and content."""
-
-    def __init__(self, filepath: str, config: Config):
-        self.filepath = filepath
-        self.config = config
-        self.metadata: Dict[str, Any] = {}
-        self.content: str = ""
-        self.html_content: str = ""
-
-    def parse(self) -> bool:
-        """Parse post file and extract metadata and content."""
-        try:
-            with open(self.filepath, "r", encoding="utf-8") as f:
-                content = f.read()
-
-            # Split frontmatter and body
-            if not content.startswith("---"):
-                logger.error(f"{self.filepath}: Missing frontmatter")
-                return False
-
-            parts = content.split("---", 2)
-            if len(parts) < 3:
-                logger.error(f"{self.filepath}: Invalid frontmatter format")
-                return False
-
-            # Parse YAML frontmatter
-            try:
-                self.metadata = yaml.safe_load(parts[1])
-                if not isinstance(self.metadata, dict):
-                    logger.error(f"{self.filepath}: Frontmatter must be a dictionary")
-                    return False
-            except yaml.YAMLError as e:
-                logger.error(f"{self.filepath}: YAML parsing error: {e}")
-                return False
-
-            self.content = parts[2]
-
-            # Validate required fields
-            required = self.config.get(
-                "post", "required_fields", default=["title", "created", "published"]
-            )
-            missing = [field for field in required if field not in self.metadata]
-            if missing:
-                logger.error(
-                    f"{self.filepath}: Missing required fields: {', '.join(missing)}"
-                )
-                return False
-
-            return True
-
-        except Exception as e:
-            logger.error(f"{self.filepath}: Error reading file: {e}")
-            return False
-
-    def convert_to_html(self, temp_source: str, temp_output: str) -> bool:
-        """Convert Markdown content to HTML using Pandoc."""
-        try:
-            # Write content to temporary file
-            with open(temp_source, "w", encoding="utf-8") as f:
-                f.write(self.content)
-
-            # Run Pandoc conversion
-            subprocess.run(
-                [
-                    "pandoc",
-                    "-f",
-                    "markdown",
-                    "-t",
-                    "html",
-                    "-o",
-                    temp_output,
-                    temp_source,
-                ],
-                capture_output=True,
-                text=True,
-                check=True,
-            )
-
-            # Read converted HTML
-            with open(temp_output, "r", encoding="utf-8") as f:
-                self.html_content = f.read()
-
-            return True
-
-        except subprocess.CalledProcessError as e:
-            logger.error(f"{self.filepath}: Pandoc conversion failed")
-            if e.stderr:
-                logger.error(f"  {e.stderr}")
-            return False
-        except Exception as e:
-            logger.error(f"{self.filepath}: Error during conversion: {e}")
-            return False
+    slug: str
+    title: str  # as listed in the catalogue, without the "Book Summary" form
+    form: str  # "Book Summary", "Project Summary", … or ""
+    heading: str  # article h1: title without the author
+    author: str
+    subtitle: str
+    tags: list[str]
+    created: date
+    published: date
+    status: str
+    topic: str
+    unlisted: bool
+    words: int
+    markdown: str
+    body: str = ""  # Pandoc HTML, filled in by the build
+    toc: list[dict] = field(default_factory=list)
+    drawer: Drawer | None = None
 
     @property
-    def output_filename(self) -> str:
-        """Get the output HTML filename for this post."""
-        return splitext(basename(self.filepath))[0] + ".html"
+    def url(self) -> str:
+        return f"posts/{self.slug}.html"
+
+    @property
+    def reading_minutes(self) -> int:
+        return max(1, round(self.words / Site.words_per_minute))
+
+    @property
+    def sections(self) -> list[str]:
+        return [h["label"] for h in self.toc]
+
+    @property
+    def lede(self) -> str:
+        """First top-level paragraph of the note (not one inside a list), as plain text."""
+        match = re.search(r"^<p>(.*?)</p>", self.body, re.S | re.M)
+        return shorten(plain_text(match.group(1))) if match else ""
+
+    @property
+    def has_math(self) -> bool:
+        return 'class="math' in self.body
+
+    @property
+    def status_note(self) -> str:
+        return STATUS_NOTES[self.status]
 
 
-class SiteGenerator:
-    """Main site generator class."""
+@dataclass
+class Drawer:
+    slug: str
+    code: str
+    name: str
+    blurb: str
+    see_also: list[Post]
+    posts: list[Post] = field(default_factory=list)
 
-    def __init__(self):
-        # Change to script directory so relative paths in config work
-        script_dir = Path(__file__).parent.resolve()
-        os.chdir(script_dir)
-        logger.info(f"Working directory: {os.getcwd()}")
-
-        # Load configuration
-        self.config = Config()
-
-        # Setup Jinja2 environment
-        template_dir = self.config.get("paths", "templates", default="templates")
-        self.jinja_env = Environment(loader=FileSystemLoader(template_dir))
-
-        # Cache for tracking file changes (for incremental builds)
-        self.cache_file = ".build_cache"
-        self.file_hashes: Dict[str, str] = {}
-        self._load_cache()
-
-    def _load_cache(self):
-        """Load build cache to track file changes."""
-        if os.path.exists(self.cache_file):
-            try:
-                with open(self.cache_file, "r") as f:
-                    for line in f:
-                        if ":" in line:
-                            filepath, filehash = line.strip().split(":", 1)
-                            self.file_hashes[filepath] = filehash
-            except Exception as e:
-                logger.warning(f"Could not load build cache: {e}")
-
-    def _save_cache(self):
-        """Save build cache."""
-        try:
-            with open(self.cache_file, "w") as f:
-                for filepath, filehash in sorted(self.file_hashes.items()):
-                    f.write(f"{filepath}:{filehash}\n")
-        except Exception as e:
-            logger.warning(f"Could not save build cache: {e}")
-
-    def _get_file_hash(self, filepath: str) -> str:
-        """Get hash of file contents for change detection."""
-        try:
-            with open(filepath, "rb") as f:
-                return hashlib.md5(f.read()).hexdigest()
-        except Exception:
-            return ""
-
-    def _has_file_changed(self, filepath: str) -> bool:
-        """Check if file has changed since last build."""
-        current_hash = self._get_file_hash(filepath)
-        previous_hash = self.file_hashes.get(filepath, "")
-        return current_hash != previous_hash
-
-    def _update_file_hash(self, filepath: str):
-        """Update hash for a file."""
-        self.file_hashes[filepath] = self._get_file_hash(filepath)
-
-    def generate_posts(self) -> Tuple[List[str], List[str], List[str]]:
-        """Generate HTML for all posts."""
-        logger.info("Generating posts...")
-
-        # Get post source directory
-        posts_dir = self.config.get("paths", "posts_source", default="posts")
-        posts_md = sorted(glob(f"{posts_dir}/*.md"))
-
-        if not posts_md:
-            logger.warning(f"No .md files found in {posts_dir}/")
-            return [], [], []
-
-        # Get output directory and ensure it exists
-        output_dir = self.config.get("paths", "posts_output", default="../posts")
-        os.makedirs(output_dir, exist_ok=True)
-
-        # Load templates
-        template_default_name = self.config.get(
-            "paths", "template_default", default="default.html"
-        )
-        template_post_name = self.config.get(
-            "paths", "template_post", default="post.html"
+    @property
+    def years(self) -> str:
+        return year_span(
+            min(p.published.year for p in self.posts),
+            max(p.published.year for p in self.posts),
         )
 
-        try:
-            template_default = self.jinja_env.get_template(template_default_name)
-            template_post = self.jinja_env.get_template(template_post_name)
-        except Exception as e:
-            logger.error(f"Error loading templates: {e}")
-            sys.exit(1)
+    @property
+    def longest(self) -> Post:
+        return max(self.posts, key=lambda p: p.words)
 
-        # Temporary files for conversion
-        temp_source = self.config.get("build", "temp_source", default="tmp.md")
-        temp_output = self.config.get("build", "temp_output", default="tmp.html")
+    def neighbours(self, post: Post) -> tuple[Post | None, Post | None]:
+        """(older, newer) card in this drawer."""
+        i = self.posts.index(post)
+        older = self.posts[i + 1] if i + 1 < len(self.posts) else None
+        newer = self.posts[i - 1] if i > 0 else None
+        return older, newer
 
-        # Check if incremental builds are enabled
-        incremental = self.config.get("build", "incremental", default=True)
 
-        posts_name = []
-        posts_published = []
-        posts_title = []
+def parse_post(path: Path, required: list[str]) -> Post:
+    text = path.read_text(encoding="utf-8")
+    if not text.startswith("---"):
+        raise BuildError(f"{path.name}: missing frontmatter")
+    try:
+        _, front, body = text.split("---", 2)
+        meta = yaml.safe_load(front)
+    except (ValueError, yaml.YAMLError) as e:
+        raise BuildError(f"{path.name}: invalid frontmatter: {e}") from e
+    if not isinstance(meta, dict):
+        raise BuildError(f"{path.name}: frontmatter must be a mapping")
+    missing = [f for f in required if f not in meta]
+    if missing:
+        raise BuildError(f"{path.name}: missing fields: {', '.join(missing)}")
 
-        processed = 0
-        skipped = 0
-        failed = 0
+    title = clean(meta["title"])
+    form = ""
+    if m := FORM_RE.match(title):
+        form, title = m.group(1), m.group(2)
+    title = title[:1].upper() + title[1:]
+    heading, author = title, ""
+    if form == "Book Summary" and (m := BY_RE.match(title)):
+        heading, author = m.group(1), m.group(2).strip()
 
-        for md_file in posts_md:
-            # Check if file has changed (for incremental builds)
-            if incremental and not self._has_file_changed(md_file):
-                # Still need to collect metadata for archive
-                post = Post(md_file, self.config)
-                if post.parse():
-                    posts_name.append(post.output_filename)
-                    posts_published.append(post.metadata["published"])
-                    posts_title.append(post.metadata["title"])
-                    skipped += 1
-                continue
+    status = clean(meta.get("status")).lower() or "draft"
+    if status not in STATUSES:
+        raise BuildError(f"{path.name}: unknown status {status!r}")
+    unlisted = bool(meta.get("unlisted", False))
+    topic = clean(meta.get("topic"))
+    if not topic and not unlisted:
+        raise BuildError(f"{path.name}: needs `topic:` (or `unlisted: true`)")
 
-            # Parse post
-            post = Post(md_file, self.config)
-            if not post.parse():
-                failed += 1
-                continue
+    tags = meta.get("tags") or []
+    if isinstance(tags, str):
+        tags = tags.split(",")
+    return Post(
+        slug=path.stem,
+        title=title,
+        form=form,
+        heading=heading,
+        author=author,
+        subtitle=clean(meta.get("subtitle")),
+        tags=[t for t in (clean(t) for t in tags) if t],
+        created=to_date(meta["created"]),
+        published=to_date(meta["published"]),
+        status=status,
+        topic=topic,
+        unlisted=unlisted,
+        words=count_words(body),
+        markdown=body,
+    )
 
-            # Convert to HTML
-            if not post.convert_to_html(temp_source, temp_output):
-                failed += 1
-                continue
 
-            # Fix relative URLs for posts (in subdirectory)
-            html_content = post.html_content.replace('href="/', 'href="../')
+# ---------- Pandoc ----------
 
-            # Render post template
-            try:
-                post_body = template_post.render(
-                    created=post.metadata["created"],
-                    published=post.metadata["published"],
-                    body=html_content,
+
+def pandoc_html(markdown: str, cache_dir: Path | None) -> str:
+    # Notes written with "#" as their top heading are shifted so the page
+    # keeps a single h1 (the note title).
+    args = PANDOC_ARGS + [f"--lua-filter={FILTER}"]
+    if re.search(r"^# ", markdown, re.M):
+        args.append("--shift-heading-level-by=1")
+    key = hashlib.sha256(
+        "\0".join(args + [FILTER.read_text(), markdown]).encode()
+    ).hexdigest()
+    cached = cache_dir / f"{key}.html" if cache_dir else None
+    if cached and cached.exists():
+        return cached.read_text(encoding="utf-8")
+    try:
+        out = subprocess.run(
+            args, input=markdown, capture_output=True, text=True, check=True
+        ).stdout
+    except FileNotFoundError as e:
+        raise BuildError("pandoc not found on PATH") from e
+    except subprocess.CalledProcessError as e:
+        raise BuildError(f"pandoc failed: {e.stderr}") from e
+    if cached:
+        cached.parent.mkdir(exist_ok=True)
+        cached.write_text(out, encoding="utf-8")
+    return out
+
+
+def finish_body(body: str, root: str) -> str:
+    """Make site-absolute links relative and let wide tables scroll."""
+    body = re.sub(r'(href|src)="/(?!/)', rf'\1="{root}', body)
+    body = body.replace("<table", '<div class="table-wrap"><table')
+    return body.replace("</table>", "</table></div>")
+
+
+def table_of_contents(body: str) -> list[dict]:
+    """h2 entries with their h3 children."""
+    toc: list[dict] = []
+    for level, anchor, label in HEADING_RE.findall(body):
+        entry = {"id": anchor, "label": plain_text(label), "children": []}
+        if level == "2" or not toc:
+            toc.append(entry)
+        else:
+            toc[-1]["children"].append(entry)
+    return toc
+
+
+# ---------- site ----------
+
+
+class Site:
+    words_per_minute = 230
+
+    def __init__(self, config_path: Path = HERE / "config.toml", output: Path | None = None):
+        with open(config_path, "rb") as f:
+            self.config = tomllib.load(f)
+        paths = self.config["paths"]
+        self.source = HERE / paths["posts_source"]
+        self.output = (output or HERE / paths["output"]).resolve()
+        Site.words_per_minute = self.config["post"].get("words_per_minute", 230)
+        incremental = self.config.get("build", {}).get("incremental", True)
+        self.cache_dir = HERE / ".pandoc_cache" if incremental else None
+
+        self.env = Environment(
+            loader=FileSystemLoader(HERE / paths["templates"]),
+            autoescape=select_autoescape(["html"]),
+            undefined=StrictUndefined,
+            trim_blocks=True,
+            lstrip_blocks=True,
+        )
+        self.env.filters["longdate"] = lambda d: f"{d.day} {d:%B %Y}"
+        self.env.filters["shortdate"] = lambda d: f"{d.day} {d:%b %Y}"
+        self.env.filters["thousands"] = lambda n: f"{n:,}"
+        self.env.filters["words"] = number_words
+
+    def load(self) -> None:
+        required = self.config["post"]["required_fields"]
+        self.posts = [parse_post(p, required) for p in sorted(self.source.glob("*.md"))]
+        if not self.posts:
+            raise BuildError(f"no notes in {self.source}")
+        by_slug = {p.slug: p for p in self.posts}
+
+        self.drawers = []
+        for t in self.config["topics"]:
+            unknown = [s for s in t.get("see_also", []) if s not in by_slug]
+            if unknown:
+                raise BuildError(f"topic {t['slug']}: unknown see_also {unknown}")
+            self.drawers.append(
+                Drawer(
+                    slug=t["slug"],
+                    code=t["code"],
+                    name=t["name"],
+                    blurb=t.get("blurb", ""),
+                    see_also=[by_slug[s] for s in t.get("see_also", [])],
                 )
-
-                # Render full page with default template
-                full_html = template_default.render(
-                    title=post.metadata["title"], body=post_body
-                )
-
-                # Fix relative URLs in default template
-                full_html = full_html.replace('href="/', 'href="../')
-
-            except Exception as e:
-                logger.error(f"{md_file}: Template rendering error: {e}")
-                failed += 1
-                continue
-
-            # Write output file
-            output_path = join(output_dir, post.output_filename)
-            try:
-                with open(output_path, "w", encoding="utf-8") as f:
-                    f.write(full_html)
-                logger.info(f"  ✓ {basename(md_file)}")
-                processed += 1
-            except Exception as e:
-                logger.error(f"{md_file}: Error writing output: {e}")
-                failed += 1
-                continue
-
-            # Update cache
-            self._update_file_hash(md_file)
-
-            # Collect metadata for archive
-            posts_name.append(post.output_filename)
-            posts_published.append(post.metadata["published"])
-            posts_title.append(post.metadata["title"])
-
-        # Clean up temporary files
-        for temp_file in [temp_source, temp_output]:
-            if os.path.exists(temp_file):
-                try:
-                    os.remove(temp_file)
-                except Exception:
-                    pass
-
-        # Summary
-        logger.info(
-            f"Posts: {processed} generated, {skipped} unchanged, {failed} failed"
-        )
-
-        return posts_name, posts_published, posts_title
-
-    def generate_archive(
-        self, posts_name: List[str], posts_published: List[str], posts_title: List[str]
-    ):
-        """Generate archive page with list of all posts."""
-        logger.info("Generating archive...")
-
-        # Load templates
-        template_default_name = self.config.get(
-            "paths", "template_default", default="default.html"
-        )
-        template_archive_name = self.config.get(
-            "paths", "template_archive", default="archive.html"
-        )
-
-        try:
-            template_default = self.jinja_env.get_template(template_default_name)
-            template_archive = self.jinja_env.get_template(template_archive_name)
-        except Exception as e:
-            logger.error(f"Error loading templates: {e}")
-            sys.exit(1)
-
-        # Sort posts by publication date (descending)
-        sorted_indices = sorted(
-            range(len(posts_published)), key=lambda k: posts_published[k], reverse=True
-        )
-
-        # Create post list HTML
-        post_list_html = "\n<ul>\n"
-        for i in sorted_indices:
-            pub = posts_published[i]
-            name = posts_name[i]
-            title = posts_title[i]
-            post_list_html += (
-                f"<li>\n{pub} - <a href='./posts/{name}'>{title}</a></li>\n"
             )
-        post_list_html += "</ul>\n"
+        drawers = {d.slug: d for d in self.drawers}
+        newest_first = sorted(self.posts, key=lambda p: (p.published, p.slug), reverse=True)
+        for post in newest_first:
+            if post.unlisted:
+                continue
+            if post.topic not in drawers:
+                raise BuildError(f"{post.slug}: unknown topic {post.topic!r}")
+            post.drawer = drawers[post.topic]
+            post.drawer.posts.append(post)
+        self.drawers = [d for d in self.drawers if d.posts]
+        self.listed = [p for p in newest_first if not p.unlisted]
 
-        # Render templates
-        try:
-            archive_body = template_archive.render(post_list=post_list_html)
-            full_html = template_default.render(title="Writing", body=archive_body)
+        for post in self.posts:
+            post.body = pandoc_html(post.markdown, self.cache_dir)
+            post.toc = table_of_contents(post.body)
 
-            # Fix relative URLs for archive (in root)
-            full_html = full_html.replace('href="/', 'href="./')
+    # -- page data --
 
-        except Exception as e:
-            logger.error(f"Archive template rendering error: {e}")
-            sys.exit(1)
+    def desk(self) -> list[dict]:
+        """The reading desk: every ongoing note, then the newest card."""
+        newest = self.listed[0]
+        picks = [p for p in self.listed if p.status == "ongoing" and p is not newest]
+        slips = []
+        for post in picks + [newest]:
+            slip = {"post": post, "kind": post.status.capitalize(), "note": ""}
+            if post is newest:
+                slip["kind"] = "Newest card"
+                if len(self.listed) > 1:
+                    gap = (newest.published - self.listed[1].published).days // 365
+                    if gap >= 2:
+                        slip["note"] = (
+                            f"The first new card in more than {number_words(gap)} years: "
+                            "the catalogue is open again."
+                        )
+            if not slip["note"] and len(post.sections) > 3:
+                shown = ", ".join(post.sections[:3])
+                slip["note"] = f"Sections include {shown} and {len(post.sections) - 3} more."
+            slips.append(slip)
+        return slips
 
-        # Write output file
-        output_path = self.config.get(
-            "paths", "archive_output", default="../archive.html"
+    def common(self, root: str, nav: str) -> dict:
+        years = [p.published.year for p in self.listed] + [p.created.year for p in self.listed]
+        return {
+            "site": self.config["site"],
+            "root": root,
+            "nav": nav,
+            "years": year_span(min(years), max(years)),
+            "first_year": min(years),
+        }
+
+    # -- rendering --
+
+    def render(self, template: str, target: str, **context) -> None:
+        page = self.env.get_template(template).render(**context)
+        path = self.output / target
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(page, encoding="utf-8")
+
+    def build(self) -> None:
+        self.load()
+        newest = self.listed[0]
+        counts = {s: sum(p.status == s for p in self.listed) for s in STATUSES}
+
+        self.render(
+            "home.html", "index.html",
+            **self.common("./", "home"),
+            slips=self.desk(), drawers=self.drawers, listed=self.listed,
+            newest=newest, counts=counts,
         )
-        try:
-            with open(output_path, "w", encoding="utf-8") as f:
-                f.write(full_html)
-            logger.info("  ✓ archive.html")
-        except Exception as e:
-            logger.error(f"Error writing archive: {e}")
-            sys.exit(1)
+        self.render(
+            "archive.html", "archive.html",
+            **self.common("./", "notes"), listed=self.listed, counts=counts,
+        )
+        self.render("contact.html", "contact.html", **self.common("./", "contact"))
 
-    def build(self):
-        """Run the full build process."""
-        logger.info("Starting build...")
-
-        # Generate posts
-        posts_name, posts_published, posts_title = self.generate_posts()
-
-        if not posts_name:
-            logger.warning("No posts to generate")
-            return
-
-        # Generate archive
-        self.generate_archive(posts_name, posts_published, posts_title)
-
-        # Save cache
-        self._save_cache()
-
-        logger.info("Build complete!")
+        for post in self.posts:
+            older, newer = post.drawer.neighbours(post) if post.drawer else (None, None)
+            self.render(
+                "post.html", post.url,
+                **self.common("../", "notes"),
+                post=post, body=finish_body(post.body, "../"),
+                older=older, newer=newer, newest=newest,
+            )
+        logger.info(
+            "Built %d notes (%d listed in %d drawers) into %s",
+            len(self.posts), len(self.listed), len(self.drawers), self.output,
+        )
 
 
-def main():
-    """Main entry point."""
-    generator = SiteGenerator()
-    generator.build()
+def main() -> None:
+    try:
+        Site().build()
+    except BuildError as e:
+        logger.error(e)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

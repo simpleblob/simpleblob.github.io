@@ -1,0 +1,33 @@
+{% macro mark(status) -%}
+<span class="mark {{ status }}" aria-hidden="true"></span>
+{%- endmacro %}
+
+{% macro status_cell(status) -%}
+<span class="st">{{ mark(status) }}<span class="vh">Status: {{ status }}</span></span>
+{%- endmacro %}
+
+{# One catalogue card. `flag` marks the newest and the ongoing notes. #}
+{% macro card(post, root, newest, show_code=false) -%}
+{% set flag = "new" if post is sameas newest else ("ongoing" if post.status == "ongoing" else "") %}
+<li class="card{% if flag %} hl{% endif %}">
+  <time datetime="{{ post.published.isoformat() }}">{{ post.published.isoformat() }}</time>
+  <span class="title">
+    {%- if flag %}<span class="manicule" aria-hidden="true">☞&#xFE0E;</span>{% endif -%}
+    <a href="{{ root }}{{ post.url }}">{% if post.form and post.form != "Book Summary" %}{{ post.form }} – {% endif %}{{ post.title }}</a>
+    {%- if flag %}<span class="flag">{{ flag }}</span>{% endif -%}
+    <span class="sub">
+      {%- if show_code %}<span class="callno">{{ post.drawer.code }}</span> · {% endif -%}
+      {%- if post.subtitle %}{{ post.subtitle }} · {% endif -%}
+      <span class="w">{{ post.words | thousands }} words</span></span>
+  </span>
+  {{ status_cell(post.status) }}
+</li>
+{%- endmacro %}
+
+{% macro legend(counts) -%}
+<ul class="legend" aria-label="Status key">
+  {% for status, n in counts.items() if n %}
+  <li>{{ mark(status) }} {{ status }} · {{ n }}</li>
+  {% endfor %}
+</ul>
+{%- endmacro %}

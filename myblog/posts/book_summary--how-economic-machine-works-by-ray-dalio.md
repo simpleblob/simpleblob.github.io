@@ -7,6 +7,7 @@ tags: economics
 created: 2015-01-19
 published: 2017-11-26
 status: draft
+topic: bk
 confidence: log
 importance: 1
 ---

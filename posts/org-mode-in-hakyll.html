@@ -1,59 +1,118 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>website - Org Mode in Hakyll</title>
-        
-        <!-- Theme color meta tags -->
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FCFCF9" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#100E12" />
-        
-        <!-- Preload Inter font for better performance -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-        
-        <link rel="stylesheet" type="text/css" href="../css/default.css" />
-        
-        <!-- Theme toggle script - runs immediately to prevent flash -->
-        <script src="/js/theme-toggle.js"></script>
-    </head>
-    <main>
-    <body>
-        <div id="header">
-            <div id="logo">
-                <a href="../">SIMPLEBLOB</a>
-            </div>
-            <div id="navigation">
-                <a href="../">Home</a>
-                <a href="../archive.html">Writing</a>
-                <a href="https://simpleblob.com/lab/">Labs</a>
-                <a href="../contact.html">Contact</a>
-                <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-            </div>
-        </div>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Org Mode in Hakyll · SIMPLEBLOB</title>
+<meta name="description" content="Org Mode in Hakyll. The Ultimate Toolkit for Publishing?">
+<meta name="theme-color" content="#f7f2e7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17140f" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&amp;display=swap">
+<link rel="stylesheet" href="../css/site.css">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-        <div id="content">
-            <h1>Org Mode in Hakyll</h1>
+<header class="masthead wrap">
+  <div class="full">
+<p class="wordmark"><a href="../index.html" aria-label="Simpleblob, home">SIMPLEBLOB</a></p>    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#catalogue" aria-current="true">Notes</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li class="theme-item"><button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-            <div class="post-meta">
-    <em>
-    creation date: 2017-11-25,
-    latest update: 2017-11-26
-    </em>
-</div>
+<main id="main" class="wrap">
+  <nav class="crumbs full" aria-label="Breadcrumb">
+    <a href="../index.html#catalogue">← The Catalogue</a>
+<span aria-hidden="true">/</span> <a href="../index.html#mm"><span class="callno">MM·02</span> Machines &amp; Math</a>  </nav>
 
+  <article class="note folio" aria-labelledby="title">
+    <header class="title-block">
+      <h1 id="title">Org Mode in Hakyll</h1>
+<p class="subtitle">The Ultimate Toolkit for Publishing?</p>    </header>
+
+    <aside class="margin meta" aria-label="About this note">
+      <dl>
+        <dt>Created</dt><dd><time datetime="2017-11-25">25 Nov 2017</time></dd>
+        <dt>Updated</dt><dd><time datetime="2017-11-26">26 Nov 2017</time></dd>
+        <dt>Status</dt><dd><span class="mark finished" aria-hidden="true"></span> <span class="status-word finished">finished</span></dd>
+        <dt>Tags</dt><dd><span class="tag">emacs</span> · <span class="tag">haskell</span></dd>
+        <dt>Length</dt><dd>391 words</dd>
+        <dt>Reading</dt><dd>~2 min</dd>
+      </dl>
+      <p class="note-on-status">A finished note is complete as it stands.</p>
+    </aside>
+
+    <nav class="toc" aria-label="Table of contents">
+      <details>
+        <summary>Contents</summary>
+        <ol>
+          <li><a href="#this-is-h1">This is H1</a>
+            <ol>
+              <li><a href="#h2">H2</a></li>
+            </ol>
+          </li>
+          <li><a href="#some-basic-test">Some basic test</a>
+          </li>
+          <li><a href="#list">List</a>
+            <ol>
+              <li><a href="#other-style">Other style</a></li>
+              <li><a href="#other-style-1">Other style</a></li>
+            </ol>
+          </li>
+          <li><a href="#links">Links</a>
+          </li>
+          <li><a href="#check-list-13-33">Check List [1/3] [33%]</a>
+          </li>
+          <li><a href="#task-list">Task List</a>
+            <ol>
+              <li><a href="#some-to-do">TODO some to-do</a></li>
+              <li><a href="#done-to-do">DONE done to-do</a></li>
+            </ol>
+          </li>
+          <li><a href="#tables">Tables</a>
+          </li>
+          <li><a href="#source-code">Source Code</a>
+          </li>
+          <li><a href="#latex">LaTeX</a>
+            <ol>
+              <li><a href="#ℋℯ𝓁𝓁ℴ">ℋℯ𝓁𝓁ℴ!</a></li>
+            </ol>
+          </li>
+          <li><a href="#deadline">Deadline</a>
+          </li>
+          <li><a href="#tagged">Tagged tag</a>
+          </li>
+          <li><a href="#block-quote">Block Quote</a>
+          </li>
+          <li><a href="#image">Image</a>
+          </li>
+          <li><a href="#description-list">Description List</a>
+          </li>
+          <li><a href="#footnotes">Footnotes</a>
+          </li>
+        </ol>
+      </details>
+    </nav>
+
+    <div class="prose">
 <p>Testing Pandoc’s emacs-org file conversion to html, based on this <a
 href="https://github.com/turboMaCk/turboMaCk.github.io/blob/develop/posts/2016-12-21-org-mode-in-hakyll.org">page</a>.</p>
 <p>This is the end of post itself. Everything below is just to test how
 Pandoc handles org files.</p>
-<h1 id="this-is-h1">This is H1</h1>
+<h2 id="this-is-h1">This is H1</h2>
 <p>There is paragraph under h1</p>
-<h2 id="h2">H2</h2>
-<h3 id="h3">H3</h3>
-<h1 id="some-basic-test">Some basic test</h1>
+<h3 id="h2">H2</h3>
+<h4 id="h3">H3</h4>
+<h2 id="some-basic-test">Some basic test</h2>
 <p>This is <strong>bold</strong>, <em>italic</em>, <code
 class="verbatim">code</code>, <code>verbatim</code> and
 <del>strike</del> text.</p>
@@ -63,7 +122,7 @@ when used together like in markdown.</li>
 <li>However <strong><em>bold and italic</em></strong> doesn’t play well
 when used together like in markdown.</li>
 </ul>
-<h1 id="list">List</h1>
+<h2 id="list">List</h2>
 <ul>
 <li>Bullet</li>
 <li>Another bullet
@@ -74,7 +133,7 @@ when used together like in markdown.</li>
 </ul></li>
 </ul></li>
 </ul>
-<h2 id="other-style">Other style</h2>
+<h3 id="other-style">Other style</h3>
 <ul>
 <li>Bullet</li>
 <li>Another bullet
@@ -85,7 +144,7 @@ when used together like in markdown.</li>
 </ul></li>
 </ul></li>
 </ul>
-<h2 id="other-style-1">Other style</h2>
+<h3 id="other-style-1">Other style</h3>
 <ol type="1">
 <li>Bullet</li>
 <li>Another bullet
@@ -97,11 +156,11 @@ when used together like in markdown.</li>
 </ol></li>
 </ol>
 <p>Style <code class="verbatim">*</code> isn’t supported.</p>
-<h1 id="links">Links</h1>
+<h2 id="links">Links</h2>
 <p><span class="spurious-link" target="link to org mode homepage"><em><a
 href="http://orgmode.org/"
 class="uri">http://orgmode.org/</a></em></span></p>
-<h1 id="check-list-13-33">Check List [1/3] [33%]</h1>
+<h2 id="check-list-13-33">Check List [1/3] [33%]</h2>
 <ul class="task-list">
 <li><label><input type="checkbox" />Item</label></li>
 <li><label><input type="checkbox" />Item</label></li>
@@ -110,12 +169,12 @@ class="uri">http://orgmode.org/</a></em></span></p>
 <p>Heading and has special class however <code
 class="verbatim">&lt;ul&gt;</code> and <code
 class="verbatim">&lt;li&gt;</code> are plain.</p>
-<h1 id="task-list">Task List</h1>
-<h2 id="some-to-do"><span class="todo TODO">TODO</span> some to-do</h2>
-<h2 id="done-to-do"><span class="done DONE">DONE</span> done to-do</h2>
+<h2 id="task-list">Task List</h2>
+<h3 id="some-to-do"><span class="todo TODO">TODO</span> some to-do</h3>
+<h3 id="done-to-do"><span class="done DONE">DONE</span> done to-do</h3>
 <p>Items are added with special class.</p>
-<h1 id="tables">Tables</h1>
-<table>
+<h2 id="tables">Tables</h2>
+<div class="table-wrap"><table>
 <thead>
 <tr class="header">
 <th style="text-align: left;">number</th>
@@ -132,56 +191,58 @@ class="verbatim">&lt;li&gt;</code> are plain.</p>
 <td style="text-align: left;">name</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><code class="verbatim">&lt;tr&gt;</code> has <code
 class="verbatim">even</code> and <code class="verbatim">odd</code>
 classes.</p>
-<h1 id="source-code">Source Code</h1>
+<h2 id="source-code">Source Code</h2>
 <p><strong>Emacs Lisp:</strong></p>
-<div class="sourceCode" id="cb1" data-org-language="emacs-lisp"><pre
-class="sourceCode commonlisp"><code class="sourceCode commonlisp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">defun</span><span class="fu"> negate </span>(x)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Negate the value of x.&quot;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    (<span class="op">-</span> x))</span></code></pre></div>
-<div class="sourceCode" id="cb2" data-org-language="emacs-lisp"
-data-results="output"><pre class="sourceCode commonlisp"><code class="sourceCode commonlisp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">print</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    (negate <span class="dv">10</span>))</span></code></pre></div>
+<pre class="commonlisp" data-org-language="emacs-lisp"><code>(defun negate (x)
+    &quot;Negate the value of x.&quot;
+    (- x))</code></pre>
+<pre class="commonlisp" data-org-language="emacs-lisp"
+data-results="output"><code>(print
+    (negate 10))</code></pre>
 <pre class="example"><code>-10</code></pre>
 <p>There are interesting classes like <code
 class="verbatim">sourceCode</code> and <code
 class="verbatim">example</code>. Also there html5 attributes prefixed
 with <code class="verbatim">rundoc-</code>.</p>
 <p><strong>Haskell:</strong></p>
-<div class="sourceCode" id="cb4" data-results="output"><pre
-class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ot">factorial ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>factorial <span class="dv">0</span> <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>factorial n <span class="ot">=</span> n <span class="op">*</span> factorial (n <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
-<h1 id="latex">LaTeX</h1>
+<pre class="haskell" data-results="output"><code>factorial :: Int -&gt; Int
+factorial 0 = 1
+factorial n = n * factorial (n - 1)</code></pre>
+<h2 id="latex">LaTeX</h2>
 <ul>
 <li><strong>Characters:</strong> α β → ↑ ∨ \and ⟹ π ∞</li>
-<li><strong>Inline Math:</strong> <span
-class="math inline"><em>f</em>(<em>x</em>) = <em>x</em><sup>2</sup></span></li>
+<li><strong>Inline Math:</strong> <span class="math inline">\(f(x) =
+x^2\)</span></li>
 <li><strong>More complex:</strong> <span
-class="math inline">$\frac{x^2}{2}$</span></li>
+class="math inline">\(\frac{x^2}{2}\)</span></li>
 </ul>
 <p>LaTeX characters are wrapped in <code>&lt;em&gt;</code> and Math
 inside <code>&lt;span class="math inline"&gt;</code>.</p>
-<h2 id="ℋℯ𝓁𝓁ℴ">ℋℯ𝓁𝓁ℴ!</h2>
+<h3 id="ℋℯ𝓁𝓁ℴ">ℋℯ𝓁𝓁ℴ!</h3>
+<span class="math display">\[\begin{align*}
+  8 * 3 &amp;= 8 + 8 \\
+        &amp;= 24
+\end{align*}\]</span>
 <p><strong>NOTE:</strong> <em>There is standard LaTeX embeded above
 which is skipped during compilation to HTML.</em></p>
 <p><strong>This is using</strong> <span class="spurious-link"
 target="MathJax"><em><a href="https://www.mathjax.org/"
 class="uri">https://www.mathjax.org/</a></em></span></p>
-<p><span class="math display">$$\sum_{i=0}^n i^2 =
-\frac{(n^2+n)(2n+1)}{6}$$</span></p>
-<h1 id="deadline">Deadline</h1>
-<h1 id="tagged">Tagged <span class="tag" data-tag-name="tag"><span
-class="smallcaps">tag</span></span></h1>
+<p><span class="math display">\[\sum_{i=0}^n i^2 =
+\frac{(n^2+n)(2n+1)}{6}\]</span></p>
+<h2 id="deadline">Deadline</h2>
+<h2 id="tagged">Tagged <span class="tag" data-tag-name="tag"><span
+class="smallcaps">tag</span></span></h2>
 <p>Tags are not visible in render</p>
-<h1 id="block-quote">Block Quote</h1>
+<h2 id="block-quote">Block Quote</h2>
 <blockquote>
 <p>Org mode is amazing. So is Hakyll &amp; Pandoc.</p>
 </blockquote>
-<h1 id="image">Image</h1>
+<h2 id="image">Image</h2>
 <p><a
 href="http://media.riffsy.com/images/f8534774b678ad1932b379a03460680b/raw"
 class="uri">http://media.riffsy.com/images/f8534774b678ad1932b379a03460680b/raw</a></p>
@@ -190,7 +251,7 @@ class="uri">http://media.riffsy.com/images/f8534774b678ad1932b379a03460680b/raw<
 <p>then it can be loaded even from other origin..</p>
 <p><img
 src="https://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png" /></p>
-<h1 id="description-list">Description List</h1>
+<h2 id="description-list">Description List</h2>
 <dl>
 <dt>Frodo</dt>
 <dd>
@@ -208,27 +269,54 @@ The Grey Wizard
 <p>creddits to <span class="spurious-link" target="nihilmancer"><em><a
 href="https://www.reddit.com/user/nihilmancer"
 class="uri">https://www.reddit.com/user/nihilmancer</a></em></span></p>
-<h1 id="footnotes">Footnotes</h1>
-<p>This has some<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a> foot note.</p>
-<aside id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1"><p>The link is: <a href="http://orgmode.org"
-class="uri">http://orgmode.org</a><a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</aside>
+<h2 id="footnotes">Footnotes</h2>
+<p>This has
+some<span class="sn-ref" aria-hidden="true"></span><span class="sidenote" role="note">The link is: <a href="http://orgmode.org"
+class="uri">http://orgmode.org</a></span> foot note.</p>
 
-        </div>
-        <div id="footer">
-            <a href="#header">↑ Back to top</a>
-        </div>
+    </div>
 
-    <!-- MathJax is library for displaying math nicely -->
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <footer class="pager">
+      <a class="back" href="../index.html#mm">← Back to drawer MM·02</a>
+      <ul>
+        <li class="next">
+          <a href="../posts/computing-architecture.html" rel="next">
+            <span class="dir">Newer card →</span>
+            <span class="t">Computing Architecture</span>
+            <span class="d"><time datetime="2017-12-02">2017-12-02</time> · draft</span>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </article>
+</main>
 
-    </body>
-    </main>
+<footer class="site-foot wrap">
+  <div class="full">
+    <hr class="fleuron">
+    <div class="foot-grid">
+      <section aria-labelledby="f-contact">
+        <h2 id="f-contact">Contact</h2>
+        <p>I live in a small hut in the middle of Tokyo, Japan.</p>
+        <p><span class="email">siimmmpleebblloobb at gmail dot com.</span> Just remove all the duplicated letters.</p>
+      </section>
+      <section aria-labelledby="f-nav">
+        <h2 id="f-nav">The notebook</h2>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#catalogue">Notes: the catalogue</a></li>
+          <li><a href="../archive.html">Notes: by date</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="f-colophon">
+        <h2 id="f-colophon">Colophon</h2>
+        <p>Written in Markdown, built with Python and Pandoc, hosted on <a href="https://github.com/simpleblob/simpleblob.github.io">GitHub</a>. Set in Source Serif&nbsp;4 and EB&nbsp;Garamond.</p>
+      </section>
+    </div>
+    <p class="copyright">SIMPLEBLOB · 2013–2026</p>
+  </div>
+</footer>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</body>
 </html>
